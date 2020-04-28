@@ -1,5 +1,6 @@
 package com.mg.common.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,10 +10,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 public class ClassBuildUtil {
-
-
-    Logger logger = LoggerFactory.getLogger(ClassBuildUtil.class);
 
     int tab_no=0;
     String tab ="	";
@@ -41,7 +40,7 @@ public class ClassBuildUtil {
         String classStr ="";
 
 
-        logger.info(String.format("开始构建类文件 %s 的 文件内容",className));
+        log.info(String.format("开始构建类文件 %s 的 文件内容",className));
 
         String content = "";
 
@@ -150,12 +149,12 @@ public class ClassBuildUtil {
      */
     public void finish(File file) throws IOException {
         finish();
-        logger.info("开始生成文件：" + file.getPath());
+        log.info("开始生成文件：" + file.getPath());
         file.getParentFile().mkdirs();
         FileOutputStream out = new FileOutputStream(file);
         out.write(classConetent.getBytes("UTF-8"));
         out.close();
-        logger.info("文件生成成功！！");
+        log.info("文件生成成功！！");
     }
 
 

@@ -1,10 +1,17 @@
 package com.mg.common.util;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.http.StatusLine;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 
 import java.io.File;
 import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
 
-@self4j
+@Slf4j
 public class BaseFileUtil
 {
 
@@ -125,7 +132,7 @@ public class BaseFileUtil
 	 */
 	public static boolean delete(File file){
 		if(!file.exists()){//验证路径是否存在
-			logger.debug(file.getPath()+"   路径不存在！");
+			log.debug(file.getPath()+"   路径不存在！");
 			return false;
 		}
 		if(!file.isDirectory()){//验证是否是文件夹
@@ -139,7 +146,7 @@ public class BaseFileUtil
 			delete(f);//递归删除
 		}
 		file.delete();//删除文件夹
-		logger.debug("删除文件夹" +file.getPath());
+		log.debug("删除文件夹" +file.getPath());
 		return true;
 		
 	}
@@ -174,7 +181,7 @@ public class BaseFileUtil
 					type = FileType.WEBP;
 			} catch (Exception e)
 			{
-				logger.debug("无法获取Content-Type ");
+				log.debug("无法获取Content-Type ");
 			}
 		} finally
 		{

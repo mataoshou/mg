@@ -1,13 +1,12 @@
 package com.mg.common.util;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-@slf4j
+@Slf4j
 public class MethodUtil {
     String mehodContent ="";
     String innerContent ="";
@@ -29,7 +28,7 @@ public class MethodUtil {
     {
         if(params.get(paramName)!=null)
         {
-            log.info("已存在参数" + paramName);
+            log.debug("已存在参数" + paramName);
         }
         params.put(paramName,paramType.getSimpleName());
     }
