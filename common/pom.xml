@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>tool</module>
+        <module>generate</module>
     </modules>
 
     <dependencies>
@@ -59,7 +60,11 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.30</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.9</version>
+        </dependency>
 
     </dependencies>
 </project>

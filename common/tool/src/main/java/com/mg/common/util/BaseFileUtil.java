@@ -1,5 +1,6 @@
 package com.mg.common.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -9,7 +10,6 @@ import org.apache.http.impl.client.HttpClients;
 
 import java.io.File;
 import java.io.IOException;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class BaseFileUtil
@@ -25,7 +25,7 @@ public class BaseFileUtil
 	}
 
 	/**
-	 * 根据多段路径，获取文件
+	 * 根据多段路径，获取文�?
 	 */
 	public static File getFile(String... paths)
 	{
@@ -44,7 +44,7 @@ public class BaseFileUtil
 	}
 	
 	/**
-	 * 根据多段路径，获取文件完整路径
+	 * 根据多段路径，获取文件完整路�?
 	 */
 	public static String getFilePath(String... paths)
 	{
@@ -113,10 +113,10 @@ public class BaseFileUtil
 		{
 			dst.getParentFile().mkdirs();
 			FileUtils.moveFile(src, dst);
-			log.debug("文件从:" + src.getPath() + "移动到:" + dst.getPath());
+			log.debug("文件�?:" + src.getPath() + "移动�?:" + dst.getPath());
 			return;
 		}
-		log.debug(src.getPath() + "文件不存在");
+		log.debug(src.getPath() + "文件不存�?");
 	}
 
 	// 文件格式转换
@@ -145,8 +145,8 @@ public class BaseFileUtil
 		for(File f:files){
 			delete(f);//递归删除
 		}
-		file.delete();//删除文件夹
-		log.debug("删除文件夹" +file.getPath());
+		file.delete();//删除文件�?
+		log.debug("删除文件�?" +file.getPath());
 		return true;
 		
 	}
