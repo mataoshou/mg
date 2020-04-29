@@ -5,8 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
 public class ClassBuildUtil {
@@ -16,7 +14,7 @@ public class ClassBuildUtil {
 
     String classConetent;
 
-    List<MethodUtil> method_list = new ArrayList();
+//    List<MethodUtil> method_list = new ArrayList();
 
 
     public void classInit(String className,String packageName,boolean isclass,String... imports)
@@ -35,65 +33,15 @@ public class ClassBuildUtil {
      */
     public void classInit(String className,String baseName,String[] imps,String packageName,String[] annotation,boolean isclass,String... imports)
     {
-        String classStr ="";
-
-
         log.info(String.format("开始构建类文件 %s 的 文件内容",className));
 
-        String content = "";
+        String content =template();
 
-
-        ////////添加packagename;
-        content += getContent(tab_no,tab, String.format("package %s ;",packageName));
-        content += getContent(tab_no,tab, String.format(""));
-        /////////添加import
-        if(imports!=null&&imports.length>0) {
-            for (String importName : imports) {
-                content += getContent(tab_no, tab, String.format("import %s;", importName));
-            }
-        }
-
-        content += getContent(tab_no,tab, String.format(""));
-
-        if(annotation!=null&&annotation.length>0)
-        {
-            for(String str : annotation) {
-                content += getContent(tab_no, tab, String.format("@%s", str));
-            }
-
-        }
-
-        ////////构建class内容
-        String classType = "class";
-        if(!isclass)
-        {
-            classType = "interface";
-        }
-        String classLine ="";
-        if(baseName!=null&&baseName.length()>0) {
-            classLine = String.format("public %s %s extends %s ",classType, className, baseName);
-        }
-        else{
-            classLine = String.format("public %s %s ", classType,className);
-        }
-
-        if(imps!=null&&imps.length>0)
-        {
-            classLine +="implements ";
-            for(int i=0;i< imps.length;i++)
-            {
-                if(i!=0) {
-                    classLine += ",";
-                }
-                classLine+=imps[i];
-            }
-        }
-        classLine +="{";
-        content += getContent(tab_no, tab,classLine);
-
-                content += "##1";
-
-        content += getContent(tab_no,tab, String.format("}"));
+        content = content.replace("#packageName#",packageName)
+                .replace("#import#",getImports(imports))
+                .replace("#annotation#",getAnnotation(annotation))
+                .replace("#classType#",getClassType(isclass))
+                .replace("#className#",getClassName(className,baseName,imps));
 
         classConetent = content;
 
@@ -101,18 +49,78 @@ public class ClassBuildUtil {
     }
 
 
+    public String getImports(String[] imports) {
 
-    public void addMehod(MethodUtil methodUtil)
-    {
-        if(method_list==null)
-        {
-            method_list = new ArrayList();
+        String importData = "";
+        /////////添加import
+        if (imports != null && imports.length > 0) {
+            for (String importName : imports) {
+                importData += getContent(tab_no, tab, String.format("import %s;", importName));
+            }
         }
-        if(methodUtil!=null)
-        {
-            method_list.add(methodUtil);
-        }
+        return importData;
     }
+
+    public String getAnnotation(String[] annotation) {
+        String annotationData = "";
+
+        if (annotation != null && annotation.length > 0) {
+            for (String str : annotation) {
+                annotationData += getContent(tab_no, tab, String.format("@%s", str));
+            }
+
+        }
+        return annotationData;
+    }
+
+
+    public String getClassType( boolean isclass) {
+        ////////构建class内容
+        String classType = "class";
+        if (!isclass) {
+            classType = "interface";
+        }
+
+        return classType;
+    }
+
+    public String getClassName(String className ,String baseName,String[] imps)
+    {
+        String classNameData =className;
+        if(className!=null&&baseName.length()>0) {
+            classNameData = String.format("%s extends %s ", className, baseName);
+        }
+
+        if(imps!=null&&imps.length>0)
+        {
+            classNameData +="implements ";
+            for(int i=0;i< imps.length;i++)
+            {
+                if(i!=0) {
+                    classNameData += ",";
+                }
+                classNameData+=imps[i];
+            }
+        }
+
+        return classNameData;
+    }
+
+
+
+
+
+//    public void addMehod(MethodUtil methodUtil)
+//    {
+//        if(method_list==null)
+//        {
+//            method_list = new ArrayList();
+//        }
+//        if(methodUtil!=null)
+//        {
+//            method_list.add(methodUtil);
+//        }
+//    }
 
 
     String innerContent = "";
@@ -128,13 +136,13 @@ public class ClassBuildUtil {
         {
             innerContent ="";
 
-            if(method_list.size()>0)
-            {
-                for(MethodUtil method : method_list)
-                {
-                    innerContent += method.methodToString();
-                }
-            }
+//            if(method_list.size()>0)
+//            {
+//                for(MethodUtil method : method_list)
+//                {
+//                    innerContent += method.methodToString();
+//                }
+//            }
 
         }
 
@@ -240,5 +248,28 @@ public class ClassBuildUtil {
         String baseName = stringUtil.firstUpper(str);
 
         return baseName;
+    }
+
+
+    public String template()
+    {
+        String classTemplate =
+                        "package #packageName# \n\n" +
+                        "#import#\n\n"+
+                        "#annotation#\n\n" +
+                        "public #classType# #className# {\n\n" +
+                        "#content#\n\n"+
+                        "}\n";
+
+        return classTemplate;
+
+    }
+
+    public static void main(String[] args) {
+        ClassBuildUtil util = new ClassBuildUtil();
+        util.classInit("matao","ss",new String[]{"String"},
+                "root",null,true,"String","data");
+
+        System.out.println(util.classConetent);
     }
 }

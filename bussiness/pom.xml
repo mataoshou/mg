@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>website</module>
-        <module>summary</module>
+        <module>compose</module>
         <module>node</module>
         <module>dao</module>
     </modules>

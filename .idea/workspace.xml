@@ -2,58 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/generate/generate.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IMakeUpBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IMethodBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/CommonTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/dao/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bussiness/dao/target/mg-dao-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/dao/target/mg-dao-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/node/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/node/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bussiness/node/target/mg-service-node-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/node/target/mg-service-node-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/summary/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/summary/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/summary/target/mg-service-summary-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/summary/target/mg-service-summary-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/website/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/summary/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/compose/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/summary/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/compose/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/summary/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/compose/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/summary/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/compose/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/summary/summary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/compose/compose.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/summary/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/compose/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/summary/target/mg-service-summary-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/compose/target/mg-service-summary-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bussiness/website/target/mg-website-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/website/target/mg-website-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/target/mg-generate-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/mg-generate-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/BaseFileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/BaseFileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/.factorypath" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/.factorypath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/Convert.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/Convert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/DomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/DomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/EmptyCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/EmptyCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/GuidUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/GuidUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/HexUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/HexUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/Md5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/Md5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/MethodUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/MethodUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/PinYinUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/PinYinUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/TypeConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/TypeConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/BaseFileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/BaseFileUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/ClassBuildUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/ClassBuildUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Convert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/EmptyCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/GuidUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/HexUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Md5Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/PinYinUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/StringUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/TypeConvert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/mg-common-tool-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/mg-common-tool-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empty/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/empty/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empty/target/mg-empty-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/empty/target/mg-empty-1.0.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,6 +35,7 @@
     <ignored path="$PROJECT_DIR$/bussiness/dao/target/" />
     <ignored path="$PROJECT_DIR$/common/tool/target/" />
     <ignored path="$PROJECT_DIR$/common/generate/target/" />
+    <ignored path="$PROJECT_DIR$/bussiness/compose/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,15 +50,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/BaseFileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+            <state relative-caret-position="115">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1825#1826#0" expanded="true" />
-                <element signature="e#1861#1862#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,19 +64,29 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/generate/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
               <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/pom.xml">
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java">
+        <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="3864">
+              <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,25 +95,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/generate/generate.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        <entry file="file://$PROJECT_DIR$/bussiness/pom.xml">
+          <provider selected="true" editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java">
+        <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4163">
-              <caret line="186" column="17" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="17" />
+            <state relative-caret-position="874">
+              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#4207#4208#0" expanded="true" />
+                <element signature="e#4266#4267#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IMakeUpBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="184">
               <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
@@ -168,7 +143,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IMethodBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="115">
               <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -193,13 +168,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bussiness/pom.xml" />
         <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/GuidUtil.java" />
         <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileType.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/MethodUtil.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/common/tool/pom.xml" />
         <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java" />
         <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IMethodBase.java" />
@@ -208,8 +180,12 @@
         <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/genate/CommonTool.java" />
         <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/CommonTool.java" />
         <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CommonTool.java" />
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" />
         <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/BaseFileUtil.java" />
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" />
+        <option value="$PROJECT_DIR$/bussiness/summary/pom.xml" />
+        <option value="$PROJECT_DIR$/bussiness/pom.xml" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
       </list>
     </option>
   </component>
@@ -240,6 +216,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,6 +228,11 @@
             <path>
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
               <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -257,59 +240,17 @@
               <item name="mg" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="generate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="generate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="generate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="generate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="generate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ibasic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588088181010" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588172844401" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -337,6 +278,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="ClassBuildUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mg.common.util.ClassBuildUtil" />
+      <module name="tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mg.common.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClassBuildUtil" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -348,12 +309,14 @@
       <option name="presentableId" value="Default" />
       <updated>1588081073588</updated>
       <workItem from="1588081080171" duration="4676000" />
-      <workItem from="1588085853257" duration="2321000" />
+      <workItem from="1588085853257" duration="3035000" />
+      <workItem from="1588163574383" duration="5013000" />
+      <workItem from="1588172949120" duration="114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6997000" />
+    <option name="totallyTimeSpent" value="12838000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,17 +331,18 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983108" visible="true" weight="0.25294748" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983108" visible="true" weight="0.25937834" />
       <window_info id="Structure" order="1" sideWeight="0.5016892" side_tool="true" weight="0.25294748" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5016892" side_tool="true" weight="0.25294748" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="REST Client" />
+      <window_info anchor="bottom" id="Sequence" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994641" visible="true" weight="0.49943376" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994641" visible="true" weight="0.51075876" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -388,17 +352,18 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295583" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005359" side_tool="true" weight="0.50169873" />
-      <window_info anchor="right" id="Json Parser" />
-      <window_info anchor="right" id="aiXcoder" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3295583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.329582" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.18220793" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Json Parser" order="9" />
+      <window_info anchor="right" id="aiXcoder" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,14 +394,25 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bussiness/mg-bussiness-api/pom.xml" />
     <entry file="file://$PROJECT_DIR$/bussiness/bsapi/pom.xml" />
     <entry file="file://$PROJECT_DIR$/bussiness/website/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bussiness/summary/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bussiness/node/pom.xml">
@@ -447,13 +423,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/empty/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bussiness/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileStore.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -501,12 +470,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
           <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
         </state>
       </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/PinYinUtil.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -540,20 +509,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/tool/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/common/.settings/org.eclipse.m2e.core.prefs">
       <provider selected="true" editor-type-id="text-editor" />
@@ -565,20 +526,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java">
+    <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CommonTool.java" />
+    <entry file="file://$PROJECT_DIR$/bussiness/compose/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/BaseFileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/generate/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
         </state>
       </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3864">
+          <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/pom.xml">
+      <provider selected="true" editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+            <element signature="e#4207#4208#0" expanded="true" />
+            <element signature="e#4266#4267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/CommonTool.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -592,14 +604,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IMakeUpBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="184">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/IMethodBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="115">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -607,46 +619,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CommonTool.java">
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4163">
-          <caret line="186" column="17" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/BaseFileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1825#1826#0" expanded="true" />
-            <element signature="e#1861#1862#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
