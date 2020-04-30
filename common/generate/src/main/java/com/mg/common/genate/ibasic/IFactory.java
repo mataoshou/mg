@@ -1,10 +1,12 @@
 package com.mg.common.genate.ibasic;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public abstract class IFactory<T extends IMakeUpBase> {
+public abstract class IFactory {
 
-    T t;
+    List<IMakeUpBase> makeList = new ArrayList();
 
     public abstract T setMakeUp(String name, Class toolClass,
                                    Class pojoClass, String[] methods, String sysName);
@@ -12,18 +14,27 @@ public abstract class IFactory<T extends IMakeUpBase> {
     public IFactory(String name, Class toolClass,
                     Class pojoClass, String[] methods, String sysName)
     {
-        t = setMakeUp(name, toolClass,
-                pojoClass,methods, sysName);
+        makeList.add(setMakeUp(name, toolClass,
+                pojoClass,methods, sysName));
+    }
+
+    public void addMakeUp()
+    {
+
     }
 
 
 
     public void build() throws Exception{
-        t.build();
+        for(IMakeUpBase base : makeList) {
+            base.build();
+        }
     }
 
     public void delete() throws Exception{
-        t.delete();
+        for(IMakeUpBase base : makeList) {
+            base.delete();
+        }
     }
 
     public void rebuild() throws Exception{

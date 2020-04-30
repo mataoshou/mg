@@ -11,10 +11,16 @@ import java.util.List;
 public abstract class IMakeUpBase {
 
 
-    public IMakeUpBase(String name, Class toolClass,
-                       Class pojoClass, String[] methods, String sysName)
+    public IMakeUpBase()
     {
 
+    }
+    
+    
+    public void initMakeUp(String name, Class toolClass,
+                           Class pojoClass, String[] methods, String sysName, ICreate item)
+    {
+        
     }
 
     protected void add(ICreate item)
@@ -32,7 +38,7 @@ public abstract class IMakeUpBase {
     public void rebuild() throws IOException{
         for(ICreate item : items)
         {
-            item.setConver(true);
+            item.setOverwrite(true);
             item.startCreate();
         }
 

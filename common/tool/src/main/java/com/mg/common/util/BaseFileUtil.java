@@ -25,7 +25,7 @@ public class BaseFileUtil
 	}
 
 	/**
-	 * 根据多段路径，获取文�?
+	 * 根据多段路径，获取文
 	 */
 	public static File getFile(String... paths)
 	{

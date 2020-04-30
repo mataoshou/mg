@@ -49,7 +49,7 @@ public class ClassBuildUtil {
     }
 
 
-    public String getImports(String[] imports) {
+    private String getImports(String[] imports) {
 
         String importData = "";
         /////////添加import
@@ -61,7 +61,7 @@ public class ClassBuildUtil {
         return importData;
     }
 
-    public String getAnnotation(String[] annotation) {
+    private String getAnnotation(String[] annotation) {
         String annotationData = "";
 
         if (annotation != null && annotation.length > 0) {
@@ -74,7 +74,7 @@ public class ClassBuildUtil {
     }
 
 
-    public String getClassType( boolean isclass) {
+    private String getClassType( boolean isclass) {
         ////////构建class内容
         String classType = "class";
         if (!isclass) {
@@ -84,7 +84,7 @@ public class ClassBuildUtil {
         return classType;
     }
 
-    public String getClassName(String className ,String baseName,String[] imps)
+    private String getClassName(String className ,String baseName,String[] imps)
     {
         String classNameData =className;
         if(className!=null&&baseName.length()>0) {
@@ -108,21 +108,6 @@ public class ClassBuildUtil {
 
 
 
-
-
-//    public void addMehod(MethodUtil methodUtil)
-//    {
-//        if(method_list==null)
-//        {
-//            method_list = new ArrayList();
-//        }
-//        if(methodUtil!=null)
-//        {
-//            method_list.add(methodUtil);
-//        }
-//    }
-
-
     String innerContent = "";
 
 
@@ -136,17 +121,9 @@ public class ClassBuildUtil {
         {
             innerContent ="";
 
-//            if(method_list.size()>0)
-//            {
-//                for(MethodUtil method : method_list)
-//                {
-//                    innerContent += method.methodToString();
-//                }
-//            }
-
         }
 
-        classConetent = classConetent.replace("##1",innerContent);
+        classConetent = classConetent.replace("#content#",innerContent);
         return classConetent;
     }
     /**
@@ -196,33 +173,6 @@ public class ClassBuildUtil {
     }
 
 
-    //获取属性的get方法
-    public String getGetMethodName(String valueName)
-    {
-        char first = Character.toUpperCase(valueName.charAt(0));
-        StringBuffer methodName = new StringBuffer("get" + valueName);
-        methodName.setCharAt(3, first);
-
-        return methodName.toString();
-    }
-    //获取属性的set方法
-    public String getSetMethodName(String valueName)
-    {
-        char first = Character.toUpperCase(valueName.charAt(0));
-        StringBuffer methodName = new StringBuffer("set" + valueName);
-        methodName.setCharAt(3, first);
-
-        return methodName.toString();
-    }
-
-    public String getLName(String name)
-    {
-        char first = Character.toLowerCase(name.charAt(0));
-        StringBuffer rName = new StringBuffer(name);
-        rName.setCharAt(0, first);
-        return  rName.toString();
-    }
-
     private String getContent(int tab_no,String tab,String content)
     {
         String tabs="";
@@ -233,43 +183,18 @@ public class ClassBuildUtil {
         return tabs+content+"\r";
     }
 
-    public static String getFileName(String fn)
-    {
-        if(fn.lastIndexOf(".")<=0)return fn;
-        String name =  fn.substring(0,fn.lastIndexOf("."));
-
-        return name;
-    }
-
-    public static String firstUpper(String str)
-    {
-        StringUtil stringUtil = new StringUtil();
-
-        String baseName = stringUtil.firstUpper(str);
-
-        return baseName;
-    }
-
-
     public String template()
     {
         String classTemplate =
-                        "package #packageName# \n\n" +
-                        "#import#\n\n"+
-                        "#annotation#\n\n" +
-                        "public #classType# #className# {\n\n" +
-                        "#content#\n\n"+
+                        "package #packageName# " +"\r\n"+
+                        "#import#"+"\r\n"+
+                        "#annotation#"+"\r\n"+
+                        "public #classType# #className# {" +"\r\n"+
+                        "#content#"+"\r\n"+
                         "}\n";
 
         return classTemplate;
 
     }
 
-    public static void main(String[] args) {
-        ClassBuildUtil util = new ClassBuildUtil();
-        util.classInit("matao","ss",new String[]{"String"},
-                "root",null,true,"String","data");
-
-        System.out.println(util.classConetent);
-    }
 }

@@ -8,23 +8,24 @@ public class CreateItem {
 
     //包名
     private String packageName;
-    //常量包名
-    private  String constantPackageName;
+
     //对象名称
     private String name;
+
     //工具类
     private Class toolClass;
+
     //pojo类
     private Class pojoClass;
+
     //生成方法
     private String[] methods;
+
     //系统名称
     private String sysName;
 
     //对象文件路径
     private File classFile;
-    //常量对象文件路径
-    private File constantFile;
 
     //POJO的类名
     private String pojoClassName;
@@ -38,10 +39,13 @@ public class CreateItem {
     //工具类类名
     private String toolClassFullName;
 
+    //是否覆盖原来的文件
+    private boolean overwrite;
+
 
 
     public CreateItem(String name, Class toolClass,
-                      Class pojoClass, String[] methods, String sysName, String packageName,String constantPackageName)
+                      Class pojoClass, String[] methods, String sysName, String packageName)
     {
 
         StringUtil stringUtil = new StringUtil();
@@ -61,20 +65,19 @@ public class CreateItem {
             this.toolClassFullName = toolClass.getName();
         }
 
-        if(constantPackageName!=null)
-        {
-            this.constantPackageName = constantPackageName.trim();
-        }
     }
 
 
+    public boolean isOverwrite() {
+        return overwrite;
+    }
+
+    public void setOverwrite(boolean overwrite) {
+        this.overwrite = overwrite;
+    }
 
     public void setPackageName(String packageName) {
         this.packageName = packageName;
-    }
-
-    public void setConstantPackageName(String constantPackageName) {
-        this.constantPackageName = constantPackageName;
     }
 
     public String getName() {
@@ -125,14 +128,6 @@ public class CreateItem {
         this.classFile = classFile;
     }
 
-    public File getConstantFile() {
-        return constantFile;
-    }
-
-    public void setConstantFile(File constantFile) {
-        this.constantFile = constantFile;
-    }
-
     public String getPojoClassName() {
         return pojoClassName;
     }
@@ -149,13 +144,8 @@ public class CreateItem {
         this.toolClassName = toolClassName;
     }
 
-
     public String getPackageName() {
         return packageName;
-    }
-
-    public String getConstantPackageName() {
-        return constantPackageName;
     }
 
     public String getPojoClassFullName() {

@@ -22,16 +22,7 @@ public abstract class ICreate {
 
     private CreateItem item ;
 
-    private boolean conver = false;
-
-
-
-    private File classFile ;
-    private File constantFile;
-
-    private String className;
-
-    private String constantClassName;
+    private File classFile;
 
     public CreateItem getItem() {
         return item;
@@ -48,9 +39,8 @@ public abstract class ICreate {
     public ICreate(String name, Class toolClass,
                    Class pojoClass, String[] methods, String sysName)
     {
-
-        this.item = new CreateItem(name,toolClass,pojoClass,methods,sysName,getPackageName(),getConstantPackageName());
-        setConver(false);
+        this.item = new CreateItem(name,toolClass,pojoClass,methods,sysName,getPackageName());
+        item.setOverwrite(false);
         initSys();
         classInit();
     }
@@ -61,9 +51,6 @@ public abstract class ICreate {
      */
     private void initSys(){
         this.classFile = initFilePath(item.getPackageName(),getClassName());
-        if(isCreateConstant()) {
-            this.constantFile = initFilePath(item.getConstantPackageName(), getConstantClassName());
-        }
     }
 
     /**
@@ -109,23 +96,11 @@ public abstract class ICreate {
             return false;
         }
 
-        if(isCreateConstant()&&(item.getConstantPackageName()==null||item.getConstantPackageName().length()<=0))
-        {
-            log.info("constantPackageName未初始化，请设置constantPackageName!!");
-            return false;
-        }
-
-        if(!this.conver)
+        if(!item.isOverwrite())
         {
             if(this.classFile.exists())
             {
                 log.info("文件已存在:" + this.classFile.getPath());
-                return false;
-            }
-
-            if(this.isCreateConstant()&&this.constantFile.exists())
-            {
-                log.info("文件已存在:" +this.constantFile.getPath());
                 return false;
             }
         }
@@ -163,14 +138,6 @@ public abstract class ICreate {
     }
 
 
-    /**
-     * 是否进行覆盖重写
-     * @return
-     */
-    public void setConver(boolean conver){
-        this.conver = conver;
-    }
-
 
     /**
      * 删除已生成文件
@@ -182,13 +149,7 @@ public abstract class ICreate {
             BaseFileUtil.delete(this.classFile);
         }
 
-        if(isCreateConstant()&&this.constantFile.exists())
-        {
-            BaseFileUtil.delete(this.constantFile);
-        }
     }
-
-
 
 
     private String  getClassContent(String content){
@@ -214,9 +175,7 @@ public abstract class ICreate {
 
     private void editClass(boolean isNew) throws IOException {
         ClassBuildUtil classBuildUtil = createClass();
-        ClassBuildUtil constantClassBuild = createConstantClass();
-
-        preEditClass(isNew,classBuildUtil,constantClassBuild);
+        preEditClass(isNew,classBuildUtil);
 
         if(this.item.getMethods()!=null&&this.item.getMethods().length>0)
         {
@@ -234,25 +193,10 @@ public abstract class ICreate {
             classBuildUtil.finish(this.classFile);
         }
 
-        //构建constant文件
-        if(this.isCreateConstant()) {
-
-            if(this.item.getMethods()!=null||this.item.getMethods().length>0)
-            {
-                for (String method : this.item.getMethods()) {
-                    createConstantMethod(constantClassBuild, method);
-                    constantClassBuild.addTabContent("\r");
-                }
-            }
-
-            if(constantClassBuild!=null) {
-                constantClassBuild.finish(this.constantFile);
-            }
-        }
     }
 
 
-    private void preEditClass(boolean isNew, ClassBuildUtil classBuildUtil, ClassBuildUtil constantClassBuild) throws IOException {
+    private void preEditClass(boolean isNew, ClassBuildUtil classBuildUtil) throws IOException {
         if(classBuildUtil==null)
         {
             classBuildUtil = new ClassBuildUtil();
@@ -267,33 +211,12 @@ public abstract class ICreate {
             createPreMethod(classBuildUtil);
             classBuildUtil.addTabContent("\r");
         }
-
-        if(this.isCreateConstant()) {
-            if (constantClassBuild == null) {
-                constantClassBuild = new ClassBuildUtil();
-            }
-            if (!isNew) {
-                constantClassBuild.addTabContent(getContent(this.constantFile));
-                constantClassBuild.addTabContent("\r");
-            }
-
-            if (isNew) {
-                createConstantPreMethod(constantClassBuild);
-                constantClassBuild.addTabContent("\r");
-            }
-        }
-
     }
 
 
     public void empty()
     {
         BaseFileUtil.delete(this.classFile.getParentFile());
-
-        if(this.isCreateConstant())
-        {
-            BaseFileUtil.delete(this.constantFile.getParentFile());
-        }
     }
 
 
@@ -307,20 +230,11 @@ public abstract class ICreate {
         return this.getClassNamePre() + item.getName() + this.getClassNameLast();
     }
 
-    public String getConstantClassName()
-    {
-        return this.getConstantClassNamePre() + item.getName() + this.getConstantClassNameLast();
-    }
-
     public String getClassFullName()
     {
         return this.getPackageName() +"."+ this.getClassNamePre() + item.getName() + this.getClassNameLast();
     }
 
-    public String getConstantClassFullName()
-    {
-        return this.getConstantPackageName() +"." + this.getConstantClassNamePre() + item.getName() + this.getConstantClassNameLast();
-    }
 
     public File getClassFile() {
         return classFile;
@@ -328,6 +242,12 @@ public abstract class ICreate {
 
     public void setClassFile(File classFile) {
         this.classFile = classFile;
+    }
+
+
+    public void setOverwrite(Boolean overwrite)
+    {
+        this.item.setOverwrite(overwrite);
     }
 
     /**
@@ -338,15 +258,12 @@ public abstract class ICreate {
         return true;
     }
 
-
     //////////////////////////////////抽象函数////////////////////////////////////////
 
     /**
      * 构建文件
      */
     protected abstract ClassBuildUtil createClass() throws IOException;
-
-
 
 
     /**
@@ -366,28 +283,6 @@ public abstract class ICreate {
 
 
     /**
-     * 构建常量文件
-     */
-    protected abstract ClassBuildUtil createConstantClass() throws IOException;
-
-
-
-
-    /**
-     * 构建文件
-     */
-    protected abstract void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException;
-
-
-    /**
-     * 构建常量文件内容
-     */
-    protected abstract void createConstantMethod(ClassBuildUtil classBuildUtil,String methodName) throws IOException;
-
-
-
-
-    /**
      * 初始化
      */
     protected  abstract void classInit();
@@ -397,18 +292,6 @@ public abstract class ICreate {
      * @return
      */
     protected abstract String getPackageName();
-
-    /**
-     * 是否创建常量类
-     * @return
-     */
-    protected abstract boolean isCreateConstant();
-
-    /**
-     * 设置常量类的包名
-     * @return
-     */
-    protected abstract String getConstantPackageName();
 
 
     /**
@@ -425,21 +308,5 @@ public abstract class ICreate {
      * @return
      */
     protected abstract String getClassNameLast();
-
-    /**
-     * 常量类名称 前缀
-     * @return
-     */
-    protected String getConstantClassNamePre(){
-        return  "";
-    }
-
-
-    /**
-     * 常量类名称 后缀
-     * @return
-     */
-    protected abstract String getConstantClassNameLast();
-
 
 }
