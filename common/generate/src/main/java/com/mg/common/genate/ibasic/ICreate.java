@@ -2,7 +2,7 @@ package com.mg.common.genate.ibasic;
 
 
 import com.mg.common.util.BaseFileUtil;
-import com.mg.common.util.ClassBuildUtil;
+import com.mg.common.util.ClassUtil;
 import com.mg.common.util.CommonTool;
 import com.mg.common.util.FileStore;
 import lombok.extern.slf4j.Slf4j;
@@ -33,6 +33,14 @@ public abstract class ICreate {
     }
 
 
+
+    //类构造工具
+    private ClassUtil classbuildUtils = new ClassUtil();
+
+
+
+
+
     ////////////////////////////////////////////////////////模板函数
 
 
@@ -41,16 +49,23 @@ public abstract class ICreate {
     {
         this.item = new CreateItem(name,toolClass,pojoClass,methods,sysName,getPackageName());
         item.setOverwrite(false);
-        initSys();
+        initBegin();
         classInit();
+        initEnd();
     }
 
 
     /**
      * 初始化
      */
-    private void initSys(){
+    private void initBegin(){
+        log.info(String.format("开始初始化%s对象",item.getName()));
         this.classFile = initFilePath(item.getPackageName(),getClassName());
+    }
+
+    private void initEnd()
+    {
+        log.info(String.format("完成初始化%s对象",item.getName()));
     }
 
     /**
@@ -68,9 +83,9 @@ public abstract class ICreate {
             log.info("系统初始化失败，请检查是否有参数未完成初始化或生成文件已存在，停止生成文件!!");
             return;
         }
-
+        this.item.setOverwrite(true);
         log.info("开始生成新对象!!");
-        editClass(true);
+        editClass();
         log.info("完成对象新生成!!");
     }
 
@@ -79,8 +94,9 @@ public abstract class ICreate {
      */
     public void startEdit() throws IOException {
 
+        this.item.setOverwrite(false);
         log.info("开始对象内容添加!!");
-        editClass(false);
+        editClass();
         log.info("完成对象内容添加!!");
     }
 
@@ -173,9 +189,9 @@ public abstract class ICreate {
     }
 
 
-    private void editClass(boolean isNew) throws IOException {
-        ClassBuildUtil classBuildUtil = createClass();
-        preEditClass(isNew,classBuildUtil);
+    private void editClass() throws IOException {
+        ClassUtil classBuildUtil = createClass();
+        preEditClass(classBuildUtil);
 
         if(this.item.getMethods()!=null&&this.item.getMethods().length>0)
         {
@@ -184,7 +200,7 @@ public abstract class ICreate {
                 classBuildUtil.addTabContent("\r");
             }
         }
-        if(isNew) {
+        if(this.item.isOverwrite()) {
             createLastMethod(classBuildUtil);
         }
 
@@ -196,18 +212,18 @@ public abstract class ICreate {
     }
 
 
-    private void preEditClass(boolean isNew, ClassBuildUtil classBuildUtil) throws IOException {
+    private void preEditClass(ClassUtil classBuildUtil) throws IOException {
         if(classBuildUtil==null)
         {
-            classBuildUtil = new ClassBuildUtil();
+            classBuildUtil = new ClassUtil();
         }
 
-        if(!isNew)
+        if(!this.item.isOverwrite())
         {
             classBuildUtil.addTabContent(getContent(this.classFile));
             classBuildUtil.addTabContent("\r");
         }
-        if(isNew) {
+        if(this.item.isOverwrite()) {
             createPreMethod(classBuildUtil);
             classBuildUtil.addTabContent("\r");
         }
@@ -263,23 +279,23 @@ public abstract class ICreate {
     /**
      * 构建文件
      */
-    protected abstract ClassBuildUtil createClass() throws IOException;
+    protected abstract ClassUtil createClass() throws IOException;
 
 
     /**
      * 构建文件
      */
-    protected abstract void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException;
+    protected abstract void createPreMethod(ClassUtil classBuildUtil) throws IOException;
 
     /**
      * 构建文件
      */
-    protected abstract void createMethod(ClassBuildUtil classBuildUtil,String methodName) throws IOException;
+    protected abstract void createMethod(ClassUtil classBuildUtil, String methodName) throws IOException;
 
     /**
      * 构建文件
      */
-    protected abstract void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException;
+    protected abstract void createLastMethod(ClassUtil classBuildUtil) throws IOException;
 
 
     /**

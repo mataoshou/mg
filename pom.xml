@@ -12,6 +12,7 @@
         <module>common</module>
         <module>bussiness</module>
         <module>empty</module>
+        <module>knowledge</module>
     </modules>
 
     <properties>
