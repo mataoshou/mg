@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="42" selection-start-line="5" selection-end-line="15" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/Test.java" />
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/ConvertFactory.java" />
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/ConvertMakeUp.java" />
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ParamUnit.java" />
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java" />
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/CreateConvertBase.java" />
+        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ClassItem.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassUtil.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ParamItem.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/LineItem.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/MethodItem.java" />
+        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/TestUnit.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteProduct1.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/util/ShowArr.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Factory1.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="" />
+      <created>1588081073588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588081073588</updated>
+      <workItem from="1588081080171" duration="4676000" />
+      <workItem from="1588085853257" duration="3035000" />
+      <workItem from="1588163574383" duration="5013000" />
+      <workItem from="1588172949120" duration="114000" />
+      <workItem from="1588210849287" duration="1570000" />
+      <workItem from="1588215546257" duration="2821000" />
+      <workItem from="1588225396891" duration="7654000" />
+      <workItem from="1588323871495" duration="17051000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1936" height="1048" extended-state="0" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="REST Client" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Sequence" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32993197" />
+      <window_info anchor="bottom" id="Run with VisualVM" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug with VisualVM" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39909297" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Json Parser" />
+      <window_info anchor="right" id="aiXcoder" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
