@@ -38,8 +38,7 @@ public class CreateItem {
 
 
 
-    public CreateItem(String name, Class toolClass,
-                      Class pojoClass, String[] methods, String sysName, String packageName)
+    public CreateItem(String name, String[] methods, String packageName)
     {
 
         StringUtil stringUtil = new StringUtil();

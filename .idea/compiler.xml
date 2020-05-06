@@ -7,18 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="compose" />
-        <module name="dao" />
-        <module name="empty" />
-        <module name="generate" />
-        <module name="mg-common-tool" />
-        <module name="mg-dao" />
-        <module name="mg-empty" />
-        <module name="mg-generate" />
-        <module name="mg-service-compose" />
         <module name="mg-service-node" />
-        <module name="mg-website" />
-        <module name="node" />
+        <module name="empty" />
+        <module name="mg-empty" />
         <module name="tool" />
+        <module name="generate" />
+        <module name="mg-service-compose" />
+        <module name="dao" />
+        <module name="mg-website" />
+        <module name="knowledge" />
+        <module name="mg-dao" />
+        <module name="node" />
+        <module name="mg-generate" />
+        <module name="mg-common-tool" />
         <module name="website" />
       </profile>
     </annotationProcessing>

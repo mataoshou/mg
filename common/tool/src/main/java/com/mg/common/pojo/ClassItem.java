@@ -105,4 +105,5 @@ public class ClassItem {
     {
         this.annotations.add(value);
     }
+
 }

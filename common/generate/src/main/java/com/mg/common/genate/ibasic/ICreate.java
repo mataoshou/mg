@@ -1,16 +1,16 @@
 package com.mg.common.genate.ibasic;
 
 
+import com.mg.common.unit.ClassUnit;
+import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.BaseFileUtil;
-import com.mg.common.util.ClassUtil;
 import com.mg.common.util.CommonTool;
-import com.mg.common.util.FileStore;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 单文件生成类
@@ -33,25 +33,34 @@ public abstract class ICreate {
     }
 
 
+    Map<String,Object> paramItems = new HashMap<>();
+
+
 
     //类构造工具
-    private ClassUtil classbuildUtils = new ClassUtil();
-
-
-
+    private ClassUnit unit = new ClassUnit();
 
 
     ////////////////////////////////////////////////////////模板函数
 
 
-    public ICreate(String name, Class toolClass,
-                   Class pojoClass, String[] methods, String sysName)
+    public ICreate(String name, String[] methods)
     {
-        this.item = new CreateItem(name,toolClass,pojoClass,methods,sysName,getPackageName());
+        this.item = new CreateItem(name,methods,getPackageName());
         item.setOverwrite(false);
+
+        unit.setName(name);
+        unit.setPackageName(getPackageName());
+
+
         initBegin();
         classInit();
         initEnd();
+    }
+
+    public void addParamItem(String key,Object value)
+    {
+        paramItems.put(key,value);
     }
 
 
@@ -106,12 +115,6 @@ public abstract class ICreate {
      */
     private boolean isFinishInit()
     {
-        if(item.getPackageName()==null||item.getPackageName().length()<=0)
-        {
-            log.info("packageName未初始化，请设置packageName!!");
-            return false;
-        }
-
         if(!item.isOverwrite())
         {
             if(this.classFile.exists())
@@ -168,55 +171,30 @@ public abstract class ICreate {
     }
 
 
-    private String  getClassContent(String content){
-        String reg = "\\{([\\w\\W]*)}";
-
-        Pattern pattern = Pattern.compile(reg);
-        Matcher matcher = pattern.matcher(content);
-        while (matcher.find())
-        {
-            String hit = matcher.group(1);
-            return hit.trim();
-        }
-
-        return  "";
-    }
-
-
-    private String getContent(File file) throws IOException {
-        String content = FileStore.getContent(file);
-        return getClassContent(content);
-    }
-
 
     private void editClass() throws IOException {
-        ClassUtil classBuildUtil = createClass();
-        preEditClass(classBuildUtil);
+        preEditClass();
 
         if(this.item.getMethods()!=null&&this.item.getMethods().length>0)
         {
             for (String method : this.item.getMethods()) {
-                createMethod(classBuildUtil, method);
+                createMethod(method);
                 classBuildUtil.addTabContent("\r");
             }
         }
         if(this.item.isOverwrite()) {
-            createLastMethod(classBuildUtil);
+            createLastMethod();
         }
 
         //结束class 构建
-        if(classBuildUtil!=null) {
-            classBuildUtil.finish(this.classFile);
+        if(unit!=null) {
+            finish(this.classFile);
         }
 
     }
 
 
-    private void preEditClass(ClassUtil classBuildUtil) throws IOException {
-        if(classBuildUtil==null)
-        {
-            classBuildUtil = new ClassUtil();
-        }
+    private void preEditClass() throws IOException {
 
         if(!this.item.isOverwrite())
         {
@@ -276,26 +254,21 @@ public abstract class ICreate {
 
     //////////////////////////////////抽象函数////////////////////////////////////////
 
-    /**
-     * 构建文件
-     */
-    protected abstract ClassUtil createClass() throws IOException;
-
 
     /**
      * 构建文件
      */
-    protected abstract void createPreMethod(ClassUtil classBuildUtil) throws IOException;
+    protected abstract void createPreMethod(ClassUnit unit) throws IOException;
 
     /**
      * 构建文件
      */
-    protected abstract void createMethod(ClassUtil classBuildUtil, String methodName) throws IOException;
+    protected abstract void createMethod(MethodUnit unit, String methodName) throws IOException;
 
     /**
      * 构建文件
      */
-    protected abstract void createLastMethod(ClassUtil classBuildUtil) throws IOException;
+    protected abstract void createLastMethod(ClassUnit unit) throws IOException;
 
 
     /**
@@ -309,20 +282,5 @@ public abstract class ICreate {
      */
     protected abstract String getPackageName();
 
-
-    /**
-     * 类名称 前缀
-     * @return
-     */
-    protected String getClassNamePre(){
-        return "";
-    }
-
-
-    /**
-     * 类名称 后缀
-     * @return
-     */
-    protected abstract String getClassNameLast();
 
 }
