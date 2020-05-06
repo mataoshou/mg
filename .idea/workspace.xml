@@ -20,185 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/ConvertFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/ConvertMakeUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/ConvertTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/CreateConvertBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/CreateConvertMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/CreateConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/MapperItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/PropertyItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ClassItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/LineItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/MethodItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ParamItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/knowledge.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/util/ShowArr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/抽象工厂模式.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/adapter/Adaptee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/adapter/Adapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/adapter/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/adapter/ConcreteTarget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/adapter/Target.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/bridge/Abstraction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/bridge/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/bridge/ConcreteImplementor1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/bridge/ConcreteImplementor2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/bridge/Implementor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/bridge/RefinedAbstraction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/builder/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/builder/ConcreteBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/builder/Director.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/builder/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/ConcreteCommand1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/ConcreteCommand2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/ConcreteReceiver1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/ConcreteReceiver2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/Invoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/Receiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/composite/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/composite/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/composite/Composite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/composite/Leaf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/ConcreteComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/ConcreteDecorator1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/ConcreteDecorator2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/Decorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/ClassA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/ClassB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/ClassC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/Facade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteProduct1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteProduct2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/Creator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/SimpleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/flyweight/ConcreteFlyWeight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/flyweight/FlyWeight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/flyweight/FlyweightFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/ConcreteHandler1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/ConcreteHandler2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/ConcreteHandler3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/handler/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/interpreter/Clinet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/interpreter/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/interpreter/Expression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/interpreter/NonterminalExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/interpreter/TerminalExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/iterator/Aggregate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/iterator/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/iterator/ConcreteAggregate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/iterator/ConcreteIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/iterator/Iterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/media/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/media/Colleague.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/media/ConcreteColleague1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/media/ConcreteColleague2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/media/ConcreteMediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/media/Mediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/memento/Caretaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/memento/Clent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/memento/Memento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/memento/Originator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/observer/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/observer/ConcreteObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/observer/ConcreteSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/observer/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/prototype/PrototypePattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/Proxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/RealSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/dynamic/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/dynamic/DynamicProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/dynamic/RealSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/dynamic/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/dynamic/SubjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/force/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/force/ISubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/force/ProxySubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/force/RealSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/single/SafeSinglePattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/single/SinglePattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/single/UnsafeSinglePattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/state/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/state/ConcreteState1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/state/ConcreteState2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/state/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/state/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/strategy/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/strategy/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/strategy/ConcreteStrategy1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/strategy/ConcreteStrategy2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/strategy/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/strategy/Strategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/template/AbstractClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/template/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/template/ConcreteClass1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/template/ConcreteClass2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/visitor/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/visitor/ConcreteElement1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/visitor/ConcreteElement2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/visitor/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/visitor/IVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/visitor/ObjectStruture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/visitor/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/CreateItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/CreateItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/ICreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/ICreate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IMakeUpBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IMakeUpBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IMethodBase$ParamItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IMethodBase$ParamItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IMethodBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/ibasic/IMethodBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/BaseFileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/BaseFileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/ClassBuildUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/ClassBuildUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/CommonTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/CommonTool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Convert.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Convert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/EmptyCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/EmptyCheck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileType$FileItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileType$FileItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/GuidUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/GuidUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/HexUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/HexUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Md5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Md5Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/MethodUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/MethodUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/PinYinUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/PinYinUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/TypeConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/TypeConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/.factorypath" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/.factorypath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/ConvertTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/ConvertTools.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/CreateConvertMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/CreateConvertMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/CreateConvertUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/CreateConvertUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/MapperItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/MapperItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/PropertyItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/target/classes/com/mg/common/genate/mgconvert/PropertyItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/.factorypath" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/.factorypath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/unit/TestUnit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/ClassBuildUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/doc/设计模式/工厂模式.docx" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/doc/设计模式/工厂模式.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bussiness/node/target/" />
     <ignored path="$PROJECT_DIR$/bussiness/target/" />
@@ -226,91 +64,96 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/command/ConcreteReceiver2.java">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="2" selection-start-line="2" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/ConcreteComponent.java">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/ConcreteDecorator1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/ClassA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/ClassB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/ClassC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/facade/Facade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/dynamic/Client.java">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/util/ShowArr.java">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#298#299#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -354,13 +197,20 @@
         <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java" />
         <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/util/ShowArr.java" />
         <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Factory1.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java" />
+        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java" />
       </list>
     </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1936" />
@@ -424,18 +274,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="knowledge" type="462c0819:PsiDirectoryNode" />
-              <item name="alt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
-              <item name="alt" type="462c0819:PsiDirectoryNode" />
-              <item name="sort" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
@@ -446,6 +285,40 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="knowledge" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="abstractfactory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="MethodFactory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -461,7 +334,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588682445494" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588775921280" />
     <property name="last_opened_file_path" value="D:/mg.frame/core/mg.base.desgin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -472,11 +345,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\core\mg\knowledge\src\main\java\com\mg\knowledge\doc\设计模式" />
+      <recent name="D:\core\mg\knowledge\src\main\java\com\mg\knowledge\doc\算法" />
+      <recent name="D:\core\mg\knowledge\src\main\java\com\mg\knowledge\doc\基础知识点" />
       <recent name="D:\core\mg\knowledge\src\main\java\com\mg\knowledge\design" />
       <recent name="D:\core\mg\common\generate\src\main\java\com\mg\common\genate\mgconvert" />
-      <recent name="D:\core\mg\common\tool\src\main\java\com\mg\common\genate" />
-      <recent name="D:\core\mg\common\generate\src\main\java\com\mg\common\genate\ibasic" />
-      <recent name="D:\core\mg\common\tool\src\main\java\com\mg\common\util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -491,7 +364,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.InserSort">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="ClassUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mg.common.util.ClassUtil" />
       <module name="tool" />
@@ -505,12 +378,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mg.knowledge.design.abstractfactory.Client" />
+      <module name="knowledge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mg.knowledge.design.abstractfactory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InserSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mg.knowledge.alt.sort.InserSort" />
       <module name="knowledge" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.mg.knowledge.alt.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mg.knowledge.design.factory.MethodFactory.Main" />
+      <module name="knowledge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mg.knowledge.design.factory.MethodFactory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -535,9 +434,13 @@
       <item itemvalue="Application.ClassUtil" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.InserSort" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Client" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.InserSort" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.ClassUtil" />
@@ -561,12 +464,12 @@
       <workItem from="1588210849287" duration="1570000" />
       <workItem from="1588215546257" duration="2821000" />
       <workItem from="1588225396891" duration="7654000" />
-      <workItem from="1588323871495" duration="13069000" />
+      <workItem from="1588323871495" duration="16316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13069000" />
+    <option name="totallyTimeSpent" value="16316000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,14 +481,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1936" height="1048" extended-state="0" />
+    <frame x="-9" y="-9" width="1936" height="1048" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="REST Client" />
       <window_info anchor="bottom" id="Terminal" />
@@ -599,8 +503,8 @@
       <window_info anchor="bottom" id="Debug with VisualVM" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39909297" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39909297" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -703,96 +607,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/JDK/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="780" column="35" selection-start-line="780" selection-start-column="30" selection-end-line="780" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/JDK/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="675" column="22" selection-start-line="675" selection-start-column="22" selection-end-line="675" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/TestUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/MethodItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1035#1036#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1387#1388#0" expanded="true" />
-            <element signature="e#1451#1452#0" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
-            <element signature="e#1831#1832#0" expanded="true" />
-            <element signature="e#1867#1868#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/composite/Leaf.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/decorator/ConcreteDecorator2.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/proxy/force/RealSubject.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -808,33 +622,6 @@
     <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/observer/Client.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/Client.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteProduct1.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -842,42 +629,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -1054,8 +806,151 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="338">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteProduct1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/SimpleFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="15" selection-start-line="15" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/Creator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteProduct2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
