@@ -8,6 +8,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Slf4j
 public class ClassUnit {
@@ -17,7 +19,7 @@ public class ClassUnit {
 
     String content = "";
 
-    List<String> innerContent =  new ArrayList<>();
+    List<MethodUnit> methods =  new ArrayList<>();
 
 
     public void init()
@@ -29,9 +31,28 @@ public class ClassUnit {
                 .replace("#annotation#",getAnnotation(item.getAnnotations()))
                 .replace("#classType#",getClassType(item.getType()))
                 .replace("#className#",getClassName(item.getName(),item.getBaseName(),item.getImplementStringList()));
-
+    }
+    public void setName(String name) {
+        this.item.setName(name);
     }
 
+    public void setPackageName(String packageName) {
+        this.item.setPackageName(packageName);
+    }
+
+    public void setBaseName(String baseName) {
+        this.setBaseName(baseName);
+    }
+
+    public void addImport(String imp)
+    {
+        this.item.addImport(imp);
+    }
+
+    public void addAnnotion(String ann)
+    {
+        this.item.addAnnotation(ann);
+    }
 
     private String getImports(List<String> imports) {
 
@@ -97,14 +118,18 @@ public class ClassUnit {
      */
     public String finish()
     {
-        if(innerContent==null||innerContent.size()==0)
+        if(methods==null||methods.size()==0)
         {
             return "";
 
         }
-
-        classConetent = classConetent.replace("#content#",innerContent);
-        return classConetent;
+        String inner ="";
+        for(MethodUnit unit : methods)
+        {
+            inner += unit.getContent() +"\r\n";
+        }
+        content = content.replace("#content#",inner);
+        return content;
     }
 
 
@@ -117,9 +142,16 @@ public class ClassUnit {
         log.info("开始生成文件：" + file.getPath());
         file.getParentFile().mkdirs();
         FileOutputStream out = new FileOutputStream(file);
-        out.write(classConetent.getBytes("UTF-8"));
+        out.write(content.getBytes("UTF-8"));
         out.close();
         log.info("文件生成成功！！");
+    }
+
+
+    public void editClass(String content)
+    {
+        String body = getClassContent(content);
+        this.content = content.replace(body,body+"\r\n#content#");
     }
 
 
@@ -133,8 +165,39 @@ public class ClassUnit {
                         "public #classType# #className# {" +"\r\n"+
                         "#content#"+"\r\n"+
                         "}\n";
-
         return classTemplate;
+    }
+
+
+
+
+
+    public MethodUnit createMethod(String name)
+    {
+        MethodUnit unit = new MethodUnit();
+        unit.setName(name);
+
+        return unit;
+    }
+
+    public void addMethod(MethodUnit unit)
+    {
+        this.methods.add(unit);
+    }
+
+
+    private String  getClassContent(String content){
+        String reg = "\\{([\\w\\W]*)}";
+
+        Pattern pattern = Pattern.compile(reg);
+        Matcher matcher = pattern.matcher(content);
+        while (matcher.find())
+        {
+            String hit = matcher.group(1);
+            return hit.trim();
+        }
+
+        return  "";
     }
 
 

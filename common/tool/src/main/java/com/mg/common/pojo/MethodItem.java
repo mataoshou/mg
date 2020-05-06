@@ -6,7 +6,7 @@ import java.util.List;
 public class MethodItem {
 
     /**
-     * 函数类型  1 有body  2没有
+     * 函数类型  1 有body  2没有body
      */
     private int type;
     /**
@@ -29,6 +29,8 @@ public class MethodItem {
 
 
     private List<LineItem> lines = new ArrayList<>();
+
+    private List<String> annotations = new ArrayList<>();
 
 
     public int getType() {
@@ -71,6 +73,16 @@ public class MethodItem {
         this.params = params;
     }
 
+
+    public void addParam(String pType,String pName)
+    {
+        ParamItem item = new ParamItem();
+        item.setKey(pType);
+        item.setValue(pName);
+        this.params.add(item);
+    }
+
+
     public List<LineItem> getLines() {
         return lines;
     }
@@ -99,5 +111,18 @@ public class MethodItem {
     public void addLine(LineItem line)
     {
         this.lines.add(line);
+    }
+
+    public List<String> getAnnotations() {
+        return annotations;
+    }
+
+    public void setAnnotations(List<String> annotations) {
+        this.annotations = annotations;
+    }
+
+    public void addAnnotation(String annotation)
+    {
+        this.annotations.add(annotation);
     }
 }
