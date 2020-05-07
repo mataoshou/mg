@@ -44,14 +44,16 @@ public class ClassUnit {
         this.setBaseName(baseName);
     }
 
-    public void addImport(String imp)
+    public ClassUnit addImport(String imp)
     {
         this.item.addImport(imp);
+        return this;
     }
 
-    public void addAnnotion(String ann)
+    public ClassUnit addAnnotion(String ann)
     {
         this.item.addAnnotation(ann);
+        return this;
     }
 
     private String getImports(List<String> imports) {

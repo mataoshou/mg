@@ -1,172 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="" />
+    <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/CreateConvertBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/CreateConvertBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="42" selection-start-line="5" selection-end-line="15" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/Test.java" />
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/ConvertFactory.java" />
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/ConvertMakeUp.java" />
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ParamUnit.java" />
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/CreateItem.java" />
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/mgconvert/CreateConvertBase.java" />
-        <option value="$PROJECT_DIR$/common/generate/src/main/java/com/mg/common/genate/ibasic/ICreate.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ClassItem.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassBuildUtil.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/ClassUtil.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ParamItem.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/LineItem.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/MethodItem.java" />
-        <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/TestUnit.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/ConcreteProduct1.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/util/ShowArr.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Factory1.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java" />
-        <option value="$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java" />
-      </list>
-    </option>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1bZBjJpxbTlLzr67H4NBnbBgnyX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../shineon.frame/shineon/core" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -186,51 +55,12 @@
       <workItem from="1588215546257" duration="2821000" />
       <workItem from="1588225396891" duration="7654000" />
       <workItem from="1588323871495" duration="17051000" />
+      <workItem from="1588829871164" duration="9716000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1936" height="1048" extended-state="0" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="REST Client" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Sequence" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32993197" />
-      <window_info anchor="bottom" id="Run with VisualVM" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Debug with VisualVM" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32993197" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39909297" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Json Parser" />
-      <window_info anchor="right" id="aiXcoder" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
@@ -247,6 +77,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1588831287256">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588831287256" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588839069733">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588839069733" />
+    <state x="461" y="151" key="SettingsEditor" timestamp="1588839820425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588839820425" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -254,7 +99,6 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/alt/sort/InserSort.java</url>
           <line>14</line>
-          <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

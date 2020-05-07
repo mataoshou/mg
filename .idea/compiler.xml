@@ -9,9 +9,9 @@
         <module name="compose" />
         <module name="mg-service-node" />
         <module name="empty" />
-        <module name="mg-empty" />
-        <module name="tool" />
         <module name="generate" />
+        <module name="tool" />
+        <module name="mg-empty" />
         <module name="mg-service-compose" />
         <module name="dao" />
         <module name="mg-website" />

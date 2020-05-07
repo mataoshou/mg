@@ -5,6 +5,7 @@ import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.BaseFileUtil;
 import com.mg.common.util.CommonTool;
+import com.mg.common.util.FileStore;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
@@ -32,10 +33,7 @@ public abstract class ICreate {
         this.item = item;
     }
 
-
     Map<String,Object> paramItems = new HashMap<>();
-
-
 
     //类构造工具
     private ClassUnit unit = new ClassUnit();
@@ -49,12 +47,12 @@ public abstract class ICreate {
         this.item = new CreateItem(name,methods,getPackageName());
         item.setOverwrite(false);
 
-        unit.setName(name);
+        unit.setName(getClassName(name));
         unit.setPackageName(getPackageName());
 
 
         initBegin();
-        classInit();
+        classInit(unit);
         initEnd();
     }
 
@@ -69,7 +67,7 @@ public abstract class ICreate {
      */
     private void initBegin(){
         log.info(String.format("开始初始化%s对象",item.getName()));
-        this.classFile = initFilePath(item.getPackageName(),getClassName());
+        this.classFile = initFilePath(item.getPackageName(),getClassName(item.getName()));
     }
 
     private void initEnd()
@@ -115,15 +113,11 @@ public abstract class ICreate {
      */
     private boolean isFinishInit()
     {
-        if(!item.isOverwrite())
+        if(!item.isOverwrite()&&this.classFile.exists())
         {
-            if(this.classFile.exists())
-            {
-                log.info("文件已存在:" + this.classFile.getPath());
-                return false;
-            }
+            log.info("文件已存在:" + this.classFile.getPath());
+            return false;
         }
-
         return true;
     }
 
@@ -173,17 +167,14 @@ public abstract class ICreate {
 
 
     private void editClass() throws IOException {
-        preEditClass();
-
         if(this.item.getMethods()!=null&&this.item.getMethods().length>0)
         {
             for (String method : this.item.getMethods()) {
-                createMethod(method);
-                classBuildUtil.addTabContent("\r");
+
+                MethodUnit munit = new MethodUnit();
+                munit.setName(method);
+                createMethod(munit);
             }
-        }
-        if(this.item.isOverwrite()) {
-            createLastMethod();
         }
 
         //结束class 构建
@@ -193,19 +184,11 @@ public abstract class ICreate {
 
     }
 
-
-    private void preEditClass() throws IOException {
-
-        if(!this.item.isOverwrite())
-        {
-            classBuildUtil.addTabContent(getContent(this.classFile));
-            classBuildUtil.addTabContent("\r");
-        }
-        if(this.item.isOverwrite()) {
-            createPreMethod(classBuildUtil);
-            classBuildUtil.addTabContent("\r");
-        }
+    private void finish(File classFile)
+    {
+        FileStore.putString(classFile,unit.finish());
     }
+
 
 
     public void empty()
@@ -219,14 +202,9 @@ public abstract class ICreate {
         return item.getName();
     }
 
-    public String getClassName()
-    {
-        return this.getClassNamePre() + item.getName() + this.getClassNameLast();
-    }
-
     public String getClassFullName()
     {
-        return this.getPackageName() +"."+ this.getClassNamePre() + item.getName() + this.getClassNameLast();
+        return this.getPackageName() +"."+ getClassName(item.getName());
     }
 
 
@@ -263,18 +241,13 @@ public abstract class ICreate {
     /**
      * 构建文件
      */
-    protected abstract void createMethod(MethodUnit unit, String methodName) throws IOException;
-
-    /**
-     * 构建文件
-     */
-    protected abstract void createLastMethod(ClassUnit unit) throws IOException;
+    protected abstract void createMethod(MethodUnit unit) throws IOException;
 
 
     /**
      * 初始化
      */
-    protected  abstract void classInit();
+    protected  abstract void classInit(ClassUnit unit);
 
     /**
      * 获取类的包名
@@ -282,5 +255,6 @@ public abstract class ICreate {
      */
     protected abstract String getPackageName();
 
+    public abstract String getClassName(String name);
 
 }
