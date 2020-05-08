@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bussiness/bussiness.iml" filepath="$PROJECT_DIR$/bussiness/bussiness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/compose/common-compose.iml" filepath="$PROJECT_DIR$/common/compose/common-compose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/dao/common-dao.iml" filepath="$PROJECT_DIR$/common/dao/common-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/node/common-node.iml" filepath="$PROJECT_DIR$/common/node/common-node.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/website/common-website.iml" filepath="$PROJECT_DIR$/common/website/common-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knowledge/knowledge.iml" filepath="$PROJECT_DIR$/knowledge/knowledge.iml" />
     </modules>
   </component>
 </project>

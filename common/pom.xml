@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>tool</module>
-        <module>iservice</module>
         <module>website</module>
         <module>compose</module>
         <module>node</module>
