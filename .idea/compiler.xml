@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mg-node" />
         <module name="compose" />
         <module name="mg-service-node" />
         <module name="empty" />
         <module name="generate" />
+        <module name="mg-iservice" />
         <module name="tool" />
         <module name="mg-empty" />
         <module name="mg-service-compose" />
@@ -18,13 +20,17 @@
         <module name="knowledge" />
         <module name="mg-dao" />
         <module name="node" />
-        <module name="mg-generate" />
+        <module name="mg-common-dao" />
         <module name="mg-common-tool" />
+        <module name="bussiness-website" />
         <module name="website" />
+        <module name="mg-compose" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bussiness" target="1.8" />
+      <module name="iservice" target="1.8" />
+      <module name="mg-generate" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
