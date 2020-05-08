@@ -20,6 +20,14 @@
     </modules>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.5.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.jyaml</groupId>
             <artifactId>jyaml</artifactId>
@@ -67,6 +75,7 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.9</version>
         </dependency>
+
 
     </dependencies>
 </project>

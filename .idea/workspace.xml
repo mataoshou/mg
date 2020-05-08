@@ -20,20 +20,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/website/common-website.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bussiness/website/uauth/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ActionConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/CommonItemConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ConvertsConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/DTOConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/FeignConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/PoolConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ServerConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/SysConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/ApiResultItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/IPojoBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/SimpleItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/AttachItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/BasicCommonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/CommonItemUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/base/SimpleItemCommonBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/mapper/SimpleItemCommonMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/util/SimpleItemCommonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/feign/BaseFallBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/mq/BaseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/iservice/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/node/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/compose/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/compose/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/compose/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/compose/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/compose/target/mg-service-compose-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/compose/target/mg-service-summary-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/dao/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/dao/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/dao/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/dao/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/dao/target/mg-dao-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/node/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/node/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/node/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/node/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/node/target/mg-service-node-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/website/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/website/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/website/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/website/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/website/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/website/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bussiness/website/target/mg-website-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/compose/common-compose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/compose/common-compose.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/dao/common-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/dao/common-dao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/node/common-node.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/node/common-node.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/CreateItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/CreateItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/ICreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/ICreate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/IMakeUpBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/IMakeUpBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/IMethodBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/IMethodBase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/ClassItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/ClassItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/LineItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/LineItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/MethodItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/MethodItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/ParamItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/ParamItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/unit/ClassUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/unit/ClassUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/unit/MethodUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/unit/MethodUnit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/BaseFileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/BaseFileUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/ClassUtil.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/CommonTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/CommonTool.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Convert.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Convert.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil$1.class" afterDir="false" />
@@ -45,147 +97,167 @@
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/GuidUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/GuidUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/HexUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/HexUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Md5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Md5Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/MethodUtil.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/PinYinUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/PinYinUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/StringUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/TypeConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/TypeConvert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/tool/target/mg-common-tool-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/target/mg-common-tool-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/alt/sort/InserSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/alt/sort/InserSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/alt/util/ShowArr.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/alt/util/ShowArr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractProductA.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractProductA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractProductB.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractProductB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Create1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Create1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Create2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Create2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductA1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductA1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductA2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductA2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductB1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductB1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductB2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductB2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Adaptee.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Adaptee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Adapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Adapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/ConcreteTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/ConcreteTarget.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Target.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Target.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Abstraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Abstraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/ConcreteImplementor1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/ConcreteImplementor1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/ConcreteImplementor2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/ConcreteImplementor2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Implementor.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Implementor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/RefinedAbstraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/RefinedAbstraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/ConcreteBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/ConcreteBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Director.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Director.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteCommand1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteCommand1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteCommand2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteCommand2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteReceiver1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteReceiver1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteReceiver2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteReceiver2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Invoker.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Invoker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Receiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Composite.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Composite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Leaf.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Leaf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteDecorator1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteDecorator1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteDecorator2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteDecorator2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Decorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Decorator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassA.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassB.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassC.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/Facade.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/Facade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteProduct1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteProduct1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteProduct2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteProduct2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Creator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Creator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/common-website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/common-website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empty/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/empty/target/mg-empty-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/alt/sort/InserSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/alt/util/ShowArr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractProductA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/AbstractProductB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Create1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/Create2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductA1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductA2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductB1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/ProductB2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/abstractfactory/抽象工厂模式.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Adaptee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Adapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/ConcreteTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/adapter/Target.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Abstraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/ConcreteImplementor1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/ConcreteImplementor2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/Implementor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/bridge/RefinedAbstraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/ConcreteBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Director.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/builder/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteCommand1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteCommand2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteReceiver1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/ConcreteReceiver2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Invoker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/command/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Component.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Composite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/composite/Leaf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Component.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteDecorator1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/ConcreteDecorator2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/decorator/Decorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/ClassC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/facade/Facade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteProduct1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/ConcreteProduct2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Creator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Factory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/SimpleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/SimpleFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/ConcreteFlyWeight.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/ConcreteFlyWeight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/FlyWeight.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/FlyWeight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/FlyweightFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/FlyweightFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler3.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Level.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Clinet.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Clinet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Context.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Expression.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Expression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/NonterminalExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/NonterminalExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/TerminalExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/TerminalExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Aggregate.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Aggregate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/ConcreteAggregate.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/ConcreteAggregate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/ConcreteIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/ConcreteIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Iterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Iterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Colleague.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Colleague.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteColleague1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteColleague1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteColleague2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteColleague2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteMediator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteMediator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Mediator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Mediator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Caretaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Caretaker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Clent.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Clent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Memento.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Memento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Originator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Originator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/ConcreteObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/ConcreteObserver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/ConcreteSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/ConcreteSubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Observer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/prototype/PrototypePattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/prototype/PrototypePattern.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/Proxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/Proxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/RealSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/RealSubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/DynamicProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/DynamicProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/RealSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/RealSubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/SubjectHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/SubjectHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/ISubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/ISubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/ProxySubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/ProxySubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/RealSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/RealSubject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/SafeSinglePattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/SafeSinglePattern.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/SinglePattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/SinglePattern.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/UnsafeSinglePattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/UnsafeSinglePattern.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/ConcreteState1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/ConcreteState1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/ConcreteState2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/ConcreteState2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/Context.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/ConcreteStrategy1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/ConcreteStrategy1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/ConcreteStrategy2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/ConcreteStrategy2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Context.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Strategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Strategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/AbstractClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/AbstractClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/ConcreteClass1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/ConcreteClass1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/ConcreteClass2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/ConcreteClass2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ConcreteElement1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ConcreteElement1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ConcreteElement2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ConcreteElement2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Element.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/IVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/IVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ObjectStruture.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ObjectStruture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Visitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/SimpleFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/ConcreteFlyWeight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/FlyWeight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/flyweight/FlyweightFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/ConcreteHandler3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Handler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Level.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/handler/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Clinet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/Expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/NonterminalExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/interpreter/TerminalExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Aggregate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/ConcreteAggregate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/ConcreteIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/iterator/Iterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Colleague.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteColleague1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteColleague2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/ConcreteMediator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/media/Mediator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Caretaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Clent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Memento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/memento/Originator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/ConcreteObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/ConcreteSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/observer/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/prototype/PrototypePattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/Proxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/RealSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/DynamicProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/RealSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/dynamic/SubjectHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/ISubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/ProxySubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/proxy/force/RealSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/SafeSinglePattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/SinglePattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/single/UnsafeSinglePattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/ConcreteState1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/ConcreteState2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/state/State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/ConcreteStrategy1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/ConcreteStrategy2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/strategy/Strategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/AbstractClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/ConcreteClass1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/template/ConcreteClass2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ConcreteElement1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ConcreteElement2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Element.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/IVisitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/ObjectStruture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/visitor/Visitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/HashMap多线程不安全.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/Lock和synchronized浅析.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/基本类型.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/算法/插入排序.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/设计模式/~$工厂模式.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/设计模式/单例模式.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/设计模式/工厂模式.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge/target/mg-knowledge-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bussiness/node/target/" />
     <ignored path="$PROJECT_DIR$/bussiness/target/" />
@@ -196,6 +268,14 @@
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/common/tool/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
+    <ignored path="$PROJECT_DIR$/common/website/target/" />
+    <ignored path="$PROJECT_DIR$/common/compose/target/" />
+    <ignored path="$PROJECT_DIR$/common/node/target/" />
+    <ignored path="$PROJECT_DIR$/common/dao/target/" />
+    <ignored path="$PROJECT_DIR$/bussiness/website/uauth/target/" />
+    <ignored path="$PROJECT_DIR$/knowledge/target/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,78 +285,91 @@
     <option name="done" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="288">
+              <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/FileUploadController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="403">
+              <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/website/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/compose/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/node/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/dao/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bussiness/node/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IFactory.java">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/dto/UserDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="49" column="7" selection-start-line="39" selection-start-column="4" selection-end-line="49" selection-end-column="7" />
+            <state relative-caret-position="314">
+              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/factory/MethodFactory/Main.java">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/base/RmtUserInfoCommonBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" selection-start-line="4" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="138">
+              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/task/UserTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#827#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/task/MataoBuild.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/readme.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/UauthApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/config/ApiConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -290,7 +383,33 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IFactory.java" />
+        <option value="$PROJECT_DIR$/bussiness/pom.xml" />
+        <option value="$PROJECT_DIR$/bussiness/website/api.uauth/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/bussiness/website/uauth/pom.xml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/ActionConstant.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/CommonItemConstant.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/FeignConstant.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/PoolConstant.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/DTOConstant.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/ServerConstant.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/SysConstant.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/ApiResultItem.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonItem.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/CommonItemUtils.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/base/SimpleItemCommonBase.java" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/util/SimpleItemCommonUtil.java" />
+        <option value="$PROJECT_DIR$/common/website/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/feign/BaseFallBack.java" />
+        <option value="$PROJECT_DIR$/bussiness/website/pom.xml" />
+        <option value="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/OperateGroupController.java" />
+        <option value="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/OperateController.java" />
+        <option value="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/dto/OperateDTO.java" />
+        <option value="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/UserController.java" />
+        <option value="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/dto/UserDTO.java" />
+        <option value="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/base/RmtUserInfoCommonBase.java" />
       </list>
     </option>
   </component>
@@ -299,11 +418,11 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="mg-root" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="mg-website-uauth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="mg-root" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="mg-website-uauth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -313,6 +432,12 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1936" />
+    <option name="height" value="1048" />
+  </component>
   <component name="ProjectId" id="1bbYihwVbEiBIrpC59O079IQRsV" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -320,7 +445,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -337,110 +461,38 @@
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
               <item name="mg" type="462c0819:PsiDirectoryNode" />
               <item name="bussiness" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
               <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
               <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
               <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
               <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -448,17 +500,123 @@
             <path>
               <item name="mg" type="b2602c69:ProjectViewProjectNode" />
               <item name="mg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
+              <item name="bussiness" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="uauth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -468,11 +626,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588943270246" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588946940682" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/common/service/src" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\core\mg\common\website\src\main\java\com\mg\website\common\service" />
+      <recent name="D:\core\mg\common\website\src\main\java\com\mg\website\common\pojo" />
+      <recent name="D:\core\mg\common\website\src\main\java\com\mg\website\common\action" />
       <recent name="E:\core\mg\common\service\src" />
       <recent name="E:\core\mg\common\tool\src\main\java\com\mg\common" />
     </key>
@@ -508,54 +669,60 @@
       <workItem from="1588225396891" duration="7654000" />
       <workItem from="1588323871495" duration="18116000" />
       <workItem from="1588902390323" duration="11576000" />
+      <workItem from="1588945627802" duration="1518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="730000" />
+    <option name="totallyTimeSpent" value="4455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1936" height="1048" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="REST Client" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Sequence" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32993197" />
-      <window_info anchor="bottom" id="Run with VisualVM" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Debug with VisualVM" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26417235" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39909297" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" visible="true" weight="0.3299356" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Json Parser" />
-      <window_info anchor="right" id="aiXcoder" weight="0.3299356" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="REST Client" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32993197" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Sequence" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.32993197" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="18" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.30364805" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Json Parser" order="7" />
+      <window_info anchor="right" id="aiXcoder" order="8" weight="0.3299356" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -616,109 +783,332 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA1.java">
+    <entry file="file://$PROJECT_DIR$/bussiness/compose/.classpath" />
+    <entry file="file://$PROJECT_DIR$/bussiness/compose/.project">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/compose/compose.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="8" />
+        <state relative-caret-position="23">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Client.java">
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth1/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/bussiness/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="460">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductA.java">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="598">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IFactory.java">
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/base/RmtOperateInfoCommonBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="49" column="7" selection-start-line="39" selection-start-column="4" selection-end-line="49" selection-end-column="7" />
+        <state relative-caret-position="1311">
+          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/Create1.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="230">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ActionConstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractProductB.java">
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/CommonItemConstant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="6" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ConvertsConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/DTOConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/FeignConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/PoolConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ServerConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/SysConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/CommonItemUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/ApiResultItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/base/SimpleItemCommonBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/mapper/SimpleItemCommonMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/util/SimpleItemCommonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/website/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/feign/BaseFallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="126" column="21" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/OperateGroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/OperateController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="33" />
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductA2.java">
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/dto/OperateDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/feign/OperateFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/constant/action/OperateControllerConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/config/ApiConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/constant/cache/MessageCacheConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/constant/feign/OperateFeignConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/CacheItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB1.java">
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/QueryItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="8" />
+        <state relative-caret-position="92">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bussiness/node/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/compose/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/ProductB2.java">
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/mq/BaseMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="92">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/node/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/src/main/java/com/mg/knowledge/design/abstractfactory/AbstractCreator.java">
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/task/UserTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
+        <state>
+          <folding>
+            <element signature="e#0#827#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/dao/pom.xml">
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/task/MataoBuild.java">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/readme.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/UauthApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/base/RmtUserInfoCommonBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
