@@ -6,28 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bussiness-website" />
-        <module name="common-compose" />
-        <module name="common-dao" />
-        <module name="common-node" />
-        <module name="common-website" />
-        <module name="compose" />
-        <module name="dao" />
-        <module name="empty" />
-        <module name="knowledge" />
-        <module name="mg-common-dao" />
-        <module name="mg-common-tool" />
-        <module name="mg-compose" />
-        <module name="mg-dao" />
-        <module name="mg-empty" />
-        <module name="mg-iservice" />
-        <module name="mg-knowledge" />
         <module name="mg-node" />
-        <module name="mg-service-compose" />
+        <module name="compose" />
         <module name="mg-service-node" />
-        <module name="mg-website" />
-        <module name="node" />
+        <module name="empty" />
+        <module name="mg-empty" />
         <module name="tool" />
+        <module name="mg-service-compose" />
+        <module name="dao" />
+        <module name="common-dao" />
+        <module name="knowledge" />
+        <module name="common-node" />
+        <module name="mg-dao" />
+        <module name="common-website" />
+        <module name="node" />
+        <module name="mg-common-dao" />
+        <module name="common-compose" />
+        <module name="mg-knowledge" />
+        <module name="mg-common-tool" />
+        <module name="bussiness-website" />
+        <module name="mg-compose" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,11 +33,13 @@
       <module name="generate" target="1.8" />
       <module name="iservice" target="1.8" />
       <module name="mg-generate" target="1.8" />
+      <module name="mg-iservice" target="1.8" />
       <module name="mg-website-uauth" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bussiness-website" options="-parameters" />
       <module name="common-compose" options="-parameters" />
       <module name="common-dao" options="-parameters" />
       <module name="common-node" options="-parameters" />
@@ -47,7 +47,16 @@
       <module name="compose" options="-parameters" />
       <module name="dao" options="-parameters" />
       <module name="empty" options="-parameters" />
+      <module name="knowledge" options="-parameters" />
+      <module name="mg-common-dao" options="-parameters" />
+      <module name="mg-common-tool" options="-parameters" />
+      <module name="mg-compose" options="-parameters" />
+      <module name="mg-dao" options="-parameters" />
+      <module name="mg-empty" options="-parameters" />
       <module name="mg-knowledge" options="-parameters" />
+      <module name="mg-node" options="-parameters" />
+      <module name="mg-service-compose" options="-parameters" />
+      <module name="mg-service-node" options="-parameters" />
       <module name="mg-website-uauth" options="-parameters" />
       <module name="node" options="-parameters" />
       <module name="tool" options="-parameters" />

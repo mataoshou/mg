@@ -18,12 +18,26 @@ public class MethodUnit {
     /////////////////////////////////////////////////////////////////////////////
 
 
+    private boolean isUsed = true;
+
+
+    public void setDisabled()
+    {
+        isUsed =false;
+    }
+
     private MethodItem methodItem = new MethodItem();
 
 
     public MethodItem getMethodItem()
     {
         return methodItem;
+    }
+
+
+    public String getName()
+    {
+        return this.methodItem.getMethodName();
     }
 
 
@@ -65,6 +79,11 @@ public class MethodUnit {
 
     public String getContent()
     {
+        if(!isUsed)
+        {
+            return "";
+        }
+
         String content =template();
         if(this.methodItem.getType()==2)
         {
@@ -93,11 +112,7 @@ public class MethodUnit {
 
         for(LineItem line : this.methodItem.getLines())
         {
-            for(int i=0;i<line.getIntervalNo();i++)
-            {
-                inner += line.getIntervalStr();
-            }
-            inner+= line.getContent() +"\n";
+            inner+= line.buildContent() ;
 
         }
 

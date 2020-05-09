@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<root> 
-  <item pojoName="key" commonName="id" type="java.lang.String"/>
-  <item pojoName="value" commonName="title" type="java.lang.String"/>
-</root>

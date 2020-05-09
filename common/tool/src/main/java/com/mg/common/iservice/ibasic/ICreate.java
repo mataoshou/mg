@@ -1,6 +1,7 @@
 package com.mg.common.iservice.ibasic;
 
 
+import com.mg.common.pojo.LineItem;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.BaseFileUtil;
@@ -10,7 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -37,6 +40,7 @@ public abstract class ICreate {
 
     //类构造工具
     private ClassUnit unit = new ClassUnit();
+
 
 
     ////////////////////////////////////////////////////////模板函数

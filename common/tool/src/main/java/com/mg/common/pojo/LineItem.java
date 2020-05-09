@@ -31,4 +31,16 @@ public class LineItem {
     public void setIntervalNo(int intervalNo) {
         this.intervalNo = intervalNo;
     }
+
+    public String buildContent()
+    {
+        String result ="";
+        for(int i=0;i<this.getIntervalNo();i++)
+        {
+            result += this.getIntervalStr();
+        }
+        result+= this.getContent() +"\n";
+
+        return result;
+    }
 }

@@ -1,7 +1,7 @@
 package com.mg.website.common.pojo;
 
 import com.alibaba.fastjson.JSONObject;
-import com.shineon.api.common.base.util.Md5Util;
+import com.mg.common.util.Md5Util;
 
 public interface IPojoBase {
 

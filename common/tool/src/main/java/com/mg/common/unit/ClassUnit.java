@@ -1,6 +1,7 @@
 package com.mg.common.unit;
 
 import com.mg.common.pojo.ClassItem;
+import com.mg.common.pojo.LineItem;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
@@ -20,6 +21,8 @@ public class ClassUnit {
     String content = "";
 
     List<MethodUnit> methods =  new ArrayList<>();
+
+    List<LineItem> lines = new ArrayList<>();
 
 
     public void init()
@@ -47,6 +50,22 @@ public class ClassUnit {
     public ClassUnit addImport(String imp)
     {
         this.item.addImport(imp);
+        return this;
+    }
+
+    public void addPreContent(String content)
+    {
+        LineItem lineItem = new LineItem();
+        lineItem.setContent(content);
+        lineItem.setIntervalNo(1);
+        lines.add(lineItem);
+    }
+
+    public ClassUnit addImport(String[] imps)
+    {
+        for(String imp : imps) {
+            this.item.addImport(imp);
+        }
         return this;
     }
 
@@ -120,17 +139,26 @@ public class ClassUnit {
      */
     public String finish()
     {
+
+        String preConent ="";
+        for(LineItem lineItem : lines)
+        {
+            preConent += lineItem.buildContent() ;
+        }
+        content = content.replace("#preContent#",preConent);
+
         if(methods==null||methods.size()==0)
         {
             return "";
 
         }
-        String inner ="";
+
+        String mtdhoStr ="";
         for(MethodUnit unit : methods)
         {
-            inner += unit.getContent() +"\r\n";
+            mtdhoStr += unit.getContent() +"\r\n";
         }
-        content = content.replace("#content#",inner);
+        content = content.replace("#methods#",mtdhoStr);
         return content;
     }
 
@@ -153,7 +181,7 @@ public class ClassUnit {
     public void editClass(String content)
     {
         String body = getClassContent(content);
-        this.content = content.replace(body,body+"\r\n#content#");
+        this.content = content.replace(body,body+"\r\n#methods#");
     }
 
 
@@ -165,7 +193,8 @@ public class ClassUnit {
                         "#import#"+"\r\n"+
                         "#annotation#"+"\r\n"+
                         "public #classType# #className# {" +"\r\n"+
-                        "#content#"+"\r\n"+
+                        "#preContent#"+"\r\n"+
+                        "#methods#"+"\r\n"+
                         "}\n";
         return classTemplate;
     }

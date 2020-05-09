@@ -8,13 +8,13 @@ public class ServerConstant {
 
 
 
-    public static final String SHINEON_DB_USER = "shineon.db.user";
+    public static final String DAO_USER = "dao.user";
 
-    public static final  String SHINEON_BASE_USER = "shineon.base.user";
+    public static final  String NODE_USER = "node.user";
 
-    public static final String SHINEON_SERVER_UAUTH = "shineon.server.uauth";
+    public static final String COMPOSE_UAUTH = "compose.uauth";
 
-    public static final String SHINEON_API_UAUTH = "shineon.api.uauth";
+    public static final String WEBSITE_UAUTH = "website.uauth";
 
 
 

@@ -1,15 +1,12 @@
 package com.mg.website.common.pojo;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import com.alibaba.fastjson.JSONObject;
+import com.mg.common.util.Md5Util;
 
 import java.util.Date;
 import java.util.HashMap;
 
-
-@Component
-@Scope("prototype")
-public class CommonData {
+public class QueryItem implements IPojoBase {
 
     private HashMap<String ,Double> dParams = new HashMap<>();
 
@@ -22,24 +19,24 @@ public class CommonData {
     private HashMap<String ,Object> oParams = new HashMap<>();
 
 
-    public HashMap<String, Double> getdParams() {
-        return dParams;
+    public void setdParams(HashMap<String, Double> dParams) {
+        this.dParams = dParams;
     }
 
-    public HashMap<String, Long> getlParams() {
-        return lParams;
+    public void setlParams(HashMap<String, Long> lParams) {
+        this.lParams = lParams;
     }
 
-    public HashMap<String, Integer> getiParams() {
-        return iParams;
+    public void setiParams(HashMap<String, Integer> iParams) {
+        this.iParams = iParams;
     }
 
-    public HashMap<String, String> getsParams() {
-        return sParams;
+    public void setsParams(HashMap<String, String> sParams) {
+        this.sParams = sParams;
     }
 
-    public HashMap<String, Object> getoParams() {
-        return oParams;
+    public void setoParams(HashMap<String, Object> oParams) {
+        this.oParams = oParams;
     }
 
     public void addParam(String key, Object value)
@@ -128,6 +125,12 @@ public class CommonData {
         return getString(key,"");
     }
 
+
+    public Date getDate(String key)
+    {
+        return new Date(getLong(key));
+    }
+
     public Object getObject(String key,Object def)
     {
         Object result = oParams.get(key);
@@ -143,8 +146,5 @@ public class CommonData {
         return getObject(key,null);
     }
 
-    public Date getDate(String key)
-    {
-        return new Date(getLong(key));
-    }
+
 }
