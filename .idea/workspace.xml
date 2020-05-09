@@ -20,35 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertMakeUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/MapperItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/PropertyItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/QueryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/base/RmtUserInfoCommonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/base/RmtUserInfoCommonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/ICreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/ICreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/LineItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/MethodUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/MethodUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ServerConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ServerConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/IPojoBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/IPojoBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/BasicCommonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/BasicCommonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/CommonItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/CommonItemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/base/SimpleItemCommonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/base/SimpleItemCommonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/mapper/SimpleItemCommonMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/util/SimpleItemCommonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/util/SimpleItemCommonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +81,7 @@
       <workItem from="1588323871495" duration="18116000" />
       <workItem from="1588902390323" duration="11576000" />
       <workItem from="1588945627802" duration="1518000" />
-      <workItem from="1588989321604" duration="12827000" />
+      <workItem from="1588989321604" duration="12876000" />
     </task>
     <servers />
   </component>

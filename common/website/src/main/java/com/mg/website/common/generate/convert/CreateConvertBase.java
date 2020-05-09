@@ -17,6 +17,7 @@ public class CreateConvertBase extends ICreate {
     Class  toolClass;
     Class  pojoClass;
     String sysName;
+    List<MapperItem> items;
 
     public CreateConvertBase(String actionName, Class toolClass, Class pojoClass, String sysName) {
         super(actionName,new String[]{
@@ -33,11 +34,7 @@ public class CreateConvertBase extends ICreate {
 
     private void toCommonData(MethodUnit unit)
     {
-        String methodName = "toCommonData";
-
-        classBuildUtil.addTabContent(String.format("private CommonData %s( %s pojo) {" ,methodName,pojoName));
-
-        classBuildUtil.addTabRightContent(String.format("CommonData data = new CommonData();" ));
+        unit.addTabContent(String.format("CommonData data = new CommonData();" ));
 
         for(MapperItem item:items)
         {
@@ -50,8 +47,6 @@ public class CreateConvertBase extends ICreate {
             }
         }
         classBuildUtil.addTabContent("return data;");
-
-        classBuildUtil.addTabLeftContent(String.format("}"));
 
     }
 
