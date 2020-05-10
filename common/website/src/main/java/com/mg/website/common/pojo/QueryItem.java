@@ -1,8 +1,5 @@
 package com.mg.website.common.pojo;
 
-import com.alibaba.fastjson.JSONObject;
-import com.mg.common.util.Md5Util;
-
 import java.util.Date;
 import java.util.HashMap;
 
