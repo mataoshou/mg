@@ -1,8 +1,8 @@
 package com.mg.website.common.service.convert;
 
-import com.mg.website.common.constant.CommonItemConstant;
-import com.mg.website.common.pojo.CommonData;
-import com.mg.website.common.pojo.CommonItem;
+import com.mg.common.constant.CommonItemConstant;
+import com.mg.common.pojo.CommonData;
+import com.mg.common.pojo.CommonItem;
 
 import java.util.List;
 

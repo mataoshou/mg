@@ -13,9 +13,6 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
-    <modules>
-        <module>uauth</module>
-    </modules>
 
 
     <dependencies>

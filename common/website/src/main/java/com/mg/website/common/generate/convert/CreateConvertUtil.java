@@ -1,62 +1,41 @@
 package com.mg.website.common.generate.convert;
 
-import com.shineon.db.common.base.constant.convert.ConvertsConstant;
-import com.shineon.db.common.base.util.ClassBuildUtil;
-import com.shineon.db.common.create.ibase.ICreate;
+
+import com.mg.common.iservice.ibasic.ICreate;
+import com.mg.common.unit.ClassUnit;
+import com.mg.common.unit.MethodUnit;
+import com.mg.common.util.StringUtil;
+import com.mg.website.common.constant.ConvertsConstant;
 
 import java.io.IOException;
 
 public class CreateConvertUtil extends ICreate {
-    public CreateConvertUtil(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
-        super(actionName, toolClass, pojoClass, methods, sysName);
+
+
+    String baseName = this.getName() + "CommonBase";
+
+    public CreateConvertUtil(String name) {
+        super(name, null);
+        init();
     }
 
     @Override
-    protected ClassBuildUtil createClass() throws IOException {
-        ClassBuildUtil classBuildUtil = new ClassBuildUtil();
-
-        String baseName = this.getName() + "CommonBase";
-
-        classBuildUtil.classInit(this.getClassName(),baseName, null, this.getPackageName() ,new String[]{"Service"},true,
-                String.format("%s.%s", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Service");
-
-        return classBuildUtil;
-    }
-
-    @Override
-    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+    protected void createPreMethod(ClassUnit unit) throws IOException {
 
     }
 
     @Override
-    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+    protected void createMethod(MethodUnit unit) throws IOException {
 
     }
 
     @Override
-    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+    protected void classInit(ClassUnit unit) {
 
-    }
-
-    @Override
-    protected ClassBuildUtil createConstantClass() throws IOException {
-        return null;
-    }
-
-    @Override
-    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
-
-    }
-
-    @Override
-    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
-
-    }
-
-
-    @Override
-    protected void classInit() {
-
+        unit.setBaseName(baseName);
+        unit.addAnnotion("Service");
+        unit.addImport("org.springframework.stereotype.Service");
+        unit.addImport(ConvertsConstant.BASE_PACKAGE +"." +baseName);
     }
 
     @Override
@@ -65,22 +44,7 @@ public class CreateConvertUtil extends ICreate {
     }
 
     @Override
-    protected boolean isCreateConstant() {
-        return false;
+    public String getClassName(String name) {
+        return StringUtil.firstUpper(name) +"CommonUtil";
     }
-    @Override
-    protected String getConstantPackageName() {
-        return null;
-    }
-
-    @Override
-    protected String getClassNameLast() {
-        return "CommonUtil";
-    }
-
-    @Override
-    protected String getConstantClassNameLast() {
-        return null;
-    }
-
 }

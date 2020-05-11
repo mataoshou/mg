@@ -1,7 +1,7 @@
 package com.mg.website.common.service.feign;
 
-import com.mg.website.common.constant.CommonItemConstant;
-import com.mg.website.common.pojo.CommonItem;
+import com.mg.common.constant.CommonItemConstant;
+import com.mg.common.pojo.CommonItem;
 
 public interface BaseFallBack {
 

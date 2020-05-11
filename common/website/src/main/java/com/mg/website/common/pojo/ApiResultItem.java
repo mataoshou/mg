@@ -2,6 +2,7 @@ package com.mg.website.common.pojo;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.mg.common.pojo.CommonItem;
 
 import java.util.Collection;
 import java.util.List;

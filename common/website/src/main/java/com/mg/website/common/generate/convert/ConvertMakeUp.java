@@ -1,15 +1,15 @@
 package com.mg.website.common.generate.convert;
 
-import com.shineon.db.common.create.ibase.IMakeUpBase;
+
+import com.mg.common.iservice.ibasic.IMakeUpBase;
 
 public class ConvertMakeUp extends IMakeUpBase {
 
 
-    public ConvertMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
-        super(name, toolClass, pojoClass, methods, sysName);
-        add( new CreateConvertMapper(name,toolClass,pojoClass,methods, sysName));
-        add( new CreateConvertBase(name,toolClass,pojoClass,methods, sysName));
-        add( new CreateConvertUtil(name,toolClass,pojoClass,methods, sysName));
+    public ConvertMakeUp(String name, Class pojoClass) {
+
+        add( new CreateConvertBase(name,pojoClass));
+        add( new CreateConvertUtil(name));
     }
 
 }

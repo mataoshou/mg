@@ -12,7 +12,7 @@
     <artifactId>mg-common</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>tool</module>
+        <module>basic</module>
         <module>website</module>
         <module>compose</module>
         <module>node</module>
@@ -76,13 +76,6 @@
             <version>4.5.9</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.mg</groupId>
-            <artifactId>mg-common-tool</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
 
     </dependencies>
 </project>

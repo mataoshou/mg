@@ -1,31 +1,37 @@
 package com.mg.website.common.generate.convert;
 
+import com.mg.common.constant.ConverCommonConstant;
 import com.mg.common.iservice.ibasic.ICreate;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
+import com.mg.common.util.ClassUtil;
 import com.mg.common.util.StringUtil;
 import com.mg.website.common.constant.ConvertsConstant;
-import org.dom4j.DocumentException;
+import com.mg.website.common.pojo.ApiResultItem;
+import com.mg.common.pojo.SimpleItem;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
+import java.lang.reflect.Field;
 
 public class CreateConvertBase extends ICreate {
 
 
-    Class  toolClass;
     Class  pojoClass;
     String sysName;
-    List<MapperItem> items;
+    Field[] items;
 
-    public CreateConvertBase(String actionName, Class toolClass, Class pojoClass, String sysName) {
+    public CreateConvertBase(String actionName, Class pojoClass) {
         super(actionName,new String[]{
-               "toCommonData","toPojoData" ,"toCommon" ,"toCommonList" ,"toPojo" ,"toPojoList"
+                "toCommonData","toPojoData" ,"toCommon" ,"toCommonList" ,"toPojo" ,"toPojoList"
         });
-        this.toolClass = toolClass;
+
+
         this.pojoClass = pojoClass;
         this.sysName = sysName;
+        items = ConvertTools.getFields(this.pojoClass);
+
+        init();
+
     }
 
 
@@ -34,129 +40,116 @@ public class CreateConvertBase extends ICreate {
 
     private void toCommonData(MethodUnit unit)
     {
+
+        unit.setReturnValue("CommonData");
+        unit.setDecorate("private");
+        unit.addParam(this.pojoClass.getSimpleName(),"pojo");
+
         unit.addTabContent(String.format("CommonData data = new CommonData();" ));
 
-        for(MapperItem item:items)
+        for(Field item:items)
         {
-            if(item.commonName.length()>0) {
-                String getMehod = classBuildUtil.getGetMethodName(item.pojoName);
-                String setMethod = classBuildUtil.getSetMethodName(item.commonName);
+            String getMehod = ClassUtil.getGetMethodName(item.getName());
 
-                String str = String.format("data.%s(pojo.%s());", setMethod, getMehod);
-                classBuildUtil.addTabContent(str);
-            }
+            String str = String.format("data.addParam(\"%s\",pojo.%s());",item.getName(), getMehod);
+
+            unit.addTabContent(str);
         }
-        classBuildUtil.addTabContent("return data;");
-
+        unit.addTabContent("return data;");
     }
 
 
-    private void toPojoData(String pojoName, List<MapperItem> items , ClassBuildUtil classBuildUtil)
+    private void toPojoData(MethodUnit unit)
     {
-        String methodName = "toPojoData";
 
-        classBuildUtil.addTabContent(String.format("private %s %s( CommonData data) {" ,pojoName,methodName));
+        unit.setReturnValue(this.pojoClass.getSimpleName());
+        unit.setDecorate("private");
+        unit.addParam("CommonData","data");
 
-        classBuildUtil.addTabRightContent(String.format("%s pojo = new %s();",pojoName,pojoName ));
+        unit.addTabContent(String.format("%s pojo = new %s();",this.pojoClass.getSimpleName(),this.pojoClass.getSimpleName() ));
 
-        for(MapperItem item:items)
+        for(Field item:items)
         {
-            if(item.commonName.length()>0) {
-                String getMehod = classBuildUtil.getGetMethodName(item.commonName);
-                String setMethod = classBuildUtil.getSetMethodName(item.pojoName);
+                String setMethod = ClassUtil.getSetMethodName(item.getName());
+                String str = String.format("pojo.%s(data.%s(\"%s\"));", setMethod, ConvertTools.getMethod(item),item.getName());
 
-                String str = String.format("pojo.%s(data.%s());", setMethod, getMehod);
-                classBuildUtil.addTabContent( str);
-            }
+
+                unit.addTabContent( str);
         }
-        classBuildUtil.addTabContent("return pojo;");
-
-        classBuildUtil.addTabLeftContent(String.format("}"));
+        unit.addTabContent("return pojo;");
     }
 
-    private void toCommon(String pojoName , ClassBuildUtil classBuildUtil)
+    private void toCommon(MethodUnit unit)
+    {
+        unit.addAnnotation("Override");
+        unit.setReturnValue("CommonItem");
+        unit.setDecorate("public");
+        unit.addParam(this.pojoClass.getSimpleName(),"pojo");
+
+        unit.addTabRightContent("return success(toCommonData(pojo));");
+
+    }
+
+    private void toCommonList(MethodUnit unit)
     {
 
-        String methodName = "toCommon";
+        unit.setName("toCommon");
+        unit.addAnnotation("Override");
+        unit.setReturnValue("CommonItem");
+        unit.setDecorate("public");
+        unit.addParam(String.format("List<%s>",this.pojoClass.getSimpleName()),"pojos");
 
-        classBuildUtil.addTabContent(String.format("public CommonItem %s( %s pojo) {" ,methodName,pojoName));
 
-        classBuildUtil.addTabRightContent("return success(toCommonData(pojo));");
-
-
-        classBuildUtil.addTabLeftContent(String.format("}"));
+        unit.addTabContent(String.format("List<CommonData> result = new ArrayList();" ));
+        unit.addTabContent(String.format("for(%s item : pojos){",this.pojoClass.getSimpleName()));
+        unit.addTabRightContent(String.format("result.add(toCommonData(item));"));
+        unit.addTabLeftContent(String.format("}"));
+        unit.addTabContent("return success(result);");
 
     }
 
-    private void toCommonList(String pojoName , ClassBuildUtil classBuildUtil)
+
+    private void toPojo(MethodUnit unit)
     {
+        unit.addAnnotation("Override");
+        unit.setReturnValue(this.pojoClass.getSimpleName());
+        unit.setDecorate("public");
+        unit.addParam("CommonItem","item");
+        unit.addException("Exception");
 
-        String methodName = "toCommon";
+        unit.addTabContent(String.format("checkCommonItem(item);"));
 
-        classBuildUtil.addTabContent(String.format("public  CommonItem %s( List<%s> pojos) {" ,methodName,pojoName));
+        unit.addTabContent(String.format("List<CommonData> datas = item.getDatas();"));
 
-        classBuildUtil.addTabRightContent(String.format("List<CommonData> result = new ArrayList();" ));
+        unit.addTabContent(String.format("if(datas ==null||datas.size()==0){log.debug(\"CommonItem 中data数据为空!!\"); return null;}"));
 
-        classBuildUtil.addTabContent(String.format("for(%s item : pojos){",pojoName));
-        classBuildUtil.addTabRightContent(String.format("result.add(toCommonData(item));"));
-        classBuildUtil.addTabLeftContent(String.format("}"));
+        unit.addTabContent(String.format("if(datas.size()>1){log.debug(\"CommonItem 中data数据不止一条数据!!\"); }"));
 
-
-        classBuildUtil.addTabContent("return success(result);");
-
-
-        classBuildUtil.addTabLeftContent(String.format("}"));
-
+        unit.addTabContent("return toPojoData(datas.get(0));");
     }
 
 
-    private void toPojo(String pojoName , ClassBuildUtil classBuildUtil)
+
+    private void toPojoList(MethodUnit unit)
     {
-        String methodName = "toPojo";
+        unit.addAnnotation("Override");
+        unit.setReturnValue(String.format("List<%s>",this.pojoClass.getSimpleName()));
+        unit.setDecorate("public");
+        unit.addParam("CommonItem","item");
+        unit.addException("Exception");
 
-        classBuildUtil.addTabContent(String.format("public %s %s( CommonItem item) throws Exception{" ,pojoName,methodName));
+        unit.addTabContent(String.format("checkCommonItem(item);"));
 
-        classBuildUtil.addTabRightContent(String.format("checkCommonItem(item);"));
+        unit.addTabContent(String.format("List<%s> result = new ArrayList();",this.pojoClass.getSimpleName() ));
+        unit.addTabContent(String.format("List<CommonData> datas = item.getDatas();" ));
 
-        classBuildUtil.addTabContent(String.format("List<CommonData> datas = item.getDatas();"));
+        unit.addTabContent(String.format("for(CommonData data : datas){"));
+        unit.addTabRightContent(String.format("result.add(toPojoData(data));"));
+        unit.addTabLeftContent(String.format("}"));
 
-        classBuildUtil.addTabContent(String.format("if(datas ==null||datas.size()==0){logger.debug(\"CommonItem 中data数据为空!!\"); return null;}"));
-
-        classBuildUtil.addTabContent(String.format("if(datas.size()>1){logger.debug(\"CommonItem 中data数据不止一条数据!!\"); }"));
-
-        classBuildUtil.addTabContent("return toPojoData(datas.get(0));");
-
-
-        classBuildUtil.addTabLeftContent(String.format("}"));
+        unit.addTabContent("return result;");
     }
 
-
-
-    private void toPojoList(String pojoName, ClassBuildUtil classBuildUtil)
-    {
-        String methodName = "toPojoList";
-
-        classBuildUtil.addTabContent(String.format("public List<%s> %s(  CommonItem item) throws Exception{" ,pojoName,methodName));
-
-        classBuildUtil.addTabRightContent(String.format("checkCommonItem(item);"));
-
-        classBuildUtil.addTabContent(String.format("List<%s> result = new ArrayList();",pojoName ));
-        classBuildUtil.addTabRightContent(String.format("List<CommonData> datas = item.getDatas();" ));
-
-        classBuildUtil.addTabContent(String.format("for(CommonData data : datas){"));
-        classBuildUtil.addTabRightContent(String.format("result.add(toPojoData(data));"));
-        classBuildUtil.addTabLeftContent(String.format("}"));
-
-        classBuildUtil.addTabContent("return result;");
-
-
-        classBuildUtil.addTabLeftContent(String.format("}"));
-    }
-
-
-    protected void classInit() {
-        setConver(true);
-    }
 
     @Override
     protected void createPreMethod(ClassUnit unit) throws IOException {
@@ -165,28 +158,35 @@ public class CreateConvertBase extends ICreate {
 
     @Override
     protected void createMethod(MethodUnit unit) throws IOException {
+
+
         switch (unit.getName())
         {
-            case "toCommonData":toCommonData(unit)
+            case "toCommonData":toCommonData(unit);break;
+            case "toPojoData":toPojoData(unit);break;
+            case "toCommon":toCommon(unit);break;
+            case "toCommonList":toCommonList(unit);break;
+            case "toPojo":toPojo(unit);break;
+            case "toPojoList":toPojoList(unit);break;
         }
     }
 
     @Override
     protected void classInit(ClassUnit unit) {
 
+        setOverwrite(true);
         unit.setPackageName(getPackageName());
-        unit.addImport( "java.util.Date",
-                String.format("%s.%s", ConvertsConstant.POJO_PACKAGE,this.getItem().getPojoClassName()),
-                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonData",
-                "java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
+        unit.addImport(new String[]{
+                this.pojoClass.getName(),
+                ConverCommonConstant.CONVERT_COMMON_POJO+".CommonData",
+                "java.util.ArrayList","java.util.List",
                 ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItemUtils",
-                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItem",
-                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItemUtils",
-                "org.slf4j.Logger","org.slf4j.LoggerFactory")
+                ConverCommonConstant.CONVERT_COMMON_POJO+".CommonItem",
+                "lombok.extern.slf4j.Slf4j"});
 
-        classBuildUtil.classInit(this.getClassName(),null,
-                new String[]{String.format("CommonItemUtils<%s>",this.getItem().getPojoClassName())}, this.getPackageName(),null,true,
-               );
+        unit.addAnnotion("Slf4j");
+        unit.addImplement(String.format("CommonItemUtils<%s>",this.pojoClass.getSimpleName()));
+
     }
 
     @Override
@@ -197,6 +197,13 @@ public class CreateConvertBase extends ICreate {
     @Override
     public String getClassName(String name) {
         return StringUtil.firstUpper(name) +"CommonBase";
+    }
+
+
+    public void testCreate() throws IOException {
+        CreateConvertBase base = new CreateConvertBase("matao",
+                SimpleItem.class);
+        base.startCreate();
     }
 
 }

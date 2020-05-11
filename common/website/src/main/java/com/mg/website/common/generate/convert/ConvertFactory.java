@@ -1,42 +1,45 @@
 package com.mg.website.common.generate.convert;
 
-import com.shineon.db.common.base.constant.convert.ConvertsConstant;
-import com.shineon.db.common.base.constant.sys.SysConstant;
-import com.shineon.db.common.base.util.BaseFileUtil;
-import com.shineon.db.common.create.CommonTool;
-import com.shineon.db.common.create.ibase.IFactory;
+import com.mg.common.iservice.ibasic.IFactory;
+import com.mg.common.util.BaseFileUtil;
+import com.mg.common.util.CommonTool;
+import com.mg.website.common.constant.ConvertsConstant;
+import com.mg.website.common.constant.SysConstant;
 
 import java.io.File;
+import java.io.IOException;
+import java.rmi.server.ExportException;
 
-public class ConvertFactory extends IFactory<com.shineon.db.common.create.convert.ConvertMakeUp> {
+public class ConvertFactory extends IFactory {
 
-
-    public ConvertFactory() {
-        super("convert", null, null, null, null);
+    public ConvertFactory(String name,   String[] methods, String sysName) {
+        super(name);
+        setMakeUp();
     }
 
-    public ConvertFactory(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
-        super(name, toolClass, pojoClass, methods, sysName);
-    }
-
-    @Override
-    public com.shineon.db.common.create.convert.ConvertMakeUp setMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
-        return new com.shineon.db.common.create.convert.ConvertMakeUp(name,null,pojoClass,null, SysConstant.getSys());
-    }
-
-    @Override
-    public void build() throws Exception {
+    public void setMakeUp() {
         CommonTool tools = new CommonTool();
         File root = tools.getSysPath(ConvertsConstant.POJO_PACKAGE);
         File[] pojos = root.listFiles();
 
         for(File pf :pojos) {
-            String fname = BaseFileUtil.getFileNameNoSuffix(pf.getName());
-            String pojoClassName = ConvertsConstant.POJO_PACKAGE +"." + fname;
-            Class pojoClass = Class.forName(pojoClassName);
-            com.shineon.db.common.create.convert.ConvertMakeUp makeUp = new com.shineon.db.common.create.convert.ConvertMakeUp(fname,null,pojoClass,null, SysConstant.getSys());
-            makeUp.build();
+            try {
+                String fname = BaseFileUtil.getFileNameNoSuffix(pf.getName());
+                String pojoClassName = ConvertsConstant.POJO_PACKAGE + "." + fname;
+                Class pojoClass = Class.forName(pojoClassName);
+                ConvertMakeUp makeUp = new ConvertMakeUp(fname, pojoClass);
+                addMakeUp(makeUp);
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
         }
+    }
+
+    @Override
+    public void build() throws Exception {
+
     }
 
     @Override

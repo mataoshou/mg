@@ -1,6 +1,6 @@
 package com.mg.website.common.action;
 
-import com.shineon.api.common.base.constant.sys.SysConstant;
+import com.mg.website.common.constant.SysConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -17,7 +17,7 @@ public class ControllerLog {
     public void params() {
     }
 
-    @Pointcut("execution(* com.shineon.api.action..*.*(..))")
+    @Pointcut("execution(* com.mg.website.action..*.*(..))")
     public void methods() {
     }
 
