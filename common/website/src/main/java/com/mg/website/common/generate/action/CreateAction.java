@@ -21,14 +21,22 @@ public class CreateAction extends ICreate {
         super(actionName, methods);
         this.toolClass = toolClass;
         this.pojoClass = pojoClass;
-
-        init();
     }
     String dtoName = StringUtil.firstUpper(this.getName()) +"DTO";
     String constantClassName = StringUtil.firstUpper(this.getName()) +"ControllerConstant";
 
+
     @Override
-    protected void createPreMethod(ClassUnit unit) throws IOException {
+    protected void createPre(ClassUnit unit) throws IOException {
+        unit.addPreContent("@Autowired");
+        unit.addPreContent(String.format("%s dto;",dtoName));
+        unit.addPreContent("\r\n");
+        unit.addPreContent("@Autowired");
+        unit.addPreContent(String.format("%s commonUtil;",this.toolClass.getSimpleName()));
+    }
+
+    @Override
+    protected void createPreEachMethod(MethodUnit munit) throws IOException {
 
     }
 
@@ -74,17 +82,19 @@ public class CreateAction extends ICreate {
 
     @Override
     protected void classInit(ClassUnit unit) {
-        unit.addImport(new String[]{this.toolClass.getName(),"lombok.extern.slf4j.Slf4j",
-                "org.springframework.web.bind.annotation.RestController","org.springframework.web.bind.annotation.RequestMapping",
-                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItem","org.springframework.beans.factory.annotation.Autowired",
-                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName, ActionConstant.ACTION_CONSTANT_PACKAGE+"." + constantClassName
-                ,"org.springframework.web.bind.annotation.RequestBody","com.alibaba.fastjson.JSONObject",
-                ActionConstant.ACTION_COMMON_DB +".ApiResultItem",this.pojoClass.getName()});
-        unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("%s dto;",dtoName));
-        unit.addPreContent("\r\n");
-        unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("%s commonUtil;",this.toolClass.getName()));
+        unit.addImport(new String[]{
+                this.toolClass.getName(),
+                "lombok.extern.slf4j.Slf4j",
+                "org.springframework.web.bind.annotation.RestController",
+                "org.springframework.web.bind.annotation.RequestMapping",
+                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItem",
+                "org.springframework.beans.factory.annotation.Autowired",
+                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName,
+                ActionConstant.ACTION_CONSTANT_PACKAGE+"." + constantClassName,
+                "org.springframework.web.bind.annotation.RequestBody",
+                "com.alibaba.fastjson.JSONObject",
+                ActionConstant.ACTION_COMMON_DB +".ApiResultItem",
+                this.pojoClass.getName()});
 
     }
 

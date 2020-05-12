@@ -4,11 +4,8 @@ import com.mg.common.iservice.ibasic.IFactory;
 import com.mg.common.util.BaseFileUtil;
 import com.mg.common.util.CommonTool;
 import com.mg.website.common.constant.ConvertsConstant;
-import com.mg.website.common.constant.SysConstant;
 
 import java.io.File;
-import java.io.IOException;
-import java.rmi.server.ExportException;
 
 public class ConvertFactory extends IFactory {
 
@@ -35,16 +32,6 @@ public class ConvertFactory extends IFactory {
                 e.printStackTrace();
             }
         }
-    }
-
-    @Override
-    public void build() throws Exception {
-
-    }
-
-    @Override
-    public void rebuild() throws Exception {
-        build();
     }
 
 }

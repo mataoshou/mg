@@ -14,10 +14,10 @@ class CreateActionTest {
     void classInit() {
 
         CreateAction action = new CreateAction("matao", ApiResultItem.class, SimpleItem.class,new String[]{
-                "get","list"
+                "get1","list1"
         });
         try {
-            action.startCreate();
+            action.startEdit();
         } catch (IOException e) {
             e.printStackTrace();
         }

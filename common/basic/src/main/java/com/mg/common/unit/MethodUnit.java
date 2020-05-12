@@ -4,6 +4,9 @@ import com.mg.common.pojo.LineItem;
 import com.mg.common.pojo.MethodItem;
 import com.mg.common.pojo.ParamItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MethodUnit {
 
     /////////////////////////////////////////////////////////////////////////////
@@ -20,10 +23,20 @@ public class MethodUnit {
 
     private boolean isUsed = true;
 
+    private List<LineItem> preLine = new ArrayList<>();
+
 
     public void setDisabled()
     {
         isUsed =false;
+    }
+
+    public void addPreLine(String lineStr)
+    {
+        LineItem lineItem = new LineItem();
+        lineItem.setIntervalNo(1);
+        lineItem.setContent(lineStr);
+        preLine.add(lineItem);
     }
 
     private MethodItem methodItem = new MethodItem();
@@ -80,6 +93,18 @@ public class MethodUnit {
     public void addException(String ex)
     {
         this.methodItem.addException(ex);
+    }
+
+
+    public String getPre()
+    {
+        String pre = "";
+
+        for(LineItem item : preLine)
+        {
+            pre +=item.buildContent();
+        }
+        return pre;
     }
 
     public String getContent()
@@ -141,8 +166,9 @@ public class MethodUnit {
 
         }
 
-        content = content.replace("#decorate#",this.methodItem.getDecorate()).
-                replace("#returnType#",this.methodItem.getReturnValue())
+        content = content
+                .replace("#decorate#",this.methodItem.getDecorate())
+                .replace("#returnType#",this.methodItem.getReturnValue())
                 .replace("#params#",params)
                 .replace("#content#",inner)
                 .replace("#methodName#",this.methodItem.getMethodName())
@@ -169,7 +195,8 @@ public class MethodUnit {
     public String templateNobody()
     {
         String classTemplate =
-                "#decorate# #returnType#  (#params#)" +"\r\n";
+                "   #anntion#"+
+                "   #decorate# #returnType# #methodName#(#params#);" +"\r\n";
 
         return classTemplate;
     }

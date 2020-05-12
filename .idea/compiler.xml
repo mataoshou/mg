@@ -23,21 +23,21 @@
         <module name="mg-common-dao" />
         <module name="common-compose" />
         <module name="mg-knowledge" />
-        <module name="mg-common-tool" />
         <module name="bussiness-website" />
         <module name="mg-compose" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bussiness" target="1.8" />
+      <module name="mg-common-basic" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bussiness-website" options="-parameters" />
       <module name="knowledge" options="-parameters" />
+      <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-dao" options="-parameters" />
-      <module name="mg-common-tool" options="-parameters" />
       <module name="mg-compose" options="-parameters" />
       <module name="mg-dao" options="-parameters" />
       <module name="mg-empty" options="-parameters" />

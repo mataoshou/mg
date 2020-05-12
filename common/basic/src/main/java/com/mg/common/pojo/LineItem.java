@@ -8,9 +8,6 @@ public class LineItem {
 
     private int intervalNo =0;
 
-    public String getContent() {
-        return content;
-    }
 
     public void setContent(String content) {
         this.content = content;
@@ -39,7 +36,7 @@ public class LineItem {
         {
             result += this.getIntervalStr();
         }
-        result+= this.getContent() +"\n";
+        result+= this.content +"\n";
 
         return result;
     }

@@ -20,177 +20,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc6afe9-f794-403f-81d6-6b800f5e98d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/ClassUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/iservice/ibasic/CreateItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/iservice/ibasic/ICreate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/iservice/ibasic/IFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/iservice/ibasic/IMakeUpBase.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/iservice/ibasic/IMethodBase.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/pojo/ClassItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/pojo/LineItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/pojo/MethodItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/pojo/ParamItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/unit/ClassUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/unit/MethodUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/BaseFileUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/CommonTool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/Convert.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/DomUtil$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/DomUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/EmptyCheck.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/FileStore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/FileType$FileItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/FileType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/GuidUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/HexUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/Md5Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/PinYinUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/StringUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/util/TypeConvert.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/basic/target/mg-common-tool-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/CreateAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/CreateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/action/CreateActionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/convert/CreateConvertBaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/convert/CreateConvertUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bussiness/website/uauth/website-uauth.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/ActionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/ActionMakeUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/CreateActionConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/feign/CreateFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/feign/CreateFeignConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/feign/CreateFeignFallBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/feign/FeignFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/feign/FeignMakeUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/action/CreateActionConstantTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/feign/CreateFeignConstantTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/feign/CreateFeignFallBackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/feign/CreateFeignTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bussiness/website/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/UauthApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/FileUploadController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/action/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/config/ApiConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/constant/action/UserControllerConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/constant/feign/UserFeignConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/RmtOperateGroupInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/RmtOperateInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/RmtOrganizationInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/RmtPrivilegeGroupInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/RmtPrivilegeInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/RmtUserDepartmentInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/pojo/RmtUserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/db/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/base/RmtUserInfoCommonBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/mapper/RmtUserInfoCommonMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/convert/util/RmtUserInfoCommonUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/dto/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/feign/UserFeign.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/feign/UserFeignFallBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/task/MataoBuild.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/java/com/mg/api/service/task/UserTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bussiness/website/uauth/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/compose/target/mg-common-compose-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/compose/target/mg-common-compose-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/dao/target/mg-common-dao-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/dao/target/mg-common-dao-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/node/target/mg-common-node-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/node/target/mg-common-node-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/ICreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/ICreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/LineItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/ClassUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/ClassUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/MethodUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/MethodUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/iservice/ibasic/ICreate.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/iservice/ibasic/ICreate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/pojo/LineItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/pojo/LineItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/unit/ClassUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/unit/ClassUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/unit/MethodUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/classes/com/mg/common/unit/MethodUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/basic/target/mg-common-basic-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/mg-common-basic-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/.factorypath" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/.factorypath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/CreateItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/CreateItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/ICreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/ICreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/IFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IMakeUpBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/IMakeUpBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/iservice/ibasic/IMethodBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/IMethodBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ClassItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/ClassItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/LineItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/MethodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/MethodItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/pojo/ParamItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/ParamItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/ClassUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/ClassUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/unit/MethodUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/MethodUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/BaseFileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/BaseFileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/CommonTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/CommonTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/Convert.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/Convert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/DomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/DomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/EmptyCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/EmptyCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/FileStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/FileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/FileType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/GuidUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/GuidUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/HexUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/HexUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/Md5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/Md5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/PinYinUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/PinYinUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/src/main/java/com/mg/common/util/TypeConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/util/TypeConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/CreateItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/ICreate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/IFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/IMakeUpBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/iservice/ibasic/IMethodBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/ClassItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/LineItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/MethodItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/pojo/ParamItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/unit/ClassUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/unit/MethodUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/BaseFileUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/CommonTool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Convert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/DomUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/EmptyCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileType$FileItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/FileType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/GuidUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/HexUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/Md5Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/PinYinUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/StringUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/classes/com/mg/common/util/TypeConvert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/target/mg-common-tool-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tool/tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/tool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/website/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/ControllerLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/ControllerLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/sys/SysClassListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/sys/SysClassListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/sys/SysOperController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/action/sys/SysPageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/CommonItemConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/constant/CommonItemConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ConvertsConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/constant/ConvertsConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/CreateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/CreateAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/CreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action/CreateDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertMakeUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertMakeUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/ConvertTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/CreateConvertUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/MapperItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/convert/PropertyItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/ApiResultItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/ApiResultItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/CommonData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/CommonItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/CommonItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/IPojoBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/IPojoBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/QueryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/QueryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/pojo/SimpleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/pojo/SimpleItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/BasicCommonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/BasicCommonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/CommonItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/CommonItemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/base/SimpleItemCommonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/convert/base/SimpleItemCommonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/feign/BaseFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/service/feign/BaseFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/service/convert/base/MataoCommonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/service/convert/base/MataoCommonBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/src/main/java/com/shineon/api/action/MataoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/action/CreateActionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/action/CreateActionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/convert/CreateConvertUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/src/test/java/com/mg/website/common/generate/convert/CreateConvertUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/action/CreateAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/action/CreateAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/action/CreateDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/action/CreateDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/ConvertFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/ConvertFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/ConvertMakeUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/ConvertMakeUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/CreateConvertBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/CreateConvertBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/CreateConvertUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/common/generate/convert/CreateConvertUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/service/convert/base/MataoCommonBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/classes/com/mg/website/service/convert/base/MataoCommonBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/website/target/mg-common-website-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/mg-common-website-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/ConcreteFactory2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/design/factory/MethodFactory/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/class声明周期和加载器.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/~$ass声明周期和加载器.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/~$线程.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/~WRL0003.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge/target/classes/com/mg/knowledge/doc/基础知识点/线程.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/surefire-reports/TEST-com.mg.website.common.generate.convert.CreateConvertBaseTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/surefire-reports/TEST-com.mg.website.common.generate.convert.CreateConvertBaseTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/surefire-reports/com.mg.website.common.generate.convert.CreateConvertBaseTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/surefire-reports/com.mg.website.common.generate.convert.CreateConvertBaseTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/website/target/test-classes/com/mg/website/common/generate/action/CreateActionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/website/target/test-classes/com/mg/website/common/generate/action/CreateActionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,39 +111,58 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589032276637" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/website/src/main/java/com/mg/website/common/generate/action" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../shineon.frame/shineon/core" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.mg.website.common.generate.feign" />
       <recent name="com.mg.website.common.generate.action" />
       <recent name="com.mg.website.common.generate.convert" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mg.website.common.generate.convert" />
       <recent name="com.mg.common.pojo" />
       <recent name="com.mg.website.common.pojo" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\feign" />
       <recent name="E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\action" />
       <recent name="E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\convert" />
       <recent name="D:\core\mg\common\website\src\main\java\com\mg\website\common\action" />
       <recent name="D:\core\mg\common\website\src\main\java\com\mg\website\common\service" />
-      <recent name="D:\core\mg\common\website\src\main\java\com\mg\website\common\pojo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CreateActionTest.classInit">
+  <component name="RunManager" selected="JUnit.CreateFeignFallBackTest.classInit">
+    <configuration name="CreateActionConstantTest.classInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bussiness-website" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mg.website.common.generate.action.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.action" />
+      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.action.CreateActionConstantTest" />
+      <option name="METHOD_NAME" value="classInit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateActionTest.classInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bussiness-website" />
       <extension name="coverage">
@@ -277,32 +180,16 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateConvertBaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateFeignConstantTest.classInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bussiness-website" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mg.website.common.generate.convert.*" />
+          <option name="PATTERN" value="com.mg.website.common.generate.feign.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.convert" />
-      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.convert.CreateConvertBaseTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateConvertBaseTest.classInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bussiness-website" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mg.website.common.generate.convert.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.convert" />
-      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.convert.CreateConvertBaseTest" />
+      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.feign" />
+      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.feign.CreateFeignConstantTest" />
       <option name="METHOD_NAME" value="classInit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -310,33 +197,33 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateConvertBaseTest.testCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateFeignFallBackTest.classInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bussiness-website" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mg.website.common.generate.convert.*" />
+          <option name="PATTERN" value="com.mg.website.common.generate.feign.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.convert" />
-      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.convert.CreateConvertBaseTest" />
-      <option name="METHOD_NAME" value="testCreate" />
+      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.feign" />
+      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.feign.CreateFeignFallBackTest" />
+      <option name="METHOD_NAME" value="classInit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateConvertUtilTest.classInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateFeignTest.classInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bussiness-website" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mg.website.common.generate.convert.*" />
+          <option name="PATTERN" value="com.mg.website.common.generate.feign.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.convert" />
-      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.convert.CreateConvertUtilTest" />
+      <option name="PACKAGE_NAME" value="com.mg.website.common.generate.feign" />
+      <option name="MAIN_CLASS_NAME" value="com.mg.website.common.generate.feign.CreateFeignTest" />
       <option name="METHOD_NAME" value="classInit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -353,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateFeignFallBackTest.classInit" />
+        <item itemvalue="JUnit.CreateFeignTest.classInit" />
+        <item itemvalue="JUnit.CreateFeignConstantTest.classInit" />
+        <item itemvalue="JUnit.CreateActionConstantTest.classInit" />
         <item itemvalue="JUnit.CreateActionTest.classInit" />
-        <item itemvalue="JUnit.CreateConvertUtilTest.classInit" />
-        <item itemvalue="JUnit.CreateConvertBaseTest.testCreate" />
-        <item itemvalue="JUnit.CreateConvertBaseTest" />
-        <item itemvalue="JUnit.CreateConvertBaseTest.classInit" />
       </list>
     </recent_temporary>
   </component>
@@ -383,7 +270,8 @@
       <workItem from="1588945627802" duration="1518000" />
       <workItem from="1588989321604" duration="12876000" />
       <workItem from="1589162050557" duration="14173000" />
-      <workItem from="1589187753524" duration="8773000" />
+      <workItem from="1589187753524" duration="10010000" />
+      <workItem from="1589248181664" duration="21867000" />
     </task>
     <servers />
   </component>
@@ -421,18 +309,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="93" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1589188754925" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1589196635892">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1589267599532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589196635892" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589267599532" />
     <state x="611" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1588923721638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="611" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588923721638" />
-    <state x="736" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1589182801735">
+    <state x="734" y="386" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589262936082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="736" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589182801735" />
+    <state x="734" y="386" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1589262936082" />
+    <state x="736" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1589263495354">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="736" y="351" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589263495354" />
     <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589162722377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -441,58 +333,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="432" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1589180827816" />
-    <state x="852" y="329" key="FileChooserDialogImpl" timestamp="1589002590624">
+    <state x="852" y="329" key="FileChooserDialogImpl" timestamp="1589278731873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="852" y="329" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589002590624" />
-    <state width="1876" height="207" key="GridCell.Tab.0.bottom" timestamp="1589198589746">
+    <state x="852" y="329" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589278731873" />
+    <state width="1876" height="315" key="GridCell.Tab.0.bottom" timestamp="1589274791359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589198589746" />
-    <state width="1876" height="207" key="GridCell.Tab.0.center" timestamp="1589198589746">
+    <state width="1876" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589274791359" />
+    <state width="1876" height="315" key="GridCell.Tab.0.center" timestamp="1589274791359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="207" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589198589746" />
-    <state width="1876" height="207" key="GridCell.Tab.0.left" timestamp="1589198589746">
+    <state width="1876" height="315" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589274791359" />
+    <state width="1876" height="315" key="GridCell.Tab.0.left" timestamp="1589274791359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="207" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589198589746" />
-    <state width="1876" height="207" key="GridCell.Tab.0.right" timestamp="1589198589746">
+    <state width="1876" height="315" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589274791359" />
+    <state width="1876" height="315" key="GridCell.Tab.0.right" timestamp="1589274791359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="207" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589198589746" />
-    <state width="1876" height="352" key="GridCell.Tab.1.bottom" timestamp="1589196753356">
+    <state width="1876" height="315" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589274791359" />
+    <state width="1876" height="352" key="GridCell.Tab.1.bottom" timestamp="1589267380007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589196753356" />
-    <state width="1876" height="352" key="GridCell.Tab.1.center" timestamp="1589196753356">
+    <state width="1876" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589267380007" />
+    <state width="1876" height="352" key="GridCell.Tab.1.center" timestamp="1589267380007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="352" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589196753356" />
-    <state width="1876" height="352" key="GridCell.Tab.1.left" timestamp="1589196753356">
+    <state width="1876" height="352" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589267380007" />
+    <state width="1876" height="352" key="GridCell.Tab.1.left" timestamp="1589267380007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="352" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589196753356" />
-    <state width="1876" height="352" key="GridCell.Tab.1.right" timestamp="1589196753356">
+    <state width="1876" height="352" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589267380007" />
+    <state width="1876" height="352" key="GridCell.Tab.1.right" timestamp="1589267380007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="352" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589196753356" />
+    <state width="1876" height="352" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589267380007" />
     <state x="490" y="174" key="Maven.ArtifactSearchDialog" timestamp="1589179530080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="490" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589179530080" />
-    <state x="461" y="151" key="SettingsEditor" timestamp="1589187674318">
+    <state x="461" y="151" key="SettingsEditor" timestamp="1589282961466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589187674318" />
-    <state x="681" y="273" width="663" height="703" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589196678279">
+    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589282961466" />
+    <state x="681" y="273" width="663" height="703" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589270333998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="681" y="273" width="663" height="703" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589196678279" />
+    <state x="681" y="273" width="663" height="703" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589270333998" />
     <state x="443" y="235" key="new project wizard" timestamp="1589002622421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="443" y="235" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1589002622421" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589249795521">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589249795521" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -509,18 +405,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/ClassUnit.java</url>
-          <line>148</line>
+          <line>159</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/MethodUnit.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/ClassUnit.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/ClassUnit.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/iservice/ibasic/ICreate.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="16" />
+          <line>124</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/basic/src/main/java/com/mg/common/unit/MethodUnit.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

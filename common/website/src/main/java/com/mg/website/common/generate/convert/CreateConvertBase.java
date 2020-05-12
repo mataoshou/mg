@@ -30,8 +30,6 @@ public class CreateConvertBase extends ICreate {
         this.sysName = sysName;
         items = ConvertTools.getFields(this.pojoClass);
 
-        init();
-
     }
 
 
@@ -152,7 +150,12 @@ public class CreateConvertBase extends ICreate {
 
 
     @Override
-    protected void createPreMethod(ClassUnit unit) throws IOException {
+    protected void createPre(ClassUnit unit) throws IOException {
+
+    }
+
+    @Override
+    protected void createPreEachMethod(MethodUnit munit) throws IOException {
 
     }
 

@@ -18,7 +18,6 @@ public class MataoCommonBase implements CommonItemUtils<SimpleItem> {
       data.addParam("value",pojo.getValue());
       return data;
    }
-
    
    private SimpleItem toPojoData(CommonData data) {
       SimpleItem pojo = new SimpleItem();
@@ -26,12 +25,10 @@ public class MataoCommonBase implements CommonItemUtils<SimpleItem> {
       pojo.setValue(data.getString("value"));
       return pojo;
    }
-
    @Override
    public CommonItem toCommon(SimpleItem pojo) {
          return success(toCommonData(pojo));
    }
-
    @Override
    public CommonItem toCommon(List<SimpleItem> pojos) {
       List<CommonData> result = new ArrayList();
@@ -40,7 +37,6 @@ public class MataoCommonBase implements CommonItemUtils<SimpleItem> {
       }
       return success(result);
    }
-
    @Override
    public SimpleItem toPojo(CommonItem item) throws Exception{
       checkCommonItem(item);
@@ -49,7 +45,6 @@ public class MataoCommonBase implements CommonItemUtils<SimpleItem> {
       if(datas.size()>1){log.debug("CommonItem 中data数据不止一条数据!!"); }
       return toPojoData(datas.get(0));
    }
-
    @Override
    public List<SimpleItem> toPojoList(CommonItem item) throws Exception{
       checkCommonItem(item);
@@ -60,6 +55,5 @@ public class MataoCommonBase implements CommonItemUtils<SimpleItem> {
       }
       return result;
    }
-
 
 }

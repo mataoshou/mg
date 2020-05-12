@@ -39,12 +39,21 @@ public class ClassUnit {
         this.item.setName(name);
     }
 
+    public String getName()
+    {
+        return this.item.getName();
+    }
+
     public void setPackageName(String packageName) {
         this.item.setPackageName(packageName);
     }
 
     public void setBaseName(String baseName) {
         this.item.setBaseName(baseName);
+    }
+
+    public void setType(int type){
+        this.item.setType(type);
     }
 
     public ClassUnit addImport(String imp)
@@ -145,7 +154,9 @@ public class ClassUnit {
     public String finish()
     {
 
-        init();
+        if(content==null||content.length()==0) {
+            init();
+        }
         String preConent ="";
         for(LineItem lineItem : lines)
         {
@@ -162,26 +173,27 @@ public class ClassUnit {
         String methodStr ="";
         for(MethodUnit unit : methods)
         {
-            methodStr += unit.getContent() +"\r\n";
+            methodStr += unit.getPre();
+            methodStr += unit.getContent();
         }
         content = content.replace("#methods#",methodStr);
         return content;
     }
 
 
-    /**
-     * 完成 并将内容写入文件
-     * @return
-     */
-    public void finish(File file) throws IOException {
-        finish();
-        log.info("开始生成文件：" + file.getPath());
-        file.getParentFile().mkdirs();
-        FileOutputStream out = new FileOutputStream(file);
-        out.write(content.getBytes("UTF-8"));
-        out.close();
-        log.info("文件生成成功！！");
-    }
+//    /**
+//     * 完成 并将内容写入文件
+//     * @return
+//     */
+//    public void finish(File file) throws IOException {
+//        finish();
+//        log.info("开始生成文件：" + file.getPath());
+//        file.getParentFile().mkdirs();
+//        FileOutputStream out = new FileOutputStream(file);
+//        out.write(content.getBytes("UTF-8"));
+//        out.close();
+//        log.info("文件生成成功！！");
+//    }
 
 
     public void editClass(String content)

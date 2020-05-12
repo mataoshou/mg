@@ -16,11 +16,15 @@ public class CreateConvertUtil extends ICreate {
 
     public CreateConvertUtil(String name) {
         super(name, null);
-        init();
     }
 
     @Override
-    protected void createPreMethod(ClassUnit unit) throws IOException {
+    protected void createPre(ClassUnit unit) throws IOException {
+
+    }
+
+    @Override
+    protected void createPreEachMethod(MethodUnit munit) throws IOException {
 
     }
 

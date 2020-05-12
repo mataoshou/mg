@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,18 +43,31 @@ public abstract class ICreate {
     private ClassUnit unit = new ClassUnit();
 
 
+    private String nm = "";
 
     ////////////////////////////////////////////////////////模板函数
 
 
     public ICreate(String name, String[] methods)
     {
+        this.nm = name;
         this.item = new CreateItem(name,methods,getPackageName());
         item.setOverwrite(false);
-
         unit.setName(getClassName(name));
         unit.setPackageName(getPackageName());
 
+        innerInit();
+
+    }
+
+    public String getName()
+    {
+        return this.nm;
+    }
+
+    private void innerInit()
+    {
+        this.classFile = initFilePath(item.getPackageName(),getClassName(item.getName()));
     }
 
     public void init()
@@ -74,7 +88,6 @@ public abstract class ICreate {
      */
     private void initBegin(){
         log.info(String.format("开始初始化%s对象",item.getName()));
-        this.classFile = initFilePath(item.getPackageName(),getClassName(item.getName()));
     }
 
     private void initEnd()
@@ -86,6 +99,7 @@ public abstract class ICreate {
      * 开始对象的生成
      */
     public void startCreate() throws IOException {
+        init();
         if(!checkBeforeBuild())
         {
             log.info("生成失败，checkBeforeBuild函数检查结果返回false，停止生成文件!!");
@@ -99,6 +113,7 @@ public abstract class ICreate {
         }
         this.item.setOverwrite(true);
         log.info("开始生成新对象!!");
+        createPre(unit);
         editClass();
         log.info("完成对象新生成!!");
     }
@@ -107,11 +122,34 @@ public abstract class ICreate {
      * 开始对象的生成
      */
     public void startEdit() throws IOException {
-
+        init();
         this.item.setOverwrite(false);
         log.info("开始对象内容添加!!");
+        String src = FileStore.getContent(this.classFile);
+        unit.editClass(src);
         editClass();
         log.info("完成对象内容添加!!");
+    }
+
+
+    private void editClass() throws IOException {
+        if(this.item.getMethods()!=null&&this.item.getMethods().length>0)
+        {
+            for (String method : this.item.getMethods()) {
+                MethodUnit munit = new MethodUnit();
+                munit.setName(method);
+
+                createPreEachMethod(munit);
+                createMethod(munit);
+                this.unit.addMethod(munit);
+            }
+        }
+
+        //结束class 构建
+        if(unit!=null) {
+            finish(this.classFile);
+        }
+
     }
 
     /**
@@ -173,24 +211,6 @@ public abstract class ICreate {
 
 
 
-    private void editClass() throws IOException {
-        if(this.item.getMethods()!=null&&this.item.getMethods().length>0)
-        {
-            for (String method : this.item.getMethods()) {
-
-                MethodUnit munit = new MethodUnit();
-                munit.setName(method);
-                createMethod(munit);
-                this.unit.addMethod(munit);
-            }
-        }
-
-        //结束class 构建
-        if(unit!=null) {
-            finish(this.classFile);
-        }
-
-    }
 
     private void finish(File classFile)
     {
@@ -206,10 +226,6 @@ public abstract class ICreate {
     }
 
 
-    public String getName()
-    {
-        return item.getName();
-    }
 
     public String getClassFullName()
     {
@@ -243,18 +259,27 @@ public abstract class ICreate {
 
 
     /**
-     * 构建文件
+     * 开始构建正文内容之前执行
+     *
+     * 可在这里 添加全局变量  和 静态代码块
      */
-    protected abstract void createPreMethod(ClassUnit unit) throws IOException;
+    protected abstract void createPre(ClassUnit unit) throws IOException;
+
 
     /**
-     * 构建文件
+     * 每次构建函数之前都会执行一次
+     */
+    protected abstract void createPreEachMethod(MethodUnit munit) throws IOException;
+
+    /**
+     * 构建函数
      */
     protected abstract void createMethod(MethodUnit unit) throws IOException;
 
 
     /**
-     * 初始化
+     * 构造函数中执行
+     * 初始化 需要手动调用init方法
      */
     protected  abstract void classInit(ClassUnit unit);
 
@@ -264,6 +289,11 @@ public abstract class ICreate {
      */
     protected abstract String getPackageName();
 
+    /**
+     * 获取类名称
+     * @param name
+     * @return
+     */
     public abstract String getClassName(String name);
 
 }
