@@ -1,0 +1,1 @@
+package com.mg.compose.common.service.convert.util;import com.mg.compose.common.service.convert.base.SimpleItemCommonBase;import org.springframework.stereotype.Service;@Servicepublic class SimpleItemCommonUtil extends SimpleItemCommonBase {}
