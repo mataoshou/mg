@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bussiness" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bussiness/compose" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bussiness/dao" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bussiness/node" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bussiness/website" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common/basic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bussiness/website/website.uauth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/basic/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common/compose" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/compose/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common/dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/dao/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common/node" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/node/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common/website" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/website/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/empty" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/knowledge" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/knowledge/src/main/java" charset="UTF-8" />
   </component>
 </project>

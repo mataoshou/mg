@@ -1,0 +1,15 @@
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\db\pojo\RmtUserInfo.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\mq\BaseMessage.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\dto\UserDTO.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\convert\base\RmtUserInfoCommonBase.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\UauthApplication.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\feign\UserFeign.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\feign\UserFeignFallBack.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\convert\base\QueryItemCommonBase.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\convert\util\QueryItemCommonUtil.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\service\convert\util\RmtUserInfoCommonUtil.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\action\FileUploadController.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\constant\action\UserControllerConstant.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\constant\feign\UserFeignConstant.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\action\UserController.java
+E:\core\mg\bussiness\website\website.uauth\src\main\java\com\mg\website\config\ApiConfig.java

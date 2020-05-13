@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root> 
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="usercode" commonName="parentCode1" type="java.lang.String"/>
+  <item pojoName="username" commonName="parent1Name" type="java.lang.String"/>
+  <item pojoName="userpassword" commonName="parentCode2" type="java.lang.String"/>
+  <item pojoName="displayname" commonName="changerId" type="java.lang.String"/>
+  <item pojoName="userthumb" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="workcode" commonName="createId" type="java.lang.String"/>
+  <item pojoName="oganizationid" commonName="parent2Name" type="java.lang.String"/>
+  <item pojoName="departmentid" commonName="createName" type="java.lang.String"/>
+  <item pojoName="userextendid" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="createdtime" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="createuserid" commonName="title" type="java.lang.String"/>
+  <item pojoName="modifytime" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="modifyuserid" commonName="content" type="java.lang.String"/>
+  <item pojoName="limitedtime" commonName="endTime" type="java.util.Date"/>
+  <item pojoName="logincount" commonName="" type="java.lang.Byte"/>
+  <item pojoName="selectcondition" commonName="" type="java.lang.Byte"/>
+  <item pojoName="systemuserflag" commonName="" type="java.lang.Byte"/>
+</root>

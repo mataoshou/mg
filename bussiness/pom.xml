@@ -19,7 +19,16 @@
     </modules>
 
 
-
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.mg</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 
 
 </project>

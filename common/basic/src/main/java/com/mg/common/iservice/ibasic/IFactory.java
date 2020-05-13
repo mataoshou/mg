@@ -8,10 +8,6 @@ public abstract class IFactory {
 
     List<IMakeUpBase> makeList = new ArrayList();
 
-    public IFactory(String name)
-    {
-
-    }
 
     public void addMakeUp(IMakeUpBase makeUpBase)
     {

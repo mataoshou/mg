@@ -3,7 +3,6 @@ E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\feign\Cre
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\convert\CreateConvertUtil.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\convert\ConvertFactory.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\constant\ServerConstant.java
-E:\core\mg\common\website\src\main\java\com\mg\website\service\convert\base\MataoCommonBase.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\feign\CreateFeignFallBack.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\constant\DTOConstant.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\service\convert\base\SimpleItemCommonBase.java
@@ -17,17 +16,18 @@ E:\core\mg\common\website\src\main\java\com\mg\website\common\action\sys\SysClas
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\action\ActionMakeUp.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\feign\CreateFeign.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\pojo\ApiResultItem.java
-E:\core\mg\common\website\src\main\java\com\mg\website\service\convert\util\MataoCommonUtil.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\action\CreateDTO.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\action\CreateActionConstant.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\action\sys\SysUtil.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\constant\ConvertsConstant.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\service\convert\BasicCommonUtil.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\convert\ConvertMakeUp.java
+E:\core\mg\common\website\src\main\java\com\mg\website\common\action\sys\SysPageController.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\constant\PoolConstant.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\action\CreateAction.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\convert\ConvertTools.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\service\feign\BaseFallBack.java
+E:\core\mg\common\website\src\main\java\com\mg\website\common\action\sys\SysOperController.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\constant\FeignConstant.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\service\convert\CommonItemUtils.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\service\convert\AttachItem.java

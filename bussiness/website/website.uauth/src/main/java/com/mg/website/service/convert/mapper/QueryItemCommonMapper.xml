@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root> 
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="title" commonName="title" type="java.lang.String"/>
+  <item pojoName="status1" commonName="status1" type="java.lang.Short"/>
+  <item pojoName="status2" commonName="status2" type="java.lang.Short"/>
+  <item pojoName="status3" commonName="status3" type="java.lang.Short"/>
+  <item pojoName="beginTime" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="endTime" commonName="endTime" type="java.util.Date"/>
+</root>

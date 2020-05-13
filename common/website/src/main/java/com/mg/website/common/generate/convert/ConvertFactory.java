@@ -9,8 +9,7 @@ import java.io.File;
 
 public class ConvertFactory extends IFactory {
 
-    public ConvertFactory(String name,   String[] methods, String sysName) {
-        super(name);
+    public ConvertFactory() {
         setMakeUp();
     }
 

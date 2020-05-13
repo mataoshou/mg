@@ -1,0 +1,1 @@
+package com.mg.website.service.convert.util;import com.mg.website.service.convert.base.QueryItemCommonBase;import org.springframework.stereotype.Service;@Servicepublic class QueryItemCommonUtil extends QueryItemCommonBase {}
