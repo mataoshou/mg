@@ -5,6 +5,7 @@ import com.mg.common.iservice.ibasic.IFactory;
 import com.mg.common.pojo.CommonItem;
 import com.mg.compose.common.constant.ActionConstant;
 import com.mg.compose.common.constant.FeignConstant;
+import com.mg.compose.common.constant.SysConstant;
 import com.mg.compose.common.generate.action.ActionFactory;
 import com.mg.compose.common.generate.convert.ConvertFactory;
 import com.mg.compose.common.generate.feign.FeignFactory;

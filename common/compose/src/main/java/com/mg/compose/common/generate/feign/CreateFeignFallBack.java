@@ -5,6 +5,7 @@ import com.mg.common.iservice.ibasic.ICreate;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.StringUtil;
+import com.mg.compose.common.constant.ConvertsConstant;
 import com.mg.compose.common.constant.FeignConstant;
 
 import java.io.IOException;
@@ -33,7 +34,8 @@ public class CreateFeignFallBack extends ICreate {
     protected void createMethod(MethodUnit unit) throws IOException {
         unit.setReturnValue("CommonItem");
         unit.addParam("CommonItem","item");
-        unit.addTabLeftContent(String.format("fail(%s.FEIGN_SERVER_NAME);",constantClassName));
+        unit.setDecorate("public");
+        unit.addTabLeftContent(String.format("return fail(%s.FEIGN_SERVER_NAME);",constantClassName));
     }
 
     @Override

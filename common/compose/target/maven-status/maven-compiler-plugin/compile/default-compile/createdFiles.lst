@@ -3,7 +3,6 @@ com\mg\compose\common\generate\convert\CreateConvertUtil.class
 com\mg\compose\common\constant\FeignConstant.class
 com\mg\compose\common\generate\action\CreateActionConstant.class
 com\mg\compose\common\action\sys\SysOperController.class
-com\mg\compose\common\pojo\ApiResultItem.class
 com\mg\compose\common\generate\feign\CreateFeignConstant.class
 com\mg\compose\common\service\convert\AttachItem.class
 com\mg\compose\common\service\convert\base\SimpleItemCommonBase.class
@@ -30,6 +29,7 @@ com\mg\compose\common\generate\action\CreateDTO.class
 com\mg\compose\common\action\ControllerLog.class
 com\mg\compose\common\generate\convert\CreateConvertBase.class
 com\mg\compose\common\service\convert\BasicCommonUtil.class
+com\mg\compose\common\constant\CommonConstant.class
 com\mg\compose\common\action\sys\SysClassListController.class
 com\mg\compose\common\generate\feign\FeignFactory.class
 com\mg\compose\common\action\sys\SysItem.class

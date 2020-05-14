@@ -1,0 +1,13 @@
+com\mg\compose\service\feign\UserFeignFallBack.class
+com\mg\compose\service\convert\util\QueryItemCommonUtil.class
+com\mg\compose\service\convert\base\QueryItemCommonBase.class
+com\mg\compose\UauthApplication.class
+com\mg\compose\db\pojo\RmtUserInfo.class
+com\mg\compose\service\task\UserTask.class
+com\mg\compose\service\feign\UserFeign.class
+com\mg\compose\service\convert\base\RmtUserInfoCommonBase.class
+com\mg\compose\constant\feign\UserFeignConstant.class
+com\mg\compose\constant\action\UserControllerConstant.class
+com\mg\compose\action\UserController.class
+com\mg\compose\service\convert\util\RmtUserInfoCommonUtil.class
+com\mg\compose\service\dto\UserDTO.class

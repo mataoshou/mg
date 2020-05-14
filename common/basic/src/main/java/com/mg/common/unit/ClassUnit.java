@@ -106,6 +106,10 @@ public class ClassUnit {
 
         if (annotation != null && annotation.size() > 0) {
             for (String str : annotation) {
+                if(annotationData!=null&&annotationData.length()>0)
+                {
+                    annotationData += "\n";
+                }
                 annotationData += String.format("@%s", str);
             }
 

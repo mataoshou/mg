@@ -13,6 +13,7 @@ E:\core\mg\common\website\src\main\java\com\mg\website\common\service\mq\BaseMes
 E:\core\mg\common\website\src\main\java\com\mg\website\common\action\ControllerLog.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\convert\CreateConvertBase.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\action\sys\SysClassListController.java
+E:\core\mg\common\website\src\main\java\com\mg\website\common\constant\CommonConstant.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\action\ActionMakeUp.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\generate\feign\CreateFeign.java
 E:\core\mg\common\website\src\main\java\com\mg\website\common\pojo\ApiResultItem.java

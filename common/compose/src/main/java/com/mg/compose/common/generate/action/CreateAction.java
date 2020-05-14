@@ -1,10 +1,12 @@
 package com.mg.compose.common.generate.action;
 
+import com.mg.common.constant.ConverCommonConstant;
 import com.mg.common.iservice.ibasic.ICreate;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.StringUtil;
 import com.mg.compose.common.constant.ActionConstant;
+import com.mg.compose.common.constant.CommonConstant;
 import com.mg.compose.common.constant.ConvertsConstant;
 
 import java.io.IOException;
@@ -21,6 +23,7 @@ public class CreateAction extends ICreate {
         super(actionName, methods);
         this.toolClass = toolClass;
         this.pojoClass = pojoClass;
+        this.setOverwrite(false);
     }
     String dtoName = StringUtil.firstUpper(this.getName()) +"DTO";
     String constantClassName = StringUtil.firstUpper(this.getName()) +"ControllerConstant";
@@ -46,6 +49,7 @@ public class CreateAction extends ICreate {
         unit.setReturnValue("CommonItem");
         unit.setDecorate("public");
         unit.addParam("@RequestBody JSONObject" ,"params");
+        unit.addException("Exception");
 
         if(unit.getName().indexOf("get")>=0)
         {
@@ -87,13 +91,13 @@ public class CreateAction extends ICreate {
                 "lombok.extern.slf4j.Slf4j",
                 "org.springframework.web.bind.annotation.RestController",
                 "org.springframework.web.bind.annotation.RequestMapping",
-                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItem",
+                ConverCommonConstant.CONVERT_COMMON_POJO+".CommonItem",
                 "org.springframework.beans.factory.annotation.Autowired",
                 ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName,
                 ActionConstant.ACTION_CONSTANT_PACKAGE+"." + constantClassName,
                 "org.springframework.web.bind.annotation.RequestBody",
                 "com.alibaba.fastjson.JSONObject",
-                ActionConstant.ACTION_COMMON_DB +".ApiResultItem",
+                CommonConstant.POJO_COMMON +".ApiResultItem",
                 this.pojoClass.getName()});
 
     }

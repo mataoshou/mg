@@ -1,0 +1,13 @@
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\convert\base\QueryItemCommonBase.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\action\UserController.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\db\pojo\RmtUserInfo.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\convert\util\RmtUserInfoCommonUtil.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\feign\UserFeign.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\dto\UserDTO.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\convert\base\RmtUserInfoCommonBase.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\feign\UserFeignFallBack.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\UauthApplication.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\constant\action\UserControllerConstant.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\convert\util\QueryItemCommonUtil.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\constant\feign\UserFeignConstant.java
+E:\core\mg\bussiness\compose\compose.uauth\src\main\java\com\mg\compose\service\task\UserTask.java

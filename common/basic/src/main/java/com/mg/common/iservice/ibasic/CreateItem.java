@@ -30,7 +30,7 @@ public class CreateItem {
 
 
     //是否覆盖原来的文件
-    private boolean overwrite;
+    private boolean overwrite =true;
 
 
     //参数对象

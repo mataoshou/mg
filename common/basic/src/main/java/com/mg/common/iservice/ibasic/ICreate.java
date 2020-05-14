@@ -52,7 +52,6 @@ public abstract class ICreate {
     {
         this.nm = name;
         this.item = new CreateItem(name,methods,getPackageName());
-        item.setOverwrite(false);
         unit.setName(getClassName(name));
         unit.setPackageName(getPackageName());
 
@@ -106,12 +105,10 @@ public abstract class ICreate {
             return;
         }
 
-        if(!isFinishInit())
-        {
+        if(!isFinishInit()) {
             log.info("系统初始化失败，请检查是否有参数未完成初始化或生成文件已存在，停止生成文件!!");
             return;
         }
-        this.item.setOverwrite(true);
         log.info("开始生成新对象!!");
         createPre(unit);
         editClass();
@@ -123,7 +120,6 @@ public abstract class ICreate {
      */
     public void startEdit() throws IOException {
         init();
-        this.item.setOverwrite(false);
         log.info("开始对象内容添加!!");
         String src = FileStore.getContent(this.classFile);
         unit.editClass(src);
@@ -252,6 +248,13 @@ public abstract class ICreate {
      * @return
      */
     protected boolean checkBeforeBuild(){
+        if(!this.item.isOverwrite())
+        {
+            if(this.classFile.exists())
+            {
+                return false;
+            }
+        }
         return true;
     }
 

@@ -3,6 +3,7 @@ package com.mg.common.unit;
 import com.mg.common.pojo.LineItem;
 import com.mg.common.pojo.MethodItem;
 import com.mg.common.pojo.ParamItem;
+import com.mg.common.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -168,12 +169,12 @@ public class MethodUnit {
 
         content = content
                 .replace("#decorate#",this.methodItem.getDecorate())
-                .replace("#returnType#",this.methodItem.getReturnValue())
+                .replace("#returnType#",StringUtil.addUnEmpty(this.methodItem.getReturnValue()," "," "))
                 .replace("#params#",params)
                 .replace("#content#",inner)
                 .replace("#methodName#",this.methodItem.getMethodName())
                 .replace("#anntion#",anntions)
-                .replace("#exception#",ex);
+                .replace("#exception#",StringUtil.addUnEmpty(ex," ",""));
 
 
         return content;
@@ -185,9 +186,9 @@ public class MethodUnit {
     {
         String classTemplate =
                 "   #anntion#"+
-                "   #decorate# #returnType# #methodName#(#params#) #exception#{" +"\r\n"+
-                        "#content#"+
-                        "   }\n";
+                "   #decorate##returnType##methodName#(#params#)#exception#{" +"\r\n"+
+                "#content#"+
+                "   }\n";
 
         return classTemplate;
     }
@@ -196,7 +197,7 @@ public class MethodUnit {
     {
         String classTemplate =
                 "   #anntion#"+
-                "   #decorate# #returnType# #methodName#(#params#);" +"\r\n";
+                "   #decorate##returnType##methodName#(#params#);" +"\r\n";
 
         return classTemplate;
     }

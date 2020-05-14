@@ -1,7 +1,6 @@
 package com.mg.compose.common.generate.convert;
 
 import com.mg.common.iservice.ibasic.IMakeUpBase;
-
 public class ConvertMakeUp extends IMakeUpBase {
 
 

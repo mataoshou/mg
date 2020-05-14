@@ -1,1 +1,0 @@
-package com.mg.website.service.convert.util;import com.mg.website.service.convert.base.RmtUserInfoCommonBase;import org.springframework.stereotype.Service;@Servicepublic class RmtUserInfoCommonUtil extends RmtUserInfoCommonBase {}

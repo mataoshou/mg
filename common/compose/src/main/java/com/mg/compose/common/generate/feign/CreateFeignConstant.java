@@ -9,13 +9,17 @@ import com.mg.compose.common.constant.FeignConstant;
 import java.io.IOException;
 
 public class CreateFeignConstant  extends ICreate {
-    public CreateFeignConstant(String name, String[] methods) {
+
+    String sysName ;
+
+    public CreateFeignConstant(String name, String[] methods,String sysName) {
         super(name, methods);
+        this.sysName = sysName;
     }
 
     @Override
     protected void createPre(ClassUnit unit) throws IOException {
-
+        unit.addPreContent(String.format("public static final String FEIGN_SERVER_NAME =\"%s\";",sysName));
     }
 
     @Override

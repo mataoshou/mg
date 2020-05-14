@@ -10,5 +10,4 @@ public class CommonItemConstant {
     static  public  final  String REASON_FAIL ="ERROR";
 
 
-
 }

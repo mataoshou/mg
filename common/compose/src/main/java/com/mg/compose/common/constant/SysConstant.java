@@ -2,7 +2,7 @@ package com.mg.compose.common.constant;
 
 public class SysConstant {
 
-    private  static String sysName = "shineon.compose.uauth";
+    private static String sysName = "compose.uauth";
 
 
     public static void setSys(String sys)

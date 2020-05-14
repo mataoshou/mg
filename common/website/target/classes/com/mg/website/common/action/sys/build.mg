@@ -109,7 +109,7 @@
 				for(var j=0;j<MT.selects.length;j++)
 				{
 					MT.api(MT.urls[j],function(data,carrys){
-						var vals = data.datas;
+						var vals = data;
 						//alert(selects[carrys]  + ".." +carrys);
 						for(var i=0;i<vals.length;i++)
 						{

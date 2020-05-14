@@ -6,17 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mg-compose-uauth" />
         <module name="mg-common-dao" />
         <module name="mg-common-website" />
-        <module name="mg-service-node" />
+        <module name="mg-common-node" />
         <module name="mg-website-uauth" />
         <module name="mg-common-compose" />
         <module name="mg-empty" />
         <module name="mg-common-basic" />
-        <module name="mg-service-compose" />
         <module name="mg-knowledge" />
         <module name="mg-dao" />
-        <module name="mg-common-node" />
+        <module name="mg-service-node" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +28,7 @@
       <module name="mg-common-dao" target="1.8" />
       <module name="mg-common-node" target="1.8" />
       <module name="mg-common-website" target="1.8" />
+      <module name="mg-compose-uauth" target="1.8" />
       <module name="mg-dao" target="1.8" />
       <module name="mg-empty" target="1.8" />
       <module name="mg-knowledge" target="1.8" />
@@ -44,6 +45,7 @@
       <module name="mg-common-dao" options="-parameters" />
       <module name="mg-common-node" options="-parameters" />
       <module name="mg-common-website" options="-parameters" />
+      <module name="mg-compose-uauth" options="-parameters" />
       <module name="mg-dao" options="-parameters" />
       <module name="mg-empty" options="-parameters" />
       <module name="mg-knowledge" options="-parameters" />

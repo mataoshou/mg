@@ -1,11 +1,11 @@
 package com.mg.compose.common.action.sys;
 
-import com.mg.common.pojo.CommonItem;
-import com.mg.common.pojo.SimpleItem;
 import com.mg.compose.common.constant.ConvertsConstant;
 import com.mg.compose.common.constant.DTOConstant;
 import com.mg.compose.common.constant.ServerConstant;
 import com.mg.compose.common.generate.convert.ConvertTools;
+import com.mg.common.pojo.CommonItem;
+import com.mg.common.pojo.SimpleItem;
 import com.mg.compose.common.service.convert.util.SimpleItemCommonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class SysClassListController {
     SimpleItemCommonUtil commonUtil;
 
     @RequestMapping("sys/list/dto")
-    public CommonItem listDTO() throws IOException {
+    public List<SimpleItem> listDTO() throws IOException {
 
         File root =getRoot(DTOConstant.DTO_PACKAGE);
 
@@ -34,11 +34,11 @@ public class SysClassListController {
 
         List<SimpleItem> names = getFileNames(root,DTOConstant.DTO_PACKAGE);
 
-        return commonUtil.toCommon(names);
+        return names;
     }
 
     @RequestMapping("sys/list/commonUtil")
-    public CommonItem listCommonUtils() throws IOException {
+    public  List<SimpleItem> listCommonUtils() throws IOException {
 
         File root =getRoot(ConvertsConstant.UTIL_PACKAGE);
 
@@ -46,12 +46,12 @@ public class SysClassListController {
 
         List<SimpleItem> names = getFileNames(root, ConvertsConstant.UTIL_PACKAGE);
 
-        return commonUtil.toCommon(names);
+        return names;
     }
 
 
     @RequestMapping("sys/list/sysName")
-    public CommonItem listSysNames() throws IOException, IllegalAccessException {
+    public  List<SimpleItem> listSysNames() throws IOException, IllegalAccessException {
 
         ServerConstant constant = new ServerConstant();
         Field[] field = ServerConstant.class.getDeclaredFields();
@@ -66,12 +66,12 @@ public class SysClassListController {
             names.add(item);
         }
 
-        return commonUtil.toCommon(names);
+        return names;
     }
 
 
     @RequestMapping("sys/list/pojo")
-    public CommonItem listPojos() throws IOException {
+    public  List<SimpleItem> listPojos() throws IOException {
 
         File root =getRoot(ConvertsConstant.POJO_PACKAGE);
 
@@ -79,7 +79,7 @@ public class SysClassListController {
 
         List<SimpleItem> names = getFileNames(root, ConvertsConstant.POJO_PACKAGE);
 
-        return commonUtil.toCommon(names);
+        return names;
     }
 
     public List<SimpleItem> getFileNames(File file, String pre)

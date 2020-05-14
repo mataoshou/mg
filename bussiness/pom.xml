@@ -11,6 +11,7 @@
 
     <artifactId>mg-bussiness</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>website</module>
         <module>compose</module>
@@ -22,9 +23,9 @@
     <build>
         <resources>
             <resource>
-                <directory>src/main/java</directory>
+                <directory>src/main/resources</directory>
                 <includes>
-                    <include>**/*.mg</include>
+                    <include>**/*.yml</include>
                 </includes>
             </resource>
         </resources>

@@ -6,8 +6,9 @@ import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.ClassUtil;
 import com.mg.common.util.StringUtil;
-import com.mg.common.pojo.SimpleItem;
+import com.mg.compose.common.constant.CommonConstant;
 import com.mg.compose.common.constant.ConvertsConstant;
+import com.mg.common.pojo.SimpleItem;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -182,7 +183,7 @@ public class CreateConvertBase extends ICreate {
                 this.pojoClass.getName(),
                 ConverCommonConstant.CONVERT_COMMON_POJO+".CommonData",
                 "java.util.ArrayList","java.util.List",
-                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItemUtils",
+                CommonConstant.CONVERT_COMMON_PACKAGE+".CommonItemUtils",
                 ConverCommonConstant.CONVERT_COMMON_POJO+".CommonItem",
                 "lombok.extern.slf4j.Slf4j"});
 

@@ -8,6 +8,4 @@ public class ConvertsConstant {
 
     static public final String POJO_PACKAGE = "com.mg.compose.db.pojo";
 
-    static public final  String CONVERT_COMMON_PACKAGE ="com.mg.compose.common.service.convert";
-
 }

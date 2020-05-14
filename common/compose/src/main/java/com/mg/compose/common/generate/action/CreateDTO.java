@@ -1,9 +1,12 @@
 package com.mg.compose.common.generate.action;
 
+import com.mg.common.constant.ConverCommonConstant;
 import com.mg.common.iservice.ibasic.ICreate;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
+import com.mg.common.util.StringUtil;
 import com.mg.compose.common.constant.ActionConstant;
+import com.mg.compose.common.constant.CommonConstant;
 import com.mg.compose.common.constant.ConvertsConstant;
 import com.mg.compose.common.constant.FeignConstant;
 
@@ -17,12 +20,19 @@ public class CreateDTO extends ICreate {
         super(name, methods);
         this.toolClass = toolClass;
         this.pojoClass = pojoClass;
-        init();
     }
 
     @Override
     protected void createPre(ClassUnit unit) throws IOException {
+        unit.addPreContent("@Autowired");
+        unit.addPreContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
 
+        unit.addPreContent("@Autowired");
+        unit.addPreContent(String.format("%sFeign feign;",StringUtil.firstUpper(this.getName())));
+
+
+        unit.addPreContent("@Autowired");
+        unit.addPreContent(String.format("%s commonUtil;",this.toolClass.getSimpleName()));
     }
 
     @Override
@@ -34,6 +44,18 @@ public class CreateDTO extends ICreate {
     @Override
     protected void createMethod(MethodUnit unit) throws IOException {
 
+        unit.setDecorate("public");
+        unit.setReturnValue("CommonItem");
+        unit.addParam("CommonItem","item");
+        unit.addException("Exception");
+
+        unit.addTabContent(String.format("CommonItem result =  feign.%s(item);",unit.getName()));
+        if(unit.getName().indexOf("list")>=0) {
+            unit.addTabContent(String.format("return  new ApiResultItem(result ,commonUtil.toPojoList(result));"));
+        }
+        else {
+            unit.addTabContent(String.format("return new ApiResultItem(result ,commonUtil.toPojo(result));"));
+        }
     }
 
     @Override
@@ -43,11 +65,10 @@ public class CreateDTO extends ICreate {
                 "lombok.extern.slf4j.Slf4j",this.pojoClass.getName(),
                 "org.springframework.beans.factory.annotation.Autowired",
 //                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
-                ConvertsConstant.POJO_PACKAGE+".QueryItem",
                 ConvertsConstant.UTIL_PACKAGE+".QueryItemCommonUtil",
-                ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItem",
-                ActionConstant.ACTION_COMMON_DB +".ApiResultItem",
-                FeignConstant.FEIGN_PACKAGE+String.format(".%sFeign",this.getName())});
+                ConverCommonConstant.CONVERT_COMMON_POJO+".CommonItem",
+                CommonConstant.POJO_COMMON +".ApiResultItem",
+                FeignConstant.FEIGN_PACKAGE+String.format(".%sFeign",StringUtil.firstUpper(this.getName()))});
 
         unit.addAnnotion("Service");
         unit.addAnnotion("Slf4j");
@@ -55,11 +76,11 @@ public class CreateDTO extends ICreate {
 
     @Override
     protected String getPackageName() {
-        return null;
+        return  ActionConstant.ACTION_DTO_PACKAGE;
     }
 
     @Override
     public String getClassName(String name) {
-        return null;
+        return StringUtil.firstUpper(this.getName()) + "DTO";
     }
 }

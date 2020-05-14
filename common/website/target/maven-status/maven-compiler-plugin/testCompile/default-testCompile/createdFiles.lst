@@ -1,0 +1,8 @@
+com\mg\website\common\generate\action\CreateDTOTest.class
+com\mg\website\common\generate\feign\CreateFeignFallBackTest.class
+com\mg\website\common\generate\action\CreateActionTest.class
+com\mg\website\common\generate\feign\CreateFeignTest.class
+com\mg\website\common\generate\feign\CreateFeignConstantTest.class
+com\mg\website\common\generate\action\CreateActionConstantTest.class
+com\mg\website\common\generate\convert\CreateConvertUtilTest.class
+com\mg\website\common\generate\convert\CreateConvertBaseTest.class

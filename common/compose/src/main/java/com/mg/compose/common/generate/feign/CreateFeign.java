@@ -12,7 +12,7 @@ import java.io.IOException;
 public class CreateFeign extends ICreate {
 
 
-    public CreateFeign(String name, String[] methods,String sysName) {
+    public CreateFeign(String name, String[] methods) {
         super(name, methods);
     }
 
@@ -30,6 +30,7 @@ public class CreateFeign extends ICreate {
     @Override
     protected void createMethod(MethodUnit unit) throws IOException {
         unit.setType(unit.METHOD_TYPE_ABSTRACT);
+        unit.addParam("CommonItem","item");
         unit.addAnnotation(String.format("RequestMapping(%s.FEIGN_%s)",constantClassName,unit.getName().toUpperCase()));
         unit.setReturnValue("CommonItem");
     }

@@ -1,7 +1,7 @@
 package com.mg.compose.common.action;
 
+import com.mg.common.pojo.CommonItem;
 import com.mg.compose.common.constant.SysConstant;
-import com.mg.compose.common.pojo.ApiResultItem;
 import com.mg.compose.common.service.convert.BasicCommonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +18,13 @@ public class ActionExceptionHandler {
     Logger logger = LoggerFactory.getLogger(SysConstant.getSys());
     @ResponseBody
     @ExceptionHandler
-    public ApiResultItem processEx(Exception ex) throws Exception {
+    public CommonItem processEx(Exception ex) throws Exception {
 
         String errorReason =String.format("[%s]异常：[%s]", SysConstant.getSys(),ex.getMessage());
 
         logger.info(String.format("[%s]异常：[%s] (%s)", SysConstant.getSys(),ex.getMessage(), ex.getStackTrace()[0]));
         ex.printStackTrace();
 
-        return new ApiResultItem(utils.fail(errorReason),null);
+        return utils.fail(errorReason);
     }
 }

@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/common/dao/mg-common-dao.iml" filepath="$PROJECT_DIR$/common/dao/mg-common-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/node/mg-common-node.iml" filepath="$PROJECT_DIR$/common/node/mg-common-node.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/website/mg-common-website.iml" filepath="$PROJECT_DIR$/common/website/mg-common-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/dao/mg-dao.iml" filepath="$PROJECT_DIR$/bussiness/dao/mg-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/empty/mg-empty.iml" filepath="$PROJECT_DIR$/empty/mg-empty.iml" />
       <module fileurl="file://$PROJECT_DIR$/knowledge/mg-knowledge.iml" filepath="$PROJECT_DIR$/knowledge/mg-knowledge.iml" />
