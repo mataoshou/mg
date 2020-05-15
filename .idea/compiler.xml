@@ -6,16 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mg-compose-uauth" />
-        <module name="mg-common-dao" />
         <module name="mg-common-website" />
         <module name="mg-common-node" />
         <module name="mg-website-uauth" />
         <module name="mg-common-compose" />
         <module name="mg-empty" />
-        <module name="mg-common-basic" />
+        <module name="mg-compose-uauth" />
         <module name="mg-knowledge" />
-        <module name="mg-dao" />
+        <module name="mg-common-basic" />
         <module name="mg-service-node" />
       </profile>
     </annotationProcessing>

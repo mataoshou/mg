@@ -17,7 +17,6 @@
         <module>website</module>
         <module>compose</module>
         <module>node</module>
-        <module>dao</module>
     </modules>
 
     <dependencies>

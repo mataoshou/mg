@@ -1,1 +1,0 @@
-package com.mg.website.uauth.common.service.convert.util;import com.mg.website.uauth.common.service.convert.base.SimpleItemCommonBase;import org.springframework.stereotype.Service;@Servicepublic class SimpleItemCommonUtil extends SimpleItemCommonBase {}

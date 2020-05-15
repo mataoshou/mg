@@ -16,8 +16,5 @@ public class ApiConfig {
                 registry.addMapping("/**");
             }
         };
-
     }
-
-
 }
