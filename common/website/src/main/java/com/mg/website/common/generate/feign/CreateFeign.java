@@ -12,8 +12,13 @@ import java.io.IOException;
 public class CreateFeign extends ICreate {
 
 
-    public CreateFeign(String name, String[] methods) {
+    Class incl;
+    Class outcl;
+
+    public CreateFeign(String name, String[] methods,Class inCl,Class outCl) {
         super(name, methods);
+        this.incl =inCl;
+        this.outcl = outCl;
     }
 
     @Override
@@ -30,9 +35,9 @@ public class CreateFeign extends ICreate {
     @Override
     protected void createMethod(MethodUnit unit) throws IOException {
         unit.setType(unit.METHOD_TYPE_ABSTRACT);
-        unit.addParam("CommonItem","item");
+        unit.addParam(incl.getSimpleName(),"item");
         unit.addAnnotation(String.format("RequestMapping(%s.FEIGN_%s)",constantClassName,unit.getName().toUpperCase()));
-        unit.setReturnValue("CommonItem");
+        unit.setReturnValue(outcl.getSimpleName());
     }
 
     @Override
@@ -41,10 +46,11 @@ public class CreateFeign extends ICreate {
 
         unit.addImport(new String[]{
                 "lombok.extern.slf4j.Slf4j",
-                ConverCommonConstant.CONVERT_COMMON_POJO+".CommonItem",
                 "org.springframework.cloud.openfeign.FeignClient",
                 "org.springframework.web.bind.annotation.RequestMapping",
-                FeignConstant.FEIGN_CONSTANT_PACKAGE + "." +constantClassName
+                FeignConstant.FEIGN_CONSTANT_PACKAGE + "." +constantClassName,
+                this.incl.getName(),
+                this.outcl.getName()
         });
 
         unit.setType(2);

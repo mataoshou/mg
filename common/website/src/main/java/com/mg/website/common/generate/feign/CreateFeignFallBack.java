@@ -11,9 +11,13 @@ import java.io.IOException;
 
 public class CreateFeignFallBack extends ICreate {
 
+    Class incl;
+    Class outcl;
 
-    public CreateFeignFallBack(String name, String[] methods) {
+    public CreateFeignFallBack(String name, String[] methods,Class inCl,Class outCl) {
         super(name, methods);
+        this.incl =inCl;
+        this.outcl = outCl;
     }
 
     @Override
@@ -31,10 +35,10 @@ public class CreateFeignFallBack extends ICreate {
 
     @Override
     protected void createMethod(MethodUnit unit) throws IOException {
-        unit.setReturnValue("CommonItem");
-        unit.addParam("CommonItem","item");
+        unit.setReturnValue(outcl.getSimpleName());
+        unit.addParam(incl.getSimpleName(),"item");
         unit.setDecorate("public");
-        unit.addTabLeftContent(String.format("return fail(%s.FEIGN_SERVER_NAME);",constantClassName));
+        unit.addTabLeftContent(String.format("fail(%s.FEIGN_SERVER_NAME);return new %s()",constantClassName,outcl.getSimpleName()));
     }
 
     @Override

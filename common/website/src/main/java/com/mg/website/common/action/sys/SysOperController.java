@@ -57,8 +57,7 @@ public class SysOperController {
             item.setMethods(FeignConstant.FEIGN_METHOD);
         }
 
-        FeignFactory factory = new FeignFactory(item.getName(),item.getMethods()
-                ,item.getSysName());
+        FeignFactory factory = new FeignFactory(item);
         oper(factory,item);
         return new ApiResultItem();
     }
@@ -98,8 +97,7 @@ public class SysOperController {
         oper(actionfactory,item);
 
 
-        FeignFactory feignfactory = new FeignFactory(item.getName(),item.getMethods()
-                ,item.getSysName());
+        FeignFactory feignfactory = new FeignFactory(item);
         oper(feignfactory,item);
         return new ApiResultItem();
     }
