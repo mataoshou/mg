@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class ActionExceptionHandler {
 
-    @Autowired
-    BasicCommonUtil utils;
 
     Logger logger = LoggerFactory.getLogger(SysConstant.getSys());
     @ResponseBody
@@ -25,6 +23,6 @@ public class ActionExceptionHandler {
         logger.info(String.format("[%s]异常：[%s] (%s)", SysConstant.getSys(),ex.getMessage(), ex.getStackTrace()[0]));
         ex.printStackTrace();
 
-        return new ApiResultItem(utils.fail(errorReason),null);
+        return new ApiResultItem(-1,ex.getMessage());
     }
 }

@@ -1,35 +1,44 @@
 package com.mg.website.common.pojo;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.mg.common.pojo.CommonItem;
-
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ApiResultItem {
+public class ApiResultItem<T> {
 
     private Integer code;
 
     private String msg;
 
-    private JSONArray data = new JSONArray();
+    private List<T> data = new ArrayList();
 
-    public ApiResultItem(CommonItem item, Object data) throws Exception {
+    public ApiResultItem( List<T> data) throws Exception {
 
-        this.msg = item.getErrorReason();
-        this.code = item.getErrorStatus();
+        this.msg = "ok";
+        this.code = 100;
 
-        if(data instanceof  List)
-        {
-            if(data!=null) {
-                this.data.addAll((Collection<? extends Object>) data);
-            }
-        }
-        else if(data!=null) {
-            this.data.add(JSON.toJSON(data));
-        }
+        this.data = data;
 
+    }
+
+    public ApiResultItem( T t) throws Exception {
+
+        this.msg = "ok";
+        this.code = 100;
+
+        this.data.add(t);
+
+    }
+
+    public ApiResultItem( int code,String msg) throws Exception {
+
+        this.msg = msg;
+        this.code = code;
+    }
+
+    public ApiResultItem()
+    {
+        this.msg = "ok";
+        this.code = 100;
     }
 
 
@@ -50,11 +59,16 @@ public class ApiResultItem {
         this.msg = msg;
     }
 
-    public JSONArray getData() {
-        return data;
+    public T get()
+    {
+        if(this.data==null||this.data.size()==0)return null;
+        return this.data.get(0);
     }
 
-    public void setData(JSONArray data) {
-        this.data = data;
+    public List<T> list()
+    {
+        if(this.data==null||this.data.size()==0)return null;
+        return this.data;
     }
+
 }

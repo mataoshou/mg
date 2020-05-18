@@ -14,25 +14,20 @@ import java.io.IOException;
 
 public class CreateDTO extends ICreate {
 
-    Class toolClass;
-    Class pojoClass;
-    public CreateDTO(String name, Class toolClass, Class pojoClass, String[] methods) {
+    Class resultClass;
+    Class paramClass;
+    public CreateDTO(String name, Class paramClass,Class resultClass, String[] methods) {
         super(name, methods);
-        this.toolClass = toolClass;
-        this.pojoClass = pojoClass;
+        this.paramClass = paramClass;
+        this.resultClass = resultClass;
     }
 
     @Override
     protected void createPre(ClassUnit unit) throws IOException {
-        unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
 
         unit.addPreContent("@Autowired");
         unit.addPreContent(String.format("%sFeign feign;",StringUtil.firstUpper(this.getName())));
 
-
-        unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("%s commonUtil;",this.toolClass.getSimpleName()));
     }
 
     @Override
@@ -46,41 +41,40 @@ public class CreateDTO extends ICreate {
 
         unit.setDecorate("public");
         unit.setReturnValue("ApiResultItem");
-        unit.addParam("CommonItem","item");
+        unit.addParam(paramClass.getSimpleName(),"item");
         unit.addException("Exception");
 
-        unit.addTabContent(String.format("CommonItem result =  feign.%s(item);",unit.getName()));
         if(unit.getName().indexOf("list")>=0) {
-            unit.addTabContent(String.format("return  new ApiResultItem(result ,commonUtil.toPojoList(result));"));
+            unit.addTabContent(String.format("List<%s> result =  feign.%s(item);",resultClass.getSimpleName(),unit.getName()));
+            unit.addTabContent(String.format("return new ApiResultItem(result);"));
         }
         else {
-            unit.addTabContent(String.format("return new ApiResultItem(result ,commonUtil.toPojo(result));"));
+            unit.addTabContent(String.format("%s result =  feign.%s(item);",resultClass.getSimpleName(),unit.getName()));
+            unit.addTabContent(String.format("return new ApiResultItem(result);"));
         }
     }
 
     @Override
     protected void classInit(ClassUnit unit) {
         unit.addImport(new String[]{"org.springframework.stereotype.Service",
-                this.toolClass.getName(),
-                "lombok.extern.slf4j.Slf4j",this.pojoClass.getName(),
+                this.paramClass.getName(),
+                "lombok.extern.slf4j.Slf4j",this.resultClass.getName(),
                 "org.springframework.beans.factory.annotation.Autowired",
 //                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
-                ConvertsConstant.UTIL_PACKAGE+".QueryItemCommonUtil",
-                ConverCommonConstant.CONVERT_COMMON_POJO+".CommonItem",
                 CommonConstant.POJO_COMMON +".ApiResultItem",
                 FeignConstant.FEIGN_PACKAGE+String.format(".%sFeign",StringUtil.firstUpper(this.getName()))});
-
+        unit.addImport("java.util.List");
         unit.addAnnotion("Service");
         unit.addAnnotion("Slf4j");
     }
 
     @Override
     protected String getPackageName() {
-        return  ActionConstant.ACTION_DTO_PACKAGE;
+        return  ActionConstant.ACTION_REPOSITORY_PACKAGE;
     }
 
     @Override
     public String getClassName(String name) {
-        return StringUtil.firstUpper(this.getName()) + "DTO";
+        return StringUtil.firstUpper(this.getName()) + "Repository";
     }
 }

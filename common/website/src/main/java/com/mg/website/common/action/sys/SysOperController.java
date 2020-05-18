@@ -2,12 +2,12 @@ package com.mg.website.common.action.sys;
 
 
 import com.mg.common.iservice.ibasic.IFactory;
-import com.mg.common.pojo.CommonItem;
-import com.mg.website.common.generate.feign.FeignFactory;
 import com.mg.website.common.constant.ActionConstant;
 import com.mg.website.common.constant.FeignConstant;
 import com.mg.website.common.generate.action.ActionFactory;
 import com.mg.website.common.generate.convert.ConvertFactory;
+import com.mg.website.common.generate.feign.FeignFactory;
+import com.mg.website.common.pojo.ApiResultItem;
 import com.mg.website.common.service.convert.util.SimpleItemCommonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class SysOperController {
 
 
     @RequestMapping("sys/oper/api")
-    public CommonItem api(@RequestBody SysItem item) throws Exception {
+    public ApiResultItem api(@RequestBody SysItem item) throws Exception {
 
         if(item==null)throw new Exception("参数为空，请检查！！");
         if(item.getName()==null||item.getName().trim().length()==0)throw new Exception("名称为空，请检查！！");
@@ -37,18 +37,15 @@ public class SysOperController {
             item.setMethods(ActionConstant.ACTION_METHOD);
         }
 
-        ActionFactory factory = new ActionFactory(item.getName(),
-                Class.forName(item.getCommonName()),
-                Class.forName(item.getPojoName()),
-                item.getMethods());
+        ActionFactory factory = new ActionFactory(item);
         oper(factory,item);
-        return commonUtil.success();
+        return new ApiResultItem();
     }
 
 
 
     @RequestMapping("sys/oper/feign")
-    public CommonItem feign(@RequestBody SysItem item) throws Exception {
+    public ApiResultItem feign(@RequestBody SysItem item) throws Exception {
 
         if(item==null)throw new Exception("参数为空，请检查！！");
         if(item.getName()==null||item.getName().trim().length()==0)throw new Exception("名称为空，请检查！！");
@@ -63,7 +60,7 @@ public class SysOperController {
         FeignFactory factory = new FeignFactory(item.getName(),item.getMethods()
                 ,item.getSysName());
         oper(factory,item);
-        return commonUtil.success();
+        return new ApiResultItem();
     }
 
 //    @RequestMapping("sys/oper/db")
@@ -76,18 +73,18 @@ public class SysOperController {
 //    }
 
     @RequestMapping("sys/oper/convert")
-    public CommonItem convert(@RequestBody SysItem item) throws Exception {
+    public ApiResultItem convert(@RequestBody SysItem item) throws Exception {
 
 
         ConvertFactory factory = new ConvertFactory();
         oper(factory,item);
-        return commonUtil.success();
+        return new ApiResultItem();
     }
 
 
 
     @RequestMapping("sys/oper/buildAll")
-    public CommonItem buildAll(@RequestBody SysItem item) throws Exception {
+    public ApiResultItem buildAll(@RequestBody SysItem item) throws Exception {
 
 
         if(item==null)throw new Exception("参数为空，请检查！！");
@@ -97,14 +94,14 @@ public class SysOperController {
         {
             item.setOper(item.getOper().replace("，",","));
         }
-        ActionFactory actionfactory = new ActionFactory(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods());
+        ActionFactory actionfactory = new ActionFactory(item);
         oper(actionfactory,item);
 
 
         FeignFactory feignfactory = new FeignFactory(item.getName(),item.getMethods()
                 ,item.getSysName());
         oper(feignfactory,item);
-        return commonUtil.success();
+        return new ApiResultItem();
     }
 
 

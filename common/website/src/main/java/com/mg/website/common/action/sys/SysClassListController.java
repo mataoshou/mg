@@ -1,12 +1,12 @@
 package com.mg.website.common.action.sys;
 
+import com.mg.common.pojo.SimpleItem;
+import com.mg.website.common.constant.CommonConstant;
 import com.mg.website.common.constant.ConvertsConstant;
+import com.mg.website.common.constant.DTOConstant;
 import com.mg.website.common.constant.ServerConstant;
 import com.mg.website.common.generate.convert.ConvertTools;
 import com.mg.website.common.service.convert.util.SimpleItemCommonUtil;
-import com.mg.website.common.constant.DTOConstant;
-import com.mg.common.pojo.CommonItem;
-import com.mg.common.pojo.SimpleItem;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,26 +25,26 @@ public class SysClassListController {
     @Autowired
     SimpleItemCommonUtil commonUtil;
 
-    @RequestMapping("sys/list/dto")
+    @RequestMapping("sys/list/repository")
     public List<SimpleItem> listDTO() throws IOException {
 
-        File root =getRoot(DTOConstant.DTO_PACKAGE);
+        File root =getRoot(CommonConstant.RESPOSITORY_PACKAGE);
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root,DTOConstant.DTO_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, CommonConstant.RESPOSITORY_PACKAGE);
 
         return names;
     }
 
-    @RequestMapping("sys/list/commonUtil")
-    public  List<SimpleItem> listCommonUtils() throws IOException {
+    @RequestMapping("sys/list/dto")
+    public  List<SimpleItem> listDtos() throws IOException {
 
-        File root =getRoot(ConvertsConstant.UTIL_PACKAGE);
+        File root =getRoot(CommonConstant.DTO_PACKAGE);
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root, ConvertsConstant.UTIL_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, CommonConstant.DTO_PACKAGE);
 
         return names;
     }
@@ -70,14 +70,38 @@ public class SysClassListController {
     }
 
 
-    @RequestMapping("sys/list/pojo")
-    public  List<SimpleItem> listPojos() throws IOException {
+    @RequestMapping("sys/list/vo")
+    public  List<SimpleItem> listVos() throws IOException {
 
-        File root =getRoot(ConvertsConstant.POJO_PACKAGE);
+        File root =getRoot(CommonConstant.VO_PACKAGE);
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root, ConvertsConstant.POJO_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, CommonConstant.VO_PACKAGE);
+
+        return names;
+    }
+
+    @RequestMapping("sys/list/bo")
+    public  List<SimpleItem> listBos() throws IOException {
+
+        File root =getRoot(CommonConstant.BO_PACKAGE);
+
+        log.info(root.getPath());
+
+        List<SimpleItem> names = getFileNames(root, CommonConstant.BO_PACKAGE);
+
+        return names;
+    }
+
+    @RequestMapping("sys/list/po")
+    public  List<SimpleItem> listPos() throws IOException {
+
+        File root =getRoot(CommonConstant.PO_PACKAGE);
+
+        log.info(root.getPath());
+
+        List<SimpleItem> names = getFileNames(root, CommonConstant.PO_PACKAGE);
 
         return names;
     }

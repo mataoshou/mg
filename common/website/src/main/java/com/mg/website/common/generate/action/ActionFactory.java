@@ -2,9 +2,19 @@ package com.mg.website.common.generate.action;
 
 
 import com.mg.common.iservice.ibasic.IFactory;
+import com.mg.website.common.action.sys.SysItem;
 
 public class ActionFactory extends IFactory {
-    public ActionFactory(String name, Class toolClass, Class pojoClass, String[] methods) {
-        addMakeUp(new ActionMakeUp(name,toolClass,pojoClass,methods));
+    public ActionFactory(SysItem item) {
+        try {
+            addMakeUp(new ActionMakeUp(item.getName(),
+                    Class.forName(item.getInVoName()),
+                    Class.forName(item.getOutVoName()),
+                    Class.forName(item.getInDtoName()),
+                    Class.forName(item.getOutDtoName()),
+                    item.getMethods()));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

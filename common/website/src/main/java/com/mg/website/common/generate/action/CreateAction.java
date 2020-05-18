@@ -14,27 +14,33 @@ import java.lang.reflect.Field;
 public class CreateAction extends ICreate {
 
 
-    Class toolClass;
-    Class pojoClass;
+    Class inDto;
+    Class outDto;
+
+    Class inVo;
+    Class outVo;
 
 
-    public CreateAction(String actionName, Class toolClass, Class pojoClass, String[] methods) {
+    public CreateAction(String actionName,  Class inVo, Class outVo,
+                        Class inDto, Class outDto, String[] methods) {
         super(actionName, methods);
-        this.toolClass = toolClass;
-        this.pojoClass = pojoClass;
+        this.inDto = inDto;
+        this.outDto = outDto;
+        this.inVo = inVo;
+        this.outVo = outVo;
         this.setOverwrite(false);
     }
-    String dtoName = StringUtil.firstUpper(this.getName()) +"DTO";
+    String repositoryName = StringUtil.firstUpper(this.getName()) +"Repository";
     String constantClassName = StringUtil.firstUpper(this.getName()) +"ControllerConstant";
 
 
     @Override
     protected void createPre(ClassUnit unit) throws IOException {
         unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("%s dto;",dtoName));
-        unit.addPreContent("\r\n");
+        unit.addPreContent(String.format("%s repository;",repositoryName));
+
         unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("%s commonUtil;",this.toolClass.getSimpleName()));
+        unit.addPreContent(String.format("GeneralMapper mapper;",repositoryName));
     }
 
     @Override
@@ -47,57 +53,53 @@ public class CreateAction extends ICreate {
         unit.addAnnotation(String.format("RequestMapping(%s.ACTION_%s)",this.constantClassName,unit.getName().toUpperCase()));
         unit.setReturnValue("ApiResultItem");
         unit.setDecorate("public");
-        unit.addParam("@RequestBody JSONObject" ,"params");
+        unit.addParam(String.format("@RequestBody %s",this.inVo.getSimpleName()) ,"voData");
         unit.addException("Exception");
 
-        if(unit.getName().indexOf("get")>=0)
-        {
-            unit.addTabContent(String.format("%s pojo = new %s();",this.pojoClass.getSimpleName(),this.pojoClass.getSimpleName()));
-            unit.addTabContent(String.format("pojo.setId(params.getString(\"id\"));"));
-            unit.addTabContent(String.format("return dto.%s(commonUtil.toCommon(pojo));",unit.getName()));
-        }
-        else if(unit.getName().indexOf("edit")>=0)
-        {
-            unit.addTabContent(String.format("%s pojo = new %s();",this.pojoClass.getSimpleName(),this.pojoClass.getSimpleName()));
-            Field[] fields = this.pojoClass.getDeclaredFields();
-            StringUtil stringUtil = new StringUtil();
-            for(Field field: fields)
-            {
-                unit.addTabContent(String.format("pojo.set%s(params.get%s(\"%s\"));",stringUtil.firstUpper(field.getName()),field.getType().getSimpleName(),field.getName()));
-            }
-
-            unit.addTabContent(String.format("return dto.%s(commonUtil.toCommon(pojo));",unit.getName()));
-        }
-        else if(unit.getName().indexOf("list")>=0)
-        {
-            unit.addTabRightContent(String.format("return dto.list(commonUtil.success());"));
-        }
-        else if(unit.getName().indexOf("delete")>=0)
-        {
-            unit.addTabRightContent(String.format("%s pojo = new %s();",this.pojoClass.getSimpleName(),this.pojoClass.getSimpleName()));
-            unit.addTabContent(String.format("pojo.setId(params.getString(\"id\"));"));
-            unit.addTabContent(String.format("return dto.delete(commonUtil.toCommon(pojo));"));
-        }
-        else {
-            unit.addTabRightContent(String.format("return dto.%s(item);", unit.getName()));
-        }
+        unit.addTabContent(String.format("%s pojo = mapper.convert(voData,%s.class);",
+                this.inDto.getSimpleName(),this.inDto.getSimpleName()));
+        unit.addTabContent(String.format("return repository.%s(pojo);", unit.getName()));
+//        if(unit.getName().indexOf("get")>=0)
+//        {
+//            unit.addTabContent(String.format("return repository.%s(pojo);",unit.getName()));
+//        }
+//        else if(unit.getName().indexOf("edit")>=0)
+//        {
+//            unit.addTabContent(String.format("return repository.%s(pojo);",unit.getName()));
+//        }
+//        else if(unit.getName().indexOf("list")>=0)
+//        {
+//            unit.addTabContent(String.format("return repository.%s(pojo);",unit.getName()));
+//        }
+//        else if(unit.getName().indexOf("delete")>=0)
+//        {
+//            unit.addTabContent(String.format("return repository.%s(pojo);",unit.getName()));
+//        }
+//        else {
+//            unit.addTabRightContent(String.format("return repository.%s(item);", unit.getName()));
+//        }
     }
 
     @Override
     protected void classInit(ClassUnit unit) {
         unit.addImport(new String[]{
-                this.toolClass.getName(),
+                this.inVo.getName(),
+                this.inDto.getName(),
+                this.outDto.getName(),
+                this.outVo.getName(),
                 "lombok.extern.slf4j.Slf4j",
                 "org.springframework.web.bind.annotation.RestController",
                 "org.springframework.web.bind.annotation.RequestMapping",
-                ConverCommonConstant.CONVERT_COMMON_POJO+".CommonItem",
                 "org.springframework.beans.factory.annotation.Autowired",
-                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName,
+                ActionConstant.ACTION_REPOSITORY_PACKAGE +"."+repositoryName,
                 ActionConstant.ACTION_CONSTANT_PACKAGE+"." + constantClassName,
                 "org.springframework.web.bind.annotation.RequestBody",
-                "com.alibaba.fastjson.JSONObject",
+//                "com.alibaba.fastjson.JSONObject",
                 CommonConstant.POJO_COMMON +".ApiResultItem",
-                this.pojoClass.getName()});
+                CommonConstant.MAPPER_PACKAGE +".GeneralMapper"});
+
+        unit.addAnnotion("Slf4j");
+        unit.addAnnotion("RestController");
 
     }
 

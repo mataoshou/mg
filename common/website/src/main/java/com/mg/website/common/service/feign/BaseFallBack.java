@@ -1,17 +1,14 @@
 package com.mg.website.common.service.feign;
 
-import com.mg.common.constant.CommonItemConstant;
-import com.mg.common.pojo.CommonItem;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public interface BaseFallBack {
 
-    default CommonItem fail(String serverName)
+    default void fail(String serverName)
     {
-        CommonItem item = new CommonItem();
-        item.setErrorStatus(CommonItemConstant.STATUS_FAIL);
-
-        item.setErrorReason(String.format("[%s]服务访问失败！！",serverName ));
-
-        return item;
+        Logger logger = LoggerFactory.getLogger(this.getClass());
+        logger.info(String.format("[%s]服务访问失败！！",serverName ));
     }
 }

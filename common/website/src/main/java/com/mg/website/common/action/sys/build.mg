@@ -18,40 +18,69 @@
 				<option value="1">api接口</option>
 				<option value="2">Feign</option>
 				<option value="3">数据库构建</option>
-				<option value="4">convert构建</option>
 				<option value="5">缓存构建</option>
-				<option value="6">bo构建</option>
-
+				<option value="6">DAO构建</option>
 			</select>
 		</div>
 
-		<div class="sys-center-show" style="background: #00F7DE;height: 180px; width: 700px;margin-left: 400px;margin-bottom:5px;padding: 30px;padding-top: 10px;">
+		<div class="sys-center-show" style="background: #00F7DE;height: 380px; width: 700px;margin-left: 400px;margin-bottom:5px;padding: 30px;padding-top: 10px;">
 			<div style="background: #C0C4CC;width: 690px;height: 30px;; padding-left: 20px;margin-bottom: 10px;padding-top: 4px;">选择生成参数</div>
 
 
 			<div class="util-content">
-				<span style="width: 200px;display: inline-block;height: 30px;"> commonUtils类选择:  </span>
-				<select style="width: 350px;height: 30px;" class="sys-util">
-
-
+				<span style="width: 200px;display: inline-block;height: 30px;"> repository类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-repository">
 				</select>
 			</div>
 
 
-			<div class="pojo-content">
-				<span style="width: 200px;display: inline-block;height: 30px;"> pojo类选择:  </span>
-				<select style="width: 350px;height: 30px;" class="sys-pojo" onchange="MT.setname()">
-
-
+			<div class="pojo-dto-content">
+				<span style="width: 200px;display: inline-block;height: 30px;"> 输入dto选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-in-dto">
 				</select>
 			</div>
 
+			<div class="pojo-dto-content">
+				<span style="width: 200px;display: inline-block;height: 30px;"> 输出dto选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-out-dto">
+				</select>
+			</div>
+
+			<div class="pojo-bo-content">
+				<span style="width: 200px;display: inline-block;height: 30px;"> 输入bo类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-in-bo">
+				</select>
+			</div>
+			<div class="pojo-bo-content">
+				<span style="width: 200px;display: inline-block;height: 30px;">  输出bo类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-out-bo">
+				</select>
+			</div>
+
+
+
+			<div class="pojo-vo-content">
+				<span style="width: 200px;display: inline-block;height: 30px;"> 输入vo类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-in-vo">
+				</select>
+			</div>
+
+			<div class="pojo-vo-content">
+				<span style="width: 200px;display: inline-block;height: 30px;"> 输出vo类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-out-vo">
+				</select>
+			</div>
+
+
+			<div class="pojo-po-content">
+				<span style="width: 200px;display: inline-block;height: 30px;"> po类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-po">
+				</select>
+			</div>
 
 			<div class="sys-content">
 				<span style="width: 200px;display: inline-block;height: 30px;"> 系统名称选择:  </span>
 				<select style="width: 350px;height: 30px;" class="sys-name">
-
-
 				</select>
 			</div>
 
@@ -100,9 +129,13 @@
 				$(".build-name").val($(".sys-pojo").find("option:selected").text().trim());
 			}
 
-			MT.selects = [".sys-util",".sys-pojo",".sys-name"];
-			MT.urls = ["/sys/list/commonUtil","/sys/list/pojo","/sys/list/sysName"];
-			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/convert","/sys/oper/cache","/sys/oper/bo","/sys/oper/buildAll"]
+			MT.selects = [".sys-repository",".sys-pojo-in-dto",".sys-pojo-out-dto",
+			".sys-pojo-in-vo",".sys-pojo-out-vo",".sys-pojo-in-bo",".sys-pojo-out-bo",".sys-pojo-po",".sys-name"];
+			MT.urls = ["/sys/list/repository","/sys/list/dto","/sys/list/dto",
+			"/sys/list/vo","/sys/list/vo",
+			"/sys/list/bo","/sys/list/bo",
+			"/sys/list/po","/sys/list/sysName"];
+			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/cache","/sys/oper/bo","/sys/oper/buildAll"]
 
 			MT.init_center_show = function(val)
 			{
@@ -127,14 +160,20 @@
 
 				var req ={};
 				req.name = $(".build-name").val();
-				req.commonName = $(".sys-util").val();
-				req.pojoName = $(".sys-pojo").val();
+				req.repositoryName = $(".sys-repository").val();
+				req.inDtoName = $(".sys-pojo-in-dto").val();
+				req.outDtoName = $(".sys-pojo-out-dto").val();
+				req.inVoName = $(".sys-pojo-in-vo").val();
+				req.outVoName = $(".sys-pojo-out-vo").val();
+				req.inBoName = $(".sys-pojo-in-bo").val();
+				req.outBoName = $(".sys-pojo-out-bo").val();
+				req.poName = $(".sys-pojo-po").val();
 				req.sysName = $(".sys-name").val();
 				req.oper = $(".class-method").val();
 				req.createType = createType;
 				MT.api(MT.build_urls[val/1-1],function(data){
 
-					if(data.errorStatus==0)
+					if(data.code==100)
 					{
 						alert("生成成功！！")
 					}
@@ -201,21 +240,21 @@
 				}
 
 			}
-			
+
 			MT.build_center_show = function(val)
 			{
 				//$(".sys-center-show").html("");
-				
+
 			}
-			
-			
-			
+
+
+
 			MT.build_center_oper = function(val)
 			{
 				//$(".sys-center-oper").html("");
-				
+
 			}
-			
+
 			MT.api =function(url,success,data,carrys){
 				$.ajax({
 		            type: "post",
@@ -233,5 +272,5 @@
 		</script>
 	</body>
 
-	
+
 </html>

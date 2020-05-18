@@ -6,7 +6,7 @@ public class ActionConstant {
 
     public static final String ACTION_CONSTANT_PACKAGE ="com.mg.website.constant.action";
 
-    public static final String ACTION_DTO_PACKAGE ="com.mg.website.service.dto";
+    public static final String ACTION_REPOSITORY_PACKAGE ="com.mg.website.service.repository";
 
 
     public static final String[] ACTION_METHOD ={"get","edit","list","delete"};
