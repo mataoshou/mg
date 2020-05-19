@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/bussiness/mg-bussiness.iml" filepath="$PROJECT_DIR$/bussiness/mg-bussiness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/mg-common.iml" filepath="$PROJECT_DIR$/common/mg-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/basic/mg-common-basic.iml" filepath="$PROJECT_DIR$/common/basic/mg-common-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/compose/mg-common-compose.iml" filepath="$PROJECT_DIR$/common/compose/mg-common-compose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/node/mg-common-node.iml" filepath="$PROJECT_DIR$/common/node/mg-common-node.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/website/mg-common-website.iml" filepath="$PROJECT_DIR$/common/website/mg-common-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/mg-compose.iml" filepath="$PROJECT_DIR$/bussiness/compose/mg-compose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/empty/mg-empty.iml" filepath="$PROJECT_DIR$/empty/mg-empty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knowledge/mg-knowledge.iml" filepath="$PROJECT_DIR$/knowledge/mg-knowledge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/node/mg-node.iml" filepath="$PROJECT_DIR$/bussiness/node/mg-node.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" filepath="$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/mg-root.iml" filepath="$PROJECT_DIR$/mg-root.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/website/mg-website.iml" filepath="$PROJECT_DIR$/bussiness/website/mg-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" filepath="$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" />
     </modules>
   </component>
 </project>

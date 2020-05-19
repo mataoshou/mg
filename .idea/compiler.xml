@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mg-compose-uauth" />
+        <module name="mg-knowledge" />
+        <module name="mg-common-website" />
+        <module name="mg-website-uauth" />
+        <module name="mg-common-compose" />
+        <module name="mg-node-user" />
+        <module name="mg-empty" />
+        <module name="mg-common-basic" />
+        <module name="mg-common-node" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mg" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
@@ -10,10 +26,12 @@
       <module name="mg-common-dao" target="1.8" />
       <module name="mg-common-node" target="1.8" />
       <module name="mg-common-website" target="1.8" />
+      <module name="mg-compose" target="1.8" />
       <module name="mg-compose-uauth" target="1.8" />
       <module name="mg-dao" target="1.8" />
       <module name="mg-empty" target="1.8" />
       <module name="mg-knowledge" target="1.8" />
+      <module name="mg-node" target="1.8" />
       <module name="mg-node-user" target="1.8" />
       <module name="mg-root" target="1.8" />
       <module name="mg-service-compose" target="1.8" />
