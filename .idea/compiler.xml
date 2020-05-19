@@ -6,15 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mg-common-basic" />
+        <module name="mg-knowledge" />
         <module name="mg-common-website" />
-        <module name="mg-common-node" />
+        <module name="mg-website-uauth (1)" />
         <module name="mg-website-uauth" />
         <module name="mg-common-compose" />
+        <module name="mg-node-user" />
         <module name="mg-empty" />
-        <module name="mg-compose-uauth" />
-        <module name="mg-knowledge" />
-        <module name="mg-common-basic" />
-        <module name="mg-service-node" />
+        <module name="mg-common-node" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,10 +30,12 @@
       <module name="mg-dao" target="1.8" />
       <module name="mg-empty" target="1.8" />
       <module name="mg-knowledge" target="1.8" />
+      <module name="mg-node-user" target="1.8" />
       <module name="mg-service-compose" target="1.8" />
       <module name="mg-service-node" target="1.8" />
       <module name="mg-website" target="1.8" />
       <module name="mg-website-uauth" target="1.8" />
+      <module name="mg-website-uauth (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -47,9 +49,11 @@
       <module name="mg-dao" options="-parameters" />
       <module name="mg-empty" options="-parameters" />
       <module name="mg-knowledge" options="-parameters" />
+      <module name="mg-node-user" options="-parameters" />
       <module name="mg-service-compose" options="-parameters" />
       <module name="mg-service-node" options="-parameters" />
       <module name="mg-website-uauth" options="-parameters" />
+      <module name="mg-website-uauth (1)" options="-parameters" />
     </option>
   </component>
 </project>

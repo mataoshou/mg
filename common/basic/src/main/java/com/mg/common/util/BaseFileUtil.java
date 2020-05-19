@@ -68,7 +68,15 @@ public class BaseFileUtil
 		return f.getName();
 	}
 
-	public static   String getFileNameNoSuffix(String path)
+//	public static String getFileNameNoSuffix(String fn)
+//	{
+//
+//		String name =  fn.substring(0,fn.lastIndexOf(".") );
+//
+//		return name;
+//	}
+
+	public static String getFileNameNoSuffix(String path)
 	{
 		File f = new File(path);
 		String name = f.getName();

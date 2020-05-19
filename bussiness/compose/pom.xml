@@ -106,6 +106,17 @@
         </dependency>
 
         <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer-spring</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.mg</groupId>
             <artifactId>mg-common-compose</artifactId>
             <version>1.0</version>

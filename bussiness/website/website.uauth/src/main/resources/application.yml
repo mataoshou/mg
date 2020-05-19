@@ -3,19 +3,6 @@ spring:
     allow-bean-definition-overriding: true
   application: 
     name: shineon.api.uauth
-  rabbitmq: 
-    addresses: 127.0.0.1
-    password: matao
-    publisherconfirms: true
-    port: 5672
-    username: matao
-  cloud:
-    stream:
-      bindings:
-        Matao1MessageOutput:
-          destination: Matao1Message
-        Matao1MessageInput:
-          destination: Matao1Message
   session: 
     timeout: 3600s
     redis: 
