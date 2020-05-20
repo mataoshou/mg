@@ -1,0 +1,11 @@
+com\mg\compose\action\FileUploadController.class
+com\mg\compose\mapper\GeneralMapper.class
+com\mg\compose\config\ApiConfig.class
+com\mg\compose\constant\feign\UserFeignConstant.class
+com\mg\compose\pojo\dto\InUserDto.class
+com\mg\compose\constant\action\UserControllerConstant.class
+com\mg\compose\config\ApiConfig$1.class
+com\mg\compose\config\DozerConfig.class
+com\mg\compose\UauthApplication.class
+com\mg\compose\pojo\bo\UserBo.class
+com\mg\compose\service\repository\UserRepository.class

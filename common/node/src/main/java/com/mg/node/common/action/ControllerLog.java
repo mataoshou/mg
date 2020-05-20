@@ -17,7 +17,7 @@ public class ControllerLog {
     public void params() {
     }
 
-    @Pointcut("execution(* com.mg.node.action..*.*(..))")
+    @Pointcut("execution(* com.mg.webiste.action..*.*(..))")
     public void methods() {
     }
 

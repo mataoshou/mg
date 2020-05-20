@@ -6,7 +6,6 @@ import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.StringUtil;
 import com.mg.node.common.constant.ActionConstant;
-import com.mg.node.common.constant.CommonConstant;
 import com.mg.node.common.constant.FeignConstant;
 
 import java.io.IOException;

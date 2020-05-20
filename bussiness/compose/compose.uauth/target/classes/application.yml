@@ -1,0 +1,54 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application: 
+    name: shineon.api.uauth
+  session: 
+    timeout: 3600s
+    redis: 
+      namespace: 
+        spring: session
+      flushmode: on_save
+    storetype: redis
+  servlet: 
+    multipart: 
+      resolvelazily: true
+      maxrequestsize: 6000MB
+      location: "c:/tmp"
+      filesizethreshold: 2000
+      maxfilesize: 6000MB
+  redis: 
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+server: 
+  port: 129
+hystrix: 
+  command: 
+    default: 
+      execution: 
+        isolation: 
+          thread: 
+            timeoutInMilliseconds: 5000
+        timeout: 
+          enabled: true
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://127.0.0.1:81/eureka"
+  instance:
+    prefer-ip-address: true
+
+ribbon:
+  ConnectTimeout: 3000
+  MaxAutoRetriesNextServer: 1
+  MaxAutoRetries: 1
+  ReadTimeout: 3000
+  OkToRetryOnAllOperations: false
+logging: 
+  level: 
+    root: info
+  file: ../shineon.log/shineon.api.uauth.log
+feign: 
+  hystrix: 
+    enabled: true

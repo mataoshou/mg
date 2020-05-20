@@ -3,7 +3,9 @@ package com.mg.node.common.action.sys;
 
 import com.mg.common.iservice.ibasic.IFactory;
 import com.mg.common.pojo.ResultItem;
+import com.mg.node.common.generate.dao.DAOFactory;
 import com.mg.node.common.generate.action.ActionFactory;
+import com.mg.node.common.generate.db.DBFactory;
 import com.mg.node.common.generate.feign.FeignFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -49,14 +51,25 @@ public class SysOperController {
         return new ResultItem();
     }
 
-//    @RequestMapping("sys/oper/db")
-//    public CommonItem db(@RequestBody SysItem item) throws Exception {
-//
-//
-//        GeneratorFactory factory = new GeneratorFactory();
-//        factory.build();
-//        return commonUtil.success();
-//    }
+    @RequestMapping("sys/oper/db")
+    public ResultItem db(@RequestBody SysItem item) throws Exception {
+
+        DBFactory factory = new DBFactory();
+        factory.build();
+        return new ResultItem();
+    }
+
+    @RequestMapping("sys/oper/dao")
+    public ResultItem dao(@RequestBody SysItem item) throws Exception {
+
+        if(item.getMethods()==null)
+        {
+            item.setOper(item.getOper().replace("，",","));
+        }
+        DAOFactory factory = new DAOFactory(item.getName(),Class.forName(item.getPoName()),item.getMethods());
+        factory.build();
+        return new ResultItem();
+    }
 
 //    @RequestMapping("sys/oper/convert")
 //    public ResultItem convert(@RequestBody SysItem item) throws Exception {

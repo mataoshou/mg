@@ -1,0 +1,13 @@
+com\mg\website\mapper\GeneralMapper.class
+com\mg\website\pojo\vo\UserVo.class
+com\mg\website\pojo\dto\IBaseDto.class
+com\mg\website\config\ApiConfig$1.class
+com\mg\website\pojo\bo\UserBo.class
+com\mg\website\pojo\dto\InUserDto.class
+com\mg\website\UauthApplication.class
+com\mg\website\config\DozerConfig.class
+com\mg\website\constant\action\UserControllerConstant.class
+com\mg\website\action\FileUploadController.class
+com\mg\website\config\ApiConfig.class
+com\mg\website\constant\feign\UserFeignConstant.class
+com\mg\website\service\repository\UserRepository.class

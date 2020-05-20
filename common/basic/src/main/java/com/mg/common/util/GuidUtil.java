@@ -2,6 +2,7 @@ package com.mg.common.util;
 
 import java.util.UUID;
 
+
 public class GuidUtil {
 
     public String gen()

@@ -3,6 +3,7 @@ package com.mg.common.unit;
 import com.mg.common.pojo.ClassItem;
 import com.mg.common.pojo.LineItem;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Import;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -13,7 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Slf4j
-public class ClassUnit {
+public class ClassUnit  {
 
     private ClassItem item = new ClassItem();
 
@@ -33,7 +34,7 @@ public class ClassUnit {
                 .replace("#import#",getImports(item.getImports()))
                 .replace("#annotation#",getAnnotation(item.getAnnotations()))
                 .replace("#classType#",getClassType(item.getType()))
-                .replace("#className#",getClassName(item.getName(),item.getBaseName(),item.getImplementStringList()));
+                .replace("#className#",getClassName(item.getName(),item.getBaseName(),item.getImplementStringList(),item.getType()));
     }
     public void setName(String name) {
         this.item.setName(name);
@@ -128,24 +129,40 @@ public class ClassUnit {
         return classType;
     }
 
-    private String getClassName(String className ,String baseName,List<String> imps)
+    private String getClassName(String className ,String baseName,List<String> imps,int type)
     {
         String classNameData =className;
+
+
+        String imp = "";
+        if(imps!=null&&imps.size()>0)
+        {
+            for(int i=0;i< imps.size();i++)
+            {
+                if(i!=0) {
+                    imp += ",";
+                }
+                imp+=imps.get(i);
+            }
+        }
+
+        if(type==2)
+        {
+            baseName = imp ;
+            imp ="";
+        }
+
         if(baseName!=null&&baseName.length()>0) {
             classNameData = String.format("%s extends %s ", className, baseName);
         }
 
-        if(imps!=null&&imps.size()>0)
+        if(imp.length()>0)
         {
-            classNameData +=" implements ";
-            for(int i=0;i< imps.size();i++)
-            {
-                if(i!=0) {
-                    classNameData += ",";
-                }
-                classNameData+=imps.get(i);
-            }
+            imp = " implements " + imp;
+            classNameData +=imp;
         }
+
+
 
         return classNameData;
     }

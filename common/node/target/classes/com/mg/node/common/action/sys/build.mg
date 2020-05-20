@@ -17,7 +17,7 @@
 				<option value="6">API/FEIGN构建</option>
 				<option value="1">api接口</option>
 				<option value="2">Feign</option>
-				<option value="3">数据库构建</option>
+				<option value="3">db数据库构建</option>
 				<option value="4">缓存构建</option>
 				<option value="5">DAO构建</option>
 			</select>
@@ -135,7 +135,7 @@
 			"/sys/list/vo","/sys/list/vo",
 			"/sys/list/bo","/sys/list/bo",
 			"/sys/list/po","/sys/list/sysName"];
-			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/cache","/sys/oper/bo","/sys/oper/buildAll"]
+			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/cache","/sys/oper/dao","/sys/oper/buildAll"]
 
 			MT.init_center_show = function(val)
 			{

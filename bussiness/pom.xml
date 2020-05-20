@@ -16,6 +16,8 @@
         <module>website</module>
         <module>compose</module>
         <module>node</module>
+        <module>zuul</module>
+        <module>eurake</module>
     </modules>
 
 

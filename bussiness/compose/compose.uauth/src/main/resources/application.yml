@@ -2,7 +2,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application: 
-    name: shineon.api.uauth
+    name: mg-compose-uauth
   session: 
     timeout: 3600s
     redis: 

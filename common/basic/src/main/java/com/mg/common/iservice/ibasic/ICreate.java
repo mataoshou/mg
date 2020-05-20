@@ -7,6 +7,7 @@ import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.BaseFileUtil;
 import com.mg.common.util.CommonTool;
 import com.mg.common.util.FileStore;
+import com.mg.common.util.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
@@ -62,6 +63,11 @@ public abstract class ICreate {
     public String getName()
     {
         return this.nm;
+    }
+
+    public String getName2()
+    {
+        return StringUtil.firstUpper(this.nm);
     }
 
     private void innerInit()
