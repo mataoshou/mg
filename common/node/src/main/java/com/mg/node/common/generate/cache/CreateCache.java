@@ -19,7 +19,7 @@
 //                        this.getItem().getToolClassFullName(),
 //                        "lombok.extern.slf4j.Slf4j",
 //                        "org.springframework.stereotype.Service",
-//                        "com.shineon.base.common.base.util.SpringUtil",
+//                        "com.mg.base.common.base.util.SpringUtil",
 //                        CacheConstant.CACHE_CONSTANT_PACKAGE+"." +this.getConstantClassName(),
 //                        ConvertsConstant.POJO_PACKAGE+".QueryItem",
 //                        ConvertsConstant.CONVERT_COMMON_PACKAGE+".CommonItem",

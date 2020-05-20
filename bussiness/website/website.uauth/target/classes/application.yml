@@ -2,7 +2,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application: 
-    name: shineon.api.uauth
+    name: mg-website-uauth
   session: 
     timeout: 3600s
     redis: 
@@ -48,7 +48,7 @@ ribbon:
 logging: 
   level: 
     root: info
-  file: ../shineon.log/shineon.api.uauth.log
+  file: ../mg.log/mg.api.uauth.log
 feign: 
   hystrix: 
     enabled: true

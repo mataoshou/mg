@@ -29,7 +29,7 @@ ribbon:
 
 spring:
   application:
-    name: shineon.zuul
+    name: mg.zuul
   session:
     store-type: redis
     timeout: 3600s

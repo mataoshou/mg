@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/empty/mg-empty.iml" filepath="$PROJECT_DIR$/empty/mg-empty.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/eurake/mg-eurake.iml" filepath="$PROJECT_DIR$/bussiness/eurake/mg-eurake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/zipkin/mg-eurake (1).iml" filepath="$PROJECT_DIR$/bussiness/zipkin/mg-eurake (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/knowledge/mg-knowledge.iml" filepath="$PROJECT_DIR$/knowledge/mg-knowledge.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/node/mg-node.iml" filepath="$PROJECT_DIR$/bussiness/node/mg-node.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" filepath="$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" />
@@ -19,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/bussiness/website/mg-website.iml" filepath="$PROJECT_DIR$/bussiness/website/mg-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" filepath="$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/zuul/mg-zuul.iml" filepath="$PROJECT_DIR$/bussiness/zuul/mg-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/zipkin/zipkin.iml" filepath="$PROJECT_DIR$/bussiness/zipkin/zipkin.iml" />
     </modules>
   </component>
 </project>

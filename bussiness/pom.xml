@@ -18,6 +18,7 @@
         <module>node</module>
         <module>zuul</module>
         <module>eurake</module>
+        <module>zipkin</module>
     </modules>
 
 

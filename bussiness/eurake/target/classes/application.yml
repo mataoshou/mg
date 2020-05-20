@@ -13,4 +13,4 @@ eureka:
 
 spring:
   application:
-    name: shineon.eurake
+    name: mg.eurake

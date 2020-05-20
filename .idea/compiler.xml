@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mg-compose-uauth" />
+        <module name="mg-common-basic" />
         <module name="mg-knowledge" />
         <module name="mg-common-website" />
         <module name="mg-eurake" />
@@ -14,8 +14,10 @@
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
         <module name="mg-empty" />
-        <module name="mg-common-basic" />
+        <module name="mg-compose-uauth" />
         <module name="mg-zuul" />
+        <module name="mg-eurake (1)" />
+        <module name="zipkin" />
         <module name="mg-common-node" />
       </profile>
     </annotationProcessing>
@@ -33,6 +35,7 @@
       <module name="mg-dao" target="1.8" />
       <module name="mg-empty" target="1.8" />
       <module name="mg-eurake" target="1.8" />
+      <module name="mg-eurake (1)" target="1.8" />
       <module name="mg-knowledge" target="1.8" />
       <module name="mg-node" target="1.8" />
       <module name="mg-node-user" target="1.8" />
@@ -42,7 +45,9 @@
       <module name="mg-website" target="1.8" />
       <module name="mg-website-uauth" target="1.8" />
       <module name="mg-website-uauth (1)" target="1.8" />
+      <module name="mg-zipkin" target="1.8" />
       <module name="mg-zuul" target="1.8" />
+      <module name="zipkin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -56,13 +61,16 @@
       <module name="mg-dao" options="-parameters" />
       <module name="mg-empty" options="-parameters" />
       <module name="mg-eurake" options="-parameters" />
+      <module name="mg-eurake (1)" options="-parameters" />
       <module name="mg-knowledge" options="-parameters" />
       <module name="mg-node-user" options="-parameters" />
       <module name="mg-service-compose" options="-parameters" />
       <module name="mg-service-node" options="-parameters" />
       <module name="mg-website-uauth" options="-parameters" />
       <module name="mg-website-uauth (1)" options="-parameters" />
+      <module name="mg-zipkin" options="-parameters" />
       <module name="mg-zuul" options="-parameters" />
+      <module name="zipkin" options="-parameters" />
     </option>
   </component>
 </project>

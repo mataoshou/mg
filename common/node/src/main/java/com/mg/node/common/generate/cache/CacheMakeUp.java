@@ -1,7 +1,7 @@
 //package com.mg.node.common.generate.cache;
 //
 //
-//import com.shineon.base.common.create.ibase.IMakeUpBase;
+//import com.mg.base.common.create.ibase.IMakeUpBase;
 //
 //public class CacheMakeUp extends IMakeUpBase {
 //    public CacheMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
