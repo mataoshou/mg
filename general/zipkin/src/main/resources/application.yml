@@ -1,0 +1,21 @@
+server:
+  port: 2200
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:81/eureka
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: mg.zipkin
+  main:
+    allow-bean-definition-overriding: true
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

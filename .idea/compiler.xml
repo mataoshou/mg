@@ -6,15 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mg-common-basic" />
-        <module name="mg-knowledge" />
+        <module name="mg-compose-uauth" />
         <module name="mg-common-website" />
         <module name="mg-eurake" />
         <module name="mg-website-uauth" />
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
-        <module name="mg-empty" />
-        <module name="mg-compose-uauth" />
+        <module name="mg-common-basic" />
         <module name="mg-zuul" />
         <module name="mg-eurake (1)" />
         <module name="zipkin" />
@@ -22,6 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="general" target="1.8" />
       <module name="mg" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
       <module name="mg-common" target="1.8" />
@@ -52,6 +51,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="general" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />
       <module name="mg-common-dao" options="-parameters" />
