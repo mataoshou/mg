@@ -10,4 +10,6 @@ public class UserVo {
     private String sname;
     @Mapping("id")
     private int sid;
+
+
 }
