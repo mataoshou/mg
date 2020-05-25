@@ -27,6 +27,5 @@ public class UserCache  extends IBaseCache<UserPo> {
     @Override
     protected ResultItem deletePojoByDB(String id) {
         return null;
-        AtomicInteger
     }
 }

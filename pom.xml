@@ -18,6 +18,7 @@
         <module>common</module>
         <module>bussiness</module>
         <module>general</module>
+        <module>build</module>
     </modules>
 
     <properties>

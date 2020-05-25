@@ -10,6 +10,7 @@
         <module name="mg-common-basic" />
         <module name="mg-common-website" />
         <module name="mg-website-uauth" />
+        <module name="build" />
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
         <module name="mg-compose-uauth" />
@@ -17,6 +18,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="build" target="1.8" />
       <module name="general" target="1.8" />
       <module name="mg" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
@@ -27,6 +29,7 @@
       <module name="mg-common-node" target="1.8" />
       <module name="mg-common-website" target="1.8" />
       <module name="mg-compose" target="1.8" />
+      <module name="mg-compose-matao" target="1.8" />
       <module name="mg-compose-uauth" target="1.8" />
       <module name="mg-dao" target="1.8" />
       <module name="mg-empty" target="1.8" />
@@ -34,11 +37,13 @@
       <module name="mg-eurake (1)" target="1.8" />
       <module name="mg-knowledge" target="1.8" />
       <module name="mg-node" target="1.8" />
+      <module name="mg-node-matao" target="1.8" />
       <module name="mg-node-user" target="1.8" />
       <module name="mg-root" target="1.8" />
       <module name="mg-service-compose" target="1.8" />
       <module name="mg-service-node" target="1.8" />
       <module name="mg-website" target="1.8" />
+      <module name="mg-website-matao" target="1.8" />
       <module name="mg-website-uauth" target="1.8" />
       <module name="mg-website-uauth (1)" target="1.8" />
       <module name="mg-zipkin" target="1.8" />
@@ -48,21 +53,26 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="build" options="-parameters" />
       <module name="general" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />
       <module name="mg-common-dao" options="-parameters" />
       <module name="mg-common-node" options="-parameters" />
       <module name="mg-common-website" options="-parameters" />
+      <module name="mg-compose-matao" options="-parameters" />
       <module name="mg-compose-uauth" options="-parameters" />
       <module name="mg-dao" options="-parameters" />
       <module name="mg-empty" options="-parameters" />
       <module name="mg-eurake" options="-parameters" />
       <module name="mg-eurake (1)" options="-parameters" />
       <module name="mg-knowledge" options="-parameters" />
+      <module name="mg-node" options="-parameters" />
+      <module name="mg-node-matao" options="-parameters" />
       <module name="mg-node-user" options="-parameters" />
       <module name="mg-service-compose" options="-parameters" />
       <module name="mg-service-node" options="-parameters" />
+      <module name="mg-website-matao" options="-parameters" />
       <module name="mg-website-uauth" options="-parameters" />
       <module name="mg-website-uauth (1)" options="-parameters" />
       <module name="mg-zipkin" options="-parameters" />

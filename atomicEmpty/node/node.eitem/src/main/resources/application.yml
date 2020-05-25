@@ -1,0 +1,32 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application: 
+    name: mg-node-eitem
+  data: 
+    mongodb: 
+      host: 127.0.0.1
+      port: 27017
+      database: mg
+
+  datasource: 
+    password: mg@1234
+    driverclassname: com.mysql.jdbc.Driver
+    url: "jdbc:mysql://127.0.0.1:3306/rmt_sys_uia_info?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai"
+    username: root
+server: 
+  port: 121
+logging: 
+  level: 
+    root: info
+  file:  ../mg.log/mg.node.eitem.log
+mg:
+  version: 20200520
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://127.0.0.1:81/eureka"
+  instance:
+    prefer-ip-address: true
+mybatis:
+  mapperlocations: "classpath:com/mg/node/db/sql/mapper/*.xml"
