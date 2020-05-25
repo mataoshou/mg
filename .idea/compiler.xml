@@ -7,16 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mg-compose-uauth" />
+        <module name="mg-common-basic" />
         <module name="mg-common-website" />
-        <module name="mg-eurake" />
         <module name="mg-website-uauth" />
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
-        <module name="mg-common-basic" />
-        <module name="mg-zuul" />
-        <module name="mg-eurake (1)" />
-        <module name="zipkin" />
+        <module name="mg-compose-uauth" />
         <module name="mg-common-node" />
       </profile>
     </annotationProcessing>
