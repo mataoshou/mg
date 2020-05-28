@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/build/build.iml" filepath="$PROJECT_DIR$/build/build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/knowledge/demo/boot/lock/demo.lock.iml" filepath="$PROJECT_DIR$/knowledge/demo/boot/lock/demo.lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knowledge/demo/daily/demo.daily.iml" filepath="$PROJECT_DIR$/knowledge/demo/daily/demo.daily.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knowledge/demo/daily/empty/demo.empty.iml" filepath="$PROJECT_DIR$/knowledge/demo/daily/empty/demo.empty.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/mg-bussiness.iml" filepath="$PROJECT_DIR$/bussiness/mg-bussiness.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/mg-common.iml" filepath="$PROJECT_DIR$/common/mg-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/basic/mg-common-basic.iml" filepath="$PROJECT_DIR$/common/basic/mg-common-basic.iml" />
