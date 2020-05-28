@@ -7,6 +7,7 @@ import org.apache.curator.retry.RetryNTimes;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 @Slf4j
@@ -36,10 +37,12 @@ public class CuratorConfiguration {
 //                new RetryNTimes(this.retryCount, this.elapsedTimeMs));
 
 
-        return CuratorFrameworkFactory.newClient(
+        CuratorFramework framework= CuratorFrameworkFactory.newClient(
                 "10.0.127.235:2181",
                 5000,
                 5000,
                 new RetryNTimes(3, 1000));
+//        framework.start();
+        return framework;
     }
 }

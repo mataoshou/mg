@@ -181,7 +181,6 @@
     <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-function-context:2.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-function-core:2.0.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.35" level="project" />
     <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
@@ -267,5 +266,6 @@
     <orderEntry type="library" name="Maven: io.zipkin.brave:brave-instrumentation-servlet:5.6.1" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.brave:brave-instrumentation-jms:5.6.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-netflix-eureka-client:2.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE" level="project" />
   </component>
 </module>

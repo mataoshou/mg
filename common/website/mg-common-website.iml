@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module version="4">
-  <component name="ExternalSystem" externalSystem="Maven" />
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration />
@@ -19,8 +18,6 @@
     <orderEntry type="module" module-name="mg-common-basic" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-actuator:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
@@ -144,5 +141,7 @@
     <orderEntry type="library" name="Maven: com.google.guava:guava:20.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:4.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:4.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.6.RELEASE" level="project" />
   </component>
 </module>

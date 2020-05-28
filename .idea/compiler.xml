@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mg-common-basic" />
+        <module name="mg-compose-uauth" />
         <module name="mg-common-website" />
         <module name="mg-website-uauth" />
         <module name="build" />
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
-        <module name="mg-compose-uauth" />
+        <module name="mg-common-basic" />
+        <module name="demo.lock" />
         <module name="mg-common-node" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="build" target="1.8" />
+      <module name="demo.lock" target="1.8" />
       <module name="general" target="1.8" />
       <module name="mg" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
@@ -35,6 +37,7 @@
       <module name="mg-empty" target="1.8" />
       <module name="mg-eurake" target="1.8" />
       <module name="mg-eurake (1)" target="1.8" />
+      <module name="mg-general" target="1.8" />
       <module name="mg-knowledge" target="1.8" />
       <module name="mg-node" target="1.8" />
       <module name="mg-node-matao" target="1.8" />
@@ -54,6 +57,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="build" options="-parameters" />
+      <module name="demo.lock" options="-parameters" />
       <module name="general" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />
