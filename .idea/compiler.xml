@@ -8,13 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo.daily" />
-        <module name="mg-common-basic" />
+        <module name="demo.empty" />
         <module name="mg-common-website" />
         <module name="mg-website-uauth" />
         <module name="build" />
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
-        <module name="demo.empty" />
+        <module name="mg-common-basic" />
         <module name="mg-compose-uauth" />
         <module name="mg-common-node" />
       </profile>
