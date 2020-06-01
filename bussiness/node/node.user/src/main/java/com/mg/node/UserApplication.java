@@ -1,5 +1,6 @@
 package com.mg.node;
 
+import com.codingapi.txlcn.tc.config.EnableDistributedTransaction;
 import com.mg.node.common.constant.DBConstant;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +12,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 @MapperScan(DBConstant.DB_MERGEDAO_PACKAGE)
 @EnableEurekaClient
+@EnableDistributedTransaction
 public class UserApplication {
 
     public static void main(String[] args) {

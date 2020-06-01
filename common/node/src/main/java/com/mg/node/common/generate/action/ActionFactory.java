@@ -8,10 +8,9 @@ public class ActionFactory extends IFactory {
     public ActionFactory(SysItem item) {
         try {
             addMakeUp(new ActionMakeUp(item.getName(),
-                    Class.forName(item.getInVoName()),
-                    Class.forName(item.getOutVoName()),
                     Class.forName(item.getInDtoName()),
                     Class.forName(item.getOutDtoName()),
+                    Class.forName(item.getPoName()),
                     item.getMethods()));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

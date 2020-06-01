@@ -7,14 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo.daily" />
         <module name="demo.empty" />
+        <module name="mg-common-basic" />
+        <module name="txlcn-demo-tm" />
         <module name="mg-common-website" />
         <module name="mg-website-uauth" />
         <module name="build" />
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
-        <module name="mg-common-basic" />
+        <module name="demo.daily" />
         <module name="mg-compose-uauth" />
         <module name="mg-common-node" />
       </profile>
@@ -54,6 +55,7 @@
       <module name="mg-website-uauth (1)" target="1.8" />
       <module name="mg-zipkin" target="1.8" />
       <module name="mg-zuul" target="1.8" />
+      <module name="txlcn-demo-tm" target="1.8" />
       <module name="zipkin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -86,6 +88,7 @@
       <module name="mg-website-uauth (1)" options="-parameters" />
       <module name="mg-zipkin" options="-parameters" />
       <module name="mg-zuul" options="-parameters" />
+      <module name="txlcn-demo-tm" options="-parameters" />
       <module name="zipkin" options="-parameters" />
     </option>
   </component>

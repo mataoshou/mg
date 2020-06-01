@@ -3,9 +3,11 @@ package com.mg.node.common.generate.dao;
 import com.mg.common.iservice.ibasic.ICreate;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
+import com.mg.common.util.GuidUtil;
 import com.mg.common.util.StringUtil;
 import com.mg.node.common.constant.DBConstant;
 import com.mg.node.common.constant.DAOConstant;
+import jdk.nashorn.internal.ir.UnaryNode;
 
 import java.io.IOException;
 
@@ -31,9 +33,9 @@ public class CreateDAO extends ICreate {
         unit.addPreContent("@Autowired");
         unit.addPreContent(String.format("private %s mapper;",getMapperName()));
         unit.addPreContent("\r");
-
-        unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("private GuidUtil guidUtil;"));
+//
+//        unit.addPreContent("@Autowired");
+//        unit.addPreContent(String.format("private GuidUtil guidUtil;"));
 
     }
 
@@ -44,6 +46,7 @@ public class CreateDAO extends ICreate {
 
     @Override
     protected void createMethod(MethodUnit unit) throws IOException {
+        unit.setDecorate("public");
         if(unit.getName().indexOf("get")>=0) {
             unit.setReturnValue(this.poCl.getSimpleName());
             unit.addParam("String" ,"id");
@@ -67,8 +70,9 @@ public class CreateDAO extends ICreate {
         }
         else if(unit.getName().indexOf("insert")>=0){
             unit.setReturnValue(this.poCl.getSimpleName());
-            unit.addParam(this.poCl.getSimpleName() ,"item");
 
+            unit.addParam(this.poCl.getSimpleName() ,"item");
+            unit.addTabContent("GuidUtil guidUtil = new GuidUtil();");
             unit.addTabContent("String id = guidUtil.gen();");
             unit.addTabContent("item.setId(id);");
             unit.addTabContent("mapper.insertByCustomId(item);");

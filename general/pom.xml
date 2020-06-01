@@ -16,5 +16,6 @@
         <module>zuul</module>
         <module>eurake</module>
         <module>zipkin</module>
+        <module>txlcn-tm</module>
     </modules>
 </project>

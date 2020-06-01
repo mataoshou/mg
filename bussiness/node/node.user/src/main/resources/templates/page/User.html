@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+
+<body>
+
+<input type="button" value="添加" onclick="addUser()" />
+<input type="button" value="登录" onclick="loginUser()" />
+<input type="button" value="列表" onclick="listUser()" />
+<input type="button" value="获取" onclick="getUser()" />
+</body>
+<script>
+
+    var config_url = "http://127.0.0.1:121/"
+
+
+    function getUser()
+    {
+
+        var request= {};
+
+        request.id = "8D5BE3CC6D2D4EEFB98C5FD1DC0FE958";
+        $.ajax({
+            type: "post",
+            url: config_url +"/User/get",
+            data : JSON.stringify(request),
+            contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+                alert(reason)
+            }
+        });
+
+
+    }
+
+    function listUser()
+    {
+
+        var request= {};
+
+
+        $.ajax({
+            type: "post",
+            url: config_url +"/uauth/User/list",
+            data : JSON.stringify(request),
+            contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+                alert(reason)
+            }
+        });
+
+
+    }
+
+    function loginUser()
+    {
+
+        var request= {};
+        request.username = "matao";
+        request.userpassword = "123";
+
+
+        $.ajax({
+            type: "post",
+            url: config_url +"/uauth/User/login",
+            data : JSON.stringify(request),
+            contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+                alert(reason)
+            }
+        });
+
+
+    }
+
+    function addUser()
+    {
+
+        var request= {};
+        request.username = "matao11";
+        request.userpassword = "123";
+
+        request.displayname="马焘"
+
+
+        $.ajax({
+            type: "post",
+            url: config_url +"/uauth/User/edit",
+            data : JSON.stringify(request),
+            contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+                alert(reason)
+            }
+        });
+
+
+    }
+</script>
+
+
+<script>
+
+    var rootPath =".."
+
+</script>
+<script src="../js/jquery.js"></script>
+</html>
