@@ -59,6 +59,14 @@ public class ResultItem<T> {
         this.msg = msg;
     }
 
+    public List<T> getData() {
+        return data;
+    }
+
+    public void setData(List<T> data) {
+        this.data = data;
+    }
+
     public T get()
     {
         if(this.data==null||this.data.size()==0)return null;

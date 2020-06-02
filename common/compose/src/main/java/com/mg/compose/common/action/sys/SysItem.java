@@ -9,9 +9,7 @@ public class SysItem {
     private String outDtoName;
     private String inVoName;
     private String outVoName;
-    private String inBoName;
-    private String outBoName;
-
+    private String boName;
     private String poName;
 
     private String repositoryName;

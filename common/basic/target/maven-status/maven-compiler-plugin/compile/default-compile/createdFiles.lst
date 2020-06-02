@@ -7,6 +7,7 @@ com\mg\common\pojo\QueryItem.class
 com\mg\common\pojo\SimpleItem.class
 com\mg\common\pojo\ParamItem.class
 com\mg\common\util\Md5Util.class
+com\mg\common\constant\ServerConstant.class
 com\mg\common\iservice\ibasic\IMakeUpBase.class
 com\mg\common\util\FileStore.class
 com\mg\common\util\DomUtil$1.class

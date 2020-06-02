@@ -16,17 +16,12 @@ public class CreateAction extends ICreate {
     Class inDto;
     Class outDto;
 
-    Class inVo;
-    Class outVo;
 
-
-    public CreateAction(String actionName,  Class inVo, Class outVo,
+    public CreateAction(String actionName,
                         Class inDto, Class outDto, String[] methods) {
         super(actionName, methods);
         this.inDto = inDto;
         this.outDto = outDto;
-        this.inVo = inVo;
-        this.outVo = outVo;
         this.setOverwrite(false);
     }
     String repositoryName = StringUtil.firstUpper(this.getName()) +"Repository";
@@ -38,8 +33,8 @@ public class CreateAction extends ICreate {
         unit.addPreContent("@Autowired");
         unit.addPreContent(String.format("%s repository;",repositoryName));
 
-        unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("GeneralMapper mapper;",repositoryName));
+//        unit.addPreContent("@Autowired");
+//        unit.addPreContent(String.format("GeneralMapper mapper;",repositoryName));
     }
 
     @Override
@@ -52,12 +47,12 @@ public class CreateAction extends ICreate {
         unit.addAnnotation(String.format("RequestMapping(%s.ACTION_%s)",this.constantClassName,unit.getName().toUpperCase()));
         unit.setReturnValue("ResultItem");
         unit.setDecorate("public");
-        unit.addParam(String.format("@RequestBody %s",this.inVo.getSimpleName()) ,"voData");
+        unit.addParam(String.format("@RequestBody %s",this.inDto.getSimpleName()) ,"dto");
         unit.addException("Exception");
 
-        unit.addTabContent(String.format("%s pojo = mapper.convert(voData,%s.class);",
-                this.inDto.getSimpleName(),this.inDto.getSimpleName()));
-        unit.addTabContent(String.format("return repository.%s(pojo);", unit.getName()));
+//        unit.addTabContent(String.format("%s pojo = mapper.convert(voData,%s.class);",
+//                this.inDto.getSimpleName(),this.inDto.getSimpleName()));
+        unit.addTabContent(String.format("return repository.%s(dto);", unit.getName()));
 //        if(unit.getName().indexOf("get")>=0)
 //        {
 //            unit.addTabContent(String.format("return repository.%s(pojo);",unit.getName()));
@@ -82,10 +77,8 @@ public class CreateAction extends ICreate {
     @Override
     protected void classInit(ClassUnit unit) {
         unit.addImport(new String[]{
-                this.inVo.getName(),
                 this.inDto.getName(),
                 this.outDto.getName(),
-                this.outVo.getName(),
                 "lombok.extern.slf4j.Slf4j",
                 "org.springframework.web.bind.annotation.RestController",
                 "org.springframework.web.bind.annotation.RequestMapping",

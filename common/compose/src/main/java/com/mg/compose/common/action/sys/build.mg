@@ -47,32 +47,26 @@
 			</div>
 
 			<div class="pojo-bo-content">
-				<span style="width: 200px;display: inline-block;height: 30px;"> 输入bo类选择:  </span>
-				<select style="width: 350px;height: 30px;" class="sys-pojo-in-bo">
-				</select>
-			</div>
-			<div class="pojo-bo-content">
-				<span style="width: 200px;display: inline-block;height: 30px;">  输出bo类选择:  </span>
-				<select style="width: 350px;height: 30px;" class="sys-pojo-out-bo">
+				<span style="width: 200px;display: inline-block;height: 30px;"> bo类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-pojo-bo">
 				</select>
 			</div>
 
 
-
-			<div class="pojo-vo-content">
+			<div class="pojo-vo-content" style="display:none">
 				<span style="width: 200px;display: inline-block;height: 30px;"> 输入vo类选择:  </span>
 				<select style="width: 350px;height: 30px;" class="sys-pojo-in-vo">
 				</select>
 			</div>
 
-			<div class="pojo-vo-content">
+			<div class="pojo-vo-content" style="display:none">
 				<span style="width: 200px;display: inline-block;height: 30px;"> 输出vo类选择:  </span>
 				<select style="width: 350px;height: 30px;" class="sys-pojo-out-vo">
 				</select>
 			</div>
 
 
-			<div class="pojo-po-content">
+			<div class="pojo-po-content" style="display:none">
 				<span style="width: 200px;display: inline-block;height: 30px;"> po类选择:  </span>
 				<select style="width: 350px;height: 30px;" class="sys-pojo-po">
 				</select>
@@ -130,10 +124,10 @@
 			}
 
 			MT.selects = [".sys-repository",".sys-pojo-in-dto",".sys-pojo-out-dto",
-			".sys-pojo-in-vo",".sys-pojo-out-vo",".sys-pojo-in-bo",".sys-pojo-out-bo",".sys-pojo-po",".sys-name"];
+			".sys-pojo-in-vo",".sys-pojo-out-vo",".sys-pojo-bo",".sys-pojo-po",".sys-name"];
 			MT.urls = ["/sys/list/repository","/sys/list/dto","/sys/list/dto",
 			"/sys/list/vo","/sys/list/vo",
-			"/sys/list/bo","/sys/list/bo",
+			"/sys/list/bo",
 			"/sys/list/po","/sys/list/sysName"];
 			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/cache","/sys/oper/bo","/sys/oper/buildAll"]
 
@@ -165,8 +159,7 @@
 				req.outDtoName = $(".sys-pojo-out-dto").val();
 				req.inVoName = $(".sys-pojo-in-vo").val();
 				req.outVoName = $(".sys-pojo-out-vo").val();
-				req.inBoName = $(".sys-pojo-in-bo").val();
-				req.outBoName = $(".sys-pojo-out-bo").val();
+				req.boName = $(".sys-pojo-bo").val();
 				req.poName = $(".sys-pojo-po").val();
 				req.sysName = $(".sys-name").val();
 				req.oper = $(".class-method").val();

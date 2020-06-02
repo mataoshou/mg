@@ -40,7 +40,7 @@ public class CreateBaseMapperXML extends ICreate {
 
         File mapperFile = new File(this.getClassFile().getParent(), mapperFileName + ".xml");
         String content = FileStore.getContent(mapperFile, "UTF-8");
-        content = content.replace(mapperFileName, mergeFileName).replace("dao", "mergedao");
+        content = content.replace(mapperFileName, mergeFileName).replace(DBConstant.DB_MAPPER_PACKAGE, DBConstant.DB_MERGEDAO_PACKAGE);
         FileStore.putString(this.getClassFile(), content, "UTF-8");
 
         BaseFileUtil.delete(mapperFile);

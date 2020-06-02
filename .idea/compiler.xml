@@ -8,15 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo.empty" />
-        <module name="mg-common-basic" />
-        <module name="txlcn-demo-tm" />
+        <module name="mg-compose-uauth" />
         <module name="mg-common-website" />
+        <module name="demo.daily" />
         <module name="mg-website-uauth" />
         <module name="build" />
         <module name="mg-common-compose" />
         <module name="mg-node-user" />
-        <module name="demo.daily" />
-        <module name="mg-compose-uauth" />
+        <module name="mg-common-basic" />
+        <module name="mg-eurake" />
+        <module name="txlcn-demo-tm" />
         <module name="mg-common-node" />
       </profile>
     </annotationProcessing>

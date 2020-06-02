@@ -1,10 +1,10 @@
 package com.mg.node.common.action.sys;
 
+import com.mg.common.constant.ServerConstant;
 import com.mg.common.pojo.SimpleItem;
 import com.mg.common.util.BaseFileUtil;
 import com.mg.node.common.constant.CommonConstant;
 import com.mg.node.common.constant.DBConstant;
-import com.mg.node.common.constant.ServerConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

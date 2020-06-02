@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import com.mg.node.db.sql.merge.IRmtUserInfoMapper;
 import com.mg.node.db.sql.pojo.RmtUserInfo;
 import java.util.List;
+import java.util.Random;
+
 import com.mg.common.util.GuidUtil;
 
 @Repository
@@ -15,11 +17,14 @@ public class UserDAO {
    private IRmtUserInfoMapper mapper;
    
    public RmtUserInfo get(String id){
-      return mapper.selectByPrimaryKey(id);
+
+      RmtUserInfo userInfo = mapper.selectByPrimaryKey(id);
+      return userInfo;
    }
    
    public RmtUserInfo edit(RmtUserInfo item){
-      return null;
+      mapper.updateByPrimaryKeySelective(item);
+      return item;
    }
    
    public List<RmtUserInfo> list(){

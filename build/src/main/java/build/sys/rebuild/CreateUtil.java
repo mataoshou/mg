@@ -2,7 +2,6 @@ package build.sys.rebuild;
 
 import build.tool.FileStore;
 import build.tool.StringUtil;
-import com.sun.deploy.util.StringUtils;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;

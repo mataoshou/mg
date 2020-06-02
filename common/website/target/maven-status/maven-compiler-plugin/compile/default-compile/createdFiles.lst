@@ -17,7 +17,6 @@ com\mg\website\common\generate\action\CreateRepository.class
 com\mg\website\common\generate\feign\CreateFeign.class
 com\mg\website\common\service\feign\BaseFallBack.class
 com\mg\website\common\constant\FeignConstant.class
-com\mg\website\common\constant\ServerConstant.class
 com\mg\website\common\service\mq\BaseMessage.class
 com\mg\website\common\action\sys\SysUtil.class
 com\mg\website\common\action\ControllerLog.class

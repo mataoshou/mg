@@ -8,7 +8,6 @@ spring:
       host: 127.0.0.1
       port: 27017
       database: mg
-
   datasource: 
     password: shineon@1234
     driverclassname: com.mysql.jdbc.Driver
@@ -29,7 +28,7 @@ eureka:
   instance:
     prefer-ip-address: true
 mybatis:
-  mapperlocations: "classpath:com/mg/node/db/sql/mapper/*.xml"
+  mapperlocations: "classpath:com/mg/node/db/sql/xml/*.xml"
 
 curator:
   retryCount: 5  #重试次数

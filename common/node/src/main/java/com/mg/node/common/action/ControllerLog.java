@@ -13,15 +13,12 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class ControllerLog {
 
-    @Pointcut("args(com.alibaba.fastjson.JSONObject)")
-    public void params() {
-    }
 
-    @Pointcut("execution(* com.mg.webiste.action..*.*(..))")
+    @Pointcut("execution(* com.mg.node.action..*.*(..))")
     public void methods() {
     }
 
-    @Pointcut("params() && methods()")
+    @Pointcut("methods()")
     private void actionLog(){
 
     }

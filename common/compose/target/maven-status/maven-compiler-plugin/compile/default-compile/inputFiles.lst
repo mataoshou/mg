@@ -7,14 +7,13 @@ E:\core\mg\common\compose\src\main\java\com\mg\compose\common\generate\action\Ac
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\action\ControllerLog.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\generate\action\CreateActionConstant.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\generate\action\CreateRepository.java
+E:\core\mg\common\compose\src\main\java\com\mg\compose\common\service\task\MgCloudLockFactory.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\action\sys\SysOperController.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\constant\PoolConstant.java
-E:\core\mg\common\compose\src\main\java\com\mg\compose\common\service\task\MgCloudLock.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\constant\MessageConstant.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\generate\feign\CreateFeign.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\action\ActionExceptionHandler.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\action\sys\SysClassListController.java
-E:\core\mg\common\compose\src\main\java\com\mg\compose\common\constant\ServerConstant.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\generate\message\MessageFactory.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\action\sys\SysUtil.java
 E:\core\mg\common\compose\src\main\java\com\mg\compose\common\constant\ConvertsConstant.java

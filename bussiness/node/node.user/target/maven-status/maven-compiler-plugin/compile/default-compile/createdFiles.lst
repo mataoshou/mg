@@ -3,6 +3,7 @@ com\mg\node\db\sql\pojo\RmtDepartmentChartInfo.class
 com\mg\node\db\sql\merge\IRmtTenantInfoMapper.class
 com\mg\node\db\sql\mapper\RmtOperateInfoBaseMapper.class
 com\mg\node\db\sql\mapper\RmtOrganizationExtendInfoBaseMapper.class
+com\mg\node\service\repository\UserRepository.class
 com\mg\node\db\sql\pojo\RmtOrganizationDepartmentInfo.class
 com\mg\node\db\sql\merge\IRmtUserActorInfoMapper.class
 com\mg\node\db\sql\pojo\RmtPrivilegeInfo.class
@@ -42,6 +43,7 @@ com\mg\node\db\sql\mapper\RmtUserLoginInfoExternMapper.class
 com\mg\node\pojo\bo\UserBo.class
 com\mg\node\db\sql\property\RmtPrivilegeGroupInfoProperty.class
 com\mg\node\db\sql\property\RmtOperateInfoProperty.class
+com\mg\node\pojo\dto\OutUserDto.class
 com\mg\node\db\sql\mapper\RmtOperateInfoExternMapper.class
 com\mg\node\db\sql\pojo\RmtOperateGroupInfo.class
 com\mg\node\db\sql\mapper\RmtPrivilegeGroupInfoBaseMapper.class
@@ -106,6 +108,7 @@ com\mg\node\db\sql\pojo\RmtOrganizationExtendInfo.class
 com\mg\node\db\sql\mapper\RmtActiorInfoExternMapper.class
 com\mg\node\db\sql\property\RmtOrganizationInfoProperty.class
 com\mg\node\db\sql\mapper\RmtDepartmentChartInfoBaseMapper.class
+com\mg\node\action\UserController.class
 com\mg\node\db\sql\mapper\RmtDepartmentInfoExternMapper.class
 com\mg\node\db\sql\merge\IRmtOperateInfoMapper.class
 com\mg\node\db\sql\merge\IRmtOrganizationExtendInfoMapper.class

@@ -3,7 +3,7 @@ package com.mg.compose.common.action.sys;
 import com.mg.common.pojo.SimpleItem;
 import com.mg.common.util.BaseFileUtil;
 import com.mg.compose.common.constant.CommonConstant;
-import com.mg.compose.common.constant.ServerConstant;
+import com.mg.common.constant.ServerConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

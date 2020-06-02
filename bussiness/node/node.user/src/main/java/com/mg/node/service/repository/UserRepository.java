@@ -1,5 +1,6 @@
 package com.mg.node.service.repository; 
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import org.springframework.stereotype.Service;
 import com.mg.node.pojo.dto.InUserDto;
 import com.mg.node.pojo.dto.InUserDto;
@@ -10,6 +11,8 @@ import com.mg.common.pojo.ResultItem;
 import com.mg.node.mapper.GeneralMapper;
 import com.mg.node.dao.UserDAO;
 import com.mg.node.service.feign.UserFeign;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 @Service
@@ -20,17 +23,36 @@ public class UserRepository {
    @Autowired
    GeneralMapper mapper;
 
-   
    public ResultItem get(InUserDto item) throws Exception{
       RmtUserInfo pojo = dao.get(item.getId());
       InUserDto dto = mapper.convert(pojo,InUserDto.class);
       ResultItem result =  new ResultItem<InUserDto>(dto);
       return result;
    }
-   
+
    public ResultItem edit(InUserDto item) throws Exception{
+
       RmtUserInfo pojo = mapper.convert(item,RmtUserInfo.class);
       ResultItem result = new ResultItem<InUserDto>(mapper.convert(dao.edit(pojo),InUserDto.class));
+      return result;
+   }
+
+   @LcnTransaction//分布式事务
+   @Transactional //本地事务
+   public ResultItem get1(InUserDto item) throws Exception{
+      RmtUserInfo pojo = dao.get(item.getId());
+      InUserDto dto = mapper.convert(pojo,InUserDto.class);
+      ResultItem result =  new ResultItem<InUserDto>(dto);
+      return result;
+   }
+
+   @LcnTransaction//分布式事务
+   @Transactional //本地事务
+   public ResultItem edit1(InUserDto item) throws Exception{
+
+      RmtUserInfo pojo = mapper.convert(item,RmtUserInfo.class);
+      ResultItem result = new ResultItem<InUserDto>(mapper.convert(dao.edit(pojo),InUserDto.class));
+//      throw new Exception("1111");
       return result;
    }
    
