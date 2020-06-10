@@ -17,7 +17,6 @@
         <option value="$PROJECT_DIR$/common/dao/pom.xml" />
         <option value="$PROJECT_DIR$/empty/pom.xml" />
         <option value="$PROJECT_DIR$/general/zipkin/pom.xml" />
-        <option value="$PROJECT_DIR$/general/zuul/pom.xml" />
         <option value="$PROJECT_DIR$/knowledge/pom.xml" />
       </set>
     </option>
