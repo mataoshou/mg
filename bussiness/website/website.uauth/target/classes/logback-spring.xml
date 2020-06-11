@@ -5,7 +5,9 @@
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <destination>10.0.127.235:5044</destination>
         <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" >
-            <customFields>{"appname":"uauth","type":"log","pre":"mg"}</customFields>
+            <customFields>
+                {"appname":"uauth","type":"log","pre":"mg"}
+            </customFields>
         </encoder>
     </appender>
 

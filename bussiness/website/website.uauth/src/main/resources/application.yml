@@ -48,7 +48,7 @@ ribbon:
 logging: 
   level: 
     root: info
-  file: ../mg.log/mg.api.uauth.log
+  file: /mg.log/mg.website.uauth.log
 #  config: classpath:logback-spring.xml
 feign: 
   hystrix: 
