@@ -271,6 +271,8 @@
     <orderEntry type="library" name="Maven: io.zipkin.brave:brave-instrumentation-servlet:5.6.1" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.brave:brave-instrumentation-jms:5.6.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-netflix-eureka-client:2.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-config:2.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-config-client:2.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE" level="project" />
   </component>
 </module>

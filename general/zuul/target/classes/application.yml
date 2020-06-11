@@ -1,14 +1,12 @@
 server:
   port: 182
 
-
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:81/eureka
   instance:
     prefer-ip-address: true
-
 
 zuul:
   routes:
@@ -37,7 +35,6 @@ spring:
       flush-mode: immediate
       namespace:
         spring: session
-
   redis:
     host: 127.0.0.1
     port: 6379

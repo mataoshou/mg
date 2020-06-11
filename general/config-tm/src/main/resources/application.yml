@@ -1,0 +1,25 @@
+server:
+  port: 7100
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:81/eureka
+  instance:
+    prefer-ip-address: true
+
+
+spring:
+  application:
+    name: mg.config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MT-GMZ/config
+          search-paths: website
+          username: mmqw1122
+          password: Mg12270819
+
+
+

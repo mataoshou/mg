@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/common/website/mg-common-website.iml" filepath="$PROJECT_DIR$/common/website/mg-common-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/compose/mg-compose.iml" filepath="$PROJECT_DIR$/bussiness/compose/mg-compose.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/general/config-tm/mg-config.iml" filepath="$PROJECT_DIR$/general/config-tm/mg-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/eurake/mg-eurake.iml" filepath="$PROJECT_DIR$/general/eurake/mg-eurake.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/zipkin1/mg-eurake (1).iml" filepath="$PROJECT_DIR$/general/zipkin1/mg-eurake (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/general/mg-general.iml" filepath="$PROJECT_DIR$/general/mg-general.iml" />
@@ -22,6 +23,7 @@
       <module fileurl="file://$PROJECT_DIR$/bussiness/website/mg-website.iml" filepath="$PROJECT_DIR$/bussiness/website/mg-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" filepath="$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/zuul/mg-zuul.iml" filepath="$PROJECT_DIR$/general/zuul/mg-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/general/config-tm/mg-zuul (1).iml" filepath="$PROJECT_DIR$/general/config-tm/mg-zuul (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/general/txlcn-tm/txlcn-demo-tm.iml" filepath="$PROJECT_DIR$/general/txlcn-tm/txlcn-demo-tm.iml" />
     </modules>
   </component>
