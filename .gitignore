@@ -2,5 +2,5 @@ workspace
 .project
 .classpath
 .idea
+**/target/
 *.iml
-/*/target/
