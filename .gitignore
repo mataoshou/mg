@@ -1,4 +1,6 @@
 workspace
 .project
 .classpath
-.idea/workspace.xml
+.idea
+*.iml
+/*/target/
