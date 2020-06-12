@@ -17,7 +17,7 @@ spring:
       server:
         git:
           uri: https://github.com/MT-GMZ/config
-          search-paths: website
+          search-paths: website/{application},node/{application},compose/{application}
           username: mmqw1122
           password: Mg12270819
 

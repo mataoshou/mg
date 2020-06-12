@@ -1,6 +1,6 @@
 spring:
   application: 
-    name: mg-website-uauth
+    name: mg-compose-uums
   cloud:
     config:
       profile: dev

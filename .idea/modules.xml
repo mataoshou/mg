@@ -12,7 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/common/node/mg-common-node.iml" filepath="$PROJECT_DIR$/common/node/mg-common-node.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/website/mg-common-website.iml" filepath="$PROJECT_DIR$/common/website/mg-common-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/compose/mg-compose.iml" filepath="$PROJECT_DIR$/bussiness/compose/mg-compose.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uauth/mg-compose-uauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uauth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uums.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uums.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/config-tm/mg-config.iml" filepath="$PROJECT_DIR$/general/config-tm/mg-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/eurake/mg-eurake.iml" filepath="$PROJECT_DIR$/general/eurake/mg-eurake.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/zipkin1/mg-eurake (1).iml" filepath="$PROJECT_DIR$/general/zipkin1/mg-eurake (1).iml" />

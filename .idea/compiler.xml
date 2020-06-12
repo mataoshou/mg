@@ -16,12 +16,13 @@
         <module name="demo.empty" />
         <module name="mg-common-compose" />
         <module name="mg-common-website" />
-        <module name="mg-config" />
+        <module name="mg-compose-uums" />
         <module name="mg-compose-uauth" />
+        <module name="mg-common-basic" />
         <module name="mg-node-user" />
         <module name="mg-eurake" />
         <module name="demo.daily" />
-        <module name="mg-common-basic" />
+        <module name="mg-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -41,6 +42,7 @@
       <module name="mg-compose" target="1.8" />
       <module name="mg-compose-matao" target="1.8" />
       <module name="mg-compose-uauth" target="1.8" />
+      <module name="mg-compose-uums" target="1.8" />
       <module name="mg-config" target="1.8" />
       <module name="mg-dao" target="1.8" />
       <module name="mg-empty" target="1.8" />
@@ -79,6 +81,7 @@
       <module name="mg-common-website" options="-parameters" />
       <module name="mg-compose-matao" options="-parameters" />
       <module name="mg-compose-uauth" options="-parameters" />
+      <module name="mg-compose-uums" options="-parameters" />
       <module name="mg-config" options="-parameters" />
       <module name="mg-dao" options="-parameters" />
       <module name="mg-empty" options="-parameters" />

@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>compose.uauth</module>
+        <module>compose.uums</module>
     </modules>
 
     <dependencies>
