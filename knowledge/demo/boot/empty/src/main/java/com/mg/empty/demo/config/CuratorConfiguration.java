@@ -1,4 +1,4 @@
-package com.mg.compose.common.config;
+package com.mg.empty.demo.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
@@ -30,11 +30,10 @@ public class CuratorConfiguration {
     @Bean(initMethod = "start")
     public CuratorFramework curatorFramework() {
         CuratorFramework framework= CuratorFrameworkFactory.newClient(
-                "10.0.127.235:2181",
-                5000,
-                5000,
-                new RetryNTimes(3, 1000));
-//        framework.start();
+                connectString,
+                sessionTimeoutMs,
+                connectionTimeoutMs,
+                new RetryNTimes(retryCount, elapsedTimeMs));
         return framework;
     }
 }
