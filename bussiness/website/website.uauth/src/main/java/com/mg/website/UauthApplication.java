@@ -18,6 +18,7 @@ public class UauthApplication {
         log.info("...............mg.................log................begin");
         SpringApplication.run(UauthApplication.class, args);
 
+        ThreadLocal
         new Thread(()->{
             while (true) {
                 log.info("......................mg.............." + System.currentTimeMillis());

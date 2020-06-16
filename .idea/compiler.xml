@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="build" />
         <module name="txlcn-demo-tm" />
+        <module name="demo.empty (1)" />
         <module name="mg-zuul (1)" />
         <module name="mg-zuul" />
         <module name="mg-common-node" />
@@ -17,18 +18,19 @@
         <module name="mg-common-compose" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
+        <module name="mg-config" />
         <module name="mg-compose-uauth" />
-        <module name="mg-common-basic" />
         <module name="mg-node-user" />
         <module name="mg-eurake" />
         <module name="demo.daily" />
-        <module name="mg-config" />
+        <module name="mg-common-basic" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="build" target="1.8" />
       <module name="demo.daily" target="1.8" />
       <module name="demo.empty" target="1.8" />
+      <module name="demo.empty (1)" target="1.8" />
       <module name="demo.lock" target="1.8" />
       <module name="general" target="1.8" />
       <module name="mg" target="1.8" />
@@ -72,6 +74,7 @@
       <module name="build" options="-parameters" />
       <module name="demo.daily" options="-parameters" />
       <module name="demo.empty" options="-parameters" />
+      <module name="demo.empty (1)" options="-parameters" />
       <module name="demo.lock" options="-parameters" />
       <module name="general" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
