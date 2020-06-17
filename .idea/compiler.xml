@@ -18,12 +18,13 @@
         <module name="mg-common-compose" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-config" />
         <module name="mg-compose-uauth" />
+        <module name="demo.lock" />
+        <module name="mg-common-basic" />
         <module name="mg-node-user" />
         <module name="mg-eurake" />
         <module name="demo.daily" />
-        <module name="mg-common-basic" />
+        <module name="mg-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

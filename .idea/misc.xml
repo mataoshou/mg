@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/knowledge/demo/daily/pom.xml" />
         <option value="$PROJECT_DIR$/knowledge/demo/daily/empty/pom.xml" />
         <option value="$PROJECT_DIR$/knowledge/demo/boot/empty/pom.xml" />
+        <option value="$PROJECT_DIR$/knowledge/demo/boot/lock/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

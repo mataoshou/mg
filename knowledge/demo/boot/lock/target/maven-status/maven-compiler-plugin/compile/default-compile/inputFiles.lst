@@ -1,1 +1,3 @@
-E:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\DemoApplication.java
+E:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\LockApplication.java
+E:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\redis\RedisLock.java
+E:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\redis\LockDemo.java
