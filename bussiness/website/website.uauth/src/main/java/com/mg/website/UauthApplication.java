@@ -15,20 +15,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class UauthApplication {
 
     public static void main(String[] args) {
-        log.info("...............mg.................log................begin");
         SpringApplication.run(UauthApplication.class, args);
-
-        ThreadLocal
-        new Thread(()->{
-            while (true) {
-                log.info("......................mg.............." + System.currentTimeMillis());
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
     }
 
 }
