@@ -17,6 +17,7 @@
         <module>eurake</module>
         <module>zipkin</module>
         <module>txlcn-tm</module>
-        <module>config-tm</module>
+        <module>config-server</module>
+        <module>auth-server</module>
     </modules>
 </project>
