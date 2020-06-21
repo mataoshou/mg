@@ -1,3 +1,7 @@
 com\mg\lock\demo\LockApplication.class
-com\mg\lock\demo\redis\RedisLock.class
 com\mg\lock\demo\redis\LockDemo.class
+com\mg\lock\demo\zk\ZkLock.class
+com\mg\lock\demo\zk\ZkLock$1.class
+com\mg\lock\demo\zk\Demo1.class
+com\mg\lock\demo\redis\RedisLock.class
+com\mg\lock\demo\zk\Demo2.class
