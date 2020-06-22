@@ -31,9 +31,6 @@ public class Demo2 {
         else {
             log.info("lock2获取锁失败");
         }
-
-
-
     }
 
     public static void main(String[] args) throws Exception {

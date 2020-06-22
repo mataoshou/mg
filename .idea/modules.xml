@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/knowledge/demo/daily/empty/demo.empty.iml" filepath="$PROJECT_DIR$/knowledge/demo/daily/empty/demo.empty.iml" />
       <module fileurl="file://$PROJECT_DIR$/knowledge/demo/boot/empty/demo.empty (1).iml" filepath="$PROJECT_DIR$/knowledge/demo/boot/empty/demo.empty (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/knowledge/demo/boot/lock/demo.lock.iml" filepath="$PROJECT_DIR$/knowledge/demo/boot/lock/demo.lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/general/auth/mg-auth.iml" filepath="$PROJECT_DIR$/general/auth/mg-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/mg-bussiness.iml" filepath="$PROJECT_DIR$/bussiness/mg-bussiness.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/mg-common.iml" filepath="$PROJECT_DIR$/common/mg-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/basic/mg-common-basic.iml" filepath="$PROJECT_DIR$/common/basic/mg-common-basic.iml" />

@@ -1,3 +1,7 @@
-E:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\LockApplication.java
-E:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\redis\RedisLock.java
-E:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\redis\LockDemo.java
+D:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\zk\ZkLock.java
+D:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\redis\LockDemo.java
+D:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\zk\Demo1.java
+D:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\zk\Demo2.java
+D:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\LockApplication.java
+D:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\redis\RedisLock.java
+D:\core\mg\knowledge\demo\boot\lock\src\main\java\com\mg\lock\demo\zk\Demo3.java
