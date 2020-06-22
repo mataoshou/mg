@@ -18,6 +18,6 @@
         <module>zipkin</module>
         <module>txlcn-tm</module>
         <module>config-server</module>
-        <module>auth-server</module>
+        <module>auth</module>
     </modules>
 </project>

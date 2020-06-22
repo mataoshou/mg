@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/knowledge/demo/daily/empty/pom.xml" />
         <option value="$PROJECT_DIR$/knowledge/demo/boot/empty/pom.xml" />
         <option value="$PROJECT_DIR$/knowledge/demo/boot/lock/pom.xml" />
+        <option value="$PROJECT_DIR$/general/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -18,8 +19,10 @@
         <option value="$PROJECT_DIR$/bussiness/dao/pom.xml" />
         <option value="$PROJECT_DIR$/common/dao/pom.xml" />
         <option value="$PROJECT_DIR$/empty/pom.xml" />
+        <option value="$PROJECT_DIR$/general/auth-server/pom.xml" />
         <option value="$PROJECT_DIR$/general/zipkin/pom.xml" />
         <option value="$PROJECT_DIR$/knowledge/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth-server/pom.xml" />
       </set>
     </option>
   </component>
