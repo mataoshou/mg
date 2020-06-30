@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -34,15 +35,30 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
     @Autowired
     TokenStore tokenStore;
 
+    @Autowired
+    JwtAccessTokenConverter tokenConverter;
+
+
+    @Autowired
+    private RedisConnectionFactory redisConnectionFactory;
+
     /**
      * 使用密码模式需要配置
      */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-        endpoints.authenticationManager(authenticationManager)
-                .userDetailsService(userDetailsService)
-                .tokenStore(tokenStore)
-                .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);;//配置令牌存储策略
+//        endpoints.authenticationManager(authenticationManager)
+//                .userDetailsService(userDetailsService)
+//                .tokenStore(tokenStore)
+//                .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);;//配置令牌存储策略
+
+        //指定认证管理器
+        endpoints.authenticationManager(authenticationManager);
+        //指定token存储位置
+        endpoints.tokenStore(tokenStore);
+        // token生成方式
+        endpoints.accessTokenConverter(tokenConverter);
+        endpoints.userDetailsService(userDetailsService);
     }
 
 
