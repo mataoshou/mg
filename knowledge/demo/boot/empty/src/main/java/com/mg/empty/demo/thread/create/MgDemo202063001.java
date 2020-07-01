@@ -9,7 +9,6 @@ public class MgDemo202063001 implements Runnable {
       log.info("运行线程1");
     }
 
-
     public static void main(String[] args) {
         Thread thread1 = new Thread(new MgDemo202063001());
         thread1.start();
