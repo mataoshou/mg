@@ -20,6 +20,7 @@ public class MgDemo202063003 implements Callable<String> {
         Thread thread = new Thread(future);
         thread.setName("mgTask1");
         thread.start();
+
         log.info(future.isDone()+"");
         log.info(future.get());
         log.info(future.isDone()+"");
