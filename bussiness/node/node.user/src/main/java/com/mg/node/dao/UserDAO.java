@@ -1,15 +1,10 @@
 package com.mg.node.dao; 
 
-import com.mg.node.mapper.GeneralMapper;
-import com.mg.node.pojo.po.UserPo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.mg.node.db.sql.merge.IRmtUserInfoMapper;
 import com.mg.node.db.sql.pojo.RmtUserInfo;
 import java.util.List;
-import java.util.Random;
-
-import com.mg.common.util.GuidUtil;
 
 @Repository
 public class UserDAO {

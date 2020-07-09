@@ -17,11 +17,19 @@ public class MgDemo2020070803 {
     public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, MalformedURLException {
         int no =12;
         System.out.println(no);
-        demo1();
+//        demo1();
         URL url = new URL("file:/E:/cltmp/");
         URLClassLoader classLoader = new URLClassLoader(new URL[]{url});
         Class cl = classLoader.loadClass("MgDemoSample");
-        System.out.println(cl.getName());
+        Class cl2 = classLoader.loadClass("MgDemoSample");
+        System.out.println(cl.equals(cl2));
+
+        URLClassLoader classLoader2 = new URLClassLoader(new URL[]{url});
+        Class cl3 = classLoader2.loadClass("MgDemoSample");
+        System.out.println(cl.hashCode());
+        System.out.println(cl2.hashCode());
+        System.out.println(cl3.hashCode());
+        System.out.println(cl.equals(cl3));
     }
 
     public static void demo1() throws FileNotFoundException {
@@ -32,7 +40,7 @@ public class MgDemo2020070803 {
 
         int compilationResult = compiler.run(null, null, null,
                 "-d","E:\\cltmp"
-                ,"E:\\core\\mg\\knowledge\\demo\\boot\\empty\\src\\main\\java\\com\\mg\\empty\\demo\\jvm\\createCl\\MgDemo2020070803.java");
+                ,"E:\\core\\mg\\knowledge\\demo\\boot\\empty\\src\\main\\java\\com\\mg\\empty\\demo\\jvm\\createCl\\MgDemoSample.java");
 
         System.out.println(compilationResult);
     }

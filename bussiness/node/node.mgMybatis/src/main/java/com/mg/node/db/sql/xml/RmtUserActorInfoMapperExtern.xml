@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mg.node.db.sql.merge.IRmtUserActorInfoMapper" >
+    <select id="list" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_user_actor_info
+        <if test="where != null">
+         where ${where}
+        </if>
+        <if test="order != null">
+            order by ${order}
+        </if>
+    </select>
+    <select id="get" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_user_actor_info
+        where ${where}
+    </select>
+    <insert id="insertByCustomId"   parameterType="com.mg.node.db.sql.pojo.RmtUserActorInfo" >
+        insert into rmt_user_actor_info (id,userID,departmentID,actorGroup,speciallyGroup,createTime,createUserID,description,reserved1,reserved2)
+        values (#{id,jdbcType=INTEGER},#{userid,jdbcType=INTEGER},#{departmentid,jdbcType=VARCHAR},#{actorgroup,jdbcType=VARCHAR},#{speciallygroup,jdbcType=VARCHAR},#{createtime,jdbcType=TIMESTAMP},#{createuserid,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},#{reserved1,jdbcType=VARCHAR},#{reserved2,jdbcType=VARCHAR})
+    </insert>
+</mapper>

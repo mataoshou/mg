@@ -1,16 +1,14 @@
 package com.mg.node.service.repository; 
 
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+import com.mg.node.common.mapper.GeneralMapper;
 import org.springframework.stereotype.Service;
-import com.mg.node.pojo.dto.InUserDto;
 import com.mg.node.pojo.dto.InUserDto;
 import lombok.extern.slf4j.Slf4j;
 import com.mg.node.db.sql.pojo.RmtUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.mg.common.pojo.ResultItem;
-import com.mg.node.mapper.GeneralMapper;
 import com.mg.node.dao.UserDAO;
-import com.mg.node.service.feign.UserFeign;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

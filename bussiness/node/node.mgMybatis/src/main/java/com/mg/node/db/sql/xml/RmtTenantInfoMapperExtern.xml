@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mg.node.db.sql.merge.IRmtTenantInfoMapper" >
+    <select id="list" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_tenant_info
+        <if test="where != null">
+         where ${where}
+        </if>
+        <if test="order != null">
+            order by ${order}
+        </if>
+    </select>
+    <select id="get" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_tenant_info
+        where ${where}
+    </select>
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_tenant_info 
+        where tenantName = #{name,jdbcType=VARCHAR}
+    </select> 
+    <insert id="insertByCustomId"   parameterType="com.mg.node.db.sql.pojo.RmtTenantInfo" >
+        insert into rmt_tenant_info (id,tenantID,tenantCode,tenantName,tenantType,tenantState,createTime,createdUserID,organizationID,tenantExpiryDate,tenantExtendID,reserved1,reserved2)
+        values (#{id,jdbcType=VARCHAR},#{tenantid,jdbcType=VARCHAR},#{tenantcode,jdbcType=INTEGER},#{tenantname,jdbcType=VARCHAR},#{tenanttype,jdbcType=TINYINT},#{tenantstate,jdbcType=TINYINT},#{createtime,jdbcType=TIMESTAMP},#{createduserid,jdbcType=VARCHAR},#{organizationid,jdbcType=VARCHAR},#{tenantexpirydate,jdbcType=TIMESTAMP},#{tenantextendid,jdbcType=VARCHAR},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
+    </insert>
+</mapper>

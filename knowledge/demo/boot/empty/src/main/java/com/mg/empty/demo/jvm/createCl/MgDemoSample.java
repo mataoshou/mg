@@ -1,4 +1,4 @@
-
+//
 //public class MgDemoSample {
 //
 //    public void startSample()

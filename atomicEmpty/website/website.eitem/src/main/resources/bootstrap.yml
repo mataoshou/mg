@@ -1,0 +1,11 @@
+spring:
+  application: 
+    name: mg-website-eitem
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:7100/
+
+
+

@@ -1,7 +1,6 @@
 package com.mg.compose.action; 
 
 import com.mg.compose.pojo.dto.InUserDto;
-import com.mg.compose.pojo.dto.OutUserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +9,6 @@ import com.mg.compose.service.repository.UserRepository;
 import com.mg.compose.constant.action.UserControllerConstant;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.mg.common.pojo.ResultItem;
-import com.mg.compose.mapper.GeneralMapper;
 
 @Slf4j
 @RestController
