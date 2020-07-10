@@ -25,7 +25,9 @@ public interface IMgDao<T> {
 
     T selectByName(String name);
 
-    T get(@Param("where") String where);
+    T getItem(@Param("where") String where);
+
+    T getById(@Param("id") String id);
 
     int insertByCustomId(T item);
 

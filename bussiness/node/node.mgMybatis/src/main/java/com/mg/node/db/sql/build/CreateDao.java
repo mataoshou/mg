@@ -1,6 +1,7 @@
 package com.mg.node.db.sql.build;
 
 import com.itranswarp.compiler.JavaStringCompiler;
+import tk.mybatis.mapper.common.BaseMapper;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -10,13 +11,15 @@ import java.util.Map;
 public class CreateDao {
     public static void main(String[] args) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         // 声明类名
-        String className = "RmtActiorInfoBaseMapper";
+        String className = "RmtActiorInfoBaseMapperDao";
         String prefix = String.format("package com.mg.node.db.sql.mapper;");
         // 全类名：top.fomeiherz.Main
-        String fullName = "com.mg.node.db.sql.mapper.RmtActiorInfoBaseMapper";
+        String fullName = "com.mg.node.db.sql.mapper.RmtActiorInfoBaseMapperDao";
+
+        BaseMapper
 
         // 传入String类型的代码
-        String source = "public class MgSample" +
+        String source = "public class RmtActiorInfoBaseMapperDao" +
                 "{" +
                 "public static void main(String[] args) {" +
                 "System.out.println(\"...................mgDemoTest\");" +
