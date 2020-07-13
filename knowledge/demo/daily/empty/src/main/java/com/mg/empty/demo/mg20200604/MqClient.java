@@ -9,10 +9,10 @@ public class MqClient {
 
     public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
         ConnectionFactory factory =new ConnectionFactory();
-        factory.setHost("127.0.0.1");
+        factory.setHost("10.0.127.103");
         factory.setPort(5672);
-        factory.setUsername("mg");
-        factory.setPassword("mg");
+        factory.setUsername("matao");
+        factory.setPassword("matao");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.basicQos(64);

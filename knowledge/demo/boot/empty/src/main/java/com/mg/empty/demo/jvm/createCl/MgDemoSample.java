@@ -1,9 +1,9 @@
-//
-//public class MgDemoSample {
-//
-//    public void startSample()
-//    {
-//        System.out.println("MgDemoSample");
-//    }
-//
-//}
+
+public class MgDemoSample {
+
+    public void startSample()
+    {
+        System.out.println("MgDemoSample");
+    }
+
+}

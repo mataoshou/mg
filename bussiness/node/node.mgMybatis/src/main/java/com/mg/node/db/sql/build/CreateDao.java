@@ -16,7 +16,6 @@ public class CreateDao {
         // 全类名：top.fomeiherz.Main
         String fullName = "com.mg.node.db.sql.mapper.RmtActiorInfoBaseMapperDao";
 
-        BaseMapper
 
         // 传入String类型的代码
         String source = "public class RmtActiorInfoBaseMapperDao" +
