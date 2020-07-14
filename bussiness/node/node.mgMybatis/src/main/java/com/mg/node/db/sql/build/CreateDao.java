@@ -1,7 +1,6 @@
 package com.mg.node.db.sql.build;
 
 import com.itranswarp.compiler.JavaStringCompiler;
-import tk.mybatis.mapper.common.BaseMapper;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

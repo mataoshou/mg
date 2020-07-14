@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
 @MapperScan({DBConstant.DB_MERGEDAO_PACKAGE,"com.mg.node.db.sql.build"})
+//@MapperScan({"com.mg.node.db.sql.build"})
 @EnableEurekaClient
 public class MgMybatisApplication {
 
