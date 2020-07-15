@@ -72,34 +72,33 @@ public class StartAddMyMapper implements InitializingBean, ApplicationContextAwa
 //        ITemplate cl =template.getMapper(ITemplate.class);
 //        log.info("............className:" +cl.getClass().getName());
 
+        for(int i=0;i<2;i++) {
 
-        sqlSessionFactory.getConfiguration().addMapper(ClassBuild.single().cl[0]);
-        Object cl = template.getMapper(ClassBuild.single().cl[0]);
-        log.info("............className:" +cl.toString());
+            sqlSessionFactory.getConfiguration().addMapper(ClassBuild.single().cl[i]);
+            Object mapper = template.getMapper(ClassBuild.single().cl[i]);
+            log.info("............className:" + mapper.toString());
 
 //        log.info("............proxy:{}" ,proxy);
 
-        Constructor[] cs = cl.getClass().getConstructors();
-        for (Constructor c : cs) {
-            Parameter[] ps = c.getParameters();
-            String pStr = "";
-            for (Parameter p : ps) {
-                pStr += p.getType().getSimpleName() + " " + p.getName() + ",";
-            }
-            log.info("......{} ({})", c.getName(), pStr);
+//        Constructor[] cs = cl.getClass().getConstructors();
+//        for (Constructor c : cs) {
+//            Parameter[] ps = c.getParameters();
+//            String pStr = "";
+//            for (Parameter p : ps) {
+//                pStr += p.getType().getSimpleName() + " " + p.getName() + ",";
+//            }
+//            log.info("......{} ({})", c.getName(), pStr);
+//        }
+
+
+            BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(mapper.getClass());
+            Class scl = ClassBuild.single().cl[i];
+            MapperProxy mapperProxy = new MapperProxy(template.getSqlSessionFactory().openSession(), scl, new ConcurrentHashMap<>());
+
+            DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
+
+            beanDefinitionBuilder.addConstructorArgValue(mapperProxy);
+            defaultListableBeanFactory.registerBeanDefinition("userImp"+i, beanDefinitionBuilder.getBeanDefinition());
         }
-
-
-//        ApplicationContext applicationContext =event.getApplicationContext();
-//        applicationContext.getAutowireCapableBeanFactory();
-//        applicationContext.getParentBeanFactory().
-        BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(cl.getClass());
-        Class scl =ClassBuild.single().cl[0];
-        MapperProxy mapperProxy = new MapperProxy(template.getSqlSessionFactory().openSession(), scl, new ConcurrentHashMap<>());
-
-        DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory)applicationContext.getAutowireCapableBeanFactory();
-
-        beanDefinitionBuilder.addConstructorArgValue(mapperProxy);
-        defaultListableBeanFactory.registerBeanDefinition("userImp",beanDefinitionBuilder.getBeanDefinition());
     }
 }

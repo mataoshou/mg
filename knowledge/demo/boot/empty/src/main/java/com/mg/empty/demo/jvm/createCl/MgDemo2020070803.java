@@ -17,7 +17,7 @@ public class MgDemo2020070803 {
     public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, MalformedURLException {
         int no =12;
         System.out.println(no);
-//        demo1();
+        demo1();
         URL url = new URL("file:/E:/cltmp/");
         URLClassLoader classLoader = new URLClassLoader(new URL[]{url});
         Class cl = classLoader.loadClass("MgDemoSample");
