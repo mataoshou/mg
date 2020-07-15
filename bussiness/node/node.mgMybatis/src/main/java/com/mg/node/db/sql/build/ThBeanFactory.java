@@ -2,6 +2,7 @@ package com.mg.node.db.sql.build;
 
 import com.itranswarp.compiler.JavaStringCompiler;
 import com.mg.node.db.sql.imp.ITemplate;
+import com.mg.node.service.task.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.binding.MapperRegistry;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -27,19 +28,17 @@ public class ThBeanFactory implements BeanFactoryPostProcessor {
 //    @Autowired
 //    MapperRegistry registry;
 
-    @Autowired
-    SqlSessionFactory sqlSessionFactory;
 
-    @Autowired
-    SqlSessionTemplate template;
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
 
         log.info(".......add class");
-
-        log.info("............{}",sqlSessionFactory);
-        log.info("............{}",template);
+//        SqlSessionFactory sqlSessionFactory = SpringUtil.getBean(SqlSessionFactory.class);
+//        SqlSessionTemplate template= SpringUtil.getBean(SqlSessionTemplate.class);
+//
+//        log.info("............{}",sqlSessionFactory);
+//        log.info("............{}",template);
 
 //        template.getSqlSessionFactory().getConfiguration();
 
@@ -93,7 +92,7 @@ public class ThBeanFactory implements BeanFactoryPostProcessor {
                 "import com.mg.node.db.sql.pojo.RmtActiorInfo;\n" +
                 "import com.mg.node.db.sql.pojo.RmtUserInfo;\n" +
                 "import org.apache.ibatis.annotations.Param;\n" +
-                "import org.apache.ibatis.annotations.Select;"+
+                "import org.apache.ibatis.annotations.Select;\n"+
                 "public interface UserTemplate extends ITemplate<RmtUserInfo>{\n" +
                 "\n" +
                 "    @Select(\"select * from rmt_actior_info where id=#{id}\")\n" +
