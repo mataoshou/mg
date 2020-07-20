@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableAuthorizationServer
+//@EnableAuthorizationServer
 public class AuthApplication {
 
     public static void main(String[] args) {

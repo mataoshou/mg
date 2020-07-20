@@ -15,17 +15,25 @@ public class MgDemo2020070201 {
         Runnable task = new Runnable() {
             @Override
             public void run() {
+                try {
+                    Thread.sleep(1000*10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 log.info(Thread.currentThread().getName() +"任务执行..");
                 latch.countDown();
             }
         };
-        for(int i=0;i<5;i++)
+        for(int i=0;i<10;i++)
         {
             Thread thread = new Thread(task);
             thread.start();
+            Thread.sleep(1000);
         }
         log.info("mg wait!!");
         latch.await();
         log.info("mg finish!!");
+        latch.await();
+        log.info("mg finish2!!");
     }
 }

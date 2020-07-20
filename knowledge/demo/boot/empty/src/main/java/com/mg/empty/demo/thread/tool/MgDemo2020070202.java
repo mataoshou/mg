@@ -18,13 +18,13 @@ public class MgDemo2020070202 {
                 log.info("...{}...等待进入...",Thread.currentThread().getName() );
                 semaphore.acquire(1);
                 log.info("...{}开始执行...",Thread.currentThread().getName() );
-                Thread.sleep(1000*10);
+                Thread.sleep(1000*6);
                 log.info("...{}开始释放",Thread.currentThread().getName() );
                 semaphore.release(1);
             }
         };
 
-        for(int i=0;i<20;i++)
+        for(int i=0;i<10;i++)
         {
             Thread task = new Thread(runnable);
             task.setName("mgTask-"+(i+1));
