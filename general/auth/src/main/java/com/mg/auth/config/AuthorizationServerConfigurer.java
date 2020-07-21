@@ -41,10 +41,6 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
 
     @Autowired
     private JwtAccessTokenConverter jwtAccessTokenConverter;
-
-    @Autowired
-    private RedisConnectionFactory redisConnectionFactory;
-
     /**
      * 使用密码模式需要配置
      */
@@ -54,7 +50,8 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
         .tokenStore(tokenStore)//如果使用RedisTokenStore，则会把Token存入redis中，否则存在内存
         .accessTokenConverter(jwtAccessTokenConverter)
         .authenticationManager(authenticationManager)
-        .userDetailsService(userDetailsService);
+        .userDetailsService(userDetailsService)
+        .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);;
 
 //        //指定认证管理器
 //        endpoints.authenticationManager(authenticationManager);
@@ -90,5 +87,13 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
                 .authorizedGrantTypes("refresh_token","password","authorization_code")//支持刷新令牌、密码模式、授权码模式
                 .scopes("all","read","write")//权限有哪些,如果这两配置了该参数，客户端发请求可以不带参数，使用配置的参数
                 .redirectUris("http://127.0.0.1:264/login");
+    }
+
+
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        security
+                .checkTokenAccess("isAuthenticated()")
+                .allowFormAuthenticationForClients();//允许表单认证
     }
 }

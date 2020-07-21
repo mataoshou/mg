@@ -19,6 +19,5 @@
         <module>txlcn-tm</module>
         <module>config-server</module>
         <module>auth</module>
-        <module>security</module>
     </modules>
 </project>

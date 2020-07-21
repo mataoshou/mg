@@ -20,8 +20,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        DefaultTokenServices defaultTokenServices = new DefaultTokenServices();
-        defaultTokenServices.setTokenStore(tokenStore);
-        resources.tokenServices(defaultTokenServices);
+        resources.tokenStore(tokenStore);
     }
 }

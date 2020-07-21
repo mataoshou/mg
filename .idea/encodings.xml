@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/bussiness/node/node.user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bussiness/node/node.user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bussiness/website/website.uauth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bussiness/website/website.vms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/basic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/compose/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/node/src/main/java" charset="UTF-8" />
@@ -15,7 +16,6 @@
     <file url="file://$PROJECT_DIR$/general/auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/eurake/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/general/security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/txlcn-tm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/zipkin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/zuul/src/main/java" charset="UTF-8" />

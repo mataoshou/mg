@@ -8,7 +8,7 @@
         <groupId>com.mg</groupId>
         <version>1.0</version>
     </parent>
-    <artifactId>mg-website-uauth</artifactId>
+    <artifactId>mg-website-vms</artifactId>
 
     <dependencies>
         <dependency>

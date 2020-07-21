@@ -12,25 +12,26 @@
         <module name="oauth-server" />
         <module name="mg-zuul (1)" />
         <module name="mg-zuul" />
+        <module name="demo.daily" />
         <module name="mg-common-node" />
         <module name="mg-website-uauth" />
         <module name="demo.empty" />
         <module name="mg-common-compose" />
-        <module name="mg-security" />
         <module name="auth" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-config" />
         <module name="mg-compose-uauth" />
+        <module name="demo.lock" />
         <module name="mg-auth" />
         <module name="boot.empty" />
         <module name="mg-common-basic" />
         <module name="mg-node-user" />
         <module name="demo.empty (1)" />
         <module name="mg-node-mgmybatis" />
-        <module name="demo.daily" />
+        <module name="mg-website-vms" />
         <module name="mg-eurake" />
-        <module name="demo.lock" />
+        <module name="mg-config" />
+        <module name="mg-zipkin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -75,6 +76,7 @@
       <module name="mg-website-matao" target="1.8" />
       <module name="mg-website-uauth" target="1.8" />
       <module name="mg-website-uauth (1)" target="1.8" />
+      <module name="mg-website-vms" target="1.8" />
       <module name="mg-zipkin" target="1.8" />
       <module name="mg-zuul" target="1.8" />
       <module name="mg-zuul (1)" target="1.8" />
@@ -119,6 +121,7 @@
       <module name="mg-website-matao" options="-parameters" />
       <module name="mg-website-uauth" options="-parameters" />
       <module name="mg-website-uauth (1)" options="-parameters" />
+      <module name="mg-website-vms" options="-parameters" />
       <module name="mg-zipkin" options="-parameters" />
       <module name="mg-zuul" options="-parameters" />
       <module name="mg-zuul (1)" options="-parameters" />
