@@ -55,6 +55,10 @@ public class CreateUtil {
         File srcFile = getEmptyPath(sysType);
         File dstFile =  getSysPath(sysName,sysType);
 
+        createItem(srcFile,dstFile,src,dst);
+    }
+
+    public void createItem(File srcFile, File dstFile,String[] src,String[] dst) throws Exception {
         if(dstFile.exists())
         {
             throw new Exception(dstFile.getPath() + "目标目录已存在,请检查系统名称，是否正确！！");
