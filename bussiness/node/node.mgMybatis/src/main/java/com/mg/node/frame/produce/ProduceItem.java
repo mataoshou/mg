@@ -3,6 +3,9 @@ package com.mg.node.frame.produce;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *
+ */
 public class ProduceItem {
 
     private Class pojo;

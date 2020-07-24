@@ -8,5 +8,4 @@ public interface IGeneralMapper<T> {
 
     T getById(String id);
 
-    List<T> list(String id);
 }

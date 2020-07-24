@@ -23,9 +23,5 @@ public class TemplateFactory {
         return factory;
     }
 
-    public void addTemplate()
-    {
-
-    }
 
 }

@@ -36,6 +36,7 @@ public class ClassUnit  {
                 .replace("#classType#",getClassType(item.getType()))
                 .replace("#className#",getClassName(item.getName(),item.getBaseName(),item.getImplementStringList(),item.getType()));
     }
+
     public void setName(String name) {
         this.item.setName(name);
     }
@@ -148,8 +149,8 @@ public class ClassUnit  {
 
         if(type==2)
         {
-            baseName = imp ;
-            imp ="";
+            baseName = "" ;
+//            imp ="";
         }
 
         if(baseName!=null&&baseName.length()>0) {
@@ -158,7 +159,13 @@ public class ClassUnit  {
 
         if(imp.length()>0)
         {
-            imp = " implements " + imp;
+            if(type==1) {
+                imp = " implements " + imp;
+            }
+            else if(type==2)
+            {
+                imp = " extends " + imp;
+            }
             classNameData +=imp;
         }
 
