@@ -1,11 +1,15 @@
 package com.mg.node.frame.init;
 
 import com.mg.node.frame.produce.ProduceStore;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 
 public abstract class MgAbstractInitializing {
 
+
+    @Autowired
+    ProduceStore store;
 
     public abstract void setConfig()throws Exception;
 
@@ -14,7 +18,7 @@ public abstract class MgAbstractInitializing {
      * @param pojo
      */
     protected void addPojo(Class pojo){
-        ProduceStore.single().addPojo(pojo);
+        store.addPojo(pojo);
     }
 
     /**
@@ -24,7 +28,7 @@ public abstract class MgAbstractInitializing {
      * @param imp
      */
     protected void addPojo(Class pojo,Class template,Class imp){
-        ProduceStore.single().addPojo(pojo,template,imp);
+        store.addPojo(pojo,template,imp);
     }
 
     /**
@@ -33,7 +37,7 @@ public abstract class MgAbstractInitializing {
      * @throws Exception
      */
     protected void addPackage(String packageName) throws Exception{
-        ProduceStore.single().addPackage(packageName);
+        store.addPackage(packageName);
     }
 
     /**
@@ -44,7 +48,17 @@ public abstract class MgAbstractInitializing {
      * @throws Exception
      */
     protected void addPackage(String packageName,Class template,Class imp) throws Exception{
-        ProduceStore.single().addPackage(packageName,template,imp);
+        store.addPackage(packageName,template,imp);
+    }
+
+    protected void setDefaultTemplate(Class defaultTemplate )
+    {
+        store.setDefTemplate(defaultTemplate);
+    }
+
+    protected void setDefaultImp(Class defaultImp )
+    {
+        store.setDefImp(defaultImp);
     }
 
 

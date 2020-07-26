@@ -6,6 +6,6 @@ public interface IGeneralMapper<T> {
 
     T getBySql(String sql);
 
-    T getById(String id);
+    T getById(long id);
 
 }

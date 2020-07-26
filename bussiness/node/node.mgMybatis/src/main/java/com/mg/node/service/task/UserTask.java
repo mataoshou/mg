@@ -1,17 +1,10 @@
 package com.mg.node.service.task;
 
-import com.codingapi.txlcn.common.util.SpringUtils;
 import com.mg.node.common.constant.PoolConstant;
-import com.mg.node.db.sql.build.ClassBuild;
-import com.mg.node.db.sql.imp.ITemplate;
-import com.mg.node.db.sql.merge.IRmtActiorInfoMapper;
-import com.mg.node.db.sql.pojo.RmtActiorInfo;
-import com.mg.node.db.sql.pojo.RmtUserInfo;
+import com.mg.node.db.sql.pojo.MTdUserInfo;
 import com.mg.node.frame.imp.IGeneralMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -62,16 +55,15 @@ public class UserTask {
 //    }
 //
     @Autowired
-    IGeneralMapper<RmtActiorInfo> infoIGeneralMapper;
+    IGeneralMapper<MTdUserInfo> infoIGeneralMapper;
 
     @Scheduled(initialDelay=1000, fixedRate=5000)
     @Async(PoolConstant.POOL_SCHEDULE)
     public void getUser() throws Exception {
         log.info("......11111");
-        RmtActiorInfo actiorInfo1= infoIGeneralMapper.getById("111");
-        log.info("......{}",actiorInfo1.getPrivilegegroup());
-        IGeneralMapper actiorInfo= (IGeneralMapper) utill.getBean("RmtActiorInfoMapper");
-        log.info("......{}",actiorInfo.getById("111"));
+        MTdUserInfo userInfo= infoIGeneralMapper.getById(1);
+        log.info("123......{}",infoIGeneralMapper);
+        log.info("......{}",userInfo.getDisplayname());
     }
 
 

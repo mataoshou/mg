@@ -5,6 +5,8 @@ import com.mg.node.frame.init.MgAbstractInitializing;
 import com.mg.node.frame.produce.ProduceStore;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.binding.MapperProxy;
+import org.apache.ibatis.binding.MapperProxyFactory;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.BeansException;
@@ -26,8 +28,8 @@ public class StartAddMyMapper implements InitializingBean, ApplicationContextAwa
     @Autowired
     SqlSessionTemplate template;
 
-    @Autowired
-    SqlSessionFactory sqlSessionFactory;
+//    @Autowired
+//    SqlSessionFactory sqlSessionFactory;
 
     @Override
     public void afterPropertiesSet() throws Exception {
@@ -36,6 +38,9 @@ public class StartAddMyMapper implements InitializingBean, ApplicationContextAwa
 
     @Autowired
     MgAbstractInitializing initializing;
+
+    @Autowired
+    ProduceStore store;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
@@ -48,16 +53,21 @@ public class StartAddMyMapper implements InitializingBean, ApplicationContextAwa
             e.printStackTrace();
         }
 
-        List<Class> cls = ProduceStore.single().listClass();
-
+        List<Class> cls = store.listClass();
+        SqlSession session = template.getSqlSessionFactory().openSession();
         for(Class cl : cls) {
-            sqlSessionFactory.getConfiguration().addMapper(cl);
-            Object mapper = template.getMapper(cl);
-            BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(mapper.getClass());
-            MapperProxy mapperProxy = new MapperProxy(template.getSqlSessionFactory().openSession(), cl, new ConcurrentHashMap<>());
+//            template.getConfiguration().addMapper(cl);
+//            Object mapper = template.getMapper(cl);
+            MapperProxy mapperProxy = new MapperProxy(session, cl, new ConcurrentHashMap<>());
+            MapperProxyFactory factory = new MapperProxyFactory(cl);
+            Object mapper =factory.newInstance(session);
+            BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(mapper.getClass());
+//
+
             DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
             beanDefinitionBuilder.addConstructorArgValue(mapperProxy);
             defaultListableBeanFactory.registerBeanDefinition(cl.getSimpleName(), beanDefinitionBuilder.getBeanDefinition());
         }
+//        session.close();
     }
 }

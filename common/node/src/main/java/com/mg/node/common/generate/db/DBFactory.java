@@ -15,15 +15,15 @@ public class DBFactory extends IFactory {
         CreatePojo createPojo = new CreatePojo();
         createPojo.createClass();
 
-        CommonTool tool = new CommonTool();
-
-        File pojoRoot = tool.getSysPath(DBConstant.DB_POJO_PACKAGE);
-
-        File[] pojos = pojoRoot.listFiles();
-        for(File pojo : pojos) {
-            String name = BaseFileUtil.getFileNameNoSuffix(pojo.getName());
-            DBMakeUp makeUp = new DBMakeUp(name);
-            makeUp.build();
-        }
+//        CommonTool tool = new CommonTool();
+//
+//        File pojoRoot = tool.getSysPath(DBConstant.DB_POJO_PACKAGE);
+//
+//        File[] pojos = pojoRoot.listFiles();
+//        for(File pojo : pojos) {
+//            String name = BaseFileUtil.getFileNameNoSuffix(pojo.getName());
+//            DBMakeUp makeUp = new DBMakeUp(name);
+//            makeUp.build();
+//        }
     }
 }

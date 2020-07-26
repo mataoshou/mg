@@ -50,7 +50,7 @@
         <!-- 必须要有的，使用这个配置链接数据库
             @TODO:是否可以扩展
          -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"   connectionURL="jdbc:mysql://localhost:3306/rmt_sys_uia_info" userId="root" password="shineon@1234" >
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"   connectionURL="jdbc:mysql://localhost:3306/mg.frame.user?serverTimezone=GMT" userId="root" password="shineon@1234" >
             <!-- 这里面可以设置property属性，每一个property属性都设置到配置的Driver上 -->
             <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
@@ -109,10 +109,10 @@
                 或者只使用Mapper接口+Annotation，所以，如果 javaClientGenerator配置中配置了需要生成XML的话，这个元素就必须配置
             targetPackage/targetProject:同javaModelGenerator
          -->
-        <sqlMapGenerator targetPackage="com.mg.node.db.sql.xml" targetProject="bussiness\node\node.mgMybatis\src\main\java">
-            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
-            <property name="enableSubPackages" value="true"/>
-        </sqlMapGenerator>
+<!--        <sqlMapGenerator targetPackage="com.mg.node.db.sql.xml" targetProject="bussiness\node\node.mgMybatis\src\main\java">-->
+<!--            &lt;!&ndash; 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false &ndash;&gt;-->
+<!--            <property name="enableSubPackages" value="true"/>-->
+<!--        </sqlMapGenerator>-->
 
 
         <!-- 对于mybatis来说，即生成Mapper接口，注意，如果没有配置该元素，那么默认不会生成Mapper接口
@@ -123,14 +123,14 @@
                 3，XMLMAPPER：会生成Mapper接口，接口完全依赖XML；
             注意，如果context是MyBatis3Simple：只支持ANNOTATEDMAPPER和XMLMAPPER
         -->
-        <javaClientGenerator targetPackage="com.mg.node.db.sql.mapper" type="XMLMAPPER" targetProject="bussiness\node\node.mgMybatis\src\main\java">
-            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
-            <property name="enableSubPackages" value="true"/>
+<!--        <javaClientGenerator targetPackage="com.mg.node.db.sql.mapper" type="XMLMAPPER" targetProject="bussiness\node\node.mgMybatis\src\main\java">-->
+<!--            &lt;!&ndash; 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false &ndash;&gt;-->
+<!--            <property name="enableSubPackages" value="true"/>-->
 
-            <!-- 可以为所有生成的接口添加一个父接口，但是MBG只负责生成，不负责检查
-            <property name="rootInterface" value=""/>
-             -->
-        </javaClientGenerator>
+<!--            &lt;!&ndash; 可以为所有生成的接口添加一个父接口，但是MBG只负责生成，不负责检查-->
+<!--            <property name="rootInterface" value=""/>-->
+<!--             &ndash;&gt;-->
+<!--        </javaClientGenerator>-->
 
         <!-- 选择一个table来生成相关文件，可以有一个或多个table，必须要有table元素
             选择的table会生成一下文件：
@@ -170,7 +170,7 @@
 
             注意，table里面很多参数都是对javaModelGenerator，context等元素的默认属性的一个复写；
          -->
-        <table tableName="rmt_%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <table tableName="m_td_%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 
             <!-- 参考 javaModelGenerator 的 constructorBased属性-->
             <property name="constructorBased" value="false"/>

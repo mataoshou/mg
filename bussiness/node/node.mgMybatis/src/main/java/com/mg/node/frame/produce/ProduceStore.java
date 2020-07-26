@@ -14,6 +14,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.core.type.classreading.CachingMetadataReaderFactory;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -24,27 +25,40 @@ import java.util.*;
 
 
 @Slf4j
+@Component
 public class ProduceStore {
 
     private volatile Map<String, List<ProduceItem>> m_map = new HashMap();
 
     List<String> m_scan = new ArrayList();
+//
+//    public static ProduceStore store;
 
-    public static ProduceStore store;
 
+    /////////////////////////////////////////////////////////////////////////
 
     private Class defTemplate = GeneralTemplate.class;
     private Class defImp = IGeneralMapper.class;
 
-
-    public static ProduceStore single()
-    {
-        if(store==null)
-        {
-            store = new ProduceStore();
-        }
-        return store;
+    public void setDefTemplate(Class defTemplate) {
+        this.defTemplate = defTemplate;
     }
+
+    public void setDefImp(Class defImp) {
+        this.defImp = defImp;
+    }
+
+    ////////////////////////////////////////////////////////////////////////
+
+
+//    public static ProduceStore single()
+//    {
+//        if(store==null)
+//        {
+//            store = new ProduceStore();
+//        }
+//        return store;
+//    }
 
     private void addDate(ProduceItem item)
     {
@@ -206,7 +220,7 @@ public class ProduceStore {
     private Class buildClass(ProduceItem item) throws IOException, ClassNotFoundException {
 
         // 声明类名
-        String mapperName = item.getPojo().getSimpleName()+"Mapper";
+        String mapperName = item.getPojo().getSimpleName()+item.getImp().getSimpleName()+"Mapper";
         String packageName =  item.getPojo().getPackage().getName() + ".mapper";
 
         String impName =item.getImp().getSimpleName();

@@ -9,6 +9,6 @@ public interface GeneralTemplate {
     TemplateReturn getBySql(String sql);
 
     @Select("select * from $tableName$ where id=#{id}")
-    TemplateReturn getById(String id);
+    TemplateReturn getById(long id);
 
 }
