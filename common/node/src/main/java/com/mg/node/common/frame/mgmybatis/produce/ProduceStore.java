@@ -1,12 +1,12 @@
-package com.mg.node.frame.produce;
+package com.mg.node.common.frame.mgmybatis.produce;
 
 import com.itranswarp.compiler.JavaStringCompiler;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
+import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
+import com.mg.node.common.frame.mgmybatis.template.GeneralTemplate;
+import com.mg.node.common.frame.mgmybatis.template.TemplateReturn;
 import com.mg.node.common.generate.db.DBUtils;
-import com.mg.node.frame.imp.IGeneralMapper;
-import com.mg.node.frame.template.GeneralTemplate;
-import com.mg.node.frame.template.TemplateReturn;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -251,12 +251,12 @@ public class ProduceStore {
 
             Type returnParam = method.getGenericReturnType();
             String returnStr ="";
-            if(returnParam instanceof List)
-            {
-                returnStr =String.format("List<%s>",item.getPojo().getSimpleName());
-            }
-            else if(returnParam.equals(TemplateReturn.class)){
+            if(returnParam.equals(TemplateReturn.class)){
                 returnStr =String.format("%s",item.getPojo().getSimpleName());
+            }
+            else if(returnParam.getTypeName().indexOf(TemplateReturn.class.getName())>0)
+            {
+                returnStr =returnParam.getTypeName().replace(TemplateReturn.class.getName(),item.getPojo().getSimpleName());
             }
             else if(returnParam.equals(Object.class))
             {
@@ -287,12 +287,17 @@ public class ProduceStore {
         }
 
         JavaStringCompiler compiler = new JavaStringCompiler();
-        Map<String, byte[]> results = compiler.compile(mapperName + ".java", unit.finish());
+        Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());
         // 加载内存中byte到Class<?>对象
         Class<?> clazz = compiler.loadClass(fullName, results);
 
         log.debug("成功构建mapper类{}",clazz.getName());
         return clazz;
+    }
+
+    public void cleanData(){
+        m_map = new HashMap<>();
+        m_scan = new ArrayList<>();
     }
 
 

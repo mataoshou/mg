@@ -1,4 +1,4 @@
-package com.mg.node.frame.produce;
+package com.mg.node.common.frame.mgmybatis.produce;
 
 import java.util.HashMap;
 import java.util.Map;

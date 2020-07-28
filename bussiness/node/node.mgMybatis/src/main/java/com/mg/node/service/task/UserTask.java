@@ -1,14 +1,17 @@
 package com.mg.node.service.task;
 
 import com.mg.node.common.constant.PoolConstant;
+import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
+import com.mg.node.db.sql.pojo.MTdActionInfo;
 import com.mg.node.db.sql.pojo.MTdUserInfo;
-import com.mg.node.frame.imp.IGeneralMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Slf4j
 @EnableScheduling
@@ -57,6 +60,9 @@ public class UserTask {
     @Autowired
     IGeneralMapper<MTdUserInfo> infoIGeneralMapper;
 
+    @Autowired
+    IGeneralMapper<MTdActionInfo> mTdActionInfoIGeneralMapper;
+
     @Scheduled(initialDelay=1000, fixedRate=5000)
     @Async(PoolConstant.POOL_SCHEDULE)
     public void getUser() throws Exception {
@@ -64,7 +70,11 @@ public class UserTask {
         MTdUserInfo userInfo= infoIGeneralMapper.getById(1);
         log.info("123......{}",infoIGeneralMapper);
         log.info("......{}",userInfo.getDisplayname());
+
+        MTdUserInfo userInfo2= infoIGeneralMapper.getById(2);
+        log.info("......{}",userInfo2.getDisplayname());
+
+        List<MTdActionInfo> list = mTdActionInfoIGeneralMapper.listItem("select * from m_td_user_info");
+        log.info(".......{}",list.size());
     }
-
-
 }

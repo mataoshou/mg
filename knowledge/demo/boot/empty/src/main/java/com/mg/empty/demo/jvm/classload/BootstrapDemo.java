@@ -14,6 +14,12 @@ public class BootstrapDemo {
             System.out.println(url.getPath());
         }
         System.out.println("----------------------------");
+//        //取得扩展类加载器
+//        URLClassLoader extClassLoader1 = (URLClassLoader)ClassLoader.getSystemClassLoader().getParent().getParent();
+//        for(URL url : extClassLoader1.getURLs()){
+//            System.out.println(url.getPath());
+//        }
+        System.out.println("----------------------------");
         //取得扩展类加载器
         URLClassLoader extClassLoader = (URLClassLoader)ClassLoader.getSystemClassLoader().getParent();
         for(URL url : extClassLoader.getURLs())
@@ -28,5 +34,9 @@ public class BootstrapDemo {
             System.out.println(url);
 
         System.out.println("----------------------------");
+
+
+        System.gc();
+
     }
 }
