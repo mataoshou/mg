@@ -74,7 +74,8 @@ public class UserTask {
         MTdUserInfo userInfo2= infoIGeneralMapper.getById(2);
         log.info("......{}",userInfo2.getDisplayname());
 
-        List<MTdActionInfo> list = mTdActionInfoIGeneralMapper.listItem("select * from m_td_user_info");
-        log.info(".......{}",list.size());
+//
+//        List<MTdActionInfo> list = mTdActionInfoIGeneralMapper.listItem("select * from m_td_user_info");
+//        log.info(".......{}",list.size());
     }
 }

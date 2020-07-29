@@ -34,7 +34,6 @@ public class ProduceStore {
 //
 //    public static ProduceStore store;
 
-
     /////////////////////////////////////////////////////////////////////////
 
     private Class defTemplate = GeneralTemplate.class;
@@ -281,10 +280,20 @@ public class ProduceStore {
 
             Parameter[] ps = method.getParameters();
             for (Parameter p : ps) {
-                methodUnit.addParam(p.getType().getSimpleName(),p.getName());
+                String typeStr ="";
+                Annotation[] pas = p.getAnnotations();
+                for(Annotation annotation : pas)
+                {
+                    typeStr +=" "+annotation.toString().replace("[","\"").replace("]","\"")
+                            .replace("=","=\"").replace(")","\")");
+                }
+                typeStr +=" "+p.getType().getSimpleName();
+                methodUnit.addParam(typeStr,p.getName());
             }
             unit.addMethod(methodUnit);
         }
+
+//        log.info(unit.finish());
 
         JavaStringCompiler compiler = new JavaStringCompiler();
         Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());
