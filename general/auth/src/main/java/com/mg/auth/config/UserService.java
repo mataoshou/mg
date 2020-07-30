@@ -26,7 +26,10 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         System.out.println("登录用户名："+username);
         String  password = passwordEncoder.encode("123456");
-        return new User(username,password,true,true,true,true,
+        UserDetails user = new User(username,password,true,true,true,true,
         AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
+//        User user = new User(username,password, AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
+
+        return user;
     }
 }

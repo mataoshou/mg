@@ -41,8 +41,6 @@ public class ResultItem<T> {
         this.code = 100;
     }
 
-
-
     public Integer getCode() {
         return code;
     }

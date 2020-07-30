@@ -1,5 +1,6 @@
 package com.mg.auth.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -15,22 +16,27 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.TokenEnhancer;
+import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
+import java.util.Arrays;
+
 @Configuration
 @EnableAuthorizationServer
+@Slf4j
 public class AuthorizationServerConfigurer  extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    PasswordEncoder passwordEncoder;
 
     @Autowired
-    private AuthenticationManager authenticationManager;
+    AuthenticationManager authenticationManager;
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    UserDetailsService userDetailsService;
 
     @Autowired
     TokenStore tokenStore;
@@ -39,50 +45,42 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
     JwtAccessTokenConverter tokenConverter;
 
 
-    @Autowired
-    private JwtAccessTokenConverter jwtAccessTokenConverter;
     /**
      * 使用密码模式需要配置
      */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
+
+        TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
+        tokenEnhancerChain.setTokenEnhancers(
+                Arrays.asList(customTokenEnhancer(),tokenConverter));
+
         endpoints
-        .tokenStore(tokenStore)//如果使用RedisTokenStore，则会把Token存入redis中，否则存在内存
-        .accessTokenConverter(jwtAccessTokenConverter)
+        .tokenStore(tokenStore)
+        .tokenEnhancer(tokenEnhancerChain)
+        .accessTokenConverter(tokenConverter)
         .authenticationManager(authenticationManager)
         .userDetailsService(userDetailsService)
         .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);;
-
-//        //指定认证管理器
-//        endpoints.authenticationManager(authenticationManager);
-//        //指定token存储位置
-//        endpoints.tokenStore(tokenStore);
-//        // token生成方式
-//        endpoints.accessTokenConverter(tokenConverter);
-//        endpoints.userDetailsService(userDetailsService);
+//
+//        endpoints.tokenEnhancer(tokenEnhancerChain)
+//                .accessTokenConverter(tokenConverter);
     }
+
+    @Bean
+    public TokenEnhancer customTokenEnhancer()
+    {
+        log.info("11111111111111111............111111111111111111111");
+        return new CustomTokenEnhancer();
+    }
+
 
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        //String finalSecret = "{bcrypt}" + new BCryptPasswordEncoder().encode("123456");
-
-//        // 配置两个客户端，一个用于password认证一个用于client认证
-//        clients.inMemory().withClient("client_1")
-//                .resourceIds("order")
-//                .authorizedGrantTypes("client_credentials", "refresh_token")
-//                .scopes("select")
-//                .authorities("oauth2")
-//                .secret(finalSecret)
-//                .and().withClient("client_2")
-//                .resourceIds("order")
-//                .authorizedGrantTypes("password", "refresh_token")
-//                .scopes("server")
-//                .authorities("oauth2")
-//                .secret(finalSecret);
         clients
                 .inMemory()//Token保存在内存中
-                .withClient("MgAuth").secret(passwordEncoder.encode("123456"))//指明client-id和client-secret
+                .withClient("website").secret(passwordEncoder.encode("123456"))//指明client-id和client-secret
                 .accessTokenValiditySeconds(7200)//令牌有效时间，单位秒
                 .authorizedGrantTypes("refresh_token","password","authorization_code")//支持刷新令牌、密码模式、授权码模式
                 .scopes("all","read","write")//权限有哪些,如果这两配置了该参数，客户端发请求可以不带参数，使用配置的参数
