@@ -1,24 +1,32 @@
-//
-//public class MgDemoSample {
-//
-//    public void startSample()
+
+public class MgDemoSample {
+
+
+    int count =10;
+
+    public int getCounts()
+    {
+        return count;
+    }
+
+    public void startSample()
+    {
+        System.out.println("MgDemoSample");
+    }
+
+//    public String setItem(String str)
 //    {
-//        System.out.println("MgDemoSample");
+//        return "mgDemo";
 //    }
 //
-////    public String setItem(String str)
-////    {
-////        return "mgDemo";
-////    }
-////
-////    private String setPrivateItem()
-////    {
-////        return "mgDemoPrivate";
-////    }
-////
-////    protected String setProtectedItem()
-////    {
-////        return "mgDemoProtected";
-////    }
+//    private String setPrivateItem()
+//    {
+//        return "mgDemoPrivate";
+//    }
 //
-//}
+//    protected String setProtectedItem()
+//    {
+//        return "mgDemoProtected";
+//    }
+
+}

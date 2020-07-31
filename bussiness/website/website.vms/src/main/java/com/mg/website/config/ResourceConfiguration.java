@@ -1,5 +1,6 @@
 package com.mg.website.config;
 
+import com.mg.website.action.AuthExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,9 +27,14 @@ public class ResourceConfiguration  extends ResourceServerConfigurerAdapter {
         http.csrf().disable();
     }
 
+    @Autowired
+    AuthExceptionHandler authExceptionHandler;
+
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
         resources.tokenServices(defaultTokenServices());
+        resources.accessDeniedHandler(authExceptionHandler)
+                .authenticationEntryPoint(authExceptionHandler);
     }
 
     @Autowired
@@ -46,4 +52,5 @@ public class ResourceConfiguration  extends ResourceServerConfigurerAdapter {
         defaultTokenServices.setTokenStore(tokenStore);
         return defaultTokenServices;
     }
+
 }

@@ -1,5 +1,6 @@
 package com.mg.website.service.repository; 
 
+import com.mg.website.service.feign.AuthFeign;
 import org.springframework.stereotype.Service;
 import com.mg.website.pojo.dto.InUserDto;
 import lombok.extern.slf4j.Slf4j;
@@ -15,8 +16,17 @@ public class UserRepository {
    @Autowired
    UserFeign feign;
 
+   @Autowired
+   AuthFeign authFeign;
+
    
    public ResultItem get(InUserDto item) throws Exception{
+
+      Object result1 = authFeign.getToken("website","123456","password",
+              "matao","123456");
+
+      log.info(result1.toString());
+
       ResultItem result =  feign.get(item);
       return result;
    }

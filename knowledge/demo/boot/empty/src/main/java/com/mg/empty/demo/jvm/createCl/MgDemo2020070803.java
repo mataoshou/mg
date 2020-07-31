@@ -39,8 +39,8 @@ public class MgDemo2020070803 {
 //        FileOutputStream outputStream = new FileOutputStream("E:\\mg.shineon\\MgDemo2020070803.class");
 
         int compilationResult = compiler.run(null, null, null,
-                "-d","d:\\cltmp"
-                ,"d:\\core\\mg\\knowledge\\demo\\boot\\empty\\src\\main\\java\\com\\mg\\empty\\demo\\jvm\\createCl\\MgDemoSample.java");
+                "-d","e:\\cltmp"
+                ,"e:\\core\\mg\\knowledge\\demo\\boot\\empty\\src\\main\\java\\com\\mg\\empty\\demo\\jvm\\createCl\\MgDemoSample.java");
 
         System.out.println(compilationResult);
     }
