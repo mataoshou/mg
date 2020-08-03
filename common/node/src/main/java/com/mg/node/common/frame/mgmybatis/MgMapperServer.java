@@ -7,9 +7,9 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.support.GenericBeanDefinition;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.config.RuntimeBeanReference;
+import org.springframework.beans.factory.support.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
@@ -17,17 +17,10 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
-public abstract class MgMapperServer implements ApplicationContextAware {
-
-    @Autowired
-    SqlSessionTemplate template;
-
-    @Autowired
-    ProduceStore store;
-
+public abstract class MgMapperServer implements BeanDefinitionRegistryPostProcessor {
 
     @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
         log.debug("[begin add mapper]");
         try {
             configPreLoad();
@@ -35,35 +28,59 @@ public abstract class MgMapperServer implements ApplicationContextAware {
             e.printStackTrace();
         }
 
-        List<Class> cls = store.listClass();
+        List<Class> cls = ProduceStore.single().listClass();
         for(Class cl : cls) {
             BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(cl);
-            DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
+//            DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
             GenericBeanDefinition definition = (GenericBeanDefinition) beanDefinitionBuilder.getRawBeanDefinition();
 
             definition.setBeanClass(MapperFactoryBean.class);
-            definition.getPropertyValues().add("sqlSessionTemplate",template);
+            definition.getPropertyValues().add("sqlSessionTemplate",new RuntimeBeanReference("sqlSessionTemplate"));
+//            definition.getPropertyValues().add("sqlSessionFactory",new RuntimeBeanReference("sqlSessionFactory"));
             definition.getPropertyValues().add("mapperInterface",cl);
-            defaultListableBeanFactory.registerBeanDefinition(cl.getSimpleName(), beanDefinitionBuilder.getBeanDefinition());
+            registry.registerBeanDefinition(cl.getSimpleName(), beanDefinitionBuilder.getBeanDefinition());
         }
-        store.cleanData();
+        ProduceStore.single().cleanData();
     }
 
-    /**
-     * 直接添加的方式，可用
-     * @param cl
-     * @param applicationContext
-     */
-    private void addMapper(Class  cl,ApplicationContext applicationContext)
-    {
-        template.getConfiguration().addMapper(cl);
-        Object mapper = template.getMapper(cl);
-        MapperProxy mapperProxy = new MapperProxy(template, cl, new ConcurrentHashMap<>());
-        BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(mapper.getClass());
-        DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
-        beanDefinitionBuilder.addConstructorArgValue(mapperProxy);
-        defaultListableBeanFactory.registerBeanDefinition(cl.getSimpleName(), beanDefinitionBuilder.getBeanDefinition());
-    }
+//    @Override
+//    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+//        log.debug("[begin add mapper]");
+//        try {
+//            configPreLoad();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        List<Class> cls = store.listClass();
+//        for(Class cl : cls) {
+//            BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(cl);
+//            DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
+//            GenericBeanDefinition definition = (GenericBeanDefinition) beanDefinitionBuilder.getRawBeanDefinition();
+//
+//            definition.setBeanClass(MapperFactoryBean.class);
+//            definition.getPropertyValues().add("sqlSessionTemplate",template);
+//            definition.getPropertyValues().add("mapperInterface",cl);
+//            defaultListableBeanFactory.registerBeanDefinition(cl.getSimpleName(), beanDefinitionBuilder.getBeanDefinition());
+//        }
+//        store.cleanData();
+//    }
+
+//    /**
+//     * 直接添加的方式，可用
+//     * @param cl
+//     * @param applicationContext
+//     */
+//    private void addMapper(Class  cl,ApplicationContext applicationContext)
+//    {
+//        template.getConfiguration().addMapper(cl);
+//        Object mapper = template.getMapper(cl);
+//        MapperProxy mapperProxy = new MapperProxy(template, cl, new ConcurrentHashMap<>());
+//        BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(mapper.getClass());
+//        DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
+//        beanDefinitionBuilder.addConstructorArgValue(mapperProxy);
+//        defaultListableBeanFactory.registerBeanDefinition(cl.getSimpleName(), beanDefinitionBuilder.getBeanDefinition());
+//    }
 
 
     public abstract void configPreLoad()throws Exception;
@@ -73,7 +90,7 @@ public abstract class MgMapperServer implements ApplicationContextAware {
      * @param pojo
      */
     protected void addPojo(Class pojo){
-        store.addPojo(pojo);
+        ProduceStore.single().addPojo(pojo);
     }
 
     /**
@@ -83,7 +100,7 @@ public abstract class MgMapperServer implements ApplicationContextAware {
      * @param imp
      */
     protected void addPojo(Class pojo,Class template,Class imp){
-        store.addPojo(pojo,template,imp);
+        ProduceStore.single().addPojo(pojo,template,imp);
     }
 
     /**
@@ -92,7 +109,7 @@ public abstract class MgMapperServer implements ApplicationContextAware {
      * @throws Exception
      */
     protected void addPackage(String packageName) throws Exception{
-        store.addPackage(packageName);
+        ProduceStore.single().addPackage(packageName);
     }
 
     /**
@@ -103,16 +120,21 @@ public abstract class MgMapperServer implements ApplicationContextAware {
      * @throws Exception
      */
     protected void addPackage(String packageName,Class template,Class imp) throws Exception{
-        store.addPackage(packageName,template,imp);
+        ProduceStore.single().addPackage(packageName,template,imp);
     }
 
     protected void setDefaultTemplate(Class defaultTemplate )
     {
-        store.setDefTemplate(defaultTemplate);
+        ProduceStore.single().setDefTemplate(defaultTemplate);
     }
 
     protected void setDefaultImp(Class defaultImp )
     {
-        store.setDefImp(defaultImp);
+        ProduceStore.single().setDefImp(defaultImp);
+    }
+
+    @Override
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+
     }
 }

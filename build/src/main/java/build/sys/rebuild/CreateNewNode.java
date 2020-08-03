@@ -4,6 +4,6 @@ public class CreateNewNode {
 
     public static void main(String[] args) throws Exception {
         CreateUtil util = new CreateUtil();
-        util.createSys("mgMybatis","node");
+        util.createSys("sys","node");
     }
 }

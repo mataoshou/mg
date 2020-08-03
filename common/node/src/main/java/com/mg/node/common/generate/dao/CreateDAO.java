@@ -22,16 +22,11 @@ public class CreateDAO extends ICreate {
     }
 
 
-    private String getMapperName()
-    {
-        String mapperName = "I"+ this.poCl.getSimpleName() +"Mapper";
-        return mapperName;
-    }
 
     @Override
     protected void createPre(ClassUnit unit) throws IOException {
         unit.addPreContent("@Autowired");
-        unit.addPreContent(String.format("private %s mapper;",getMapperName()));
+        unit.addPreContent(String.format("private IGeneralMapper<%s> mapper;",this.poCl.getSimpleName()));
         unit.addPreContent("\r");
 //
 //        unit.addPreContent("@Autowired");
@@ -49,43 +44,43 @@ public class CreateDAO extends ICreate {
         unit.setDecorate("public");
         if(unit.getName().indexOf("get")>=0) {
             unit.setReturnValue(this.poCl.getSimpleName());
-            unit.addParam("String" ,"id");
+            unit.addParam("Long" ,"id");
 
-            unit.addTabContent("return mapper.selectByPrimaryKey(id);");
+            unit.addTabContent("return mapper.getById(id);");
 
         }
         else if(unit.getName().indexOf("delete")>=0)
         {
             unit.setReturnValue("boolean");
-            unit.addParam("String" ,"id");
+            unit.addParam("Long" ,"id");
 
-            unit.addTabContent("int count = mapper.deleteByPrimaryKey(id);");
+            unit.addTabContent("int count = mapper.deleteById(id);");
             unit.addTabContent("if(count>0) { return true; }");
             unit.addTabContent("return false;");
         }
         else if(unit.getName().indexOf("list")>=0)
         {
             unit.setReturnValue(String.format("List<%s>",this.poCl.getSimpleName()));
-            unit.addTabContent("return mapper.list(null,null);");
+            unit.addTabContent("return mapper.listByWhere(null,null);");
         }
-        else if(unit.getName().indexOf("insert")>=0){
-            unit.setReturnValue(this.poCl.getSimpleName());
-
-            unit.addParam(this.poCl.getSimpleName() ,"item");
-            unit.addTabContent("GuidUtil guidUtil = new GuidUtil();");
-            unit.addTabContent("String id = guidUtil.gen();");
-            unit.addTabContent("item.setId(id);");
-            unit.addTabContent("mapper.insertByCustomId(item);");
-            unit.addTabContent("return get(id);");
-        }
-        else if(unit.getName().indexOf("update")>=0)
-        {
-            unit.setReturnValue(this.poCl.getSimpleName());
-            unit.addParam(this.poCl.getSimpleName() ,"item");
-
-            unit.addTabContent("mapper.updateByPrimaryKey(item);");
-            unit.addTabContent("return get(item.getId());");
-        }
+//        else if(unit.getName().indexOf("insert")>=0){
+//            unit.setReturnValue(this.poCl.getSimpleName());
+//
+//            unit.addParam(this.poCl.getSimpleName() ,"item");
+//            unit.addTabContent("GuidUtil guidUtil = new GuidUtil();");
+//            unit.addTabContent("String id = guidUtil.gen();");
+//            unit.addTabContent("item.setId(id);");
+//            unit.addTabContent("mapper.insertByCustomId(item);");
+//            unit.addTabContent("return get(id);");
+//        }
+//        else if(unit.getName().indexOf("update")>=0)
+//        {
+//            unit.setReturnValue(this.poCl.getSimpleName());
+//            unit.addParam(this.poCl.getSimpleName() ,"item");
+//
+//            unit.addTabContent("mapper.updateByPrimaryKey(item);");
+//            unit.addTabContent("return get(item.getId());");
+//        }
         else{
             unit.setReturnValue(this.poCl.getSimpleName());
             unit.addParam(this.poCl.getSimpleName() ,"item");
@@ -100,10 +95,11 @@ public class CreateDAO extends ICreate {
         unit.addImport(new String[]{
                 "org.springframework.beans.factory.annotation.Autowired",
                 "org.springframework.stereotype.Repository",
-                DBConstant.DB_MERGEDAO_PACKAGE+"."+getMapperName(),
+//                DBConstant.DB_MERGEDAO_PACKAGE+"."+getMapperName(),
                 this.poCl.getName(),
                 "java.util.List",
-                "com.mg.common.util.GuidUtil"
+                "com.mg.common.util.GuidUtil",
+                "com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper"
 //                UtilConstant.UTIL_PACKAGE +".GuidUtil"
         });
     }

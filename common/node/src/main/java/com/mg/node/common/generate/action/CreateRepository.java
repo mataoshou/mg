@@ -96,7 +96,7 @@ public class CreateRepository extends ICreate {
                 "org.springframework.beans.factory.annotation.Autowired",
 //                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
                 BasicCommonConstant.POJO_COMMON +".ResultItem",
-                CommonConstant.MAPPER_PACKAGE +".GeneralMapper",
+                CommonConstant.FEIGN_COMMON_MAPPER +".GeneralMapper",
                 DAOConstant.DAO_PACKAGE +String.format(".%sDAO",StringUtil.firstUpper(this.getName())),
                 FeignConstant.FEIGN_PACKAGE+String.format(".%sFeign",StringUtil.firstUpper(this.getName()))});
         unit.addImport("java.util.List");

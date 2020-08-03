@@ -7,6 +7,8 @@ public class CommonConstant {
 
     static public final  String FEIGN_COMMON_PACKAGE ="com.mg.node.common.service.feign";
 
+    static public final  String FEIGN_COMMON_MAPPER ="com.mg.node.common.mapper";
+
     public static final String DTO_PACKAGE ="com.mg.node.pojo.dto";
     public static final String BO_PACKAGE ="com.mg.node.pojo.bo";
     public static final String VO_PACKAGE ="com.mg.node.pojo.vo";

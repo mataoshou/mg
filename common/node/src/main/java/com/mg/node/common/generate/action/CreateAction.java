@@ -84,7 +84,8 @@ public class CreateAction extends ICreate {
                 "org.springframework.web.bind.annotation.RequestBody",
 //                "com.alibaba.fastjson.JSONObject",
                 BasicCommonConstant.POJO_COMMON +".ResultItem",
-                CommonConstant.MAPPER_PACKAGE +".GeneralMapper"});
+//                CommonConstant.MAPPER_PACKAGE +".GeneralMapper"
+        });
 
         unit.addAnnotion("Slf4j");
         unit.addAnnotion("RestController");

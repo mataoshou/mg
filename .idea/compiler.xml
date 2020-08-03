@@ -12,25 +12,26 @@
         <module name="oauth-server" />
         <module name="mg-zuul (1)" />
         <module name="mg-zuul" />
-        <module name="demo.daily" />
+        <module name="mg-node-sys" />
         <module name="mg-common-node" />
         <module name="mg-website-uauth" />
         <module name="demo.empty" />
         <module name="mg-common-compose" />
+        <module name="mg-website-vms" />
         <module name="auth" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
+        <module name="mg-config" />
         <module name="mg-compose-uauth" />
-        <module name="demo.lock" />
         <module name="mg-auth" />
         <module name="boot.empty" />
         <module name="mg-common-basic" />
         <module name="mg-node-user" />
         <module name="demo.empty (1)" />
         <module name="mg-node-mgmybatis" />
-        <module name="mg-website-vms" />
+        <module name="demo.daily" />
         <module name="mg-eurake" />
-        <module name="mg-config" />
+        <module name="demo.lock" />
         <module name="mg-zipkin" />
       </profile>
     </annotationProcessing>
@@ -67,6 +68,7 @@
       <module name="mg-node" target="1.8" />
       <module name="mg-node-matao" target="1.8" />
       <module name="mg-node-mgmybatis" target="1.8" />
+      <module name="mg-node-sys" target="1.8" />
       <module name="mg-node-user" target="1.8" />
       <module name="mg-root" target="1.8" />
       <module name="mg-security" target="1.8" />
@@ -114,6 +116,7 @@
       <module name="mg-node" options="-parameters" />
       <module name="mg-node-matao" options="-parameters" />
       <module name="mg-node-mgmybatis" options="-parameters" />
+      <module name="mg-node-sys" options="-parameters" />
       <module name="mg-node-user" options="-parameters" />
       <module name="mg-security" options="-parameters" />
       <module name="mg-service-compose" options="-parameters" />

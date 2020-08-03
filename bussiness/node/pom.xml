@@ -15,6 +15,7 @@
     <modules>
         <module>node.user</module>
         <module>node.mgMybatis</module>
+        <module>node.sys</module>
     </modules>
 
     <dependencies>

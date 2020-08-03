@@ -25,14 +25,14 @@ import java.util.*;
 
 
 @Slf4j
-@Component
+//@Component
 public class ProduceStore {
 
     private volatile Map<String, List<ProduceItem>> m_map = new HashMap();
 
     List<String> m_scan = new ArrayList();
 //
-//    public static ProduceStore store;
+    public static ProduceStore store;
 
     /////////////////////////////////////////////////////////////////////////
 
@@ -50,14 +50,14 @@ public class ProduceStore {
     ////////////////////////////////////////////////////////////////////////
 
 
-//    public static ProduceStore single()
-//    {
-//        if(store==null)
-//        {
-//            store = new ProduceStore();
-//        }
-//        return store;
-//    }
+    public static ProduceStore single()
+    {
+        if(store==null)
+        {
+            store = new ProduceStore();
+        }
+        return store;
+    }
 
     private void addDate(ProduceItem item)
     {
@@ -120,7 +120,7 @@ public class ProduceStore {
             try {
                 imp.getMethod(mt.getName(),mt.getParameterTypes());
             } catch (NoSuchMethodException e) {
-                log.debug("模板{}函数{}未在接口类{}中找到匹配项，请检查！！",template.getName(),mt.toString(),imp.getName());
+                log.info("模板{}函数{}未在接口类{}中找到匹配项，请检查！！",template.getName(),mt.toString(),imp.getName());
                 return false;
             }
         }
@@ -130,7 +130,7 @@ public class ProduceStore {
         {
             if(item.getPojo().equals(pojo)&&item.getTemplate().equals(template)&&item.getImp().equals(imp))
             {
-                log.debug("已添加过pojo类为{}，模板类为{}，接口类为{}的mapper映射，跳过此次添加！",pojo.getName(),template.getName(),imp.getName());
+                log.info("已添加过pojo类为{}，模板类为{}，接口类为{}的mapper映射，跳过此次添加！",pojo.getName(),template.getName(),imp.getName());
                 return false;
             }
         }
@@ -259,6 +259,9 @@ public class ProduceStore {
             }
             else if(returnParam.equals(Object.class))
             {
+                returnStr =method.getReturnType().getSimpleName();
+            }
+            else{
                 returnStr =method.getReturnType().getSimpleName();
             }
 
