@@ -1,5 +1,9 @@
 package com.mg.common.util;
 
+import com.esotericsoftware.minlog.Log;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class StringUtil {
 
     public static String firstUpper(String str)
@@ -28,5 +32,27 @@ public class StringUtil {
     public static boolean isEmpty(String str)
     {
         return str==null||str.length()==0;
+    }
+
+    public static String connect(String[] strs ,String pre,String last,String intrerval)
+    {
+        if(strs==null||strs.length==0)
+        {
+            return null;
+        }
+        if(pre==null)pre="";
+        if(last==null)last="";
+        if(intrerval==null)
+        {
+            log.info("intrerval参数为null,替换为默认值，");
+            intrerval=",";
+        }
+        String result ="";
+        for(String str : strs)
+        {
+            if(result.length()>0)result+=intrerval;
+            result += String.format("%s%s%s",pre,str,last);
+        }
+        return result;
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface GeneralTemplate {
 
-    @Select("${sql}")
+    @Insert(value = {"${sql}","$111"})
     TemplateReturn getBySql(@Param("sql") String sql);
 
     @Select("select * from $tableName$ where id=#{id}")
@@ -19,19 +19,20 @@ public interface GeneralTemplate {
     List<TemplateReturn> listByWhere(@Param("where") String where,@Param("order") String order);
 
     @Insert("${sql}")
-    TemplateReturn insertBySql(@Param("sql") String sql);
+    @SelectKey(statement="select last_insert_id()", keyProperty="id", before=false, resultType=long.class)
+    long insertBySql(@Param("sql") String sql);
 
     @Update("${sql}")
-    TemplateReturn updateBySql(@Param("sql") String sql);
+    int updateBySql(@Param("sql") String sql);
 
     @Update("update $tableName$ ${set} ${where}")
-    TemplateReturn updateByWhere(@Param("set") String set,@Param("where") String where);
+    int updateByWhere(@Param("set") String set,@Param("where") String where);
 
     @Update("update $tableName$ set ${column}=${value} ${where}")
-    TemplateReturn updateSingleColumn(@Param("column") String column,@Param("value") String value,@Param("where") String where);
+    int updateSingleColumn(@Param("column") String column,@Param("value") String value,@Param("where") String where);
 
     @Update("update $tableName$ set ${column}=${value} where id=#{id}")
-    TemplateReturn updateById(String column,String value,long id);
+    int updateById(String column,String value,long id);
 
 
     @Delete("${sql}")

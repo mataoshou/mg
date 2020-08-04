@@ -8,17 +8,16 @@ import com.mg.common.util.GuidUtil;
 import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
 
 @Repository
-public class SysConfigDAO {
+public class SysConfigDAO extends SuperDao<MTdSysConfig,Long>{
    @Autowired
    private IGeneralMapper<MTdSysConfig> mapper;
    
-
-   
-   public MTdSysConfig get(Long id){
+   public MTdSysConfig getById(Long id){
       return mapper.getById(id);
    }
    
-   public MTdSysConfig edit(MTdSysConfig item){
+   public MTdSysConfig edit(MTdSysConfig item) throws Exception {
+      long no = mapper.insertBySql(buildInsertSql(item));
       return null;
    }
    

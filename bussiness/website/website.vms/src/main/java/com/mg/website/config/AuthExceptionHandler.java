@@ -1,4 +1,4 @@
-package com.mg.website.action;
+package com.mg.website.config;
 
 import com.alibaba.fastjson.JSON;
 import com.mg.common.pojo.ResultItem;

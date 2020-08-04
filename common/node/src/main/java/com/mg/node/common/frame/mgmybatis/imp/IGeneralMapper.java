@@ -15,15 +15,15 @@ public interface IGeneralMapper<T> {
 
     List<T> listByWhere(String where,String order);
 
-    T insertBySql(String sql);
+    long insertBySql(String sql);
 
-    T updateBySql(String sql);
+    int updateBySql(String sql);
 
-    T updateByWhere(String set,String where);
+    int updateByWhere(String set,String where);
 
-    T updateSingleColumn(String column,String value,String where);
+    int updateSingleColumn(String column,String value,String where);
 
-    T updateById(String column,String value,long id);
+    int updateById(String column,String value,long id);
 
     int deleteBySql(String sql);
 

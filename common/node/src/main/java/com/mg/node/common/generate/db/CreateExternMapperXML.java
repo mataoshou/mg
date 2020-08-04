@@ -6,6 +6,7 @@ import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.DomUtil;
 import com.mg.common.util.FileStore;
 import com.mg.common.util.StringUtil;
+import com.mg.node.common.config.DaoConfiguration;
 import com.mg.node.common.constant.DBConstant;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -121,7 +122,8 @@ public class CreateExternMapperXML extends ICreate {
         content +=insertByCustomId;
         content +="</mapper>";
 
-        String tableName = DBUtils.getTableName(this.getName());
+        DaoConfiguration configuration = new DaoConfiguration();
+        String tableName = configuration.daoUtilsBean().getTableName(this.getName());
 
 
         content = content.replace("##1", mergeFileName).replace("##2", tableName).replace("##3",itemName)

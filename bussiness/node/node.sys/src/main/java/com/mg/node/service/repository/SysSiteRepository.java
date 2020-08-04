@@ -22,7 +22,7 @@ public class SysSiteRepository {
 
    
    public ResultItem get(InSysSiteDto item) throws Exception{
-      MTdSysSite pojo = dao.get(item.getId());
+      MTdSysSite pojo = dao.getById(item.getId());
       OutSysSiteDto dto = mapper.convert(pojo,OutSysSiteDto.class);
       ResultItem result =  new ResultItem<OutSysSiteDto>(dto);
       return result;

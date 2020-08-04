@@ -1,4 +1,4 @@
-package com.mg.lock.demo;
+package com.mg.empty.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -3,10 +3,11 @@ package com.mg.node.common.frame.mgmybatis.produce;
 import com.itranswarp.compiler.JavaStringCompiler;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
+import com.mg.common.util.StringUtil;
+import com.mg.node.common.config.DaoConfiguration;
 import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
 import com.mg.node.common.frame.mgmybatis.template.GeneralTemplate;
 import com.mg.node.common.frame.mgmybatis.template.TemplateReturn;
-import com.mg.node.common.generate.db.DBUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -14,13 +15,10 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.core.type.classreading.CachingMetadataReaderFactory;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
-import java.lang.reflect.Type;
+import java.lang.reflect.*;
 import java.util.*;
 
 
@@ -143,7 +141,7 @@ public class ProduceStore {
      */
     public void addParams(ProduceItem item)
     {
-        item.addParam("$tableName$",DBUtils.getTableName(item.getPojo().getSimpleName()));
+        item.addParam("$tableName$", new DaoConfiguration().daoUtilsBean().getTableName(item.getPojo().getSimpleName()));
     }
 
     /**
@@ -271,13 +269,13 @@ public class ProduceStore {
 
             for(Annotation annotation : annotations)
             {
-               String annStr = annotation.toString().substring(1).replace("[","\"").replace("]","\"");
+
+               String annStr = buildAnnotation(annotation);
 
                for(Map.Entry<String,String> entry: item.getParams().entrySet())
                {
                    annStr= annStr.replace(entry.getKey(), entry.getValue());
                }
-
                methodUnit.addAnnotation(annStr);
             }
 
@@ -287,8 +285,8 @@ public class ProduceStore {
                 Annotation[] pas = p.getAnnotations();
                 for(Annotation annotation : pas)
                 {
-                    typeStr +=" "+annotation.toString().replace("[","\"").replace("]","\"")
-                            .replace("=","=\"").replace(")","\")");
+
+                    typeStr +=" @"+buildAnnotation(annotation);
                 }
                 typeStr +=" "+p.getType().getSimpleName();
                 methodUnit.addParam(typeStr,p.getName());
@@ -296,7 +294,7 @@ public class ProduceStore {
             unit.addMethod(methodUnit);
         }
 
-//        log.info(unit.finish());
+        log.info(unit.finish());
 
         JavaStringCompiler compiler = new JavaStringCompiler();
         Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());
@@ -305,6 +303,64 @@ public class ProduceStore {
 
         log.debug("成功构建mapper类{}",clazz.getName());
         return clazz;
+    }
+
+    public String buildAnnotation(Annotation annotation)
+    {
+        String annStr ="";
+
+        annStr += annotation.annotationType().getName()+"(##1)";
+
+        Class ancl = annotation.annotationType();
+
+        Method[] annmts = ancl.getDeclaredMethods();
+
+        String annParamsStr = "";
+        for(Method mt : annmts)
+        {
+            try {
+                if(mt.getDefaultValue()!=null&&mt.getDefaultValue().equals(mt.invoke(annotation)))
+                {
+                    continue;
+                }
+                Class annReturnType =mt.getReturnType();
+                if(annParamsStr.length()>0)annParamsStr+=",";
+                if(annReturnType.getSimpleName().equals("String[]"))
+                {
+                    String[] annParams = (String[])mt.invoke(annotation);
+                    String annMtStr = String.format("%s={%s}",
+                            mt.getName(),StringUtil.connect(annParams,"\"","\"",","));
+                    annParamsStr += annMtStr;
+                }
+                else if(annReturnType.getSimpleName().equals("String")){
+                    annParamsStr += String.format("%s=\"%s\"",mt.getName(),mt.invoke(annotation));
+                }
+                else if(annReturnType.getSimpleName().equals("enum")) {
+                    annParamsStr += String.format("%s=%s.%s",mt.getName(),annReturnType.getName(),mt.invoke(annotation));
+                }
+                else {
+                    Object value = mt.invoke(annotation);
+                    if(annReturnType.isPrimitive())
+                    {
+                        annParamsStr += String.format("%s=%s",mt.getName(),value);
+                    }
+                    else if(annReturnType.getSimpleName().equals("Class"))
+                    {
+                        annParamsStr += String.format("%s=%s.class",mt.getName(),((Class)value).getName());
+                    }
+                    else{
+                        annParamsStr += String.format("%s=%s.%s",mt.getName(),
+                                annReturnType.getName().replace("$","."),value);
+                    }
+
+                }
+            } catch (IllegalAccessException | InvocationTargetException  e) {
+                e.printStackTrace();
+            }
+        }
+        annStr = annStr.replace("##1",annParamsStr);
+//        log.info( annStr);
+        return annStr;
     }
 
     public void cleanData(){

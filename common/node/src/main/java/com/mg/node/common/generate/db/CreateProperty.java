@@ -5,6 +5,7 @@ import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.DomUtil;
 import com.mg.common.util.StringUtil;
+import com.mg.node.common.config.DaoConfiguration;
 import com.mg.node.common.constant.DBConstant;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -25,7 +26,8 @@ public class CreateProperty extends ICreate {
 
     @Override
     protected void createPre(ClassUnit unit) throws IOException {
-        String tableName = DBUtils.getTableName(this.getName());
+        DaoConfiguration configuration = new DaoConfiguration();
+        String tableName = configuration.daoUtilsBean().getTableName(this.getName());
 
         File baseMapperFile = new  File(this.getClassFile().getParentFile().getParentFile(),"/xml/"+this.getName() +"MapperBase.xml");
 
