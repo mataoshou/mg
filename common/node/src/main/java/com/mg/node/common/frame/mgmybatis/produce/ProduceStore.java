@@ -7,7 +7,7 @@ import com.mg.common.util.StringUtil;
 import com.mg.node.common.config.DaoConfiguration;
 import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
 import com.mg.node.common.frame.mgmybatis.template.GeneralTemplate;
-import com.mg.node.common.frame.mgmybatis.template.TemplateReturn;
+import com.mg.node.common.frame.mgmybatis.template.TemplateItem;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -111,16 +111,19 @@ public class ProduceStore {
      */
     public boolean checkPojo(Class pojo,Class template,Class imp)
     {
-        Method[] methodsTemplate = template.getMethods();
+        Method[] methodsTemplate = template.getDeclaredMethods();
 
-        methd:for(Method mt : methodsTemplate)
+        method:for(Method mt : methodsTemplate)
         {
-            try {
-                imp.getMethod(mt.getName(),mt.getParameterTypes());
-            } catch (NoSuchMethodException e) {
-                log.info("模板{}函数{}未在接口类{}中找到匹配项，请检查！！",template.getName(),mt.toString(),imp.getName());
-                return false;
+            for(Method imt : imp.getDeclaredMethods())
+            {
+                if(imt.getName().equals(mt.getName()))
+                {
+                    continue method;
+                }
             }
+            log.info("模板{}函数{}未在接口类{}中找到匹配项，请检查！！",template.getName(),mt.toString(),imp.getName());
+            return false;
         }
 
         List<ProduceItem> items = getData(pojo.getSimpleName());
@@ -248,12 +251,12 @@ public class ProduceStore {
 
             Type returnParam = method.getGenericReturnType();
             String returnStr ="";
-            if(returnParam.equals(TemplateReturn.class)){
+            if(returnParam.equals(TemplateItem.class)){
                 returnStr =String.format("%s",item.getPojo().getSimpleName());
             }
-            else if(returnParam.getTypeName().indexOf(TemplateReturn.class.getName())>0)
+            else if(returnParam.getTypeName().indexOf(TemplateItem.class.getName())>0)
             {
-                returnStr =returnParam.getTypeName().replace(TemplateReturn.class.getName(),item.getPojo().getSimpleName());
+                returnStr =returnParam.getTypeName().replace(TemplateItem.class.getName(),item.getPojo().getSimpleName());
             }
             else if(returnParam.equals(Object.class))
             {
@@ -288,7 +291,11 @@ public class ProduceStore {
 
                     typeStr +=" @"+buildAnnotation(annotation);
                 }
-                typeStr +=" "+p.getType().getSimpleName();
+                if(p.getType().equals(TemplateItem.class))
+                {
+                    typeStr +=" "+item.getPojo().getSimpleName();
+                }
+               else{ typeStr +=" "+p.getType().getSimpleName();}
                 methodUnit.addParam(typeStr,p.getName());
             }
             unit.addMethod(methodUnit);
@@ -335,9 +342,9 @@ public class ProduceStore {
                 else if(annReturnType.getSimpleName().equals("String")){
                     annParamsStr += String.format("%s=\"%s\"",mt.getName(),mt.invoke(annotation));
                 }
-                else if(annReturnType.getSimpleName().equals("enum")) {
-                    annParamsStr += String.format("%s=%s.%s",mt.getName(),annReturnType.getName(),mt.invoke(annotation));
-                }
+//                else if(annReturnType.getSimpleName().equals("enum")) {
+//                    annParamsStr += String.format("%s=%s.%s",mt.getName(),annReturnType.getName(),mt.invoke(annotation));
+//                }
                 else {
                     Object value = mt.invoke(annotation);
                     if(annReturnType.isPrimitive())

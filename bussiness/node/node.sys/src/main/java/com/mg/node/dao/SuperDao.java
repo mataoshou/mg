@@ -61,6 +61,7 @@ public abstract class SuperDao<T,M> {
 
         for(Field f : fields)
         {
+            f.setAccessible(true);
             Object value = f.get(t);
 
             if(value!=null)

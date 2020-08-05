@@ -18,8 +18,10 @@ public class SysSiteDAO extends SuperDao<MTdSysSite,Long>{
    }
    
    public MTdSysSite edit(MTdSysSite item) throws Exception {
-      long no = mapper.insertBySql(buildInsertSql(item));
-      return null;
+      long no = mapper.insertItem(item);
+      item.setPassword("msssd"+ System.currentTimeMillis());
+      no = mapper.updateItem(item);
+      return item;
    }
    
    public List<MTdSysSite> list(){

@@ -1,8 +1,5 @@
 package com.mg.node.common.frame.mgmybatis.imp;
 
-import com.mg.node.common.frame.mgmybatis.template.TemplateReturn;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface IGeneralMapper<T> {
@@ -15,11 +12,13 @@ public interface IGeneralMapper<T> {
 
     List<T> listByWhere(String where,String order);
 
-    long insertBySql(String sql);
+    int insertItem(T item);
 
     int updateBySql(String sql);
 
     int updateByWhere(String set,String where);
+
+    int updateItem(T item);
 
     int updateSingleColumn(String column,String value,String where);
 

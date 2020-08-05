@@ -17,7 +17,7 @@ public class SysConfigDAO extends SuperDao<MTdSysConfig,Long>{
    }
    
    public MTdSysConfig edit(MTdSysConfig item) throws Exception {
-      long no = mapper.insertBySql(buildInsertSql(item));
+      long no = mapper.insertItem(item);
       return null;
    }
    
