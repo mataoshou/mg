@@ -1,6 +1,0 @@
-repo: cfeea66a3fa8ca3686a7cfa2d0ce8ab0169f168d
-node: 6bcd37dc6cbe6fce776ccb4c5e2bb9c3705a6f8a
-branch: default
-latesttag: jdk8u262-b10
-latesttag: jdk8u262-ga
-latesttagdistance: 2

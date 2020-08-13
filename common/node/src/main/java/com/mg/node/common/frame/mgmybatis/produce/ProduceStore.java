@@ -301,7 +301,7 @@ public class ProduceStore {
             unit.addMethod(methodUnit);
         }
 
-        log.info(unit.finish());
+        log.debug("动态构建对象代码：" +unit.finish());
 
         JavaStringCompiler compiler = new JavaStringCompiler();
         Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());
@@ -374,6 +374,12 @@ public class ProduceStore {
         m_map = new HashMap<>();
         m_scan = new ArrayList<>();
     }
+
+//    public static void main(String[] args) {
+//        ProduceStore store = new ProduceStore();
+//
+//        store.buildAnnotation();
+//    }
 
 
 

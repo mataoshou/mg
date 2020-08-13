@@ -8,5 +8,7 @@ public class SysSiteControllerConstant {
    public static final String ACTION_EDIT ="/SysSite/edit";
    public static final String ACTION_LIST ="/SysSite/list";
    public static final String ACTION_DELETE ="/SysSite/delete";
+   public static final String ACTION_GETBYNAME ="/SysSite/getByName";
+
 
 }

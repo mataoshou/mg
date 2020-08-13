@@ -16,12 +16,13 @@ import com.mg.common.pojo.ResultItem;
 public class SysConfigController {
    @Autowired
    SysConfigRepository repository;
+   private final String actionEdit = SysConfigControllerConstant.ACTION_EDIT;
 
    @RequestMapping(SysConfigControllerConstant.ACTION_GET)
    public ResultItem get(@RequestBody InSysConfigDto dtoData) throws Exception{
       return repository.get(dtoData);
    }
-   @RequestMapping(SysConfigControllerConstant.ACTION_EDIT)
+   @RequestMapping(actionEdit)
    public ResultItem edit(@RequestBody InSysConfigDto dtoData) throws Exception{
       return repository.edit(dtoData);
    }

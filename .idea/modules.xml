@@ -17,6 +17,8 @@
       <module fileurl="file://$PROJECT_DIR$/common/node/mg-common-node.iml" filepath="$PROJECT_DIR$/common/node/mg-common-node.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/website/mg-common-website.iml" filepath="$PROJECT_DIR$/common/website/mg-common-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/compose/mg-compose.iml" filepath="$PROJECT_DIR$/bussiness/compose/mg-compose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.auth/mg-compose-auth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.auth/mg-compose-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.command/mg-compose-command.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.command/mg-compose-command.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uauth.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uums.iml" filepath="$PROJECT_DIR$/bussiness/compose/compose.uums/mg-compose-uums.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/config-server/mg-config.iml" filepath="$PROJECT_DIR$/general/config-server/mg-config.iml" />

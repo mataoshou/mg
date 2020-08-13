@@ -9,7 +9,7 @@ import com.mg.common.util.GuidUtil;
 import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
 
 @Repository
-public class SysSiteDAO extends SuperDao<MTdSysSite,Long>{
+public class SysSiteDAO {
    @Autowired
    private IGeneralMapper<MTdSysSite> mapper;
 
@@ -32,5 +32,11 @@ public class SysSiteDAO extends SuperDao<MTdSysSite,Long>{
       int count = mapper.deleteById(id);
       if(count>0) { return true; }
       return false;
+   }
+
+   public MTdSysSite getByName(String name)
+   {
+      MTdSysSite site = mapper.getBySingleParam("siteName",name);
+      return site;
    }
 }

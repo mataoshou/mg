@@ -9,5 +9,7 @@ public class SysSiteFeignConstant {
    public static final String FEIGN_EDIT ="/SysSite/edit";
    public static final String FEIGN_LIST ="/SysSite/list";
    public static final String FEIGN_DELETE ="/SysSite/delete";
+   public static final String FEIGN_GETBYNAME ="/SysSite/getByName";
+
 
 }

@@ -28,5 +28,10 @@ public class SysSiteFeignFallBack implements SysSiteFeign,BaseFallBack {
    public ResultItem<OutSysSiteDto> delete(InSysSiteDto item){
       return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME);
    }
+   
+   public ResultItem<OutSysSiteDto> getByName(InSysSiteDto item){
+      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME);
+   }
+
 
 }

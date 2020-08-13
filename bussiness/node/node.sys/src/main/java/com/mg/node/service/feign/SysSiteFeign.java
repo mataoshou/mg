@@ -19,5 +19,8 @@ public interface SysSiteFeign {
     ResultItem<OutSysSiteDto> list(InSysSiteDto item);
    @RequestMapping(SysSiteFeignConstant.FEIGN_DELETE)
     ResultItem<OutSysSiteDto> delete(InSysSiteDto item);
+   @RequestMapping(SysSiteFeignConstant.FEIGN_GETBYNAME)
+    ResultItem<OutSysSiteDto> getByName(InSysSiteDto item);
+
 
 }

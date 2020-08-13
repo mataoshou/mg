@@ -1,0 +1,14 @@
+spring:
+  application: 
+    name: mg-compose-command
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:7100/
+
+  main:
+    allow-bean-definition-overriding: true
+
+
+

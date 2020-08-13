@@ -33,5 +33,10 @@ public class SysSiteController {
    public ResultItem delete(@RequestBody InSysSiteDto dtoData) throws Exception{
       return repository.delete(dtoData);
    }
+   @RequestMapping(SysSiteControllerConstant.ACTION_GETBYNAME)
+   public ResultItem getByName(@RequestBody InSysSiteDto dtoData) throws Exception{
+      return repository.getByName(dtoData);
+   }
+
 
 }

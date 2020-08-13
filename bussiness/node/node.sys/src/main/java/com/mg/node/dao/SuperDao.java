@@ -127,8 +127,6 @@ public abstract class SuperDao<T,M> {
         return sql;
     }
 
-
-
     public String getKeyName(){
         return "id";
     }

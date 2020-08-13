@@ -9,15 +9,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="build" />
         <module name="txlcn-demo-tm" />
+        <module name="mg-website-vms" />
+        <module name="mg-compose-auth" />
         <module name="oauth-server" />
-        <module name="mg-zuul (1)" />
         <module name="mg-zuul" />
         <module name="mg-node-sys" />
         <module name="mg-common-node" />
         <module name="mg-website-uauth" />
         <module name="demo.empty" />
+        <module name="mg-compose-command" />
         <module name="mg-common-compose" />
-        <module name="mg-website-vms" />
         <module name="auth" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
@@ -30,6 +31,7 @@
         <module name="demo.empty (1)" />
         <module name="mg-node-mgmybatis" />
         <module name="demo.daily" />
+        <module name="mg-zuul (1)" />
         <module name="mg-eurake" />
         <module name="demo.lock" />
         <module name="mg-zipkin" />
@@ -54,6 +56,9 @@
       <module name="mg-common-node" target="1.8" />
       <module name="mg-common-website" target="1.8" />
       <module name="mg-compose" target="1.8" />
+      <module name="mg-compose-auth" target="1.8" />
+      <module name="mg-compose-command" target="1.8" />
+      <module name="mg-compose-configure" target="1.8" />
       <module name="mg-compose-matao" target="1.8" />
       <module name="mg-compose-uauth" target="1.8" />
       <module name="mg-compose-uums" target="1.8" />
@@ -103,6 +108,9 @@
       <module name="mg-common-dao" options="-parameters" />
       <module name="mg-common-node" options="-parameters" />
       <module name="mg-common-website" options="-parameters" />
+      <module name="mg-compose-auth" options="-parameters" />
+      <module name="mg-compose-command" options="-parameters" />
+      <module name="mg-compose-configure" options="-parameters" />
       <module name="mg-compose-matao" options="-parameters" />
       <module name="mg-compose-uauth" options="-parameters" />
       <module name="mg-compose-uums" options="-parameters" />

@@ -8,6 +8,8 @@ public interface IGeneralMapper<T> {
 
     T getById(long id);
 
+    T getBySingleParam(String column,String value);
+
     List<T> listBySql(String sql);
 
     List<T> listByWhere(String where,String order);

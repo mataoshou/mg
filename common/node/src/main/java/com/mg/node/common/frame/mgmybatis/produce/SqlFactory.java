@@ -1,8 +1,10 @@
 package com.mg.node.common.frame.mgmybatis.produce;
 
+import com.mg.node.common.util.SqlWhere;
 import com.mg.node.common.util.ToolHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.jdbc.SQL;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -96,23 +98,21 @@ public class SqlFactory {
         return sql;
     }
 
-//    public String buildInsertSql(Object item) throws Exception {
-//        Class cls = item.getClass();
-//        Field[] fields = cls.getDeclaredFields();
-//        SQL sql = new SQL();
-//        sql.INSERT_INTO(ToolHolder.daoUtils.getTableName(item.getClass()));
-//
-//        for(Field f : fields)
-//        {
-//            f.setAccessible(true);
-//            Object value = f.get(item);
-//            if(value!=null) {
-//                sql.VALUES(f.getName(), value.toString());
-//            }
-//        }
-//
-//        log.info("执行插入语句：{}",sql.toString() );
-//
-//        return sql.toString();
-//    }
+
+    public String selectItem(Map<String,Object> para) throws Exception {
+        Map<String,Object> params = (Map<String, Object>) para.get("params");
+
+        Class itemcl = (Class) para.get("item");
+
+        SqlWhere where = new SqlWhere();
+
+        for(Map.Entry<String,Object> entry : para.entrySet())
+        {
+            where.add2(entry.getKey(),entry.getValue().toString());
+        }
+        String sql = String.format("SELECT * FROM %s WHERE %s ",ToolHolder.daoUtils.getTableName(itemcl),where);
+
+        return sql;
+    }
+
 }
