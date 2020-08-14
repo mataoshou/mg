@@ -30,10 +30,10 @@ public class AuthExceptionHandler extends OAuth2AccessDeniedHandler implements A
     }
 
     public void demo(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException {
-        log.info("认证失败，禁止访问 {} 失败原因：{}", httpServletRequest.getRequestURI(),e.getMessage());
+        log.info("用户认证失败，禁止访问 {} 失败原因：{}", httpServletRequest.getRequestURI(),e.getMessage());
         httpServletResponse.setCharacterEncoding("UTF-8");
         httpServletResponse.setContentType("application/json; charset=utf-8");
-        ResultItem<String> result = new ResultItem<>(401,"认证失败，禁止访问");
+        ResultItem<String> result = new ResultItem<>(401,"用户认证失败，禁止访问");
         httpServletResponse.setStatus(HttpStatus.SC_OK);
         PrintWriter printWriter = httpServletResponse.getWriter();
         log.info(JSON.toJSON(result).toString());

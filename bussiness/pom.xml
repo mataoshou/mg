@@ -147,6 +147,7 @@
                     <include>**/*.yml</include>
                     <include>**/*.xml</include>
                     <include>**/*.jks</include>
+                    <include>**/*.key</include>
                 </includes>
             </resource>
         </resources>

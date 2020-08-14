@@ -9,7 +9,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
-@MapperScan(DBConstant.DB_MERGEDAO_PACKAGE)
 @EnableEurekaClient
 public class EitemApplication {
 

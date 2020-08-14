@@ -1,4 +1,4 @@
-package com.mg.node.pojo.dto;
+package com.mg.compose.pojo.dto;
 
 import lombok.Data;
 

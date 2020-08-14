@@ -2,34 +2,38 @@ package com.mg.node.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.mg.node.db.sql.merge.IRmtUserInfoMapper;
-import com.mg.node.db.sql.pojo.RmtUserInfo;
+import com.mg.node.db.sql.pojo.MTdUserInfo;
 import java.util.List;
+import com.mg.common.util.GuidUtil;
+import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
 
 @Repository
 public class UserDAO {
    @Autowired
-   private IRmtUserInfoMapper mapper;
+   private IGeneralMapper<MTdUserInfo> mapper;
    
-   public RmtUserInfo get(String id){
 
-      RmtUserInfo userInfo = mapper.selectByPrimaryKey(id);
-      return userInfo;
+   
+   public MTdUserInfo get(Long id){
+      return mapper.getById(id);
    }
    
-   public RmtUserInfo edit(RmtUserInfo item){
-      mapper.updateByPrimaryKeySelective(item);
-      return item;
+   public MTdUserInfo edit(MTdUserInfo item){
+      return null;
    }
    
-   public List<RmtUserInfo> list(){
-      return mapper.list(null,null);
+   public List<MTdUserInfo> list(){
+      return mapper.listByWhere(null,null);
    }
    
-   public boolean delete(String id){
-      int count = mapper.deleteByPrimaryKey(id);
+   public boolean delete(Long id){
+      int count = mapper.deleteById(id);
       if(count>0) { return true; }
       return false;
+   }
+   
+   public MTdUserInfo getByName(String name){
+      return mapper.getBySingleParam("name",name);
    }
 
 }

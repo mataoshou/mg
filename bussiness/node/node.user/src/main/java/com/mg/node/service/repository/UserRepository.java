@@ -1,16 +1,15 @@
 package com.mg.node.service.repository; 
 
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
-import com.mg.node.common.mapper.GeneralMapper;
 import org.springframework.stereotype.Service;
+import com.mg.node.pojo.dto.OutUserDto;
 import com.mg.node.pojo.dto.InUserDto;
 import lombok.extern.slf4j.Slf4j;
-import com.mg.node.db.sql.pojo.RmtUserInfo;
+import com.mg.node.db.sql.pojo.MTdUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.mg.common.pojo.ResultItem;
+import com.mg.node.common.mapper.GeneralMapper;
 import com.mg.node.dao.UserDAO;
-import org.springframework.transaction.annotation.Transactional;
-
+import com.mg.node.service.feign.UserFeign;
 import java.util.List;
 
 @Service
@@ -21,43 +20,26 @@ public class UserRepository {
    @Autowired
    GeneralMapper mapper;
 
+   
    public ResultItem get(InUserDto item) throws Exception{
-      RmtUserInfo pojo = dao.get(item.getId());
-      InUserDto dto = mapper.convert(pojo,InUserDto.class);
-      ResultItem result =  new ResultItem<InUserDto>(dto);
-      return result;
-   }
-
-   public ResultItem edit(InUserDto item) throws Exception{
-
-      RmtUserInfo pojo = mapper.convert(item,RmtUserInfo.class);
-      ResultItem result = new ResultItem<InUserDto>(mapper.convert(dao.edit(pojo),InUserDto.class));
-      return result;
-   }
-
-   @LcnTransaction//分布式事务
-   @Transactional //本地事务
-   public ResultItem get1(InUserDto item) throws Exception{
-      RmtUserInfo pojo = dao.get(item.getId());
-      InUserDto dto = mapper.convert(pojo,InUserDto.class);
-      ResultItem result =  new ResultItem<InUserDto>(dto);
-      return result;
-   }
-
-   @LcnTransaction//分布式事务
-   @Transactional //本地事务
-   public ResultItem edit1(InUserDto item) throws Exception{
-
-      RmtUserInfo pojo = mapper.convert(item,RmtUserInfo.class);
-      ResultItem result = new ResultItem<InUserDto>(mapper.convert(dao.edit(pojo),InUserDto.class));
-//      throw new Exception("1111");
+      MTdUserInfo pojo = dao.get(item.getId());
+      OutUserDto dto = mapper.convert(pojo,OutUserDto.class);
+      ResultItem result =  new ResultItem<OutUserDto>(dto);
       return result;
    }
    
+   public ResultItem insert(InUserDto item) throws Exception{
+      return null;
+   }
+   
    public ResultItem list(InUserDto item) throws Exception{
-      List<RmtUserInfo> list = dao.list();
-      ResultItem result =  new ResultItem<InUserDto>(mapper.convert(list,InUserDto.class));
+      List<MTdUserInfo> list = dao.list();
+      ResultItem result =  new ResultItem<OutUserDto>(mapper.convert(list,OutUserDto.class));
       return result;
+   }
+   
+   public ResultItem update(InUserDto item) throws Exception{
+      return null;
    }
    
    public ResultItem delete(InUserDto item) throws Exception{
@@ -65,5 +47,15 @@ public class UserRepository {
       ResultItem result = new ResultItem();
       return result;
    }
+   
+   public ResultItem getByName(InUserDto item) throws Exception{
+      MTdUserInfo pojo = dao.getByName(item.getName());
+      OutUserDto dto = mapper.convert(pojo,OutUserDto.class);
+      ResultItem result =  new ResultItem<OutUserDto>(dto);
+      return result;
+   }
+
+   
+
 
 }

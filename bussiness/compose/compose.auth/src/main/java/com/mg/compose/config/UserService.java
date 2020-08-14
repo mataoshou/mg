@@ -1,5 +1,13 @@
 package com.mg.compose.config;
 
+import com.mg.common.action.MgApiException;
+import com.mg.common.pojo.ResultItem;
+import com.mg.common.util.ResultItemUtil;
+import com.mg.compose.pojo.bo.UserBo;
+import com.mg.compose.pojo.dto.InUserDto;
+import com.mg.compose.pojo.dto.OutUserDto;
+import com.mg.compose.service.feign.UserFeign;
+import com.mg.compose.service.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -18,14 +26,29 @@ public class UserService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    UserRepository repository;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("登录用户名："+username);
-        String  password = passwordEncoder.encode("123456");
-        UserDetails user = new User(username,password,true,true,true,true,
-        AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
-//        User user = new User(username,password, AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
 
-        return user;
+        try {
+            log.info("登录用户校验："+username);
+            UserBo bo =  repository.getByName(username);
+            if(bo==null)return null;
+            UserDetails userDetails = new User(bo.getName(),
+                    passwordEncoder.encode(bo.getPassword()),
+                    true,true,true,true,
+                    AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
+
+            return userDetails;
+        } catch (MgApiException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        return null;
     }
 }

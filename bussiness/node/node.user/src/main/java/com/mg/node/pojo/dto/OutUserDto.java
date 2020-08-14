@@ -2,25 +2,20 @@ package com.mg.node.pojo.dto;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class OutUserDto {
-
-    private String id;
-
-    private String usercode;
-
-    private String username;
-
-    private String userpassword;
-
+    private Long id;
+    private String name;
+    private String password;
+    private String weixin;
+    private String weibo;
+    private String qq;
+    private String telephone;
     private String displayname;
-
-    private String userthumb;
-
-    private String workcode;
-
-    private String oganizationid;
-
-    private String departmentid;
-
+    private Date timecreated;
+    private Integer level;
+    private Integer statadelete;
+    private Date timedelete;
 }

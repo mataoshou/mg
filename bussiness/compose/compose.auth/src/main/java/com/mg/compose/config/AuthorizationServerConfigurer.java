@@ -1,6 +1,8 @@
 package com.mg.compose.config;
 
+import com.mg.common.action.MgApiException;
 import com.mg.common.pojo.ResultItem;
+import com.mg.common.util.ResultItemUtil;
 import com.mg.compose.pojo.dto.InSysSiteDto;
 import com.mg.compose.pojo.dto.OutSysSiteDto;
 import com.mg.compose.service.feign.SysFeign;
@@ -27,7 +29,9 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 @EnableAuthorizationServer
@@ -83,15 +87,15 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients
-                .inMemory()//Token保存在内存中
-                .withClient("website").secret(passwordEncoder.encode("123456"))//指明client-id和client-secret
-                .accessTokenValiditySeconds(7200)//令牌有效时间，单位秒
-                .authorizedGrantTypes("refresh_token","password","authorization_code")//支持刷新令牌、密码模式、授权码模式
-                .scopes("all","read","write");//权限有哪些,如果这两配置了该参数，客户端发请求可以不带参数，使用配置的参数
-//                .redirectUris("http://127.0.0.1:264/login");
+//        clients
+//                .inMemory()//Token保存在内存中
+//                .withClient("website").secret(passwordEncoder.encode("123456"))//指明client-id和client-secret
+//                .accessTokenValiditySeconds(7200)//令牌有效时间，单位秒
+//                .authorizedGrantTypes("refresh_token","password","authorization_code")//支持刷新令牌、密码模式、授权码模式
+//                .scopes("all","read","write");//权限有哪些,如果这两配置了该参数，客户端发请求可以不带参数，使用配置的参数
+////                .redirectUris("http://127.0.0.1:264/login");
 
-//        clients.withClientDetails(clientDetails());
+        clients.withClientDetails(clientDetails());
     }
 
     @Bean
@@ -99,14 +103,21 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
         return new ClientDetailsService() {
             @Override
             public ClientDetails loadClientByClientId(String s) throws ClientRegistrationException {
-                BaseClientDetails details = new BaseClientDetails();
-                InSysSiteDto dto = new InSysSiteDto();
-                dto.setSitename(s);
-                ResultItem<OutSysSiteDto> item = feign.getByName(dto);
-                if(item.getCode()==0&&item.getData()!=null)
-                {
-                    OutSysSiteDto sysSite = item.getData();
-                    details.setClientSecret(passwordEncoder.encode("123"));
+
+                try {
+
+                    InSysSiteDto dto = new InSysSiteDto();
+                    dto.setSitename(s);
+                    ResultItem<OutSysSiteDto> item = feign.getByName(dto);
+                    OutSysSiteDto sysSite = ResultItemUtil.getDate(item);
+                    if(sysSite==null)return null;
+                    BaseClientDetails details = new BaseClientDetails(sysSite.getSitename(),null,
+                            "all,read,write","refresh_token,password,authorization_code",null);
+                    details.setClientSecret(passwordEncoder.encode(sysSite.getPassword()));
+                    details.setAccessTokenValiditySeconds(7200);
+                    return details;
+                } catch (MgApiException e) {
+                    e.printStackTrace();
                 }
 
                 return null;

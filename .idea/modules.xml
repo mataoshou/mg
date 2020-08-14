@@ -31,8 +31,8 @@
       <module fileurl="file://$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" filepath="$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/mg-root.iml" filepath="$PROJECT_DIR$/mg-root.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/website/mg-website.iml" filepath="$PROJECT_DIR$/bussiness/website/mg-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/website/website.deploy/mg-website-deploy.iml" filepath="$PROJECT_DIR$/bussiness/website/website.deploy/mg-website-deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" filepath="$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bussiness/website/website.vms/mg-website-vms.iml" filepath="$PROJECT_DIR$/bussiness/website/website.vms/mg-website-vms.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/zipkin/mg-zipkin.iml" filepath="$PROJECT_DIR$/general/zipkin/mg-zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/zuul/mg-zuul.iml" filepath="$PROJECT_DIR$/general/zuul/mg-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/config-server/mg-zuul (1).iml" filepath="$PROJECT_DIR$/general/config-server/mg-zuul (1).iml" />

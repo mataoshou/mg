@@ -6,27 +6,37 @@ import com.mg.common.pojo.ResultItem;
 import com.mg.node.common.service.feign.BaseFallBack;
 import com.mg.node.constant.feign.UserFeignConstant;
 import com.mg.node.pojo.dto.InUserDto;
-import com.mg.node.pojo.dto.InUserDto;
+import com.mg.node.pojo.dto.OutUserDto;
 
 @Component
 @Slf4j
 public class UserFeignFallBack implements UserFeign,BaseFallBack {
 
    
-   public ResultItem<InUserDto> get(InUserDto item){
+   public ResultItem<OutUserDto> get(InUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME);
    }
    
-   public ResultItem<InUserDto> edit(InUserDto item){
+   public ResultItem<OutUserDto> insert(InUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME);
    }
    
-   public ResultItem<InUserDto> list(InUserDto item){
+   public ResultItem<OutUserDto> list(InUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME);
    }
    
-   public ResultItem<InUserDto> delete(InUserDto item){
+   public ResultItem<OutUserDto> update(InUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME);
    }
+   
+   public ResultItem<OutUserDto> delete(InUserDto item){
+      return fail(UserFeignConstant.FEIGN_SERVER_NAME);
+   }
+   
+   public ResultItem<InUserDto> getByName(InUserDto item){
+      return fail(UserFeignConstant.FEIGN_SERVER_NAME);
+   }
+
+
 
 }

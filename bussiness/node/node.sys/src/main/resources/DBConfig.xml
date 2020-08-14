@@ -53,6 +53,7 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"   connectionURL="jdbc:mysql://localhost:3306/mg.frame.sys" userId="root" password="shineon@1234" >
             <!-- 这里面可以设置property属性，每一个property属性都设置到配置的Driver上 -->
             <property name="useInformationSchema" value="true"/>
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
         <!-- java类型处理器

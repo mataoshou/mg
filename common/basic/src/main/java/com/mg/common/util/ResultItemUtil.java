@@ -1,12 +1,53 @@
 package com.mg.common.util;
 
+import com.mg.common.action.MgApiException;
+import com.mg.common.constant.ResultItemEnum;
 import com.mg.common.pojo.ResultItem;
+
 
 public class ResultItemUtil {
 
-    public <T> void getDate(ResultItem<T> item)
+    public static  <T> T getDate(ResultItem<T> item) throws MgApiException {
+        if(check(item))
+        {
+            if(item.getData()!=null&&item.getData().size()>0)
+            {
+                return item.getData().get(0);
+            }
+            else {
+                return null;
+            }
+        }
+        else{
+            throw new MgApiException(item.getCode(),item.getMsg());
+        }
+
+    }
+
+    private static boolean check(ResultItem item)
     {
-        if(item.getCode())
-         item.getData()
+        ResultItemEnum itemEnum = selectResult(item.getCode());
+
+        if(itemEnum.equals(ResultItemEnum.RESULT_ENUM_SUCCESS))
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+    private static ResultItemEnum selectResult(int code){
+        switch(code){
+            case -16:
+                return ResultItemEnum.RESULT_ENUM_AUTH;
+            case -99:
+                return ResultItemEnum.RESULT_ENUM_DENY;
+            case -1:
+                return ResultItemEnum.RESULT_ENUM_FAIL;
+            default:
+                return ResultItemEnum.RESULT_ENUM_SUCCESS;
+        }
     }
 }

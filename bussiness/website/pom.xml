@@ -14,7 +14,7 @@
 
     <modules>
         <module>website.uauth</module>
-        <module>website.vms</module>
+        <module>website.deploy</module>
     </modules>
 
 

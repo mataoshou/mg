@@ -13,7 +13,7 @@ public class CommonConstant {
     public static final String PO_PACKAGE ="com.mg.website.pojo.po";
 
 
-    public static final String MAPPER_PACKAGE ="com.mg.website.mapper";
+    public static final String MAPPER_PACKAGE ="com.mg.website.common.mapper";
 
     public static final String RESPOSITORY_PACKAGE ="com.mg.website.service.repository";
 }
