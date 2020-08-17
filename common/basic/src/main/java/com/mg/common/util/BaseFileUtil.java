@@ -121,10 +121,10 @@ public class BaseFileUtil
 		{
 			dst.getParentFile().mkdirs();
 			FileUtils.moveFile(src, dst);
-			log.debug("文件�?:" + src.getPath() + "移动�?:" + dst.getPath());
+			log.debug("文件:" + src.getPath() + "移动到:" + dst.getPath());
 			return;
 		}
-		log.debug(src.getPath() + "文件不存�?");
+		log.debug(src.getPath() + "文件不存!!");
 	}
 
 	// 文件格式转换
@@ -154,7 +154,7 @@ public class BaseFileUtil
 			delete(f);//递归删除
 		}
 		file.delete();//删除文件�?
-		log.debug("删除文件�?" +file.getPath());
+		log.debug("删除文件:" +file.getPath());
 		return true;
 		
 	}

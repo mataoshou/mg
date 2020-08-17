@@ -3,6 +3,7 @@ package com.mg.empty.demo.jvm.classload;
 import lombok.extern.slf4j.Slf4j;
 import sun.misc.Launcher;
 import sun.misc.URLClassPath;
+import sun.reflect.Reflection;
 
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -11,6 +12,7 @@ import java.net.URLClassLoader;
 public class BootstrapDemo {
 
     public static void main(String[] args) {
+        System.out.println(Reflection.getCallerClass());
         URLClassPath path = Launcher.getBootstrapClassPath();
         for(URL url : path.getURLs()){
             System.out.println(url.getPath());
@@ -22,6 +24,8 @@ public class BootstrapDemo {
 //            System.out.println(url.getPath());
 //        }
         System.out.println("----------------------------");
+
+        System.out.println(Reflection.getCallerClass());
         //取得扩展类加载器
         URLClassLoader extClassLoader = (URLClassLoader)ClassLoader.getSystemClassLoader().getParent();
 
