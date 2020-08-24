@@ -91,7 +91,7 @@ public class CreateUtil {
                 replaceName(src, dst, f);
             }
 
-            if(sysFile.getName().indexOf(src)>0)
+            if(sysFile.getName().indexOf(src)>=0)
             {
                 String dname = sysFile.getName().replace(src,dst);
                 FileUtils.moveDirectory(sysFile,new File(sysFile.getParent(),dname));

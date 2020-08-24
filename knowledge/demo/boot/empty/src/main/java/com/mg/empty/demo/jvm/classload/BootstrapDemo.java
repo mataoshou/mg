@@ -1,6 +1,7 @@
 package com.mg.empty.demo.jvm.classload;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 import sun.misc.Launcher;
 import sun.misc.URLClassPath;
 import sun.reflect.Reflection;
@@ -47,6 +48,7 @@ public class BootstrapDemo {
 
 //
 //        System.gc();
-
+//        GenericBeanDefinition
+//        XmlBeanFactory
     }
 }

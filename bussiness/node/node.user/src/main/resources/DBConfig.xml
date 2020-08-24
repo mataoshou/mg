@@ -211,7 +211,7 @@
             <property name="selectAllOrderByClause" value="age desc,username asc"/>
 
             <!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate -->
-            <property name="useActualColumnNames" value="false"/>
+            <property name="useActualColumnNames" value="true"/>
 
 
             <!-- generatedKey用于生成生成主键的方法，
@@ -248,9 +248,9 @@
                column:要重新设置的列名；
                注意，一个table元素中可以有多个columnOverride元素哈~
              -->
-            <columnOverride column="username">
-                <!-- 使用property属性来指定列要生成的属性名称 -->
-                <property name="property" value="userName"/>
+<!--            <columnOverride column="username">-->
+<!--                &lt;!&ndash; 使用property属性来指定列要生成的属性名称 &ndash;&gt;-->
+<!--                <property name="property" value="userName"/>-->
 
                 <!-- javaType用于指定生成的domain的属性类型，使用类型的全限定名
                 <property name="javaType" value=""/>
@@ -269,7 +269,7 @@
                 <!-- 参考table元素的delimitAllColumns配置，默认为false
                 <property name="delimitedColumnName" value=""/>
                  -->
-            </columnOverride>
+<!--            </columnOverride>-->
 
             <!-- ignoreColumn设置一个MGB忽略的列，如果设置了改列，那么在生成的domain中，生成的SQL中，都不会有该列出现
                column:指定要忽略的列的名字；
