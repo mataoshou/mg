@@ -50,7 +50,7 @@
         <!-- 必须要有的，使用这个配置链接数据库
             @TODO:是否可以扩展
          -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"   connectionURL="jdbc:mysql://localhost:3306/mg.frame.sys" userId="root" password="shineon@1234" >
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"   connectionURL="jdbc:mysql://localhost:3306/mg.frame.sys?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai" userId="root" password="shineon@1234" >
             <!-- 这里面可以设置property属性，每一个property属性都设置到配置的Driver上 -->
             <property name="useInformationSchema" value="true"/>
             <property name="nullCatalogMeansCurrent" value="true"/>
@@ -211,7 +211,7 @@
             <property name="selectAllOrderByClause" value="age desc,username asc"/>
 
             <!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate -->
-            <property name="useActualColumnNames" value="false"/>
+            <property name="useActualColumnNames" value="true"/>
 
 
             <!-- generatedKey用于生成生成主键的方法，
