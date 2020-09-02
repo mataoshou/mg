@@ -12,10 +12,14 @@
     <file url="file://$PROJECT_DIR$/common/compose/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/node/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/website/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/general/auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/eurake/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/txlcn-tm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/zipkin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/general/zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/knowledge/demo/boot/empty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/knowledge/demo/boot/lock/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/knowledge/demo/daily/empty/src/main/java" charset="UTF-8" />
   </component>
 </project>

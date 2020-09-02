@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -12,20 +13,24 @@
         <module name="mg-zuul" />
         <module name="mg-node-sys" />
         <module name="mg-common-node" />
-        <module name="mg-compose-command" />
+        <module name="mg-website-uauth" />
         <module name="mg-txlcn-tm" />
         <module name="mg-node-user" />
+        <module name="mg-compose-command" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-website-uauth" />
-        <module name="mg-eurake" />
-        <module name="mg-common-basic" />
-        <module name="mg-common-compose" />
         <module name="mg-config" />
+        <module name="mg-eurake" />
+        <module name="mg-common-compose" />
+        <module name="mg-common-basic" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="boot.empty" target="1.8" />
       <module name="build" target="1.8" />
+      <module name="demo.empty" target="1.8" />
+      <module name="demo.lock" target="1.8" />
+      <module name="mg-auth" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
       <module name="mg-common" target="1.8" />
       <module name="mg-common-basic" target="1.8" />
@@ -54,7 +59,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot.empty" options="-parameters" />
       <module name="build" options="-parameters" />
+      <module name="demo.empty" options="-parameters" />
+      <module name="demo.lock" options="-parameters" />
+      <module name="mg-auth" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />
       <module name="mg-common-node" options="-parameters" />
