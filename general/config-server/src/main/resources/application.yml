@@ -1,23 +1,23 @@
 server:
-  port: 7100
+  port: 15201
 
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:81/eureka
+      defaultZone: http://127.0.0.1:15101/eureka
   instance:
     prefer-ip-address: true
 
 
 spring:
   application:
-    name: mg.config
+    name: mg-general-config
   cloud:
     config:
       server:
         git:
           uri: https://github.com/MT-GMZ/config
-          search-paths: website/{application},node/{application},compose/{application}
+          search-paths: website/{application},node/{application},compose/{application},general/{application}
           username: mmqw1122
           password: Mg12270819
 

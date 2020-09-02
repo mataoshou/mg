@@ -27,7 +27,7 @@ ribbon:
 
 spring:
   application:
-    name: mg.zuul
+    name: mg-general-zuul
   session:
     store-type: redis
     timeout: 3600s

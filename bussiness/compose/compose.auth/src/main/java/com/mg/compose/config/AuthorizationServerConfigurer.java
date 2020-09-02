@@ -1,5 +1,7 @@
 package com.mg.compose.config;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.mg.common.action.MgApiException;
 import com.mg.common.pojo.ResultItem;
 import com.mg.common.util.ResultItemUtil;
@@ -11,9 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.common.exceptions.OAuth2Exception;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -24,6 +29,8 @@ import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.ClientRegistrationException;
 import org.springframework.security.oauth2.provider.client.BaseClientDetails;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
+import org.springframework.security.oauth2.provider.error.DefaultWebResponseExceptionTranslator;
+import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -73,8 +80,22 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
         .accessTokenConverter(tokenConverter)
         .authenticationManager(authenticationManager)
         .userDetailsService(userDetailsService)
-        .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);;
+        .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST)
+        ;
 
+        endpoints.exceptionTranslator(loggingExceptionTranslator());
+    }
+
+    @Bean
+    public WebResponseExceptionTranslator loggingExceptionTranslator() {
+        return new DefaultWebResponseExceptionTranslator() {
+            @Override
+            public ResponseEntity<OAuth2Exception> translate(Exception e) throws Exception {
+                //异常堆栈信息输出
+                log.error("异常堆栈信息", e);
+                return new ResponseEntity(new ResultItem(HttpStatus.METHOD_NOT_ALLOWED.value(),e.getMessage()), HttpStatus.METHOD_NOT_ALLOWED);
+            }
+        };
     }
 
     @Bean
@@ -107,11 +128,11 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
                 try {
 
                     InSysSiteDto dto = new InSysSiteDto();
-                    dto.setSitename(s);
+                    dto.setSiteName(s);
                     ResultItem<OutSysSiteDto> item = feign.getByName(dto);
                     OutSysSiteDto sysSite = ResultItemUtil.getDate(item);
                     if(sysSite==null)return null;
-                    BaseClientDetails details = new BaseClientDetails(sysSite.getSitename(),null,
+                    BaseClientDetails details = new BaseClientDetails(sysSite.getSiteName(),null,
                             "all,read,write","refresh_token,password,authorization_code",null);
                     details.setClientSecret(passwordEncoder.encode(sysSite.getPassword()));
                     details.setAccessTokenValiditySeconds(7200);
@@ -131,5 +152,10 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
         security
                 .checkTokenAccess("isAuthenticated()")
                 .allowFormAuthenticationForClients();//允许表单认证
+
     }
+
+
+
+
 }

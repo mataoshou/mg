@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JavaScriptSettings">
-    <option name="languageLevel" value="ES6" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/knowledge/demo/daily/pom.xml" />
-        <option value="$PROJECT_DIR$/knowledge/demo/daily/empty/pom.xml" />
-        <option value="$PROJECT_DIR$/knowledge/demo/boot/empty/pom.xml" />
-        <option value="$PROJECT_DIR$/knowledge/demo/boot/lock/pom.xml" />
-        <option value="$PROJECT_DIR$/general/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/bussiness/dao/pom.xml" />
-        <option value="$PROJECT_DIR$/common/dao/pom.xml" />
-        <option value="$PROJECT_DIR$/empty/pom.xml" />
-        <option value="$PROJECT_DIR$/general/auth-server/pom.xml" />
-        <option value="$PROJECT_DIR$/knowledge/pom.xml" />
-        <option value="$PROJECT_DIR$/oauth-server/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

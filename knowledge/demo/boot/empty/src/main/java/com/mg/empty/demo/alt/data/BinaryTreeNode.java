@@ -62,32 +62,99 @@ public class BinaryTreeNode {
 
 
     /**
-     * 前序遍历
+     * 先序遍历  递归方式
+     *先访问根节点  然后先序遍历左子树  最后先序遍历右子树
+     * 称为DLR遍历
      * @param node
      */
-    public void preOrderTree(BinaryTreeNode node)
+    public void DLROrderTree(BinaryTreeNode node)
     {
         if(node==null)return;
 
         System.out.println(node.value);
 
-        if(node.lNode!=null)preOrderTree(node.lNode);
-        if(node.rNode!=null)preOrderTree(node.rNode);
+        if(node.lNode!=null)DLROrderTree(node.lNode);
+        if(node.rNode!=null)DLROrderTree(node.rNode);
     }
 
 
     /**
-     * 前序遍历
+     * 先序遍历  非递归方式  需要借助栈（后进先出）实现
+     *先访问根节点  然后先序遍历左子树  最后先序遍历右子树
+     * 称为DLR遍历
      * @param node
      */
-    public void preOrderTree2(BinaryTreeNode node)
+    public void DLROrderTree2(BinaryTreeNode node)
     {
 
         Stack<BinaryTreeNode> stack = new Stack<>();
         if(node==null)return;
         stack.push(node);
+        while(!stack.isEmpty())
+        {
+            BinaryTreeNode cur = stack.pop();
+            if(cur.rNode!=null)
+            {
+                stack.push(cur.rNode);
+            }
 
-        if(node.lNode!=null)preOrderTree(node.lNode);
-        if(node.rNode!=null)preOrderTree(node.rNode);
+            if(cur.lNode!=null)
+            {
+                stack.push(cur.lNode);
+            }
+
+            System.out.println(cur.value);
+        }
+    }
+
+
+
+    /**
+     * 中序遍历 递归方式
+     *先访中序遍历左子树  再访问根节点  最后中序遍历右子树
+     * 称为LDR遍历
+     * @param node
+     */
+    public void LDROrderTree(BinaryTreeNode node) {
+        if(node == null) return;
+        LDROrderTree(node.lNode);
+        System.out.println(node.value);
+        LDROrderTree(node.rNode);
+    }
+
+    /**
+     * 中序遍历 非递归方式
+     *先访中序遍历左子树  再访问根节点  最后中序遍历右子树
+     * 称为LDR遍历
+     * @param node
+     */
+    public void LDROrderTree2(BinaryTreeNode node) {
+        if(node == null) return;
+
+        Stack<BinaryTreeNode> stack = new Stack<>();
+
+
+        while(!stack.isEmpty()&&node!=null)
+        {
+
+        }
+
+        LDROrderTree(node.lNode);
+        System.out.println(node.value);
+        LDROrderTree(node.rNode);
+    }
+
+
+    /**
+     * 后序遍历 递归方式
+     *先访后序遍历左子树 再后序遍历右子树 最后访问根节点
+     * 称为LRD遍历
+     * @param node
+     */
+    public void LRDOrderTree(BinaryTreeNode node) {
+        if(node == null) return;
+        LDROrderTree(node.lNode);
+        LDROrderTree(node.rNode);
+        System.out.println(node.value);
     }
 }

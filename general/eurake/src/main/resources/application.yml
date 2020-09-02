@@ -1,5 +1,5 @@
 server:
-  port: 81
+  port: 15101
 
 eureka:
   client:
@@ -13,4 +13,4 @@ eureka:
 
 spring:
   application:
-    name: mg.eurake
+    name: mg-general-eurake

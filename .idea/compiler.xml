@@ -2,145 +2,76 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="build" />
-        <module name="txlcn-demo-tm" />
-        <module name="mg-website-deploy" />
-        <module name="demo.daily" />
+        <module name="mg-zipkin" />
         <module name="mg-compose-auth" />
-        <module name="oauth-server" />
         <module name="mg-zuul" />
         <module name="mg-node-sys" />
         <module name="mg-common-node" />
         <module name="mg-compose-command" />
-        <module name="demo.empty" />
-        <module name="mg-common-compose" />
-        <module name="auth" />
+        <module name="mg-txlcn-tm" />
+        <module name="mg-node-user" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-compose-uauth" />
-        <module name="demo.lock" />
-        <module name="mg-auth" />
-        <module name="boot.empty" />
-        <module name="mg-common-basic" />
-        <module name="mg-node-user" />
-        <module name="demo.empty (1)" />
-        <module name="mg-node-mgmybatis" />
         <module name="mg-website-uauth" />
-        <module name="mg-zuul (1)" />
         <module name="mg-eurake" />
+        <module name="mg-common-basic" />
+        <module name="mg-common-compose" />
         <module name="mg-config" />
-        <module name="mg-zipkin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="auth" target="1.8" />
-      <module name="boot.empty" target="1.8" />
       <module name="build" target="1.8" />
-      <module name="demo.daily" target="1.8" />
-      <module name="demo.empty" target="1.8" />
-      <module name="demo.empty (1)" target="1.8" />
-      <module name="demo.lock" target="1.8" />
-      <module name="general" target="1.8" />
-      <module name="mg" target="1.8" />
-      <module name="mg-auth" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
       <module name="mg-common" target="1.8" />
       <module name="mg-common-basic" target="1.8" />
       <module name="mg-common-compose" target="1.8" />
-      <module name="mg-common-dao" target="1.8" />
       <module name="mg-common-node" target="1.8" />
       <module name="mg-common-website" target="1.8" />
       <module name="mg-compose" target="1.8" />
       <module name="mg-compose-auth" target="1.8" />
       <module name="mg-compose-command" target="1.8" />
-      <module name="mg-compose-configure" target="1.8" />
-      <module name="mg-compose-matao" target="1.8" />
-      <module name="mg-compose-uauth" target="1.8" />
       <module name="mg-compose-uums" target="1.8" />
       <module name="mg-config" target="1.8" />
-      <module name="mg-config (1)" target="1.8" />
-      <module name="mg-dao" target="1.8" />
-      <module name="mg-empty" target="1.8" />
       <module name="mg-eurake" target="1.8" />
-      <module name="mg-eurake (1)" target="1.8" />
       <module name="mg-general" target="1.8" />
-      <module name="mg-knowledge" target="1.8" />
       <module name="mg-node" target="1.8" />
-      <module name="mg-node-matao" target="1.8" />
       <module name="mg-node-mgmybatis" target="1.8" />
       <module name="mg-node-sys" target="1.8" />
       <module name="mg-node-user" target="1.8" />
       <module name="mg-root" target="1.8" />
-      <module name="mg-security" target="1.8" />
-      <module name="mg-service-compose" target="1.8" />
-      <module name="mg-service-node" target="1.8" />
+      <module name="mg-txlcn-tm" target="1.8" />
       <module name="mg-website" target="1.8" />
       <module name="mg-website-deploy" target="1.8" />
-      <module name="mg-website-matao" target="1.8" />
       <module name="mg-website-uauth" target="1.8" />
-      <module name="mg-website-uauth (1)" target="1.8" />
-      <module name="mg-website-vms" target="1.8" />
       <module name="mg-zipkin" target="1.8" />
       <module name="mg-zuul" target="1.8" />
-      <module name="mg-zuul (1)" target="1.8" />
-      <module name="oauth-server" target="1.8" />
-      <module name="txlcn-demo-tm" target="1.8" />
-      <module name="zipkin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="auth" options="-parameters" />
-      <module name="boot.empty" options="-parameters" />
       <module name="build" options="-parameters" />
-      <module name="demo.daily" options="-parameters" />
-      <module name="demo.empty" options="-parameters" />
-      <module name="demo.empty (1)" options="-parameters" />
-      <module name="demo.lock" options="-parameters" />
-      <module name="general" options="-parameters" />
-      <module name="mg-auth" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />
-      <module name="mg-common-dao" options="-parameters" />
       <module name="mg-common-node" options="-parameters" />
       <module name="mg-common-website" options="-parameters" />
       <module name="mg-compose-auth" options="-parameters" />
       <module name="mg-compose-command" options="-parameters" />
-      <module name="mg-compose-configure" options="-parameters" />
-      <module name="mg-compose-matao" options="-parameters" />
-      <module name="mg-compose-uauth" options="-parameters" />
       <module name="mg-compose-uums" options="-parameters" />
       <module name="mg-config" options="-parameters" />
-      <module name="mg-config (1)" options="-parameters" />
-      <module name="mg-dao" options="-parameters" />
-      <module name="mg-empty" options="-parameters" />
       <module name="mg-eurake" options="-parameters" />
-      <module name="mg-eurake (1)" options="-parameters" />
-      <module name="mg-knowledge" options="-parameters" />
-      <module name="mg-node" options="-parameters" />
-      <module name="mg-node-matao" options="-parameters" />
       <module name="mg-node-mgmybatis" options="-parameters" />
       <module name="mg-node-sys" options="-parameters" />
       <module name="mg-node-user" options="-parameters" />
-      <module name="mg-security" options="-parameters" />
-      <module name="mg-service-compose" options="-parameters" />
-      <module name="mg-service-node" options="-parameters" />
+      <module name="mg-txlcn-tm" options="-parameters" />
       <module name="mg-website-deploy" options="-parameters" />
-      <module name="mg-website-matao" options="-parameters" />
       <module name="mg-website-uauth" options="-parameters" />
-      <module name="mg-website-uauth (1)" options="-parameters" />
-      <module name="mg-website-vms" options="-parameters" />
       <module name="mg-zipkin" options="-parameters" />
       <module name="mg-zuul" options="-parameters" />
-      <module name="mg-zuul (1)" options="-parameters" />
-      <module name="oauth-server" options="-parameters" />
-      <module name="txlcn-demo-tm" options="-parameters" />
-      <module name="zipkin" options="-parameters" />
     </option>
   </component>
 </project>

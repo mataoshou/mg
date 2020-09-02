@@ -3,16 +3,17 @@ package com.mg.node.pojo.dto;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 public class InSysSiteDto {
     private Long id;
 
-    private String sitename;
+    private String siteName;
 
     private String password;
 
-    private String displayname;
+    private Integer siteType;
 
-    private Integer sitetype;
 }
