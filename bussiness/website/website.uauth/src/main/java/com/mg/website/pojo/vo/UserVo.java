@@ -6,10 +6,8 @@ import org.dozer.Mapping;
 @Data
 public class UserVo {
 
-    @Mapping("name")
-    private String sname;
-    @Mapping("id")
-    private int sid;
+    private String username;
+    private String password;
 
 
 }

@@ -1,5 +1,7 @@
 package com.mg.common.pojo;
 
+import com.mg.common.constant.ResultItemEnum;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +67,7 @@ public class ResultItem<T> {
         this.data = data;
     }
 
-    public T get()
+    public T toItem()
     {
         if(this.data==null||this.data.size()==0)return null;
         return this.data.get(0);
@@ -76,5 +78,14 @@ public class ResultItem<T> {
         if(this.data==null||this.data.size()==0)return null;
         return this.data;
     }
+
+//    private static boolean check(ResultItem item)
+//    {
+//        if(item.getCode().equals(ResultItemEnum.RESULT_ENUM_SUCCESS))
+//        {
+//            return true;
+//        }
+//
+//    }
 
 }

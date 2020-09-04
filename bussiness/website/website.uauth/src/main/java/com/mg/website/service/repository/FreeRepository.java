@@ -17,7 +17,14 @@ public class FreeRepository {
 
    
    public ResultItem login(InUserDto item) throws Exception{
-      ResultItem result =  feign.login(item);
+
+      item.setClient_id("website");
+      item.setClient_secret("123456");
+      item.setGrant_type("password");
+
+      ResultItem result = feign.login(item.getClient_id(),item.getClient_secret(),item.getGrant_type(),
+              item.getUsername(),item.getPassword());
+//      ResultItem result = feign.login(item);
       return result;
    }
 

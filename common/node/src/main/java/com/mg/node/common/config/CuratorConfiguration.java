@@ -29,19 +29,19 @@ public class CuratorConfiguration {
     @Bean(initMethod = "start")
     public CuratorFramework curatorFramework() {
         System.out.println(".....get CuratorFramework");
-//        return CuratorFrameworkFactory.newClient(
-//                this.connectString,
-//                this.sessionTimeoutMs,
-//                this.connectionTimeoutMs,
-//                new RetryNTimes(this.retryCount, this.elapsedTimeMs));
+        return CuratorFrameworkFactory.newClient(
+                this.connectString,
+                this.sessionTimeoutMs,
+                this.connectionTimeoutMs,
+                new RetryNTimes(this.retryCount, this.elapsedTimeMs));
 
 
-        CuratorFramework framework= CuratorFrameworkFactory.newClient(
-                "10.0.127.235:2181",
-                5000,
-                5000,
-                new RetryNTimes(3, 1000));
-//        framework.start();
-        return framework;
+//        CuratorFramework framework= CuratorFrameworkFactory.newClient(
+//                "10.0.127.235:2181",
+//                5000,
+//                5000,
+//                new RetryNTimes(3, 1000));
+////        framework.start();
+//        return framework;
     }
 }

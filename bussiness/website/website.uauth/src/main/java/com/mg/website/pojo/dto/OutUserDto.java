@@ -5,6 +5,8 @@ import lombok.Data;
 @Data
 public class OutUserDto {
 
-    private String name;
-    private int id;
+    private String access_token;
+    private String token_type;
+    private String refresh_token;
+    private long userId;
 }

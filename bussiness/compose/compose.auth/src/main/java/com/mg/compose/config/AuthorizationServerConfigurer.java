@@ -8,6 +8,7 @@ import com.mg.common.util.ResultItemUtil;
 import com.mg.compose.pojo.dto.InSysSiteDto;
 import com.mg.compose.pojo.dto.OutSysSiteDto;
 import com.mg.compose.service.feign.SysFeign;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -122,26 +123,24 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
     @Bean
     public ClientDetailsService clientDetails() {
         return new ClientDetailsService() {
+            @SneakyThrows
             @Override
             public ClientDetails loadClientByClientId(String s) throws ClientRegistrationException {
 
-                try {
+                BaseClientDetails details = new BaseClientDetails();
 
-                    InSysSiteDto dto = new InSysSiteDto();
-                    dto.setSiteName(s);
-                    ResultItem<OutSysSiteDto> item = feign.getByName(dto);
-                    OutSysSiteDto sysSite = ResultItemUtil.getDate(item);
-                    if(sysSite==null)return null;
-                    BaseClientDetails details = new BaseClientDetails(sysSite.getSiteName(),null,
-                            "all,read,write","refresh_token,password,authorization_code",null);
-                    details.setClientSecret(passwordEncoder.encode(sysSite.getPassword()));
-                    details.setAccessTokenValiditySeconds(7200);
-                    return details;
-                } catch (MgApiException e) {
-                    e.printStackTrace();
-                }
-
-                return null;
+                InSysSiteDto dto = new InSysSiteDto();
+                dto.setSiteName(s);
+                Object result = feign.getByName(dto);
+                ResultItem<OutSysSiteDto> item = feign.getByName(dto);
+                OutSysSiteDto sysSite = ResultItemUtil.getDate(item);
+                if(sysSite==null)return null;
+                details = new BaseClientDetails(sysSite.getSiteName(),null,
+                        "all,read,write",
+                        "refresh_token,password,authorization_code",null);
+                details.setClientSecret(passwordEncoder.encode(sysSite.getPassword()));
+                details.setAccessTokenValiditySeconds(7200);
+                return details;
             }
         };
     }

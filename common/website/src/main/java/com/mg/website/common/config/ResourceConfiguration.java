@@ -19,7 +19,7 @@ public class ResourceConfiguration  extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/sys/**").permitAll()
+                .antMatchers("/sys/**","/free/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .headers().contentTypeOptions().disable();

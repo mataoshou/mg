@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.mg.common.pojo.ResultItem;
 import com.mg.compose.constant.feign.SysFeignConstant;
 
-@FeignClient(name = SysFeignConstant.FEIGN_SERVER_NAME,fallback = SysFeignFallBack.class)
+@FeignClient(name = SysFeignConstant.FEIGN_SERVER_NAME,fallbackFactory = SysFeignFallbackFactory.class)
 public interface SysFeign {
 
    @RequestMapping(SysFeignConstant.FEIGN_GET)
-    ResultItem<OutSysSiteDto> getByName(InSysSiteDto item);
+   ResultItem<OutSysSiteDto> getByName(InSysSiteDto item);
 
 }

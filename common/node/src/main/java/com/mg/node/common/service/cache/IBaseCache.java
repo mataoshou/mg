@@ -113,7 +113,7 @@ public abstract class IBaseCache<PoPOJO>{
         PoPOJO pojo = util.get(item,cl);
         if(pojo==null)
         {
-            pojo = getPojoByDB(key).get();
+            pojo = getPojoByDB(key).toItem();
 
         }
         return pojo;

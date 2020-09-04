@@ -10,13 +10,7 @@ public class ResultItemUtil {
     public static  <T> T getDate(ResultItem<T> item) throws MgApiException {
         if(check(item))
         {
-            if(item.getData()!=null&&item.getData().size()>0)
-            {
-                return item.getData().get(0);
-            }
-            else {
-                return null;
-            }
+                return item.toItem();
         }
         else{
             throw new MgApiException(item.getCode(),item.getMsg());

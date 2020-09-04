@@ -8,7 +8,8 @@ import com.mg.node.constant.feign.SysConfigFeignConstant;
 import com.mg.node.pojo.dto.InSysConfigDto;
 import com.mg.node.pojo.dto.OutSysConfigDto;
 
-@FeignClient(name = SysConfigFeignConstant.FEIGN_SERVER_NAME,fallback = SysConfigFeignFallBack.class)
+@FeignClient(name = SysConfigFeignConstant.FEIGN_SERVER_NAME,
+        fallbackFactory =  SysConfigFeignFallbackFactory.class)
 public interface SysConfigFeign {
 
    @RequestMapping(SysConfigFeignConstant.FEIGN_GET)

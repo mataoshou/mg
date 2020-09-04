@@ -8,6 +8,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class OutSysSiteDto {
+
     private Long id;
 
     private String siteName;
@@ -19,4 +20,5 @@ public class OutSysSiteDto {
     private Integer siteType;
 
     private Date timeCreated;
+
 }

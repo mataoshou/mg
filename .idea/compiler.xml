@@ -20,6 +20,7 @@
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
         <module name="mg-config" />
+        <module name="getaway" />
         <module name="mg-eurake" />
         <module name="mg-common-compose" />
         <module name="mg-common-basic" />
@@ -30,6 +31,7 @@
       <module name="build" target="1.8" />
       <module name="demo.empty" target="1.8" />
       <module name="demo.lock" target="1.8" />
+      <module name="getaway" target="1.8" />
       <module name="mg-auth" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
       <module name="mg-common" target="1.8" />
@@ -63,6 +65,7 @@
       <module name="build" options="-parameters" />
       <module name="demo.empty" options="-parameters" />
       <module name="demo.lock" options="-parameters" />
+      <module name="getaway" options="-parameters" />
       <module name="mg-auth" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />
