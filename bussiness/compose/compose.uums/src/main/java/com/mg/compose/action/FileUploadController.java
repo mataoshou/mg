@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.annotation.MultipartConfig;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Type;
 
 @RestController
 @MultipartConfig
@@ -14,7 +15,7 @@ public class FileUploadController {
 //    @CrossOrigin(origins="*")
 
     @RequestMapping(value="/upload",method=RequestMethod.POST)
-    public String upload(@RequestParam("file") MultipartFile file)
+    public String upload(@RequestParam("file") MultipartFile file, @RequestParam("type")String type)
     {
 //        StandardMultipartHttpServletRequest.StandardMultipartFile cf = (CommonsMultipartFile) file;
 //

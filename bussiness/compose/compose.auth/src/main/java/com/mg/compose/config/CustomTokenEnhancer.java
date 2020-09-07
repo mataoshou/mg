@@ -1,6 +1,7 @@
 package com.mg.compose.config;
 
 import com.mg.compose.pojo.bo.UserBo;
+import com.mg.compose.pojo.dto.OutUserDto;
 import com.mg.compose.service.feign.UserFeign;
 import com.mg.compose.service.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -23,13 +24,11 @@ public class CustomTokenEnhancer implements TokenEnhancer {
     @Override
     public OAuth2AccessToken enhance(OAuth2AccessToken oAuth2AccessToken, OAuth2Authentication oAuth2Authentication) {
 
-
-
         try {
             User user = (User) oAuth2Authentication.getPrincipal();
-            UserBo bo = repository.getByName(user.getUsername());
+            UserBo dto = repository.getByName(user.getUsername());
             Map<String, Object> additionalInfo = new HashMap<>();
-            additionalInfo.put("userId", bo.getId());
+            additionalInfo.put("userId", dto.getId());
             ((DefaultOAuth2AccessToken) oAuth2AccessToken).setAdditionalInformation(
                     additionalInfo);
             return oAuth2AccessToken;

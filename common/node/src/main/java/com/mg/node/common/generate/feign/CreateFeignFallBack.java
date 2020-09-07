@@ -22,7 +22,9 @@ public class CreateFeignFallBack extends ICreate {
 
     @Override
     protected void createPre(ClassUnit unit) throws IOException {
-
+        unit.addPreContent("String msg =\"\";");
+        unit.addPreContent(String.format("public %s(String msg) { this.msg = msg; }",unit.getName()));
+        unit.addPreContent(String.format("public %s() { this.msg = \"未添加异常提示！！\"; }",unit.getName()));
     }
 
     @Override
@@ -40,7 +42,7 @@ public class CreateFeignFallBack extends ICreate {
         unit.setDecorate("public");
 
 
-        unit.addTabContent(String.format("return fail(%s.FEIGN_SERVER_NAME);", constantClassName));
+        unit.addTabContent(String.format("return fail(%s.FEIGN_SERVER_NAME,msg);", constantClassName));
     }
 
     @Override

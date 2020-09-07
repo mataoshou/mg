@@ -1,17 +1,19 @@
-//package com.mg.node.common.generate.cache;
-//
-//import com.mg.base.common.create.cache.CacheMakeUp;
-//import com.mg.base.common.create.ibase.IFactory;
-//
-//public class CacheFactory extends IFactory<CacheMakeUp> {
-//    public CacheFactory(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
-//        super(name, toolClass, pojoClass, methods, sysName);
-//    }
-//
-//
-//    @Override
-//    public CacheMakeUp setMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
-//        return new CacheMakeUp(name,toolClass,pojoClass,methods,sysName);
-//    }
-//
-//}
+package com.mg.node.common.generate.cache;
+
+import com.mg.common.iservice.ibasic.IFactory;
+import com.mg.node.common.generate.action.ActionMakeUp;
+
+public class CacheFactory extends IFactory {
+    public CacheFactory(String name, String pojoClass, String dtoClass) {
+        try {
+            addMakeUp(new CacheMakeUp(name,
+                    Class.forName(pojoClass),
+                    Class.forName(dtoClass)));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+}

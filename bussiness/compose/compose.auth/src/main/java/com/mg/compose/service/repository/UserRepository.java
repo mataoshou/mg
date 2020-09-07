@@ -3,6 +3,7 @@ package com.mg.compose.service.repository;
 import com.mg.common.util.ResultItemUtil;
 import com.mg.compose.common.mapper.GeneralMapper;
 import com.mg.compose.pojo.bo.UserBo;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 import com.mg.compose.pojo.dto.InUserDto;
 import lombok.extern.slf4j.Slf4j;
@@ -17,16 +18,15 @@ import java.util.List;
 public class UserRepository {
    @Autowired
    UserFeign feign;
-
    @Autowired
    GeneralMapper mapper;
    
-   public UserBo getByName(String name) throws Exception{
-      InUserDto indto = new InUserDto();
-      indto.setName(name);
-      ResultItem<OutUserDto> result =  feign.getByName(indto);
-      OutUserDto user  = ResultItemUtil.getDate(result);
-      UserBo bo = mapper.convert(user,UserBo.class);
+   public UserBo getByName(String userName) throws Exception{
+      InUserDto dto = new InUserDto();
+      dto.setName(userName);
+      ResultItem<OutUserDto> result =  feign.getByName(dto);
+      OutUserDto outUserDto = ResultItemUtil.getDate(result);
+      UserBo bo = mapper.convert(outUserDto,UserBo.class);
       return bo;
    }
 

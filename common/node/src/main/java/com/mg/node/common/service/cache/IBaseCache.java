@@ -19,7 +19,7 @@ import java.util.List;
  * @param <PoPOJO>
  */
 @Slf4j
-public abstract class IBaseCache<PoPOJO>{
+public abstract class IBaseCache<PoPOJO,IdType>{
 
 
     @Autowired
@@ -49,39 +49,39 @@ public abstract class IBaseCache<PoPOJO>{
     }
 
 
+    private Class<PoPOJO> pojoCl;
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////  自定义区域  ////////////////////////////////////////////////////////////
-    /**
-     * 检查是否更新缓存
-     * @param key
-     * @return
-     */
-    protected abstract boolean check(String key);
 
 
-
-    /**
-     * 更新缓存前，需要更新数据库的数据
-     * @param pojo
-     * @return
-     */
-    protected abstract ResultItem<PoPOJO> updatePojo(String pojo,PoPOJO dtoPOJO);
+//    /**
+//     * 缓存中没有数据，从数据库中获取 单个数据
+//     * @return
+//     */
+//    protected abstract PoPOJO getPojo(String id);
 
 
     /**
      * 缓存中没有数据，从数据库中获取 单个数据
      * @return
      */
-    protected abstract ResultItem<PoPOJO> getPojoByDB(String id);
-
+    protected abstract PoPOJO getPojo(IdType id);
 
     /**
      * 缓存中没有数据，从数据库中获取 单个数据
      * @return
      */
-    protected abstract ResultItem<PoPOJO> deletePojoByDB(String id);
+    protected abstract PoPOJO updatePojo(PoPOJO pojo);
+
+    /**
+     * 缓存中没有数据，从数据库中获取 单个数据
+     * @return
+     */
+    protected abstract PoPOJO deletePojo(IdType id);
+
+    public abstract IdType getId(PoPOJO pojo);
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -91,10 +91,11 @@ public abstract class IBaseCache<PoPOJO>{
     /**
      * 设置修饰词
      */
-    protected void setCacheDecorate(String _cachePre,String _cacheLast)
+    protected void setCacheDecorate(String _cachePre,String _cacheLast,Class<PoPOJO> pojoClass)
     {
         this.cachePre =_cachePre;
         this.cacheLast = _cacheLast;
+        this.pojoCl = pojoClass;
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -107,13 +108,13 @@ public abstract class IBaseCache<PoPOJO>{
      *获取缓存数据
      * 私有方法，不对外开放
      */
-    private PoPOJO get(String key,Class<PoPOJO> cl) throws Exception {
+    public PoPOJO get(IdType key) throws Exception {
         String item = getKey(key);
 
-        PoPOJO pojo = util.get(item,cl);
+        PoPOJO pojo = util.get(item,pojoCl);
         if(pojo==null)
         {
-            pojo = getPojoByDB(key).toItem();
+            pojo = getPojo(key);
 
         }
         return pojo;
@@ -126,12 +127,12 @@ public abstract class IBaseCache<PoPOJO>{
      * @return
      * @throws Exception
      */
-    public final List<PoPOJO> getListCache(List<String> ukeys,Class<PoPOJO> cl) throws Exception {
+    public final List<PoPOJO> getListCache(List<IdType> ukeys) throws Exception {
 
         List<PoPOJO> list = new ArrayList();
-        for(String ukey:ukeys)
+        for(IdType ukey:ukeys)
         {
-            list.add(get(ukey,cl));
+            list.add(get(ukey));
         }
         return list;
     }
@@ -140,7 +141,7 @@ public abstract class IBaseCache<PoPOJO>{
         /**
      * 删除单个pojo的缓存
      */
-    private void delete(String key,boolean synDB) throws Exception {
+    private void delete(IdType key,boolean synDB) throws Exception {
         deleteListKeys();
         String rkey = getKey(key);
         util.delete(rkey);
@@ -153,7 +154,7 @@ public abstract class IBaseCache<PoPOJO>{
     /**
      * 删除单个pojo的缓存
      */
-    public final void delete(String key) throws Exception {
+    public final void delete(IdType key) throws Exception {
         delete(key,true);
     }
 
@@ -161,7 +162,7 @@ public abstract class IBaseCache<PoPOJO>{
      * 删除所有列表数据的缓存
      * 私有方法，不对外开放
      */
-    private  void deleteListKeys()
+    private void deleteListKeys()
     {
         String keyPattern =  cachePre + "." + list_sign +"*";
         log.info("清理列表数据：" + keyPattern);
@@ -172,10 +173,9 @@ public abstract class IBaseCache<PoPOJO>{
      * 更新缓存 删除数据,然后更新数据
      * @return
      */
-    public final PoPOJO update(String key,PoPOJO pojo,boolean synDB) throws Exception {
-        delete(key,false);
-
-        return  setCache(key,pojo,true);
+    public final PoPOJO update(PoPOJO pojo) throws Exception {
+        delete(getId(pojo));
+        return setCache(getId(pojo),pojo);
     }
 
 
@@ -184,7 +184,7 @@ public abstract class IBaseCache<PoPOJO>{
     /**
      *缓存单个pojo数据
      */
-    public final PoPOJO setCache(String key, PoPOJO pojo , boolean synDB)throws Exception{
+    public final PoPOJO setCache(IdType key, PoPOJO pojo )throws Exception{
 
         String uKey = getKey(key);
 
@@ -234,12 +234,12 @@ public abstract class IBaseCache<PoPOJO>{
     //////////////////////////////////////////////辅助方法///////////////////////////////////////////////////////////
     /**
      * 获取单个缓存数据
-     * @param guid
+     * @param id
      * @return
      * @throws Exception
      */
-    public String getKey(String guid) throws Exception {
-        return util.createCacheKey(cachePre,pojo_sign,cacheLast,guid);
+    public String getKey(IdType id) throws Exception {
+        return util.createCacheKey(cachePre,pojo_sign,cacheLast,String.valueOf(id));
     }
 
 }

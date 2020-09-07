@@ -1,7 +1,7 @@
 package com.mg.compose.action; 
 
 import com.mg.compose.pojo.dto.InSysConfigDto;
-import com.mg.compose.pojo.dto.InSysConfigDto;
+import com.mg.compose.pojo.dto.OutSysConfigDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;

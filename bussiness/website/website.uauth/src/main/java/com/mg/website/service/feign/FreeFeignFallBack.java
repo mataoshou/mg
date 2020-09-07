@@ -16,12 +16,12 @@ public class FreeFeignFallBack implements FreeFeign,BaseFallBack {
    
    public ResultItem<OutUserDto> login(String client_id, String client_secret, String grant_type,
                                            String username, String password){
-      return fail(FreeFeignConstant.FEIGN_SERVER_NAME);
+      return fail(FreeFeignConstant.FEIGN_SERVER_NAME,"");
    }
 
    @Override
    public ResultItem<OutUserDto> login(InUserDto dto) {
-      return fail(FreeFeignConstant.FEIGN_SERVER_NAME);
+      return fail(FreeFeignConstant.FEIGN_SERVER_NAME,"");
    }
 
 }

@@ -21,13 +21,17 @@ public class SysSiteController {
    public ResultItem get(@RequestBody InSysSiteDto dtoData) throws Exception{
       return repository.get(dtoData);
    }
-   @RequestMapping(SysSiteControllerConstant.ACTION_EDIT)
-   public ResultItem edit(@RequestBody InSysSiteDto dtoData) throws Exception{
-      return repository.edit(dtoData);
+   @RequestMapping(SysSiteControllerConstant.ACTION_INSERT)
+   public ResultItem insert(@RequestBody InSysSiteDto dtoData) throws Exception{
+      return repository.insert(dtoData);
    }
    @RequestMapping(SysSiteControllerConstant.ACTION_LIST)
    public ResultItem list(@RequestBody InSysSiteDto dtoData) throws Exception{
       return repository.list(dtoData);
+   }
+   @RequestMapping(SysSiteControllerConstant.ACTION_UPDATE)
+   public ResultItem update(@RequestBody InSysSiteDto dtoData) throws Exception{
+      return repository.update(dtoData);
    }
    @RequestMapping(SysSiteControllerConstant.ACTION_DELETE)
    public ResultItem delete(@RequestBody InSysSiteDto dtoData) throws Exception{
@@ -37,6 +41,5 @@ public class SysSiteController {
    public ResultItem getByName(@RequestBody InSysSiteDto dtoData) throws Exception{
       return repository.getByName(dtoData);
    }
-
 
 }

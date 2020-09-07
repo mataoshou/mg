@@ -1,7 +1,7 @@
 package com.mg.node.action; 
 
 import com.mg.node.pojo.dto.InUserDto;
-import com.mg.node.pojo.dto.OutUserDto;
+import com.mg.node.pojo.dto.InUserDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,17 +21,13 @@ public class UserController {
    public ResultItem get(@RequestBody InUserDto dtoData) throws Exception{
       return repository.get(dtoData);
    }
-   @RequestMapping(UserControllerConstant.ACTION_INSERT)
-   public ResultItem insert(@RequestBody InUserDto dtoData) throws Exception{
-      return repository.insert(dtoData);
+   @RequestMapping(UserControllerConstant.ACTION_EDIT)
+   public ResultItem edit(@RequestBody InUserDto dtoData) throws Exception{
+      return repository.edit(dtoData);
    }
    @RequestMapping(UserControllerConstant.ACTION_LIST)
    public ResultItem list(@RequestBody InUserDto dtoData) throws Exception{
       return repository.list(dtoData);
-   }
-   @RequestMapping(UserControllerConstant.ACTION_UPDATE)
-   public ResultItem update(@RequestBody InUserDto dtoData) throws Exception{
-      return repository.update(dtoData);
    }
    @RequestMapping(UserControllerConstant.ACTION_DELETE)
    public ResultItem delete(@RequestBody InUserDto dtoData) throws Exception{
@@ -41,7 +37,5 @@ public class UserController {
    public ResultItem getByName(@RequestBody InUserDto dtoData) throws Exception{
       return repository.getByName(dtoData);
    }
-
-
 
 }

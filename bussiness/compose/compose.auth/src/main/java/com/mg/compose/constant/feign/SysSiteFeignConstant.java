@@ -2,9 +2,9 @@ package com.mg.compose.constant.feign;
 
 
 
-public class SysFeignConstant {
+public class SysSiteFeignConstant {
    public static final String FEIGN_SERVER_NAME ="mg-node-sys";
 
-   public static final String FEIGN_GET ="/SysSite/getByName";
+   public static final String FEIGN_GETBYNAME ="/sysSite/getByName";
 
 }

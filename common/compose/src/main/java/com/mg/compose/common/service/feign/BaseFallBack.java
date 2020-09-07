@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory;
 
 public interface BaseFallBack {
 
-    default ResultItem fail(String serverName) {
+    default ResultItem fail(String serverName,String msg) {
         Logger logger = LoggerFactory.getLogger(this.getClass());
         logger.info(String.format("[%s]服务访问失败！！",serverName ));
 
-        return new ResultItem(-1,String.format("[%s]服务访问失败！！",serverName ));
+        return new ResultItem(-1,String.format("[%s]服务访问失败[%s]",serverName,msg ));
     }
 }

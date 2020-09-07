@@ -8,7 +8,7 @@ import com.mg.compose.constant.feign.SysSiteFeignConstant;
 import com.mg.compose.pojo.dto.InSysSiteDto;
 import com.mg.compose.pojo.dto.OutSysSiteDto;
 
-@FeignClient(name = SysSiteFeignConstant.FEIGN_SERVER_NAME,fallback = SysSiteFeignFallBack.class)
+@FeignClient(name = SysSiteFeignConstant.FEIGN_SERVER_NAME,fallbackFactory = SysSiteFeignFallBackFactory.class)
 public interface SysSiteFeign {
 
    @RequestMapping(SysSiteFeignConstant.FEIGN_GET)

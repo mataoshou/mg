@@ -1,5 +1,6 @@
 package com.mg.node.dao; 
 
+import com.mg.node.db.sql.pojo.MTdSysSite;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.mg.node.db.sql.pojo.MTdSysConfig;
@@ -12,12 +13,13 @@ public class SysConfigDAO {
    @Autowired
    private IGeneralMapper<MTdSysConfig> mapper;
    
-   public MTdSysConfig getById(Long id){
+
+   
+   public MTdSysConfig get(Long id){
       return mapper.getById(id);
    }
    
-   public MTdSysConfig edit(MTdSysConfig item) throws Exception {
-      long no = mapper.insertItem(item);
+   public MTdSysConfig insert(MTdSysConfig item){
       return null;
    }
    
@@ -25,10 +27,19 @@ public class SysConfigDAO {
       return mapper.listByWhere(null,null);
    }
    
+   public MTdSysConfig update(MTdSysConfig item){
+      return null;
+   }
+   
    public boolean delete(Long id){
       int count = mapper.deleteById(id);
       if(count>0) { return true; }
       return false;
+   }
+   
+   public MTdSysConfig getByName(String name){
+      MTdSysConfig config = mapper.getBySingleParam("configName",name);
+      return config;
    }
 
 }

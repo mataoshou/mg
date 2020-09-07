@@ -11,22 +11,25 @@ import com.mg.compose.pojo.dto.OutSysSiteDto;
 @Component
 @Slf4j
 public class SysSiteFeignFallBack implements SysSiteFeign,BaseFallBack {
+   String msg ="";
+   public SysSiteFeignFallBack(String msg) { this.msg = msg; }
+   public SysSiteFeignFallBack() { this.msg = "未添加异常提示！！"; }
 
    
    public ResultItem<OutSysSiteDto> get(InSysSiteDto item){
-      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME);
+      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME,msg);
    }
    
    public ResultItem<OutSysSiteDto> edit(InSysSiteDto item){
-      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME);
+      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME,msg);
    }
    
    public ResultItem<OutSysSiteDto> list(InSysSiteDto item){
-      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME);
+      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME,msg);
    }
    
    public ResultItem<OutSysSiteDto> delete(InSysSiteDto item){
-      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME);
+      return fail(SysSiteFeignConstant.FEIGN_SERVER_NAME,msg);
    }
 
 }

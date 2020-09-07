@@ -7,5 +7,6 @@ public class FeignMakeUp extends IMakeUpBase {
         add(new CreateFeign(name,methods,incl,outcl));
         add(new CreateFeignConstant(name,methods,sysName));
         add(new CreateFeignFallBack(name,methods,incl,outcl));
+        add(new CreateFeignFallBackFactory(name));
     }
 }

@@ -1,6 +1,8 @@
 spring:
   application: 
     name: mg-website-uauth
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     config:
       profile: dev

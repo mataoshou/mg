@@ -1,6 +1,5 @@
 package com.mg.node.service.repository; 
 
-import com.mg.node.dao.SysSiteDAO;
 import org.springframework.stereotype.Service;
 import com.mg.node.pojo.dto.OutSysConfigDto;
 import com.mg.node.pojo.dto.InSysConfigDto;
@@ -18,26 +17,19 @@ import java.util.List;
 public class SysConfigRepository {
    @Autowired
    SysConfigDAO dao;
-
-   @Autowired
-   SysSiteDAO sysSiteDAO;
-
    @Autowired
    GeneralMapper mapper;
 
    
    public ResultItem get(InSysConfigDto item) throws Exception{
-      MTdSysConfig pojo = dao.getById(item.getId());
+      MTdSysConfig pojo = dao.get(item.getId());
       OutSysConfigDto dto = mapper.convert(pojo,OutSysConfigDto.class);
-      mapper.convertor(sysSiteDAO.getById(dto.getId()),dto);
       ResultItem result =  new ResultItem<OutSysConfigDto>(dto);
       return result;
    }
    
-   public ResultItem edit(InSysConfigDto item) throws Exception{
-      MTdSysConfig pojo = mapper.convert(item,MTdSysConfig.class);
-      ResultItem result = new ResultItem<OutSysConfigDto>(mapper.convert(dao.edit(pojo),OutSysConfigDto.class));
-      return result;
+   public ResultItem insert(InSysConfigDto item) throws Exception{
+      return null;
    }
    
    public ResultItem list(InSysConfigDto item) throws Exception{
@@ -46,9 +38,20 @@ public class SysConfigRepository {
       return result;
    }
    
+   public ResultItem update(InSysConfigDto item) throws Exception{
+      return null;
+   }
+   
    public ResultItem delete(InSysConfigDto item) throws Exception{
       dao.delete(item.getId());
       ResultItem result = new ResultItem();
+      return result;
+   }
+   
+   public ResultItem getByName(InSysConfigDto item) throws Exception{
+      MTdSysConfig pojo = dao.getByName(item.getConfigName());
+      OutSysConfigDto dto = mapper.convert(pojo,OutSysConfigDto.class);
+      ResultItem result =  new ResultItem<OutSysConfigDto>(dto);
       return result;
    }
 

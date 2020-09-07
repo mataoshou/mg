@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableEurekaClient
 @EnableAsync
 @EnableFeignClients
-@EnableDistributedTransaction
+//@EnableDistributedTransaction
 public class ComposeUumsApplication {
 
     public static void main(String[] args) {

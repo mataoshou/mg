@@ -8,17 +8,17 @@ import lombok.Setter;
 public class InSysConfigDto {
     private Long id;
 
-    private String name;
+    private String configName;
 
-    private Integer showtype;
+    private Integer showType;
 
-    private Integer controltype;
+    private Integer controlType;
 
-    private String value;
+    private String configValue;
 
-    private String datasource;
+    private String dataSource;
 
     private String description;
 
-    private Long siteid;
+    private Long siteId;
 }

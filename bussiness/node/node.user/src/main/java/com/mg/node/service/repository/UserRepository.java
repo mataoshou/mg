@@ -1,7 +1,7 @@
 package com.mg.node.service.repository; 
 
 import org.springframework.stereotype.Service;
-import com.mg.node.pojo.dto.OutUserDto;
+import com.mg.node.pojo.dto.InUserDto;
 import com.mg.node.pojo.dto.InUserDto;
 import lombok.extern.slf4j.Slf4j;
 import com.mg.node.db.sql.pojo.MTdUserInfo;
@@ -23,23 +23,21 @@ public class UserRepository {
    
    public ResultItem get(InUserDto item) throws Exception{
       MTdUserInfo pojo = dao.get(item.getId());
-      OutUserDto dto = mapper.convert(pojo,OutUserDto.class);
-      ResultItem result =  new ResultItem<OutUserDto>(dto);
+      InUserDto dto = mapper.convert(pojo,InUserDto.class);
+      ResultItem result =  new ResultItem<InUserDto>(dto);
       return result;
    }
    
-   public ResultItem insert(InUserDto item) throws Exception{
-      return null;
+   public ResultItem edit(InUserDto item) throws Exception{
+      MTdUserInfo pojo = mapper.convert(item,MTdUserInfo.class);
+      ResultItem result = new ResultItem<InUserDto>(mapper.convert(dao.edit(pojo),InUserDto.class));
+      return result;
    }
    
    public ResultItem list(InUserDto item) throws Exception{
       List<MTdUserInfo> list = dao.list();
-      ResultItem result =  new ResultItem<OutUserDto>(mapper.convert(list,OutUserDto.class));
+      ResultItem result =  new ResultItem<InUserDto>(mapper.convert(list,InUserDto.class));
       return result;
-   }
-   
-   public ResultItem update(InUserDto item) throws Exception{
-      return null;
    }
    
    public ResultItem delete(InUserDto item) throws Exception{
@@ -50,12 +48,9 @@ public class UserRepository {
    
    public ResultItem getByName(InUserDto item) throws Exception{
       MTdUserInfo pojo = dao.getByName(item.getName());
-      OutUserDto dto = mapper.convert(pojo,OutUserDto.class);
-      ResultItem result =  new ResultItem<OutUserDto>(dto);
+      InUserDto dto = mapper.convert(pojo,InUserDto.class);
+      ResultItem result =  new ResultItem<InUserDto>(dto);
       return result;
    }
-
-   
-
 
 }

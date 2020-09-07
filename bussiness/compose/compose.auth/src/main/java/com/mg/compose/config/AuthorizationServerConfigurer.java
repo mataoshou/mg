@@ -7,7 +7,7 @@ import com.mg.common.pojo.ResultItem;
 import com.mg.common.util.ResultItemUtil;
 import com.mg.compose.pojo.dto.InSysSiteDto;
 import com.mg.compose.pojo.dto.OutSysSiteDto;
-import com.mg.compose.service.feign.SysFeign;
+import com.mg.compose.service.feign.SysSiteFeign;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +63,7 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
 
 
     @Autowired
-    SysFeign feign;
+    SysSiteFeign feign;
 
     /**
      * 使用密码模式需要配置

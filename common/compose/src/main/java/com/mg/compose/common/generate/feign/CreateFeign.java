@@ -42,7 +42,7 @@ public class CreateFeign extends ICreate {
 
     @Override
     protected void classInit(ClassUnit unit) {
-        String fallbackName = StringUtil.firstUpper(this.getName()) +"FeignFallBack";
+        String fallbackName = StringUtil.firstUpper(this.getName()) +"FeignFallBackFactory";
 
         unit.addImport(new String[]{
                 "lombok.extern.slf4j.Slf4j",
@@ -55,7 +55,7 @@ public class CreateFeign extends ICreate {
         });
 
         unit.setType(2);
-        unit.addAnnotion(String.format("FeignClient(name = %s.FEIGN_SERVER_NAME,fallback = %s.class)",constantClassName,fallbackName));
+        unit.addAnnotion(String.format("FeignClient(name = %s.FEIGN_SERVER_NAME,fallbackFactory = %s.class)",constantClassName,fallbackName));
     }
 
     @Override

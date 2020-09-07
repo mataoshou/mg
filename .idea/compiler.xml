@@ -8,22 +8,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="build" />
-        <module name="mg-zipkin" />
+        <module name="mg-website-uauth" />
         <module name="mg-compose-auth" />
         <module name="mg-zuul" />
         <module name="mg-node-sys" />
         <module name="mg-common-node" />
-        <module name="mg-website-uauth" />
-        <module name="mg-txlcn-tm" />
-        <module name="mg-node-user" />
         <module name="mg-compose-command" />
+        <module name="mg-txlcn-tm" />
+        <module name="mg-common-compose" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-config" />
-        <module name="getaway" />
+        <module name="boot.empty" />
+        <module name="mg-node-user" />
+        <module name="mg-gateway" />
         <module name="mg-eurake" />
-        <module name="mg-common-compose" />
         <module name="mg-common-basic" />
+        <module name="mg-config" />
+        <module name="mg-zipkin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -45,6 +46,7 @@
       <module name="mg-compose-uums" target="1.8" />
       <module name="mg-config" target="1.8" />
       <module name="mg-eurake" target="1.8" />
+      <module name="mg-gateway" target="1.8" />
       <module name="mg-general" target="1.8" />
       <module name="mg-node" target="1.8" />
       <module name="mg-node-mgmybatis" target="1.8" />
@@ -76,6 +78,7 @@
       <module name="mg-compose-uums" options="-parameters" />
       <module name="mg-config" options="-parameters" />
       <module name="mg-eurake" options="-parameters" />
+      <module name="mg-gateway" options="-parameters" />
       <module name="mg-node-mgmybatis" options="-parameters" />
       <module name="mg-node-sys" options="-parameters" />
       <module name="mg-node-user" options="-parameters" />

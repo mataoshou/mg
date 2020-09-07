@@ -3,6 +3,7 @@ package com.mg.node.common.action.sys;
 
 import com.mg.common.iservice.ibasic.IFactory;
 import com.mg.common.pojo.ResultItem;
+import com.mg.node.common.generate.cache.CacheFactory;
 import com.mg.node.common.generate.dao.DAOFactory;
 import com.mg.node.common.generate.action.ActionFactory;
 import com.mg.node.common.generate.db.DBFactory;
@@ -79,6 +80,22 @@ public class SysOperController {
 //        oper(factory,item);
 //        return new ResultItem();
 //    }
+
+    @RequestMapping("sys/oper/cache")
+    public ResultItem buildCache(@RequestBody SysItem item) throws Exception {
+
+
+        if(item==null)throw new Exception("参数为空，请检查！！");
+        if(item.getName()==null||item.getName().trim().length()==0)throw new Exception("名称为空，请检查！！");
+
+        if(item.getMethods()==null)
+        {
+            item.setOper(item.getOper().replace("，",","));
+        }
+        CacheFactory cacheFactory = new CacheFactory(item.getName(),item.getPoName(),item.getInDtoName());
+        oper(cacheFactory,item);
+        return new ResultItem();
+    }
 
 
 

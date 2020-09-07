@@ -13,7 +13,7 @@ public class SysSiteDAO {
    @Autowired
    private IGeneralMapper<MTdSysSite> mapper;
 
-   public MTdSysSite getById(Long id){
+   public MTdSysSite get(Long id){
       return mapper.getById(id);
    }
    

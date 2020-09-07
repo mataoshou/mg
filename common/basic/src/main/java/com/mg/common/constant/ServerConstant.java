@@ -10,9 +10,11 @@ public class ServerConstant {
 
     public static final String NODE_SYS = "mg-node-sys";
 
-    public static final String COMPOSE_UAUTH = "mg-compose-uauth";
+    public static final String COMPOSE_UUMS = "mg-compose-uums";
 
     public static final String COMPOSE_COMMAND = "mg-compose-command";
+
+    public static final String COMPOSE_AUTH = "mg-compose-auth";
 
     public static final String WEBSITE_UAUTH = "mg-website-uauth";
 

@@ -8,19 +8,9 @@ import com.mg.compose.constant.feign.UserFeignConstant;
 import com.mg.compose.pojo.dto.InUserDto;
 import com.mg.compose.pojo.dto.OutUserDto;
 
-@FeignClient(name = UserFeignConstant.FEIGN_SERVER_NAME,fallback = UserFeignFallBack.class)
+@FeignClient(name = UserFeignConstant.FEIGN_SERVER_NAME,fallbackFactory = UserFeignFallBackFactory.class)
 public interface UserFeign {
 
-   @RequestMapping(UserFeignConstant.FEIGN_GET)
-    ResultItem<OutUserDto> get(InUserDto item);
-   @RequestMapping(UserFeignConstant.FEIGN_INSERT)
-    ResultItem<OutUserDto> insert(InUserDto item);
-   @RequestMapping(UserFeignConstant.FEIGN_LIST)
-    ResultItem<OutUserDto> list(InUserDto item);
-   @RequestMapping(UserFeignConstant.FEIGN_UPDATE)
-    ResultItem<OutUserDto> update(InUserDto item);
-   @RequestMapping(UserFeignConstant.FEIGN_DELETE)
-    ResultItem<OutUserDto> delete(InUserDto item);
    @RequestMapping(UserFeignConstant.FEIGN_GETBYNAME)
     ResultItem<OutUserDto> getByName(InUserDto item);
 
