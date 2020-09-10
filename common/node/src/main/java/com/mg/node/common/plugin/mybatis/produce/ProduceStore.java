@@ -5,10 +5,13 @@ import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
 import com.mg.common.util.StringUtil;
 import com.mg.node.common.config.DaoConfiguration;
+import com.mg.node.common.plugin.mybatis.annotations.Column;
+import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
 import com.mg.node.common.plugin.mybatis.imp.IGeneralMapper;
 import com.mg.node.common.plugin.mybatis.template.GeneralTemplate;
 import com.mg.node.common.plugin.mybatis.template.TemplateItem;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Results;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -145,6 +148,7 @@ public class ProduceStore {
     public void addParams(ProduceItem item)
     {
         item.addParam("$tableName$", new DaoConfiguration().daoUtilsBean().getTableName(item.getPojo().getSimpleName()));
+        item.addParam("$ResultMapId$", String.format("Gemeral%sResult",item.getPojo().getSimpleName()));
     }
 
     /**
@@ -272,8 +276,11 @@ public class ProduceStore {
 
             for(Annotation annotation : annotations)
             {
-
                String annStr = buildAnnotation(annotation);
+               if(annotation instanceof Results)
+               {
+                   annStr = buildResult((Results) annotation,item.getPojo());
+               }
 
                for(Map.Entry<String,String> entry: item.getParams().entrySet())
                {
@@ -301,7 +308,7 @@ public class ProduceStore {
             unit.addMethod(methodUnit);
         }
 
-        log.debug("动态构建对象代码：" +unit.finish());
+        log.info("动态构建对象代码：" +unit.finish());
 
         JavaStringCompiler compiler = new JavaStringCompiler();
         Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());
@@ -312,10 +319,39 @@ public class ProduceStore {
         return clazz;
     }
 
+    public String buildResult(Results annotation,Class pojo)
+    {
+        String annStr ="";
+        annStr += annotation.annotationType().getName()+"(##1)";
+        Field[] fs  = pojo.getDeclaredFields();
+        String annContent = "";
+        String value = "";
+        for(Field field : fs)
+        {
+            Column ca = field.getDeclaredAnnotation(Column.class);
+            String column = field.getName();
+            String property = field.getName();
+            if(ca!=null)
+            {
+                column=ca.cloumn();
+            }
+            PrimaryId pid = field.getDeclaredAnnotation(PrimaryId.class);
+            if(pid!=null)
+            {
+                value =String.format("@org.apache.ibatis.annotations.Result(column = \"%s\",property = \"%s\" ,id=true),\n",column,property);
+            }
+            else {
+                value =String.format("@org.apache.ibatis.annotations.Result(column = \"%s\",property = \"%s\"),\n",column,property);
+            }
+            annContent= String.format("id = \"Gemeral%sResult\" ,value = {%s}",pojo.getSimpleName(),value);
+        }
+
+        return annStr.replace("##1",annContent);
+    }
+
     public String buildAnnotation(Annotation annotation)
     {
         String annStr ="";
-
         annStr += annotation.annotationType().getName()+"(##1)";
 
         Class ancl = annotation.annotationType();

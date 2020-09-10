@@ -15,7 +15,7 @@ public class OauthFeignFallBack implements OauthFeign,BaseFallBack {
    public OauthFeignFallBack() { this.msg = "未添加异常提示！！"; }
 
    @Override
-   public ResultItem<OutOauthDto> token(String client_id, String client_secret, String grant_type, String username, String password) {
+   public ResultItem token(String client_id, String client_secret, String grant_type, String username, String password) {
       return fail(OauthFeignConstant.FEIGN_SERVER_NAME,msg);
    }
 }

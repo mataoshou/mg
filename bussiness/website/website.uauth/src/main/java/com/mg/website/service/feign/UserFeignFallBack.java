@@ -16,19 +16,19 @@ public class UserFeignFallBack implements UserFeign,BaseFallBack {
    public UserFeignFallBack() { this.msg = "未添加异常提示！！"; }
 
    
-   public ResultItem<InUserDto> get(OutUserDto item){
+   public ResultItem get(OutUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME,msg);
    }
    
-   public ResultItem<InUserDto> edit(OutUserDto item){
+   public ResultItem edit(OutUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME,msg);
    }
    
-   public ResultItem<InUserDto> list(OutUserDto item){
+   public ResultItem list(OutUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME,msg);
    }
    
-   public ResultItem<InUserDto> delete(OutUserDto item){
+   public ResultItem delete(OutUserDto item){
       return fail(UserFeignConstant.FEIGN_SERVER_NAME,msg);
    }
 

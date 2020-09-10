@@ -3,6 +3,7 @@ package com.mg.node.action;
 import com.mg.node.pojo.dto.InSysSiteDto;
 import com.mg.node.pojo.dto.OutSysSiteDto;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,11 @@ import com.mg.common.pojo.ResultItem;
 public class SysSiteController {
    @Autowired
    SysSiteRepository repository;
+
+   @RequestMapping("/sysSite/get1")
+   public ResultItem get(@RequestParam("id") Long id) throws Exception{
+      return repository.get1(id);
+   }
 
    @RequestMapping(SysSiteControllerConstant.ACTION_GET)
    public ResultItem get(@RequestBody InSysSiteDto dtoData) throws Exception{

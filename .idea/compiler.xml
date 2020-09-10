@@ -19,13 +19,14 @@
         <module name="mg-compose-command" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-config" />
         <module name="boot.empty" />
         <module name="mg-node-user" />
         <module name="mg-gateway" />
         <module name="mg-eurake" />
-        <module name="nacos" />
         <module name="mg-common-basic" />
+        <module name="nacos" />
+        <module name="mg-nacos" />
+        <module name="mg-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -49,6 +50,7 @@
       <module name="mg-eurake" target="1.8" />
       <module name="mg-gateway" target="1.8" />
       <module name="mg-general" target="1.8" />
+      <module name="mg-nacos" target="1.8" />
       <module name="mg-node" target="1.8" />
       <module name="mg-node-mgmybatis" target="1.8" />
       <module name="mg-node-sys" target="1.8" />
@@ -81,6 +83,7 @@
       <module name="mg-config" options="-parameters" />
       <module name="mg-eurake" options="-parameters" />
       <module name="mg-gateway" options="-parameters" />
+      <module name="mg-nacos" options="-parameters" />
       <module name="mg-node-mgmybatis" options="-parameters" />
       <module name="mg-node-sys" options="-parameters" />
       <module name="mg-node-user" options="-parameters" />

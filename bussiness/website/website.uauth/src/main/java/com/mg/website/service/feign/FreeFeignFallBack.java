@@ -13,13 +13,13 @@ import com.mg.website.pojo.dto.InOauthDto;
 public class FreeFeignFallBack implements FreeFeign,BaseFallBack {
 
    
-   public ResultItem<OutOauthDto> login(String client_id, String client_secret, String grant_type,
+   public ResultItem login(String client_id, String client_secret, String grant_type,
                                         String username, String password){
       return fail(FreeFeignConstant.FEIGN_SERVER_NAME,"");
    }
 
    @Override
-   public ResultItem<OutOauthDto> login(InOauthDto dto) {
+   public ResultItem login(InOauthDto dto) {
       return fail(FreeFeignConstant.FEIGN_SERVER_NAME,"");
    }
 

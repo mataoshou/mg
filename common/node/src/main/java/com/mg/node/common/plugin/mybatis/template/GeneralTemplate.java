@@ -2,6 +2,7 @@ package com.mg.node.common.plugin.mybatis.template;
 
 import com.mg.node.common.plugin.mybatis.produce.SqlFactory;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.type.JdbcType;
 
 import java.util.List;
 
@@ -11,16 +12,17 @@ public interface GeneralTemplate {
     TemplateItem getBySql(@Param("sql") String sql);
 
     @Select("select * from $tableName$ where id=#{id}")
+    @Results()
     TemplateItem getById(long id);
 
     @Select("select * from $tableName$ where ${column}=#{value}")
     TemplateItem getBySingleParam(@Param("column")String column,@Param("value")String value);
 
     @Select("${sql}")
+    @ResultMap("$ResultMapId$")
     List<TemplateItem> listBySql(@Param("sql") String sql);
 
-//    @SelectProvider(type = SqlFactory.class,method = "selectItem")
-//    List<TemplateItem> listByWhere(@Param("params") Map<String,Object> params,@Param("item") Class itemClass);
+
 
     @Select("select * from $tableName$ ${where} ${order}")
     List<TemplateItem> listByWhere(@Param("where") String where, @Param("order") String order);

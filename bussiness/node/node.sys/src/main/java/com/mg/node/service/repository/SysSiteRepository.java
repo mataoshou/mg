@@ -20,6 +20,12 @@ public class SysSiteRepository {
    @Autowired
    GeneralMapper mapper;
 
+   public ResultItem get1(Long id) throws Exception{
+      MTdSysSite pojo = dao.get(id);
+      OutSysSiteDto dto = mapper.convert(pojo,OutSysSiteDto.class);
+      ResultItem result =  new ResultItem<OutSysSiteDto>(dto);
+      return result;
+   }
    
    public ResultItem get(InSysSiteDto item) throws Exception{
       MTdSysSite pojo = dao.get(item.getId());
