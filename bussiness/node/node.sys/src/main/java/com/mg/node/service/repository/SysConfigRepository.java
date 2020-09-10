@@ -1,5 +1,6 @@
 package com.mg.node.service.repository; 
 
+import com.mg.node.service.cache.SysSiteCache;
 import org.springframework.stereotype.Service;
 import com.mg.node.pojo.dto.OutSysConfigDto;
 import com.mg.node.pojo.dto.InSysConfigDto;
@@ -20,9 +21,13 @@ public class SysConfigRepository {
    @Autowired
    GeneralMapper mapper;
 
+   @Autowired
+   SysSiteCache cache;
+
    
    public ResultItem get(InSysConfigDto item) throws Exception{
       MTdSysConfig pojo = dao.get(item.getId());
+
       OutSysConfigDto dto = mapper.convert(pojo,OutSysConfigDto.class);
       ResultItem result =  new ResultItem<OutSysConfigDto>(dto);
       return result;

@@ -1,13 +1,11 @@
 package com.mg.website.pojo.vo;
 
 import lombok.Data;
-import org.dozer.Mapping;
 
 @Data
 public class UserVo {
+    String userName;
+    Long userId;
 
-    private String username;
-    private String password;
-
-
+    Integer groupId;
 }

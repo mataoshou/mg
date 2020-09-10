@@ -1,9 +1,7 @@
 package com.mg.node.config;
 
-import com.mg.node.common.frame.mgmybatis.MgMapperServer;
+import com.mg.node.common.plugin.mybatis.MgMapperServer;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Service;
 
 @Service

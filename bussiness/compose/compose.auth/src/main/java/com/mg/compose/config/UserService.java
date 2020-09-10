@@ -39,7 +39,7 @@ public class UserService implements UserDetailsService {
             UserDetails userDetails = new User(bo.getName(),
                     passwordEncoder.encode(bo.getPassword()),
                     true,true,true,true,
-                    AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
+                    AuthorityUtils.commaSeparatedStringToAuthorityList("ADMIN1,ADMIN2"));
 
             return userDetails;
         } catch (MgApiException e) {

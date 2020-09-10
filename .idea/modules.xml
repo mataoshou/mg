@@ -27,6 +27,7 @@
       <module fileurl="file://$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" filepath="$PROJECT_DIR$/bussiness/website/website.uauth/mg-website-uauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/zipkin/mg-zipkin.iml" filepath="$PROJECT_DIR$/general/zipkin/mg-zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/zuul/mg-zuul.iml" filepath="$PROJECT_DIR$/general/zuul/mg-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/general/nacos/nacos.iml" filepath="$PROJECT_DIR$/general/nacos/nacos.iml" />
     </modules>
   </component>
 </project>

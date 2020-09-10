@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.mg.node.db.sql.pojo.MTdUserInfo;
 import java.util.List;
-import com.mg.common.util.GuidUtil;
-import com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper;
+
+import com.mg.node.common.plugin.mybatis.imp.IGeneralMapper;
 
 @Repository
 public class UserDAO {

@@ -1,15 +1,14 @@
 package com.mg.node.db.sql.pojo;
 
-import com.mg.node.common.frame.mgmybatis.annotations.MgColumn;
-import com.mg.node.common.frame.mgmybatis.annotations.MgId;
-import com.mg.node.common.frame.mgmybatis.annotations.MgTable;
+import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
+import com.mg.node.common.plugin.mybatis.annotations.Table;
 import java.util.Date;
 import lombok.Data;
 
 @Data
-@MgTable("m_td_sys_site")
+@Table("m_td_sys_site")
 public class MTdSysSite {
-    @MgId
+    @PrimaryId
     private Long id;
 
     private String siteName;

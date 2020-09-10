@@ -1,13 +1,11 @@
 package com.mg.website.service.repository; 
 
 import org.springframework.stereotype.Service;
-import com.mg.website.pojo.dto.InUserDto;
+import com.mg.website.pojo.dto.InOauthDto;
 import lombok.extern.slf4j.Slf4j;
-import com.mg.website.pojo.dto.OutUserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.mg.common.pojo.ResultItem;
 import com.mg.website.service.feign.OauthFeign;
-import java.util.List;
 
 @Service
 @Slf4j
@@ -16,7 +14,7 @@ public class OauthRepository {
    OauthFeign feign;
 
    
-   public ResultItem login(InUserDto item) throws Exception{
+   public ResultItem login(InOauthDto item) throws Exception{
       item.setClient_id("website");
       item.setClient_secret("123456");
       item.setGrant_type("password");

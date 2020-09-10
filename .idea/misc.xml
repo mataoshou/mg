@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/bussiness/pom.xml" />
         <option value="$PROJECT_DIR$/general/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/general/nacos/pom.xml" />
       </list>
     </option>
   </component>

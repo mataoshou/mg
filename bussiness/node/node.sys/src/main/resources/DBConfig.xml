@@ -51,7 +51,7 @@
         <property name="endingDelimiter" value="`"/>
 
 
-        <plugin type="com.mg.node.common.frame.mgmybatis.plugin.MgPlugin" >
+        <plugin type="com.mg.node.common.plugin.mybatis.mconfig.ModuleAdapter" >
 <!--            <property name="hasLombok" value="true"/>-->
         </plugin>
 
