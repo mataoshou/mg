@@ -10,13 +10,5 @@
     </parent>
 
     <artifactId>mg-node-sys</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>com.itranswarp</groupId>
-            <artifactId>compiler</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
 
 </project>

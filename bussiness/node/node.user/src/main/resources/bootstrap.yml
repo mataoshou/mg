@@ -2,10 +2,10 @@ spring:
   application: 
     name: mg-node-user
   cloud:
-    config:
-      profile: dev
-      label: master
-      uri: http://127.0.0.1:15201/
+    nacos:
+      config:
+        server-addr: 10.0.127.103:8848
+        file-extension: yml
 
 
 

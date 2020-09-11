@@ -28,7 +28,7 @@ public class SysSiteCache extends IBaseCache<MTdSysSite,Long>  {
    }
    @Override
    public Long getId(MTdSysSite pojo){
-      return pojo.getId();
+      return pojo.getSiteid();
    }
 
 }

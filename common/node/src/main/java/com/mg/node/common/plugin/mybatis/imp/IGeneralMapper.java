@@ -1,6 +1,11 @@
 package com.mg.node.common.plugin.mybatis.imp;
 
+import com.github.pagehelper.Page;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
 import java.util.List;
+import java.util.Map;
 
 public interface IGeneralMapper<T> {
 
@@ -13,6 +18,12 @@ public interface IGeneralMapper<T> {
     List<T> listBySql(String sql);
 
     List<T> listByWhere(String where,String order);
+
+    Page<T> listByPage(String where, String order);
+
+    Map getMap(String sql);
+
+//    List listMap(String sql);
 
     int insertItem(T item);
 

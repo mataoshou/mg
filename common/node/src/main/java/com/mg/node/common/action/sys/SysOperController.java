@@ -1,13 +1,13 @@
 package com.mg.node.common.action.sys;
 
 
-import com.mg.common.iservice.ibasic.IFactory;
+import com.mg.common.plugin.igenerate.IFactory;
 import com.mg.common.pojo.ResultItem;
-import com.mg.node.common.generate.cache.CacheFactory;
-import com.mg.node.common.generate.dao.DAOFactory;
-import com.mg.node.common.generate.action.ActionFactory;
-import com.mg.node.common.generate.db.DBFactory;
-import com.mg.node.common.generate.feign.FeignFactory;
+import com.mg.node.common.plugin.generate.cache.CacheFactory;
+import com.mg.node.common.plugin.generate.dao.DAOFactory;
+import com.mg.node.common.plugin.generate.action.ActionFactory;
+import com.mg.node.common.plugin.generate.db.DBFactory;
+import com.mg.node.common.plugin.generate.feign.FeignFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

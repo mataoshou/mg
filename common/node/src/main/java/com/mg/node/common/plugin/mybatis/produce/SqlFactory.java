@@ -1,5 +1,9 @@
 package com.mg.node.common.plugin.mybatis.produce;
 
+import ch.qos.logback.classic.db.names.ColumnName;
+import com.mg.node.common.plugin.mybatis.annotations.Column;
+import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
+import com.mg.node.common.plugin.mybatis.annotations.Table;
 import com.mg.node.common.util.SqlWhere;
 import com.mg.node.common.util.ToolHolder;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +20,12 @@ public class SqlFactory {
         return buildInsertSql(para.get("pojoItem"));
     }
 
+    /**
+     * 构建动态insert语句
+     * @param item
+     * @return
+     * @throws Exception
+     */
     public String buildInsertSql(Object item) throws Exception {
         Class cls = item.getClass();
         //得到所有属性
@@ -26,9 +36,16 @@ public class SqlFactory {
             f.setAccessible(true);
             Object value = f.get(item);
 
+            String name = f.getName();
+            Column ca = f.getDeclaredAnnotation(Column.class);
+            if(ca!=null)
+            {
+                if(ca.ingore())continue;
+                name = ca.cloumn();
+            }
             if(value!=null)
             {
-                params.put(f.getName(), value.toString());
+                params.put(name, value.toString());
             }
         }
         String keys ="";
@@ -41,7 +58,7 @@ public class SqlFactory {
         }
 
 
-        String sql = String.format("insert  into `%s`(%s) values (%s);",
+        String sql = String.format("insert into `%s`(%s) values (%s);",
                 ToolHolder.daoUtils.getTableName(item.getClass()),keys,values) ;
         log.info("执行insert语句：{}",sql.toString() );
 
@@ -53,6 +70,12 @@ public class SqlFactory {
     }
 
 
+    /**
+     * 构建动态 update 语句
+     * @param item
+     * @return
+     * @throws Exception
+     */
     public String buildUpdateSql(Object item) throws Exception {
         Class cls = item.getClass();
 
@@ -61,23 +84,33 @@ public class SqlFactory {
         Field[] fields = cls.getDeclaredFields();
 
         Map<String,String> params = new HashMap();
-
-        Object id = null;
-
+        String idName ="id";
+        Object idValue =null;
         for(Field f : fields)
         {
+            Column ca = f.getDeclaredAnnotation(Column.class);
+            PrimaryId primaryId = f.getDeclaredAnnotation(PrimaryId.class);
             f.setAccessible(true);
             Object value = f.get(item);
 
-            if(f.getName().equals("id"))
+            String cloumnName = f.getName();
+
+            if(ca!=null)
             {
-                id = value;
+                if(ca.ingore())continue;
+                cloumnName = ca.cloumn();
+            }
+
+            if(primaryId!=null)
+            {
+                idName = cloumnName;
+                idValue = value;
                 continue;
             }
 
             if(value!=null)
             {
-                params.put(f.getName(), value.toString());
+                params.put(cloumnName, value.toString());
             }
         }
         for(Map.Entry entry: params.entrySet()){
@@ -90,8 +123,8 @@ public class SqlFactory {
             throw new Exception("对象没有可以更新的数据！！");
         }
 
-        sql = String.format("UPDATE %s SET %s WHERE id='%s'",
-                ToolHolder.daoUtils.getTableName(item.getClass()),sql,id) ;
+        sql = String.format("UPDATE %s SET %s WHERE %s='%s'",
+                ToolHolder.daoUtils.getTableName(item.getClass()),sql,idName,idValue) ;
 
         log.info("执行update语句：{}",sql.toString() );
 
@@ -99,6 +132,12 @@ public class SqlFactory {
     }
 
 
+    /**
+     * 构建动态查询条件
+     * @param para
+     * @return
+     * @throws Exception
+     */
     public String selectItem(Map<String,Object> para) throws Exception {
         Map<String,Object> params = (Map<String, Object>) para.get("params");
 
@@ -110,7 +149,8 @@ public class SqlFactory {
         {
             where.add2(entry.getKey(),entry.getValue().toString());
         }
-        String sql = String.format("SELECT * FROM %s WHERE %s ",ToolHolder.daoUtils.getTableName(itemcl),where);
+        Table table = (Table) itemcl.getDeclaredAnnotation(Table.class);
+        String sql = String.format("SELECT * FROM %s WHERE %s ",table.value(),where);
 
         return sql;
     }

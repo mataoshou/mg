@@ -13,6 +13,8 @@ public class ResultItem<T> {
 
     private List<T> data = new ArrayList();
 
+    private ResultPage page;
+
     public ResultItem(List<T> data)  {
 
         this.msg = "ok";
@@ -79,7 +81,23 @@ public class ResultItem<T> {
         return this.data;
     }
 
-//    private static boolean check(ResultItem item)
+    public ResultPage getPage() {
+        return page;
+    }
+
+    public void setPage(ResultPage page) {
+        this.page = page;
+    }
+
+    public void initPage(int pageCount,int currentPage,int totalPage,int totalCount) {
+        this.page = new ResultPage();
+        page.setCurrentPage(currentPage);
+        page.setPageCount(pageCount);
+        page.setTotalPage(totalPage);
+        page.setTotalCount(totalCount );
+    }
+
+    //    private static boolean check(ResultItem item)
 //    {
 //        if(item.getCode().equals(ResultItemEnum.RESULT_ENUM_SUCCESS))
 //        {

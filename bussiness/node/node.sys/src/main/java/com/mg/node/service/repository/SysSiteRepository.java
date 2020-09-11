@@ -35,11 +35,16 @@ public class SysSiteRepository {
    }
    
    public ResultItem insert(InSysSiteDto item) throws Exception{
-      return null;
+      MTdSysSite site =mapper.convert(item,MTdSysSite.class);
+      dao.edit(site);
+      OutSysSiteDto dto = mapper.convert(site,OutSysSiteDto.class);
+      ResultItem result =  new ResultItem<OutSysSiteDto>(dto);
+      return result;
    }
    
    public ResultItem list(InSysSiteDto item) throws Exception{
       List<MTdSysSite> list = dao.list();
+      dao.getMap();
       ResultItem result =  new ResultItem<OutSysSiteDto>(mapper.convert(list,OutSysSiteDto.class));
       return result;
    }
@@ -60,5 +65,6 @@ public class SysSiteRepository {
       ResultItem result =  new ResultItem<OutSysSiteDto>(dto);
       return result;
    }
+
 
 }

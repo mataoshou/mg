@@ -1,32 +1,46 @@
 package com.mg.node.common.plugin.mybatis.template;
 
+import com.github.pagehelper.Page;
 import com.mg.node.common.plugin.mybatis.produce.SqlFactory;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 
 import java.util.List;
+import java.util.Map;
 
 public interface GeneralTemplate {
 
+    ////////////////////////////////查询区域/////////////////////////////////////
     @Select("${sql}")
     TemplateItem getBySql(@Param("sql") String sql);
 
-    @Select("select * from $tableName$ where id=#{id}")
+    @Select("select * from $tableName$ where $idName$=#{id}")
     @Results()
     TemplateItem getById(long id);
 
     @Select("select * from $tableName$ where ${column}=#{value}")
+    @ResultMap("$ResultMapId$")
     TemplateItem getBySingleParam(@Param("column")String column,@Param("value")String value);
 
     @Select("${sql}")
     @ResultMap("$ResultMapId$")
     List<TemplateItem> listBySql(@Param("sql") String sql);
 
-
-
     @Select("select * from $tableName$ ${where} ${order}")
+    @ResultMap("$ResultMapId$")
     List<TemplateItem> listByWhere(@Param("where") String where, @Param("order") String order);
 
+    @Select("select * from $tableName$ ${where} ${order}")
+    Page<TemplateItem> listByPage(@Param("where")String where, @Param("order")String order);
+
+    @Select("${sql}")
+    Map getMap(@Param("sql") String sql);
+
+//    @Select("${sql}")
+//    @ResultType(Map.class)
+//    List listMap(@Param("sql") String sql);
+
+    //////////////////////////////// 插入更新区/////////////////////////////////////
     @InsertProvider(type = SqlFactory.class,method = "insertItem")
     @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
     int insertItem(@Param("pojoItem") TemplateItem item);
@@ -47,6 +61,8 @@ public interface GeneralTemplate {
     @UpdateProvider(type = SqlFactory.class,method = "updateItem")
     int updateItem(@Param("pojoItem") TemplateItem item);
 
+
+    ////////////////////////////删除区/////////////////////////////////////
 
     @Delete("${sql}")
     int deleteBySql(@Param("sql") String sql);

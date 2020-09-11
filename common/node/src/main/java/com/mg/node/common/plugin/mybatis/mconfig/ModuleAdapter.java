@@ -31,13 +31,19 @@ public class ModuleAdapter extends PluginAdapter {
 
     @Override
     public boolean modelFieldGenerated(Field field, TopLevelClass topLevelClass, IntrospectedColumn introspectedColumn, IntrospectedTable introspectedTable, ModelClassType modelClassType) {
-        if(introspectedColumn.isIdentity())
+
+        for(IntrospectedColumn column:introspectedTable.getPrimaryKeyColumns())
         {
-            field.addAnnotation("@PrimaryId");
+            if(column.getActualColumnName().equals(introspectedColumn.getActualColumnName()))
+            {
+                field.addAnnotation("@PrimaryId");
+            }
         }
-//        if(!field.getName().equals(introspectedColumn.getActualColumnName())) {
+
+
+        if(!field.getName().equals(introspectedColumn.getActualColumnName())) {
             field.addAnnotation(String.format("@Column(cloumn= \"%s\")", introspectedColumn.getActualColumnName()));
-//        }
+        }
 
         return true;
     }

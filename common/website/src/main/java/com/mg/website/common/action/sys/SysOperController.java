@@ -1,10 +1,10 @@
 package com.mg.website.common.action.sys;
 
 
-import com.mg.common.iservice.ibasic.IFactory;
+import com.mg.common.plugin.igenerate.IFactory;
 import com.mg.common.pojo.ResultItem;
-import com.mg.website.common.generate.feign.FeignFactory;
-import com.mg.website.common.generate.action.ActionFactory;
+import com.mg.website.common.plugin.generate.feign.FeignFactory;
+import com.mg.website.common.plugin.generate.action.ActionFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

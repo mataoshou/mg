@@ -148,7 +148,8 @@ public class ProduceStore {
     public void addParams(ProduceItem item)
     {
         item.addParam("$tableName$", new DaoConfiguration().daoUtilsBean().getTableName(item.getPojo().getSimpleName()));
-        item.addParam("$ResultMapId$", String.format("Gemeral%sResult",item.getPojo().getSimpleName()));
+        item.addParam("$ResultMapId$", String.format("General%sResult",item.getPojo().getSimpleName()));
+        item.addParam("$idName$","id");
     }
 
     /**
@@ -245,8 +246,26 @@ public class ProduceStore {
 
         Class template = item.getTemplate();
 
-        String content = template.toGenericString();
-        String pStr;
+
+        String idName = "id";
+
+        Field[] fs = item.getPojo().getDeclaredFields();
+
+        for(Field f :fs)
+        {
+            PrimaryId primaryId = f.getDeclaredAnnotation(PrimaryId.class);
+            if(primaryId!=null)
+            {
+                idName = f.getName();
+                Column column = f.getDeclaredAnnotation(Column.class);
+                if(column!=null)
+                {
+                    idName = column.cloumn();
+                }
+            }
+        }
+
+
         Method[] methods = template.getMethods();
         for (Method method : methods) {
             MethodUnit methodUnit = new MethodUnit();
@@ -264,10 +283,10 @@ public class ProduceStore {
             }
             else if(returnParam.equals(Object.class))
             {
-                returnStr =method.getReturnType().getSimpleName();
+                returnStr =method.getReturnType().getName();
             }
             else{
-                returnStr =method.getReturnType().getSimpleName();
+                returnStr =method.getReturnType().getName();
             }
 
             methodUnit.setReturnValue(returnStr);
@@ -338,12 +357,12 @@ public class ProduceStore {
             PrimaryId pid = field.getDeclaredAnnotation(PrimaryId.class);
             if(pid!=null)
             {
-                value =String.format("@org.apache.ibatis.annotations.Result(column = \"%s\",property = \"%s\" ,id=true),\n",column,property);
+                value +=String.format("@org.apache.ibatis.annotations.Result(column = \"%s\",property = \"%s\" ,id=true),\n",column,property);
             }
             else {
-                value =String.format("@org.apache.ibatis.annotations.Result(column = \"%s\",property = \"%s\"),\n",column,property);
+                value +=String.format("@org.apache.ibatis.annotations.Result(column = \"%s\",property = \"%s\"),\n",column,property);
             }
-            annContent= String.format("id = \"Gemeral%sResult\" ,value = {%s}",pojo.getSimpleName(),value);
+            annContent= String.format("id = \"General%sResult\" ,value = {%s}",pojo.getSimpleName(),value);
         }
 
         return annStr.replace("##1",annContent);
@@ -410,13 +429,6 @@ public class ProduceStore {
         m_map = new HashMap<>();
         m_scan = new ArrayList<>();
     }
-
-//    public static void main(String[] args) {
-//        ProduceStore store = new ProduceStore();
-//
-//        store.buildAnnotation();
-//    }
-
 
 
 }
