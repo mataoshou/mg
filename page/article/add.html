@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		标题：<input  class="title"/>
+		缩略图：<input  class="thumb"/>
+		内容：<textarea  class="content"></textarea>
+		
+		
+		<input  type="button" value="添加"/>
+	</body>
+	
+	<script>
+		function add()
+		{
+			jQuery.ajax({				
+			url: serviceUri, 			
+			method: "POST", 
+			processData: false,	
+			data: JSON.stringify(req), 
+			dataType: 'json',
+			success: function(ans){
+				if(ans.code !=100)
+				{
+					alert(ans.msg);			
+				}
+			});	
+		}
+		
+	</script>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>  
+</html>
