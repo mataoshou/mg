@@ -6,6 +6,7 @@ spring:
       config:
         server-addr: 10.0.127.103:8848
         file-extension: yml
-
+      discovery:
+        server-addr: 10.0.127.103:8848
 
 

@@ -13,6 +13,8 @@
     <properties resource="" url="" />
      -->
 
+
+
     <!-- 在MBG工作的时候，需要额外加载的依赖包
        location属性指明加载jar/zip包的全路径
    <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />
@@ -30,7 +32,8 @@
             2，MyBatis3Simple：类似MyBatis3，只是不生成XXXBySample；
         introspectedColumnImpl：类全限定名，用于扩展MBG
     -->
-    <context id="mysql" defaultModelType="conditional" targetRuntime="MyBatis3" >
+    <context id="mysql" defaultModelType="conditional" targetRuntime="MyBatis3">
+
 
         <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
             一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖
@@ -47,10 +50,20 @@
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
+
+        <plugin type="com.mg.node.common.plugin.mybatis.mconfig.ModuleAdapter" >
+<!--            <property name="hasLombok" value="true"/>-->
+        </plugin>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
         <!-- 必须要有的，使用这个配置链接数据库
             @TODO:是否可以扩展
          -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"   connectionURL="jdbc:mysql://localhost:3306/rmt_sys_eitem" userId="root" password="shineon@1234" >
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"   connectionURL="jdbc:mysql://localhost:3306/mg.frame.eitem?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai" userId="root" password="shineon@1234" >
             <!-- 这里面可以设置property属性，每一个property属性都设置到配置的Driver上 -->
             <property name="useInformationSchema" value="true"/>
             <property name="nullCatalogMeansCurrent" value="true"/>
@@ -171,7 +184,7 @@
 
             注意，table里面很多参数都是对javaModelGenerator，context等元素的默认属性的一个复写；
          -->
-        <table tableName="rmt_%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <table tableName="m_td_%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 
             <!-- 参考 javaModelGenerator 的 constructorBased属性-->
             <property name="constructorBased" value="false"/>
@@ -211,7 +224,7 @@
             <property name="selectAllOrderByClause" value="age desc,username asc"/>
 
             <!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate -->
-            <property name="useActualColumnNames" value="true"/>
+            <property name="useActualColumnNames" value="false"/>
 
 
             <!-- generatedKey用于生成生成主键的方法，

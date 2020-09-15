@@ -96,7 +96,7 @@ public class CreateDAO extends ICreate {
                 this.poCl.getName(),
                 "java.util.List",
                 "com.mg.common.util.GuidUtil",
-                "com.mg.node.common.frame.mgmybatis.imp.IGeneralMapper"
+                "com.mg.node.common.plugin.mybatis.imp.IGeneralMapper"
 //                UtilConstant.UTIL_PACKAGE +".GuidUtil"
         });
     }

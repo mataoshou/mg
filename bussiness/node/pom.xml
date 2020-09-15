@@ -15,6 +15,7 @@
     <modules>
         <module>node.user</module>
         <module>node.sys</module>
+        <module>node.article</module>
     </modules>
 
     <dependencies>

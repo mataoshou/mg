@@ -4,13 +4,18 @@ import ch.qos.logback.classic.db.names.ColumnName;
 import com.mg.node.common.plugin.mybatis.annotations.Column;
 import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
 import com.mg.node.common.plugin.mybatis.annotations.Table;
+import com.mg.node.common.plugin.mybatis.pojo.SimpleItem;
+import com.mg.node.common.plugin.mybatis.util.PojoUtil;
 import com.mg.node.common.util.SqlWhere;
 import com.mg.node.common.util.ToolHolder;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 import org.apache.ibatis.jdbc.SQL;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,27 +32,8 @@ public class SqlFactory {
      * @throws Exception
      */
     public String buildInsertSql(Object item) throws Exception {
-        Class cls = item.getClass();
-        //得到所有属性
-        Field[] fields = cls.getDeclaredFields();
-        Map<String,String> params = new HashMap();
-        for(Field f : fields)
-        {
-            f.setAccessible(true);
-            Object value = f.get(item);
-
-            String name = f.getName();
-            Column ca = f.getDeclaredAnnotation(Column.class);
-            if(ca!=null)
-            {
-                if(ca.ingore())continue;
-                name = ca.cloumn();
-            }
-            if(value!=null)
-            {
-                params.put(name, value.toString());
-            }
-        }
+        PojoUtil util = new PojoUtil();
+        Map<String,String> params = util.getColumnMap(item);
         String keys ="";
         String values ="";
         for(Map.Entry entry: params.entrySet()){
@@ -56,7 +42,6 @@ public class SqlFactory {
             keys+=String.format("`%s`", entry.getKey());
             values+=String.format("'%s'", entry.getValue());
         }
-
 
         String sql = String.format("insert into `%s`(%s) values (%s);",
                 ToolHolder.daoUtils.getTableName(item.getClass()),keys,values) ;
@@ -77,42 +62,12 @@ public class SqlFactory {
      * @throws Exception
      */
     public String buildUpdateSql(Object item) throws Exception {
-        Class cls = item.getClass();
 
         String sql = "";
-        //得到所有属性
-        Field[] fields = cls.getDeclaredFields();
+        PojoUtil util = new PojoUtil();
+        Map<String,String> params = util.getColumnMap(item);
+        SimpleItem keyItem = util.getPrimaryId(item);
 
-        Map<String,String> params = new HashMap();
-        String idName ="id";
-        Object idValue =null;
-        for(Field f : fields)
-        {
-            Column ca = f.getDeclaredAnnotation(Column.class);
-            PrimaryId primaryId = f.getDeclaredAnnotation(PrimaryId.class);
-            f.setAccessible(true);
-            Object value = f.get(item);
-
-            String cloumnName = f.getName();
-
-            if(ca!=null)
-            {
-                if(ca.ingore())continue;
-                cloumnName = ca.cloumn();
-            }
-
-            if(primaryId!=null)
-            {
-                idName = cloumnName;
-                idValue = value;
-                continue;
-            }
-
-            if(value!=null)
-            {
-                params.put(cloumnName, value.toString());
-            }
-        }
         for(Map.Entry entry: params.entrySet()){
             if(sql.length()>0)sql+=",";
             sql+=String.format("`%s`='%s'", entry.getKey(),entry.getValue());
@@ -124,7 +79,7 @@ public class SqlFactory {
         }
 
         sql = String.format("UPDATE %s SET %s WHERE %s='%s'",
-                ToolHolder.daoUtils.getTableName(item.getClass()),sql,idName,idValue) ;
+                ToolHolder.daoUtils.getTableName(item.getClass()),sql,keyItem.getColumnName(),keyItem.getValue()) ;
 
         log.info("执行update语句：{}",sql.toString() );
 
@@ -154,5 +109,6 @@ public class SqlFactory {
 
         return sql;
     }
+
 
 }

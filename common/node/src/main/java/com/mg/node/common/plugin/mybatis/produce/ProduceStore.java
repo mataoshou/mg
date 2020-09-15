@@ -327,7 +327,7 @@ public class ProduceStore {
             unit.addMethod(methodUnit);
         }
 
-        log.info("动态构建对象代码：" +unit.finish());
+        log.debug("动态构建对象代码：" +unit.finish());
 
         JavaStringCompiler compiler = new JavaStringCompiler();
         Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());

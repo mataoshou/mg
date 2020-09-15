@@ -36,9 +36,6 @@ public interface GeneralTemplate {
     @Select("${sql}")
     Map getMap(@Param("sql") String sql);
 
-//    @Select("${sql}")
-//    @ResultType(Map.class)
-//    List listMap(@Param("sql") String sql);
 
     //////////////////////////////// 插入更新区/////////////////////////////////////
     @InsertProvider(type = SqlFactory.class,method = "insertItem")
