@@ -4,34 +4,51 @@
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+	<script src="js/jquery-1.11.3.min.js"></script>  
+	
+	<script type="text/javascript" src="plugin/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="plugin/ueditor/ueditor.all.js"></script>
+	<script type="text/javascript" src="plugin/ueditor/lang/zh-cn/zh-cn.js"></script>
+		
 	<body>
 		
 		标题：<input  class="title"/>
+		<br>
 		缩略图：<input  class="thumb"/>
-		内容：<textarea  class="content"></textarea>
 		
+        <div class='layui-form-item layui-form-text'>
+			<script id="html-editor" type="text/plain" style="width:100%; height:550px;"></script>	
+		</div>
 		
-		<input  type="button" value="添加"/>
+		<input type="button" value="添加"/>
 	</body>
 	
 	<script>
 		function add()
 		{
 			jQuery.ajax({				
-			url: serviceUri, 			
-			method: "POST", 
-			processData: false,	
-			data: JSON.stringify(req), 
-			dataType: 'json',
-			success: function(ans){
-				if(ans.code !=100)
-				{
-					alert(ans.msg);			
+				url: serviceUri, 			
+				method: "POST", 
+				processData: false,	
+				data: JSON.stringify(req), 
+				dataType: 'json',
+				success: function(ans){
+					if(ans.code !=100)
+					{
+						alert(ans.msg);			
+					}
 				}
-			});	
+			});
 		}
 		
 	</script>
+
 	
-	<script src="js/jquery-1.11.3.min.js"></script>  
+
+	<script type="text/javascript">
+		$("body").ready(function()
+		{
+			 var ue = UE.getEditor('html-editor', {});
+		})
+    </script>
 </html>
