@@ -22,6 +22,7 @@ public class MgDemo2020070201 {
                 }
                 log.info(Thread.currentThread().getName() +"任务执行..");
                 latch.countDown();
+                log.info(Thread.currentThread().getName() +"任务结束执行..");
             }
         };
         for(int i=0;i<10;i++)

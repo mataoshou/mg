@@ -4,6 +4,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Slf4j
 public class MgDemo2020070202 {
@@ -22,7 +23,11 @@ public class MgDemo2020070202 {
                 Thread.sleep(1000*6);
                 log.info("...{}开始释放",Thread.currentThread().getName() );
                 semaphore.release(1);
+//                ReentrantLock lock = new ReentrantLock();
+//                lock.lock();
             }
+
+
         };
 
         for(int i=0;i<10;i++)

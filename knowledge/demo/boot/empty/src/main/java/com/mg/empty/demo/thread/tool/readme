@@ -1,0 +1,9 @@
+CountDownLatch await 通过AQS中的doAcquireSharedInterruptibly方法，进入for循环，等到status为0
+               countDown  会对status做减1操作
+
+Semaphore   acquire 方法通过AQS 中的doAcquireSharedInterruptibly  执行重写后的tryAcquireShared方法，判断是否能够获取到信号，
+            进行执行，判断剩余信号数量是否能够满足请求的信号量
+            release  会对status 做加法操作
+
+CyclicBarrier  通过condtion来控制，await方法会使用CyclicBarrier 中的lock，通过lock的condtion执行wait,最后一个线程到来以后，
+               notifyall所有等待线程，所以，优先执行线程，是最后一个到达的线程来执行
