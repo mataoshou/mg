@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>MG HOME</title>
-    <link rel="stylesheet" href="http://fonts.useso.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
 
 </head>
 
@@ -60,71 +59,54 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        <h2 class="tm-gold-text tm-title">Introduction</h2>
-                        <p class="tm-subtitle">Suspendisse ut magna vel velit cursus tempor ut nec nunc. Mauris vehicula, augue in tincidunt porta, purus ipsum blandit massa.</p>
+                        <h2 class="tm-gold-text tm-title">简介</h2>
+                        <p class="tm-subtitle">MG驿站是个人的日常技术分享网站，希望能给大家带来帮助。</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <div id="ar_items" class="row">
 
-                        <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Detail</a>    
-                        </div>  
 
-                    </div>
+                    
 
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                        <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Read More</a>    
-                        </div>  
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                        <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-3.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #3</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Detail</a>    
-                        </div>  
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                        <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-4.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #4</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Read More</a>    
-                        </div>  
-
-                    </div>
                 </div> <!-- row -->
         </section>
         
        
 
         <!-- load JS files -->
-        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-        <script src="js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
-        <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+        <script src="js/jquery-1.11.3.min.js"></script> 
+        <script src="js/tether.min.js"></script> 
+        <script src="js/bootstrap.min.js"></script> 
+		<script src="js/api.js"></script>
+		<script>
+			var MG_PAGE={};
+			MG_PAGE.list_article=function()
+			{
+				var req={};
+				MG_API.request("http://127.0.0.1:11001/article/list",req,MG_PAGE.loadData);
+			}
+			
+			MG_PAGE.loadData=function(data)
+			{
+				for(var i=0;i<data.length;i++)
+				{
+					var itemStr='<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 " style="margin-bottom:40px;">'+
+							'<div class="tm-content-box">'+
+                            '<img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">'+
+                            '<h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>'+
+                            '<p class="tm-margin-b-20"></p>'+
+                            '<a href="#" class="tm-btn text-uppercase">Read More</a>'+
+                        '</div>  '+
+						'</div>  ';
+					$("#ar_items").append(itemStr)
+				}
+			}
+			
+			$(document).ready(function(){
+			  MG_PAGE.list_article();
+			})
+			
+		</script>
        
 </body>
 </html>
