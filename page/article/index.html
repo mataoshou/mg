@@ -8,6 +8,7 @@
     <title>MG HOME</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/common.css">
 
 </head>
 
@@ -30,9 +31,9 @@
                                 <li class="nav-item active">
                                     <a href="index.html" class="nav-link">Home</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="detail.html" class="nav-link">Doc</a>
-                                </li>
+                                </li> -->
                                 <!--<li class="nav-item">
                                     <a href="about.html" class="nav-link">About</a>
                                 </li>
@@ -60,13 +61,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
                         <h2 class="tm-gold-text tm-title">简介</h2>
-                        <p class="tm-subtitle">MG驿站是个人的日常技术分享网站，希望能给大家带来帮助。</p>
+                        <p class="tm-subtitle">MG驿站是一个java技术分享网站，希望能给大家带来帮助。</p>
                     </div>
                 </div>
-                <div id="ar_items" class="row">
-
-
-                    
+                <div id="ar_items" >
 
                 </div> <!-- row -->
         </section>
@@ -83,28 +81,59 @@
 			MG_PAGE.list_article=function()
 			{
 				var req={};
-				MG_API.request("http://127.0.0.1:11001/article/list",req,MG_PAGE.loadData);
+				MG_API.request("http://127.0.0.1:11007/article/list",req,MG_PAGE.loadData);
 			}
 			
 			MG_PAGE.loadData=function(data)
 			{
+                var rowDiv= $('<div class="row"> </div>');
 				for(var i=0;i<data.length;i++)
 				{
-					var itemStr='<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 " style="margin-bottom:40px;">'+
-							'<div class="tm-content-box">'+
-                            '<img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">'+
-                            '<h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>'+
-                            '<p class="tm-margin-b-20"></p>'+
-                            '<a href="#" class="tm-btn text-uppercase">Read More</a>'+
+                    if(i%4==0)
+                    {
+                        rowDiv= $('<div class="row"> </div>');
+                    }
+                    var item = data[i];
+					var itemStr='<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 " onclick="MG_PAGE.open_detail(##2)" style="margin-bottom:40px;cursor:pointer ">'+
+							'<div class="tm-content-box article-item">'+
+                            '<img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid  ">'+
+                            '<h4 class="tm-margin-b-20 tm-gold-text" style="text-align:center;">##1</h4>'+
+                            '<p class="tm-margin-b-20" ></p>'+
+                            // '<a href="#" class="tm-btn text-uppercase">Read More</a>'+
                         '</div>  '+
-						'</div>  ';
-					$("#ar_items").append(itemStr)
-				}
+                        '</div>  ';
+                        itemStr = itemStr.replace("##1",item.title).replace("##2",item.id)
+                        rowDiv.append(itemStr);
+                        if(i%4==3||(i+1)==data.length)
+                        {
+                            $("#ar_items").append(rowDiv)
+                        }
+                  
+                    
+                   
+                }
+                MG_PAGE.touch_detail();
 			}
 			
 			$(document).ready(function(){
 			  MG_PAGE.list_article();
-			})
+            })
+            
+            MG_PAGE.open_detail = function(id)
+            {
+                window.open("detail.html?id="+id);
+            }
+
+
+            MG_PAGE.touch_detail =function()
+            {
+                // $(".dropdown").mouseover(function () {
+                //     $(this).addClass("open");
+                // });
+                // $(".dropdown").mouseleave(function(){
+                //     $(this).removeClass("open");
+                // })
+            }
 			
 		</script>
        

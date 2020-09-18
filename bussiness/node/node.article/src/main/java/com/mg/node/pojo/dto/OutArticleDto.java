@@ -8,6 +8,8 @@ import java.util.Date;
 @Data
 public class OutArticleDto {
 
+    private Long id;
+
     private String title;
 
     private String thumb;
