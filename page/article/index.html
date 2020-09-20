@@ -76,12 +76,13 @@
         <script src="js/tether.min.js"></script> 
         <script src="js/bootstrap.min.js"></script> 
 		<script src="js/api.js"></script>
+		<script src="config/sysconfig.js"></script>
 		<script>
 			var MG_PAGE={};
 			MG_PAGE.list_article=function()
 			{
 				var req={};
-				MG_API.request("http://127.0.0.1:11007/article/list",req,MG_PAGE.loadData);
+				MG_API.request(MG_CONFIG.SYSPATH+"article/list",req,MG_PAGE.loadData);
 			}
 			
 			MG_PAGE.loadData=function(data)
@@ -96,21 +97,18 @@
                     var item = data[i];
 					var itemStr='<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 " onclick="MG_PAGE.open_detail(##2)" style="margin-bottom:40px;cursor:pointer ">'+
 							'<div class="tm-content-box article-item">'+
-                            '<img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid  ">'+
+                            '<img src="##3" alt="Image" class="tm-margin-b-20 img-fluid " style="height:200px;">'+
                             '<h4 class="tm-margin-b-20 tm-gold-text" style="text-align:center;">##1</h4>'+
                             '<p class="tm-margin-b-20" ></p>'+
                             // '<a href="#" class="tm-btn text-uppercase">Read More</a>'+
                         '</div>  '+
                         '</div>  ';
-                        itemStr = itemStr.replace("##1",item.title).replace("##2",item.id)
-                        rowDiv.append(itemStr);
-                        if(i%4==3||(i+1)==data.length)
-                        {
-                            $("#ar_items").append(rowDiv)
-                        }
-                  
-                    
-                   
+					itemStr = itemStr.replace("##1",item.title).replace("##2",item.id).replace("##3",item.thumb);
+					rowDiv.append(itemStr);
+					if(i%4==3||(i+1)==data.length)
+					{
+						$("#ar_items").append(rowDiv)
+					}
                 }
                 MG_PAGE.touch_detail();
 			}

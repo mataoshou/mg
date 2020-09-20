@@ -65,10 +65,10 @@
                         <div class="tm-blog-post">
                             <h3 class="tm-gold-text at-title" style="margin-bottom: 30px;font-size: 50px;font-weight: 600;"> </h3>
                             <!-- <img src="img/tm-img-1010x336-1.jpg" alt="Image" class="img-fluid tm-img-post at-thumb"> -->
-                            <div class="tm-blog-img-container">
-            
+                            <div >
+								<img class ="at-thumb" />
                             </div>
-                            <div class="at-content" style="margin-top:10px;">
+                            <div class="at-content" style="margin-top:30px;">
                             </div>    
                                 
                         </div>                        
@@ -81,7 +81,7 @@
         <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> 
         <script src="js/bootstrap.min.js"></script>                 
         <script src="js/api.js"></script>
-
+		<script src="config/sysconfig.js"></script>
         <script>
             var MG_PAGE={};
             $(function()
@@ -94,13 +94,14 @@
 			{
                 var req={};
                 req.id = id;
-				MG_API.request("http://127.0.0.1:11007/article/get",req,MG_PAGE.load_data);
+				MG_API.request(MG_CONFIG.SYSPATH+"article/get",req,MG_PAGE.load_data);
             }
             
             MG_PAGE.load_data=function(data)
 			{
                 $(".at-title").text(data[0].title);
                 $(".at-content").append(data[0].content);
+				$(".at-thumb").append(data[0].thumb);
 			}
 
         </script>

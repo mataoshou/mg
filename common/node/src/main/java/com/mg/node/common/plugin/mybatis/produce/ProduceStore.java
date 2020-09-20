@@ -10,6 +10,7 @@ import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
 import com.mg.node.common.plugin.mybatis.imp.IGeneralMapper;
 import com.mg.node.common.plugin.mybatis.template.GeneralTemplate;
 import com.mg.node.common.plugin.mybatis.template.TemplateItem;
+import groovy.lang.GroovyClassLoader;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Results;
 import org.springframework.core.io.Resource;
@@ -168,9 +169,11 @@ public class ProduceStore {
         for (Resource resource : resources) {
             MetadataReader reader = metaReader.getMetadataReader(resource);
             String className = reader.getClassMetadata().getClassName();
-            Class<?> clazz = loader.loadClass(className);
+            log.info("...........{}",className);
+            Class<?> clazz = Class.forName(className);
             addPojo(clazz,template,imp);
         }
+
     }
 
     /**
@@ -327,13 +330,16 @@ public class ProduceStore {
             unit.addMethod(methodUnit);
         }
 
-        log.debug("动态构建对象代码：" +unit.finish());
+        log.info("动态构建对象代码：" +unit.finish());
 
+        log.info("44444444");
         JavaStringCompiler compiler = new JavaStringCompiler();
+        log.info("1111111");
         Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());
+        log.info("222222222222");
         // 加载内存中byte到Class<?>对象
         Class<?> clazz = compiler.loadClass(fullName, results);
-
+        log.info("333333333333");
         log.debug("成功构建mapper类{}",clazz.getName());
         return clazz;
     }

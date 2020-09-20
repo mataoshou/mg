@@ -1,0 +1,159 @@
+2020-09-19 17:18:28.550  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fc575ded] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:30.356  INFO [mg-node-article,,,] 28388 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2020-09-19 17:18:32.531  INFO [mg-node-article,,,] 28388 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2020-09-19 17:18:32.532  WARN [mg-node-article,,,] 28388 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/mg-node-article/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-09-19 17:18:32.536  INFO [mg-node-article,,,] 28388 --- [main] com.mg.node.ArticleApplication           : No active profile set, falling back to default profiles: default
+2020-09-19 17:18:34.650  INFO [mg-node-article,,,] 28388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-19 17:18:34.656  INFO [mg-node-article,,,] 28388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-09-19 17:18:34.835  INFO [mg-node-article,,,] 28388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
+2020-09-19 17:18:35.614  INFO [mg-node-article,,,] 28388 --- [main] com.mg.node.config.MapperServer          : .....开始配置扫描区域！
+2020-09-19 17:18:36.082  INFO [mg-node-article,,,] 28388 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=725f480d-a366-3083-b1df-a509e5161a1a
+2020-09-19 17:18:36.203  INFO [mg-node-article,,,] 28388 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-09-19 17:18:36.222  INFO [mg-node-article,,,] 28388 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-09-19 17:18:36.248  INFO [mg-node-article,,,] 28388 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-09-19 17:18:37.203  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e03d5af0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:37.357  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$4b2f161f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:37.426  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$26c1213f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:37.524  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$5fa8ca0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:37.563  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:37.709  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:37.847  INFO [mg-node-article,,,] 28388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fc575ded] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-19 17:18:40.474  INFO [mg-node-article,,,] 28388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 11007 (http)
+2020-09-19 17:18:40.526  INFO [mg-node-article,,,] 28388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-19 17:18:40.527  INFO [mg-node-article,,,] 28388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-09-19 17:18:40.799  INFO [mg-node-article,,,] 28388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-19 17:18:40.800  INFO [mg-node-article,,,] 28388 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8242 ms
+2020-09-19 17:18:41.263  WARN [mg-node-article,,,] 28388 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-09-19 17:18:41.264  INFO [mg-node-article,,,] 28388 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-09-19 17:18:41.316  INFO [mg-node-article,,,] 28388 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@25f7391e
+2020-09-19 17:18:46.591  INFO [mg-node-article,,,] 28388 --- [main] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2020-09-19 17:18:46.611  WARN [mg-node-article,,,] 28388 --- [main] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2020-09-19 17:18:46.620  INFO [mg-node-article,,,] 28388 --- [main] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: main
+2020-09-19 17:18:46.632  INFO [mg-node-article,,,] 28388 --- [main] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2020-09-19 17:18:46.636  INFO [mg-node-article,,,] 28388 --- [main] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2020-09-19 17:18:46.665  INFO [mg-node-article,,,] 28388 --- [main] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2020-09-19 17:18:47.182  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.6.1--104dcb3e3fb464b30c5186d229e00af9f332524b, built on 04/21/2020 15:01 GMT
+2020-09-19 17:18:47.183  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=LAPTOP-IKDT16E0
+2020-09-19 17:18:47.208  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_221
+2020-09-19 17:18:47.209  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2020-09-19 17:18:47.210  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=C:\Program Files\Java\jre1.8.0_221
+2020-09-19 17:18:47.212  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=D:\core\mg\bussiness\node\node.article\target\mg-node-article-1.0.jar
+2020-09-19 17:18:47.213  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\tool\Xshell 6\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Java\jdk1.8.0_201\jre\bin;D:\mysql\bin;D:\workSoft\mysql\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;C:\MinGW\bin;D:\tool\apache-maven-3.6.3\bin;C:\Users\matao\AppData\Local\Microsoft\WindowsApps;C:\Users\matao\AppData\Local\GitHubDesktop\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;.
+2020-09-19 17:18:47.216  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\matao\AppData\Local\Temp\
+2020-09-19 17:18:47.222  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2020-09-19 17:18:47.225  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2020-09-19 17:18:47.226  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2020-09-19 17:18:47.227  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2020-09-19 17:18:47.230  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=matao
+2020-09-19 17:18:47.235  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\matao
+2020-09-19 17:18:47.237  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=D:\core\mg\bussiness\node\node.article
+2020-09-19 17:18:47.239  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.free=156MB
+2020-09-19 17:18:47.240  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.max=1796MB
+2020-09-19 17:18:47.241  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.total=677MB
+2020-09-19 17:18:47.589  INFO [mg-node-article,,,] 28388 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2020-09-19 17:18:47.606  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.0.127.235:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@5f212d84
+2020-09-19 17:18:47.630  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2020-09-19 17:18:47.666  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 1048575 Bytes
+2020-09-19 17:18:47.676  INFO [mg-node-article,,,] 28388 --- [main] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=false
+2020-09-19 17:18:47.694  INFO [mg-node-article,,,] 28388 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Default schema
+2020-09-19 17:18:47.739  INFO [mg-node-article,,,] 28388 --- [main] c.mg.node.common.service.task.PoolBuild  : init pool
+2020-09-19 17:18:47.745  INFO [mg-node-article,,,] 28388 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-09-19 17:18:47.747  INFO [mg-node-article,,,] 28388 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2020-09-19 17:18:47.845  WARN [mg-node-article,,,] 28388 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-09-19 17:18:47.846  INFO [mg-node-article,,,] 28388 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-09-19 17:18:53.754  INFO [mg-node-article,,,] 28388 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-09-19 17:18:54.045  INFO [mg-node-article,,,] 28388 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-09-19 17:18:54.408  INFO [mg-node-article,,,] 28388 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2020-09-19 17:18:54.544  INFO [mg-node-article,,,] 28388 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2020-09-19 17:18:54.578  INFO [mg-node-article,,,] 28388 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2020-09-19 17:18:54.638  INFO [mg-node-article,,,] 28388 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-09-19 17:18:54.639  INFO [mg-node-article,,,] 28388 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'mg-node-article-1.errorChannel' has 1 subscriber(s).
+2020-09-19 17:18:54.642  INFO [mg-node-article,,,] 28388 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2020-09-19 17:18:54.740  INFO [mg-node-article,,,] 28388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 11007 (http) with context path ''
+2020-09-19 17:18:54.744  INFO [mg-node-article,,,] 28388 --- [main] com.mg.node.ArticleApplication           : Started ArticleApplication in 29.811 seconds (JVM running for 30.784)
+2020-09-19 17:19:05.710  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.127.235/10.0.127.235:2181.
+2020-09-19 17:19:05.712  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2020-09-19 17:19:17.735  INFO [mg-node-article,,,] 28388 --- [Curator-Framework-0] o.a.c.f.state.ConnectionStateManager     : State change: SUSPENDED
+2020-09-19 17:19:18.286 ERROR [mg-node-article,,,] 28388 --- [Curator-Framework-0] o.a.c.f.imps.CuratorFrameworkImpl        : Background operation retry gave up
+
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:102) ~[zookeeper-3.6.1.jar!/:3.6.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkBackgroundRetry(CuratorFrameworkImpl.java:844) [curator-framework-4.0.1.jar!/:4.0.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.performBackgroundOperation(CuratorFrameworkImpl.java:972) [curator-framework-4.0.1.jar!/:4.0.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.backgroundOperationsLoop(CuratorFrameworkImpl.java:925) [curator-framework-4.0.1.jar!/:4.0.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.access$300(CuratorFrameworkImpl.java:73) [curator-framework-4.0.1.jar!/:4.0.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$4.call(CuratorFrameworkImpl.java:322) [curator-framework-4.0.1.jar!/:4.0.1]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_221]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_221]
+
+2020-09-19 17:19:18.290 ERROR [mg-node-article,,,] 28388 --- [Curator-Framework-0] o.a.c.f.imps.CuratorFrameworkImpl        : Background retry gave up
+
+org.apache.curator.CuratorConnectionLossException: KeeperErrorCode = ConnectionLoss
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.performBackgroundOperation(CuratorFrameworkImpl.java:954) [curator-framework-4.0.1.jar!/:4.0.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.backgroundOperationsLoop(CuratorFrameworkImpl.java:925) [curator-framework-4.0.1.jar!/:4.0.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.access$300(CuratorFrameworkImpl.java:73) [curator-framework-4.0.1.jar!/:4.0.1]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$4.call(CuratorFrameworkImpl.java:322) [curator-framework-4.0.1.jar!/:4.0.1]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_221]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_221]
+
+2020-09-19 17:19:26.715  WARN [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for sever 10.0.127.235/10.0.127.235:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_221]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:1.8.0_221]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:342) ~[zookeeper-3.6.1.jar!/:3.6.1]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1262) ~[zookeeper-3.6.1.jar!/:3.6.1]
+
+2020-09-19 17:19:45.840  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.127.235/10.0.127.235:2181.
+2020-09-19 17:19:45.843  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2020-09-19 17:19:48.994  INFO [mg-node-article,,,] 28388 --- [http-nio-11007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-19 17:19:48.995  INFO [mg-node-article,,,] 28388 --- [http-nio-11007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-19 17:19:49.049  INFO [mg-node-article,,,] 28388 --- [http-nio-11007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2020-09-19 17:20:06.856  WARN [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for sever 10.0.127.235/10.0.127.235:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_221]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:1.8.0_221]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:342) ~[zookeeper-3.6.1.jar!/:3.6.1]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1262) ~[zookeeper-3.6.1.jar!/:3.6.1]
+
+2020-09-19 17:20:12.110  INFO [mg-node-article,b5e6c38a70730d47,b5e6c38a70730d47,false] 28388 --- [http-nio-11007-exec-7] node.uauth                               : [node.uauth]异常：[Required request body is missing: public com.mg.common.pojo.ResultItem com.mg.node.action.ArticleController.get(com.mg.node.pojo.dto.InArticleDto) throws java.lang.Exception] (org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160))
+2020-09-19 17:20:17.736  WARN [mg-node-article,,,] 28388 --- [Curator-ConnectionStateManager-0] o.a.c.f.state.ConnectionStateManager     : Session timeout has elapsed while SUSPENDED. Injecting a session expiration. Elapsed ms: 60001. Adjusted session timeout ms: 60000
+2020-09-19 17:20:17.741  INFO [mg-node-article,,,] 28388 --- [Curator-ConnectionStateManager-0] org.apache.zookeeper.ZooKeeperTestable   : injectSessionExpiration() called
+2020-09-19 17:20:17.754  WARN [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.curator.ConnectionState       : Session expired event received
+2020-09-19 17:20:17.754  WARN [mg-node-article,,,] 28388 --- [Curator-ConnectionStateManager-0] o.a.c.f.state.ConnectionStateManager     : Session timeout has elapsed while SUSPENDED. Injecting a session expiration. Elapsed ms: 60019. Adjusted session timeout ms: 60000
+2020-09-19 17:20:17.759  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.0.127.235:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@5f212d84
+2020-09-19 17:20:17.764  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 1048575 Bytes
+2020-09-19 17:20:17.775  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=false
+2020-09-19 17:20:17.779  INFO [mg-node-article,,,] 28388 --- [Curator-ConnectionStateManager-0] org.apache.zookeeper.ZooKeeperTestable   : injectSessionExpiration() called
+2020-09-19 17:20:17.792  WARN [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.curator.ConnectionState       : Session expired event received
+2020-09-19 17:20:17.792  INFO [mg-node-article,,,] 28388 --- [main-EventThread] o.a.c.f.state.ConnectionStateManager     : State change: LOST
+2020-09-19 17:20:17.793  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.0.127.235:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@5f212d84
+2020-09-19 17:20:17.798  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x0
+2020-09-19 17:20:17.799  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 1048575 Bytes
+2020-09-19 17:20:17.811  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=false
+2020-09-19 17:20:17.814  INFO [mg-node-article,,,] 28388 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x0
+2020-09-19 17:20:26.008  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.127.235/10.0.127.235:2181.
+2020-09-19 17:20:26.009  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2020-09-19 17:20:35.844  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.127.235/10.0.127.235:2181.
+2020-09-19 17:20:35.844  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.127.235/10.0.127.235:2181.
+2020-09-19 17:20:35.845  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2020-09-19 17:20:35.851  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2020-09-19 17:20:56.857  WARN [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for sever 10.0.127.235/10.0.127.235:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_221]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source) ~[na:1.8.0_221]
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:342) ~[zookeeper-3.6.1.jar!/:3.6.1]
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1262) ~[zookeeper-3.6.1.jar!/:3.6.1]
+
+2020-09-19 17:21:15.979  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.0.127.235/10.0.127.235:2181.
+2020-09-19 17:21:15.979  INFO [mg-node-article,,,] 28388 --- [main-SendThread(10.0.127.235:2181)] org.apache.zookeeper.ClientCnxn          : SASL config status: Will not attempt to authenticate using SASL (unknown error)
