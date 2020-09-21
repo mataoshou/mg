@@ -13,7 +13,7 @@ public class MapperServer extends MgMapperServer {
     @Override
     public void configPreLoad() throws Exception {
         log.info(".....开始配置扫描区域！");
-//        addPackage("com.mg.node.db.sql.pojo");
+        addPackage("com.mg.node.db.sql.pojo");
     }
 
 }

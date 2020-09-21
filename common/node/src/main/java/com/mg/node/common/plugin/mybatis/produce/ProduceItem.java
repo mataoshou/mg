@@ -16,6 +16,8 @@ public class ProduceItem {
 
     private Map<String,String> params = new HashMap<>();
 
+    private String relyOn;
+
 
     public Class getPojo() {
         return pojo;

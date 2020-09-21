@@ -1,8 +1,8 @@
 package com.mg.node.common.plugin.mybatis.produce;
 
-import com.itranswarp.compiler.JavaStringCompiler;
 import com.mg.common.unit.ClassUnit;
 import com.mg.common.unit.MethodUnit;
+import com.mg.common.util.BaseFileUtil;
 import com.mg.common.util.StringUtil;
 import com.mg.node.common.config.DaoConfiguration;
 import com.mg.node.common.plugin.mybatis.annotations.Column;
@@ -10,9 +10,10 @@ import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
 import com.mg.node.common.plugin.mybatis.imp.IGeneralMapper;
 import com.mg.node.common.plugin.mybatis.template.GeneralTemplate;
 import com.mg.node.common.plugin.mybatis.template.TemplateItem;
-import groovy.lang.GroovyClassLoader;
+import com.mg.node.common.util.JarUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Results;
+import org.springframework.boot.system.ApplicationHome;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -20,6 +21,7 @@ import org.springframework.core.type.classreading.CachingMetadataReaderFactory;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.*;
@@ -196,6 +198,20 @@ public class ProduceStore {
 
         List<Class> result = new ArrayList<>();
 
+        ApplicationHome h = new ApplicationHome(getClass());
+        File jarF = h.getSource();
+
+        String relyOn =null;
+       if(jarF.isFile()) {
+           log.info("运行环境，引入jar包依赖中！！{}",jarF.getPath());
+           JarUtil jarUtil = new JarUtil();
+           try {
+               jarUtil.buildClassPath(jarF, "tmp");
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+           relyOn = buildRelyOn();
+       }
         while(iterator.hasNext())
         {
             List<ProduceItem> list = iterator.next();
@@ -204,7 +220,7 @@ public class ProduceStore {
                 for(ProduceItem item :list)
                 {
                     try {
-                        Class cl = buildClass(item);
+                        Class cl = buildClass(item,relyOn);
                         result.add(cl);
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -215,7 +231,30 @@ public class ProduceStore {
             }
         }
 
+        BaseFileUtil.delete(new File(jarF,"tmp"));
         return result;
+    }
+
+
+    public String buildRelyOn()
+    {
+        String relyOn = ".";
+        ApplicationHome h = new ApplicationHome(getClass());
+        File jarF = h.getSource();
+        File lib = BaseFileUtil.getFile(jarF.getParentFile().getPath(),"tmp","BOOT-INF","lib");
+        log.info("111111111111111111  ....{}",lib.getPath());
+        File[] jars = lib.listFiles();
+        log.info("111111111111111111 ....{}",jars.length);
+        for(File jar : jars)
+        {
+            relyOn +="/" + jar.getPath()+File.pathSeparator;
+        }
+        log.info("33333333");
+        File classes = BaseFileUtil.getFile(jarF.getPath(),"tmp","BOOT-INF","classes");
+
+        relyOn +=classes.getPath()+File.pathSeparator;
+
+        return relyOn;
     }
 
     /**
@@ -225,7 +264,7 @@ public class ProduceStore {
      * @throws IOException
      * @throws ClassNotFoundException
      */
-    private Class buildClass(ProduceItem item) throws IOException, ClassNotFoundException {
+    private Class buildClass(ProduceItem item,String relyOn) throws IOException, ClassNotFoundException {
 
         // 声明类名
         String mapperName = item.getPojo().getSimpleName()+item.getImp().getSimpleName()+"Mapper";
@@ -332,14 +371,10 @@ public class ProduceStore {
 
         log.info("动态构建对象代码：" +unit.finish());
 
-        log.info("44444444");
         JavaStringCompiler compiler = new JavaStringCompiler();
-        log.info("1111111");
-        Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish());
-        log.info("222222222222");
-        // 加载内存中byte到Class<?>对象
+
+        Map<String, byte[]> results = compiler.compile(mapperName + ".java",unit.finish(),relyOn);
         Class<?> clazz = compiler.loadClass(fullName, results);
-        log.info("333333333333");
         log.debug("成功构建mapper类{}",clazz.getName());
         return clazz;
     }

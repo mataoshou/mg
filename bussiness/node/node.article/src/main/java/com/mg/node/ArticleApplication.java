@@ -5,9 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 @SpringBootApplication
-@MapperScan("com.mg.node.db.sql.pojo")
+//@MapperScan("com.mg.node.db.sql.pojo")
 public class ArticleApplication {
 
     public static void main(String[] args) {
