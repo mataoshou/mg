@@ -140,12 +140,12 @@ public class BaseFileUtil
 	 */
 	public static boolean delete(File file){
 		if(!file.exists()){//验证路径是否存在
-			log.debug(file.getPath()+"   路径不存在！");
+			log.info(file.getPath()+"   路径不存在！");
 			return false;
 		}
 		if(!file.isDirectory()){//验证是否是文件夹
 			file.delete();//文件直接删除
-			log.debug("删除文件" +file.getPath());
+			log.info("删除文件" +file.getPath());
 			return true;
 		}
 		//遍历文件夹下的文件或文件夹，进行删除
@@ -154,7 +154,7 @@ public class BaseFileUtil
 			delete(f);//递归删除
 		}
 		file.delete();//删除文件�?
-		log.debug("删除文件:" +file.getPath());
+		log.info("删除文件:" +file.getPath());
 		return true;
 		
 	}

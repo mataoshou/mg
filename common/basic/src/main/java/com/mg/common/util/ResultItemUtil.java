@@ -31,6 +31,29 @@ public class ResultItemUtil {
         }
     }
 
+    public static ResultItem success()
+    {
+        return new ResultItem(ResultItemEnum.RESULT_ENUM_SUCCESS.getCode(),ResultItemEnum.RESULT_ENUM_SUCCESS.getMsg());
+    }
+
+    public static ResultItem success(ResultItemEnum itemEnum)
+    {
+        return new ResultItem(itemEnum.getCode(),itemEnum.getMsg());
+    }
+    public static ResultItem success(ResultItemEnum itemEnum,String msg)
+    {
+        return new ResultItem(itemEnum.getCode(),ResultItemEnum.RESULT_ENUM_SUCCESS.getMsg());
+    }
+
+    public static ResultItem fail(ResultItemEnum itemEnum)
+    {
+        return new ResultItem(itemEnum.getCode(),itemEnum.getMsg());
+    }
+
+    public static ResultItem fail(ResultItemEnum itemEnum,String msg)
+    {
+        return new ResultItem(itemEnum.getCode(),msg);
+    }
 
     private static ResultItemEnum selectResult(int code){
         switch(code){

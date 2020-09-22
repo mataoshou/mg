@@ -1,5 +1,6 @@
 package com.mg.node.action; 
 
+import com.mg.node.common.plugin.param.annotation.ParamsCheck;
 import com.mg.node.pojo.dto.InArticleDto;
 import com.mg.node.pojo.dto.OutArticleDto;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +18,7 @@ public class ArticleController {
    @Autowired
    ArticleRepository repository;
 
+   @ParamsCheck("id:noNull:id不能为空")
    @RequestMapping(ArticleControllerConstant.ACTION_GET)
    public ResultItem get(@RequestBody InArticleDto dtoData) throws Exception{
       return repository.get(dtoData);

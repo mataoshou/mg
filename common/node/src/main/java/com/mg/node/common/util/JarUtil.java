@@ -15,7 +15,7 @@ public class JarUtil {
         File rootFile = new File(jarFile.getParent(),url);
 
 
-        log.info("....2222...{}",rootFile.getPath());
+        log.debug("解压jar包至{}",rootFile.getPath());
         if(rootFile.exists())
         {
             BaseFileUtil.delete(rootFile);
@@ -26,7 +26,7 @@ public class JarUtil {
             JarEntry je = (JarEntry) e.nextElement();
             String outFileName = new File( rootFile.getPath() ,je.getName()).getPath();
             File f = new File(outFileName);
-            System.out.println(f.getAbsolutePath());
+            log.debug("解压jar包文件{}",f.getAbsolutePath());
             f.getParentFile().mkdirs();
             if(je.isDirectory())
             {

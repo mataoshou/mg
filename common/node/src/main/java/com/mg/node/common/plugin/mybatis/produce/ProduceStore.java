@@ -195,23 +195,8 @@ public class ProduceStore {
     public List<Class> listClass()
     {
         Iterator<List<ProduceItem>> iterator = m_map.values().iterator();
-
         List<Class> result = new ArrayList<>();
-
-        ApplicationHome h = new ApplicationHome(getClass());
-        File jarF = h.getSource();
-
-        String relyOn =null;
-       if(jarF.isFile()) {
-           log.info("运行环境，引入jar包依赖中！！{}",jarF.getPath());
-           JarUtil jarUtil = new JarUtil();
-           try {
-               jarUtil.buildClassPath(jarF, "tmp");
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
-           relyOn = buildRelyOn();
-       }
+        String relyOn =getRelyOn();
         while(iterator.hasNext())
         {
             List<ProduceItem> list = iterator.next();
@@ -230,30 +215,57 @@ public class ProduceStore {
                 }
             }
         }
-
-        BaseFileUtil.delete(new File(jarF,"tmp"));
         return result;
     }
 
 
-    public String buildRelyOn()
+    private String getRelyOn()
+    {
+        String relyOn =null;
+        ApplicationHome h = new ApplicationHome(getClass());
+        File jarF = h.getSource();
+        if(jarF.isFile()) {
+            log.debug("运行环境，引入jar包依赖中！！jar包路径{}！！",jarF.getPath());
+            JarUtil jarUtil = new JarUtil();
+            try {
+                jarUtil.buildClassPath(jarF, "tmp");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            relyOn = buildRelyOn();
+        }
+        return relyOn;
+    }
+
+
+    private void deleteRelyOn()
+    {
+        ApplicationHome h = new ApplicationHome(getClass());
+        File jarF = h.getSource();
+        log.debug("删除文件{}",new File(jarF.getParent(),"tmp").getPath());
+        BaseFileUtil.delete(new File(jarF.getParent(),"tmp"));
+    }
+
+
+    private String buildRelyOn()
     {
         String relyOn = ".";
         ApplicationHome h = new ApplicationHome(getClass());
         File jarF = h.getSource();
         File lib = BaseFileUtil.getFile(jarF.getParentFile().getPath(),"tmp","BOOT-INF","lib");
-        log.info("111111111111111111  ....{}",lib.getPath());
+        log.debug("添加{}中的依赖包",lib.getPath());
         File[] jars = lib.listFiles();
-        log.info("111111111111111111 ....{}",jars.length);
+        log.debug("开始添加依赖包");
         for(File jar : jars)
         {
+            if(jar.getPath().indexOf("lombok")>=0||jar.getPath().indexOf("spring")>=0)continue;
             relyOn +="/" + jar.getPath()+File.pathSeparator;
         }
-        log.info("33333333");
-        File classes = BaseFileUtil.getFile(jarF.getPath(),"tmp","BOOT-INF","classes");
+
+        File classes = BaseFileUtil.getFile(jarF.getParentFile().getPath(),"tmp","BOOT-INF","classes");
 
         relyOn +=classes.getPath()+File.pathSeparator;
-
+        log.debug("完成依赖包构建：{}",relyOn);
         return relyOn;
     }
 
@@ -369,7 +381,7 @@ public class ProduceStore {
             unit.addMethod(methodUnit);
         }
 
-        log.info("动态构建对象代码：" +unit.finish());
+        log.debug("动态构建对象代码：" +unit.finish());
 
         JavaStringCompiler compiler = new JavaStringCompiler();
 
@@ -467,8 +479,11 @@ public class ProduceStore {
     }
 
     public void cleanData(){
+
+        log.info("加载结束，清理缓存数据！！");
         m_map = new HashMap<>();
         m_scan = new ArrayList<>();
+        deleteRelyOn();
     }
 
 

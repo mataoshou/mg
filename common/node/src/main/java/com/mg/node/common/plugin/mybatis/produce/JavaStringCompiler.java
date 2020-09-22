@@ -37,7 +37,7 @@ public class JavaStringCompiler {
 
             }
             else{
-                log.info("引入依赖：{}",relyOn);
+                log.debug("引入依赖：{}",relyOn);
                 Iterable options = Arrays.asList("-classpath", relyOn);
                 task = this.compiler.getTask((Writer)null, manager, (DiagnosticListener)null, options,
                         null, Arrays.asList(javaFileObject));

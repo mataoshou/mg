@@ -25,6 +25,9 @@ public class ControllerLog {
 
     @Before("actionLog()")
     public void before(JoinPoint point) {
-        log.info(String.format("action [%s] [%s] [%s] start execute", SysConstant.getSys(), point.getTarget().getClass().getSimpleName(),point.getSignature().getName()));
+        log.info("action [{}] [{}] [{}] start execute", SysConstant.getSys(), point.getTarget().getClass().getSimpleName(),point.getSignature().getName());
     }
+
+
+
 }
