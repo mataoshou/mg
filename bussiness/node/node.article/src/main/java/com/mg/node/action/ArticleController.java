@@ -11,6 +11,11 @@ import com.mg.node.service.repository.ArticleRepository;
 import com.mg.node.constant.action.ArticleControllerConstant;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.mg.common.pojo.ResultItem;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @RestController

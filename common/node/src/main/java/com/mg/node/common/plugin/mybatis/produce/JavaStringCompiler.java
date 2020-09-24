@@ -31,7 +31,7 @@ public class JavaStringCompiler {
             JavaCompiler.CompilationTask task;
             if(relyOn==null||relyOn.length()==0)
             {
-                log.info("调试环境不引入依赖！！");
+                log.debug("调试环境不引入依赖！！");
                 task = this.compiler.getTask((Writer)null, manager, (DiagnosticListener)null, null,
                         null, Arrays.asList(javaFileObject));
 

@@ -171,7 +171,7 @@ public class ProduceStore {
         for (Resource resource : resources) {
             MetadataReader reader = metaReader.getMetadataReader(resource);
             String className = reader.getClassMetadata().getClassName();
-            log.info("...........{}",className);
+//            log.info("...........{}",className);
             Class<?> clazz = Class.forName(className);
             addPojo(clazz,template,imp);
         }

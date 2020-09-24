@@ -30,4 +30,7 @@ public class MTdArticleInfo {
     private String tags;
 
     private String ulr;
+
+    @Column(cloumn= "siteId")
+    private Long siteid;
 }
