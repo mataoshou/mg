@@ -1,7 +1,8 @@
 package com.mg.node.db.sql.pojo;
 
-import com.mg.node.common.plugin.mybatis.annotations.Table;
+import com.mg.node.common.plugin.mybatis.annotations.Column;
 import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
+import com.mg.node.common.plugin.mybatis.annotations.Table;
 import java.util.Date;
 import lombok.Data;
 
@@ -9,15 +10,21 @@ import lombok.Data;
 @Table("m_td_privilege_info")
 public class MTdPrivilegeInfo {
     @PrimaryId
-    private Long id;
+    @Column(cloumn= "privilege_id")
+    private Long privilegeId;
 
-    private String pname;
+    @Column(cloumn= "privilege_name")
+    private String privilegeName;
 
-    private String displayName;
+    @Column(cloumn= "privilege_displayname")
+    private String privilegeDisplayname;
 
+    @Column(cloumn= "time_created")
     private Date timeCreated;
 
-    private Integer level;
+    @Column(cloumn= "privilege_level")
+    private Integer privilegeLevel;
 
-    private Integer prority;
+    @Column(cloumn= "privilege_prority")
+    private Integer privilegePrority;
 }

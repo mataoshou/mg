@@ -120,8 +120,6 @@ public class SysClassListController {
 
         File root = new File(base,packageName.replace(".","/"));
 
-        System.out.println("......."  + root.getPath());
-
         return root;
     }
 }

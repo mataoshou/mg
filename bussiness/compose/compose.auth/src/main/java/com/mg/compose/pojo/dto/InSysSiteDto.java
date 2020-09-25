@@ -1,14 +1,11 @@
 package com.mg.compose.pojo.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-import java.util.Date;
-
-@Getter
-@Setter
+@Data
 public class InSysSiteDto {
-
+    private Long siteId;
     private String siteName;
-
+    private String sitePassword;
+    private Integer siteType;
 }

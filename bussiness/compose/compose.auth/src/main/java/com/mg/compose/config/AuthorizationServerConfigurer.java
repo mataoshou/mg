@@ -138,7 +138,7 @@ public class AuthorizationServerConfigurer  extends AuthorizationServerConfigure
                 details = new BaseClientDetails(sysSite.getSiteName(),null,
                         "all,read,write",
                         "refresh_token,password,authorization_code",null);
-                details.setClientSecret(passwordEncoder.encode(sysSite.getPassword()));
+                details.setClientSecret(passwordEncoder.encode(sysSite.getSitePassword()));
                 details.setAccessTokenValiditySeconds(7200);
                 return details;
             }

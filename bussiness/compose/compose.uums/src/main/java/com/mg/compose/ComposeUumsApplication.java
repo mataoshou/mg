@@ -29,9 +29,4 @@ public class ComposeUumsApplication {
     }
 
 
-    @LoadBalanced
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 }

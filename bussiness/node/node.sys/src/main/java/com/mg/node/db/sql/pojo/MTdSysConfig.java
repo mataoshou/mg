@@ -9,26 +9,27 @@ import lombok.Data;
 @Table("m_td_sys_config")
 public class MTdSysConfig {
     @PrimaryId
-    @Column(cloumn= "configId")
-    private Long configid;
+    @Column(cloumn= "config_id")
+    private Long configId;
 
-    @Column(cloumn= "configName")
-    private String configname;
+    @Column(cloumn= "config_name")
+    private String configName;
 
-    @Column(cloumn= "showType")
-    private Integer showtype;
+    @Column(cloumn= "show_type")
+    private Integer showType;
 
-    @Column(cloumn= "controlType")
-    private Integer controltype;
+    @Column(cloumn= "control_type")
+    private Integer controlType;
 
-    @Column(cloumn= "configValue")
-    private String configvalue;
+    @Column(cloumn= "config_value")
+    private String configValue;
 
-    @Column(cloumn= "dataSource")
-    private String datasource;
+    @Column(cloumn= "data_source")
+    private String dataSource;
 
-    private String description;
+    @Column(cloumn= "config_description")
+    private String configDescription;
 
-    @Column(cloumn= "siteId")
-    private Long siteid;
+    @Column(cloumn= "site_id")
+    private Long siteId;
 }

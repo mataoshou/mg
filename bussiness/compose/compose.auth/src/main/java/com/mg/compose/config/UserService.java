@@ -36,8 +36,8 @@ public class UserService implements UserDetailsService {
             log.info("登录用户校验："+username);
             UserBo bo =  repository.getByName(username);
             if(bo==null)return null;
-            UserDetails userDetails = new User(bo.getName(),
-                    passwordEncoder.encode(bo.getPassword()),
+            UserDetails userDetails = new User(bo.getUserName(),
+                    passwordEncoder.encode(bo.getUserPassword()),
                     true,true,true,true,
                     AuthorityUtils.commaSeparatedStringToAuthorityList("ADMIN1,ADMIN2"));
 

@@ -23,7 +23,7 @@ public class UserRepository {
    
    public UserBo getByName(String userName) throws Exception{
       InUserDto dto = new InUserDto();
-      dto.setName(userName);
+      dto.setUserName(userName);
       ResultItem<OutUserDto> result =  feign.getByName(dto);
       OutUserDto outUserDto = ResultItemUtil.getDate(result);
       UserBo bo = mapper.convert(outUserDto,UserBo.class);

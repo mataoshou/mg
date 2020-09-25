@@ -28,7 +28,7 @@ public class CustomTokenEnhancer implements TokenEnhancer {
             User user = (User) oAuth2Authentication.getPrincipal();
             UserBo dto = repository.getByName(user.getUsername());
             Map<String, Object> additionalInfo = new HashMap<>();
-            additionalInfo.put("userId", dto.getId());
+            additionalInfo.put("userId", dto.getUserId());
             ((DefaultOAuth2AccessToken) oAuth2AccessToken).setAdditionalInformation(
                     additionalInfo);
             return oAuth2AccessToken;

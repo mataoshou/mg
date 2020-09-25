@@ -28,7 +28,7 @@ public class SysSiteRepository {
    }
    
    public ResultItem get(InSysSiteDto item) throws Exception{
-      MTdSysSite pojo = dao.get(item.getId());
+      MTdSysSite pojo = dao.get(item.getSiteId());
       OutSysSiteDto dto = mapper.convert(pojo,OutSysSiteDto.class);
       ResultItem result =  new ResultItem<OutSysSiteDto>(dto);
       return result;
@@ -44,7 +44,6 @@ public class SysSiteRepository {
    
    public ResultItem list(InSysSiteDto item) throws Exception{
       List<MTdSysSite> list = dao.list();
-      dao.getMap();
       ResultItem result =  new ResultItem<OutSysSiteDto>(mapper.convert(list,OutSysSiteDto.class));
       return result;
    }
@@ -54,7 +53,7 @@ public class SysSiteRepository {
    }
    
    public ResultItem delete(InSysSiteDto item) throws Exception{
-      dao.delete(item.getId());
+      dao.delete(item.getSiteId());
       ResultItem result = new ResultItem();
       return result;
    }

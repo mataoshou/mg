@@ -48,9 +48,6 @@ public class ArticleRepository {
       MTdArticleDetailInfo detailInfo = mapper.convert(item,MTdArticleDetailInfo.class);
       ResultItem result = new ResultItem<OutArticleDto>(
               mapper.convert(dao.edit(pojo,detailInfo),OutArticleDto.class));
-
-
-
       return result;
    }
    

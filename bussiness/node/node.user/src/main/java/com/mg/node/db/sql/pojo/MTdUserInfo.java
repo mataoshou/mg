@@ -1,7 +1,8 @@
 package com.mg.node.db.sql.pojo;
 
-import com.mg.node.common.plugin.mybatis.annotations.Table;
+import com.mg.node.common.plugin.mybatis.annotations.Column;
 import com.mg.node.common.plugin.mybatis.annotations.PrimaryId;
+import com.mg.node.common.plugin.mybatis.annotations.Table;
 import java.util.Date;
 import lombok.Data;
 
@@ -9,27 +10,39 @@ import lombok.Data;
 @Table("m_td_user_info")
 public class MTdUserInfo {
     @PrimaryId
-    private Long id;
+    @Column(cloumn= "user_id")
+    private Long userId;
 
-    private String name;
+    @Column(cloumn= "user_name")
+    private String userName;
 
-    private String password;
+    @Column(cloumn= "user_password")
+    private String userPassword;
 
-    private String weixin;
+    @Column(cloumn= "user_weixin")
+    private String userWeixin;
 
-    private String weibo;
+    @Column(cloumn= "user_weibo")
+    private String userWeibo;
 
-    private String qq;
+    @Column(cloumn= "user_QQ")
+    private String userQq;
 
-    private String telephone;
+    @Column(cloumn= "user_telephone")
+    private String userTelephone;
 
-    private String displayName;
+    @Column(cloumn= "user_displayName")
+    private String userDisplayname;
 
+    @Column(cloumn= "time_created")
     private Date timeCreated;
 
-    private Integer level;
+    @Column(cloumn= "user_level")
+    private Integer userLevel;
 
-    private Integer stataDelete;
+    @Column(cloumn= "user_state_delete")
+    private Integer userStateDelete;
 
+    @Column(cloumn= "time_delete")
     private Date timeDelete;
 }

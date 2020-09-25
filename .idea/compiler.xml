@@ -8,25 +8,27 @@
         <outputRelativeToContentRoot value="true" />
         <module name="build" />
         <module name="mg-zipkin" />
+        <module name="mg-node-user" />
         <module name="mg-compose-auth" />
         <module name="mg-zuul" />
         <module name="mg-node-sys" />
         <module name="mg-common-node" />
-        <module name="mg-compose-command" />
+        <module name="mg-website-uauth" />
         <module name="mg-txlcn-tm" />
         <module name="mg-common-compose" />
+        <module name="mg-compose-command" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-website-uauth" />
-        <module name="mg-node-article" />
+        <module name="mg-config" />
+        <module name="boot.empty" />
         <module name="mg-eurake" />
-        <module name="mg-node-user" />
+        <module name="mg-node-article" />
         <module name="mg-gateway" />
         <module name="mg-common-basic" />
-        <module name="mg-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="boot.empty" target="1.8" />
       <module name="build" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
       <module name="mg-common" target="1.8" />
@@ -56,6 +58,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot.empty" options="-parameters" />
       <module name="build" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />

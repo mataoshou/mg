@@ -1,5 +1,6 @@
 package com.mg.website.action; 
 
+import com.mg.website.common.util.HttpUtil;
 import com.mg.website.pojo.vo.UserVo;
 import com.mg.website.pojo.dto.OutUserDto;
 import com.mg.website.pojo.dto.InUserDto;
@@ -27,8 +28,14 @@ public class UserController {
    @Autowired
    GeneralMapper mapper;
 
+   @Autowired
+   HttpUtil util;
+
    @RequestMapping(UserControllerConstant.ACTION_GET)
    public ResultItem get(@RequestBody UserVo voData) throws Exception{
+
+//      log.info( util.doGet("https://www.baidu.com/",null));
+
       OutUserDto pojo = mapper.convert(voData,OutUserDto.class);
       return repository.get(pojo);
    }

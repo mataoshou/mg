@@ -22,7 +22,7 @@ public class SysSiteDAO {
    
    public MTdSysSite edit(MTdSysSite item) throws Exception {
       long no = mapper.insertItem(item);
-      item.setPassword("msssd"+ System.currentTimeMillis());
+      item.setSitePassword("msssd"+ System.currentTimeMillis());
       no = mapper.updateItem(item);
       return item;
    }
@@ -31,7 +31,6 @@ public class SysSiteDAO {
       PageHelper.startPage(1, 20);
       Page<MTdSysSite> userList= mapper.listByPage(null,null);
       userList.getPageNum();
-//      return userList;
       return mapper.listByWhere(null,null);
    }
    
@@ -43,14 +42,8 @@ public class SysSiteDAO {
 
    public MTdSysSite getByName(String name)
    {
-      MTdSysSite site = mapper.getBySingleParam("siteName",name);
+      MTdSysSite site = mapper.getBySingleParam("site_name",name);
       return site;
    }
 
-   public void getMap()
-   {
-      Map map = mapper.getMap("select * from m_td_sys_site where id=2");
-//      Object  maps = mapper.listMap("select * from m_td_sys_site");
-      Log.info(map.size()+"");
-   }
 }

@@ -26,7 +26,7 @@ public class SysConfigRepository {
 
    
    public ResultItem get(InSysConfigDto item) throws Exception{
-      MTdSysConfig pojo = dao.get(item.getId());
+      MTdSysConfig pojo = dao.get(item.getConfigId());
 
       OutSysConfigDto dto = mapper.convert(pojo,OutSysConfigDto.class);
       ResultItem result =  new ResultItem<OutSysConfigDto>(dto);
@@ -48,7 +48,7 @@ public class SysConfigRepository {
    }
    
    public ResultItem delete(InSysConfigDto item) throws Exception{
-      dao.delete(item.getId());
+      dao.delete(item.getConfigId());
       ResultItem result = new ResultItem();
       return result;
    }

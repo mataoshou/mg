@@ -18,10 +18,6 @@ public class SysSiteController {
    @Autowired
    SysSiteRepository repository;
 
-   @RequestMapping("/sysSite/get1")
-   public ResultItem get(@RequestParam("id") Long id) throws Exception{
-      return repository.get1(id);
-   }
 
    @RequestMapping(SysSiteControllerConstant.ACTION_GET)
    public ResultItem get(@RequestBody InSysSiteDto dtoData) throws Exception{

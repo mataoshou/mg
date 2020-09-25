@@ -319,6 +319,8 @@ public class ProduceStore {
             }
         }
 
+        item.addParam("$idName$",idName);
+
 
         Method[] methods = template.getMethods();
         for (Method method : methods) {

@@ -10,20 +10,21 @@ import lombok.Data;
 @Table("m_td_sys_site")
 public class MTdSysSite {
     @PrimaryId
-    @Column(cloumn= "siteId")
-    private Long siteid;
+    @Column(cloumn= "site_id")
+    private Long siteId;
 
-    @Column(cloumn= "siteName")
-    private String sitename;
+    @Column(cloumn= "site_name")
+    private String siteName;
 
-    private String password;
+    @Column(cloumn= "site_password")
+    private String sitePassword;
 
-    @Column(cloumn= "displayName")
-    private String displayname;
+    @Column(cloumn= "display_name")
+    private String displayName;
 
-    @Column(cloumn= "siteType")
-    private Integer sitetype;
+    @Column(cloumn= "site_type")
+    private Integer siteType;
 
-    @Column(cloumn= "timeCreated")
-    private Date timecreated;
+    @Column(cloumn= "time_created")
+    private Date timeCreated;
 }
