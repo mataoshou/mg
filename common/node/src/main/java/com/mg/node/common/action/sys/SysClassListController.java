@@ -32,14 +32,26 @@ public class SysClassListController {
         return names;
     }
 
-    @RequestMapping("sys/list/dto")
-    public  List<SimpleItem> listDtos() throws IOException {
+    @RequestMapping("sys/list/indto")
+    public  List<SimpleItem> listinDtos() throws IOException {
 
-        File root =getRoot(CommonConstant.DTO_PACKAGE);
+        File root =getRoot(CommonConstant.INDTO_PACKAGE);
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root, CommonConstant.DTO_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, CommonConstant.INDTO_PACKAGE);
+
+        return names;
+    }
+
+    @RequestMapping("sys/list/outdto")
+    public  List<SimpleItem> listoutDtos() throws IOException {
+
+        File root =getRoot(CommonConstant.OUTDTO_PACKAGE);
+
+        log.info(root.getPath());
+
+        List<SimpleItem> names = getFileNames(root, CommonConstant.OUTDTO_PACKAGE);
 
         return names;
     }
@@ -65,14 +77,27 @@ public class SysClassListController {
     }
 
 
-    @RequestMapping("sys/list/vo")
-    public  List<SimpleItem> listVos() throws IOException {
+    @RequestMapping("sys/list/invo")
+    public  List<SimpleItem> listInVos() throws IOException {
 
-        File root =getRoot(CommonConstant.VO_PACKAGE);
+        File root =getRoot(CommonConstant.INVO_PACKAGE);
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root, CommonConstant.VO_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, CommonConstant.INVO_PACKAGE);
+
+        return names;
+    }
+
+
+    @RequestMapping("sys/list/outvo")
+    public  List<SimpleItem> listOutVos() throws IOException {
+
+        File root =getRoot(CommonConstant.OUTVO_PACKAGE);
+
+        log.info(root.getPath());
+
+        List<SimpleItem> names = getFileNames(root, CommonConstant.OUTVO_PACKAGE);
 
         return names;
     }

@@ -17,7 +17,6 @@ public class Mg2020092504 {
             int tmp = index*(right-left);
             if(max<tmp)max=tmp;
 
-            Lock
             if(height[left]<height[right]){left++;}
             else {right--;}
         }

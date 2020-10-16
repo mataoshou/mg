@@ -1,11 +1,10 @@
-package com.mg.website.pojo.vo;
+package com.mg.website.pojo.vo.out;
 
 import lombok.Data;
 
 @Data
-public class UserVo {
+public class OutUserVo {
     String userName;
     Long userId;
-
     Integer groupId;
 }

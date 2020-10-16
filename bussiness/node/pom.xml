@@ -16,10 +16,10 @@
         <module>node.user</module>
         <module>node.sys</module>
         <module>node.article</module>
+        <module>node.uia</module>
     </modules>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

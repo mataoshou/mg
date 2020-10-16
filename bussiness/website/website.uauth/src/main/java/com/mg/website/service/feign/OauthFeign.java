@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.mg.common.pojo.ResultItem;
 import com.mg.website.constant.feign.OauthFeignConstant;
-import com.mg.website.pojo.dto.OutOauthDto;
+import com.mg.website.pojo.dto.out.OutOauthDto;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 

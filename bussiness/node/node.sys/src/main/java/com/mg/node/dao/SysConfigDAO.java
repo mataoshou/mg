@@ -37,7 +37,7 @@ public class SysConfigDAO {
    }
    
    public MTdSysConfig getByName(String name){
-      MTdSysConfig config = mapper.getBySingleParam("configName",name);
+      MTdSysConfig config = mapper.getByParam("configName",name);
       return config;
    }
 

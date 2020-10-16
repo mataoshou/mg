@@ -13,7 +13,9 @@ public interface IGeneralMapper<T> {
 
     T getById(long id);
 
-    T getBySingleParam(String column,String value);
+    T getByStrId(String id);
+
+    T getByParam(String column,String value);
 
     List<T> listBySql(String sql);
 
@@ -33,7 +35,7 @@ public interface IGeneralMapper<T> {
 
     int updateItem(T item);
 
-    int updateSingleColumn(String column,String value,String where);
+    int updateColumn(String column,String value,String where);
 
     int updateById(String column,String value,long id);
 
@@ -42,4 +44,6 @@ public interface IGeneralMapper<T> {
     int deleteByWhere(String where);
 
     int deleteById(long id);
+    int deleteByStrId(String id);
+    int deleteByParam(String column,String value);
 }

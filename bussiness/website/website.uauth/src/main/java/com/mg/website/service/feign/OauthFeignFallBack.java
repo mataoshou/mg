@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import com.mg.common.pojo.ResultItem;
 import com.mg.website.common.service.feign.BaseFallBack;
 import com.mg.website.constant.feign.OauthFeignConstant;
-import com.mg.website.pojo.dto.OutOauthDto;
 
 @Component
 @Slf4j

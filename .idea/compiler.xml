@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="build" />
         <module name="mg-zipkin" />
-        <module name="mg-node-user" />
         <module name="mg-compose-auth" />
+        <module name="mg-node-uia" />
         <module name="mg-zuul" />
         <module name="mg-node-sys" />
         <module name="mg-common-node" />
@@ -19,12 +19,13 @@
         <module name="mg-compose-command" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-config" />
         <module name="boot.empty" />
-        <module name="mg-eurake" />
+        <module name="mg-node-user" />
         <module name="mg-node-article" />
         <module name="mg-gateway" />
+        <module name="mg-eurake" />
         <module name="mg-common-basic" />
+        <module name="mg-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -47,6 +48,7 @@
       <module name="mg-node" target="1.8" />
       <module name="mg-node-article" target="1.8" />
       <module name="mg-node-sys" target="1.8" />
+      <module name="mg-node-uia" target="1.8" />
       <module name="mg-node-user" target="1.8" />
       <module name="mg-root" target="1.8" />
       <module name="mg-txlcn-tm" target="1.8" />
@@ -72,6 +74,7 @@
       <module name="mg-gateway" options="-parameters" />
       <module name="mg-node-article" options="-parameters" />
       <module name="mg-node-sys" options="-parameters" />
+      <module name="mg-node-uia" options="-parameters" />
       <module name="mg-node-user" options="-parameters" />
       <module name="mg-txlcn-tm" options="-parameters" />
       <module name="mg-website-uauth" options="-parameters" />

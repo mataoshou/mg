@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 @Table("m_td_action_info")
 public class MTdActionInfo {
+    @PrimaryId
     @Column(cloumn= "action_id")
     private Long actionId;
 

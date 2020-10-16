@@ -1,12 +1,12 @@
 package com.mg.website.service.feign; 
 
-import com.mg.website.pojo.dto.OutOauthDto;
+import com.mg.website.pojo.dto.out.OutOauthDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.mg.common.pojo.ResultItem;
 import com.mg.website.constant.feign.FreeFeignConstant;
-import com.mg.website.pojo.dto.InOauthDto;
+import com.mg.website.pojo.dto.in.InOauthDto;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 

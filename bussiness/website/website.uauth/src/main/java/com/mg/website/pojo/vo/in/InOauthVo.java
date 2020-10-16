@@ -1,10 +1,10 @@
-package com.mg.website.pojo.vo;
+package com.mg.website.pojo.vo.in;
 
 import lombok.Data;
 import org.dozer.Mapping;
 
 @Data
-public class OauthVo {
+public class InOauthVo {
 
     private String username;
     private String password;

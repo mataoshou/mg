@@ -1,13 +1,11 @@
 package com.mg.website.service.repository; 
 
 import org.springframework.stereotype.Service;
-import com.mg.website.pojo.dto.OutUserDto;
+import com.mg.website.pojo.dto.out.OutUserDto;
 import lombok.extern.slf4j.Slf4j;
-import com.mg.website.pojo.dto.InUserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.mg.common.pojo.ResultItem;
 import com.mg.website.service.feign.UserFeign;
-import java.util.List;
 
 @Service
 @Slf4j

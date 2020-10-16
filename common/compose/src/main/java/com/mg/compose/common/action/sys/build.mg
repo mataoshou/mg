@@ -125,8 +125,8 @@
 
 			MT.selects = [".sys-repository",".sys-pojo-in-dto",".sys-pojo-out-dto",
 			".sys-pojo-in-vo",".sys-pojo-out-vo",".sys-pojo-bo",".sys-pojo-po",".sys-name"];
-			MT.urls = ["/sys/list/repository","/sys/list/dto","/sys/list/dto",
-			"/sys/list/vo","/sys/list/vo",
+			MT.urls = ["/sys/list/repository","/sys/list/indto","/sys/list/outdto",
+			"/sys/list/invo","/sys/list/outvo",
 			"/sys/list/bo",
 			"/sys/list/po","/sys/list/sysName"];
 			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/cache","/sys/oper/bo","/sys/oper/buildAll"]

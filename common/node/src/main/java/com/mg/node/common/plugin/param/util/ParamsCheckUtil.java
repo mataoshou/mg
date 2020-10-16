@@ -35,4 +35,10 @@ public class ParamsCheckUtil {
             return true;
     }
 
+    public static boolean defaultMethod(Object value,String paramName)
+    {
+        if(value==null)return false;
+        return true;
+    }
+
 }

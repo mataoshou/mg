@@ -33,7 +33,7 @@ public class UserDAO {
    }
    
    public MTdUserInfo getByName(String name){
-      return mapper.getBySingleParam("user_name",name);
+      return mapper.getByParam("user_name",name);
    }
 
 }

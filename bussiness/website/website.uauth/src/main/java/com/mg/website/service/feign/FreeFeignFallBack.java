@@ -1,12 +1,11 @@
 package com.mg.website.service.feign; 
 
-import com.mg.website.pojo.dto.OutOauthDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import com.mg.common.pojo.ResultItem;
 import com.mg.website.common.service.feign.BaseFallBack;
 import com.mg.website.constant.feign.FreeFeignConstant;
-import com.mg.website.pojo.dto.InOauthDto;
+import com.mg.website.pojo.dto.in.InOauthDto;
 
 @Component
 @Slf4j

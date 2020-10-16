@@ -1,7 +1,7 @@
 package com.mg.website.service.repository; 
 
 import org.springframework.stereotype.Service;
-import com.mg.website.pojo.dto.InOauthDto;
+import com.mg.website.pojo.dto.in.InOauthDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.mg.common.pojo.ResultItem;

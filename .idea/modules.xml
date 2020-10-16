@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/bussiness/node/mg-node.iml" filepath="$PROJECT_DIR$/bussiness/node/mg-node.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/node/node.article/mg-node-article.iml" filepath="$PROJECT_DIR$/bussiness/node/node.article/mg-node-article.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/node/node.sys/mg-node-sys.iml" filepath="$PROJECT_DIR$/bussiness/node/node.sys/mg-node-sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/node/node.uia/mg-node-uia.iml" filepath="$PROJECT_DIR$/bussiness/node/node.uia/mg-node-uia.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" filepath="$PROJECT_DIR$/bussiness/node/node.user/mg-node-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/mg-root.iml" filepath="$PROJECT_DIR$/mg-root.iml" />
       <module fileurl="file://$PROJECT_DIR$/general/txlcn-tm/mg-txlcn-tm.iml" filepath="$PROJECT_DIR$/general/txlcn-tm/mg-txlcn-tm.iml" />

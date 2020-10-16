@@ -1,4 +1,4 @@
-package com.mg.website.pojo.dto;
+package com.mg.website.pojo.dto.out;
 
 import lombok.Data;
 

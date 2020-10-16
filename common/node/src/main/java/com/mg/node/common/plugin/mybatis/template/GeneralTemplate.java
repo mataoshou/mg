@@ -18,9 +18,13 @@ public interface GeneralTemplate {
     @Results()
     TemplateItem getById(long id);
 
+    @Select("select * from $tableName$ where $idName$=#{id}")
+    @ResultMap("$ResultMapId$")
+    TemplateItem getByStrId(@Param("id")String id);
+
     @Select("select * from $tableName$ where ${column}=#{value}")
     @ResultMap("$ResultMapId$")
-    TemplateItem getBySingleParam(@Param("column")String column,@Param("value")String value);
+    TemplateItem getByParam(@Param("column")String column,@Param("value")String value);
 
     @Select("${sql}")
     @ResultMap("$ResultMapId$")
@@ -36,7 +40,6 @@ public interface GeneralTemplate {
     @Select("${sql}")
     Map getMap(@Param("sql") String sql);
 
-
     //////////////////////////////// 插入更新区/////////////////////////////////////
     @InsertProvider(type = SqlFactory.class,method = "insertItem")
     @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
@@ -49,15 +52,13 @@ public interface GeneralTemplate {
     int updateByWhere(@Param("set") String set,@Param("where") String where);
 
     @Update("update $tableName$ set ${column}=${value} ${where}")
-    int updateSingleColumn(@Param("column") String column,@Param("value") String value,@Param("where") String where);
+    int updateColumn(@Param("column") String column,@Param("value") String value,@Param("where") String where);
 
     @Update("update $tableName$ set ${column}=${value} where id=#{id}")
     int updateById(String column,String value,long id);
 
-
     @UpdateProvider(type = SqlFactory.class,method = "updateItem")
     int updateItem(@Param("pojoItem") TemplateItem item);
-
 
     ////////////////////////////删除区/////////////////////////////////////
 
@@ -67,7 +68,13 @@ public interface GeneralTemplate {
     @Delete("delete from $tableName$ ${where}")
     int deleteByWhere(@Param("where") String where);
 
-    @Delete("delete from $tableName$ where id=#{id}")
-    int deleteById(long id);
+    @Delete("delete from $tableName$ where $idName$=#{id}")
+    int deleteById(@Param("id")long id);
+
+    @Delete("delete from $tableName$ where $idName$=#{id}")
+    int deleteByStrId(@Param("id")String id);
+
+    @Delete("delete from $tableName$ where ${column}=#{value}")
+    int deleteByParam(@Param("column") String column,@Param("value") String value);
 
 }

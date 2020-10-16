@@ -1,11 +1,9 @@
 package com.mg.node.service.cache; 
 
+import com.mg.node.common.service.cache.CacheStore;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.List;
 import com.mg.node.db.sql.pojo.MTdSysSite;
-import com.mg.node.pojo.dto.InSysConfigDto;
 import com.mg.node.common.service.cache.IBaseCache;
 
 @Service

@@ -1,6 +1,8 @@
 spring:
   application: 
     name: mg-node-eitem
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     nacos:
       config:

@@ -3,9 +3,9 @@ package com.mg.node.common.service.cache;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.mg.common.util.Md5Util;
-import com.mg.node.common.constant.CacheConstant;
+import com.mg.node.common.service.lock.MgCloudLockFactory;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -14,7 +14,6 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -31,14 +30,15 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Autowired
+    MgCloudLockFactory factory;
 
     /**
      * 创建 单个数据的缓存 缓存key
      * @throws Exception
      */
-    public String createCacheKey(String prev, String last,String sign, String id) throws Exception {
+    public String createCacheKey(String prev, String last,String sign, String id) {
         String cacheKey = prev + "." + sign +"." + id+"." +last;
-
         return cacheKey;
     }
 
@@ -48,6 +48,11 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
         return (JSONObject) JSONObject.toJSON(row);
     }
 
+    private String toJsonString(Object row)
+    {
+        return JSONObject.toJSON(row).toString();
+    }
+
 
 
     /**
@@ -55,38 +60,23 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      * @param key
      * @return
      */
-    public boolean lock(String key,long timeout)
-    {
-
+    public boolean lock(String key,long timeout) throws Exception {
         log.debug("[尝试获取redis锁]"+ key);
-
-        Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,"1", timeout, TimeUnit.MILLISECONDS);
-
-        if(isSuccess==null)return false;
-
+        boolean isSuccess = factory.acquire("redis/"+key,timeout);
         return isSuccess;
     }
 
-    public boolean lock(String key)
-    {
-
+    public void lock(String key) throws Exception {
         log.debug("[尝试获取redis锁]"+ key);
-
-        Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,"1", CacheConstant.CACHE_LOCK_LIVE, TimeUnit.MILLISECONDS);
-
-        if(isSuccess==null)return false;
-
-        return isSuccess;
+        factory.acquire("cache/"+key);
     }
 
 
     /**
      *  解锁
      */
-    public boolean unlock(String key)
-    {
-
-        return redisTemplate.delete(key);
+    public void unlock(String key) throws Exception {
+        factory.release("cache/"+key);
     }
 
     /**
@@ -94,7 +84,6 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      */
     public void delete(String key)
     {
-
         redisTemplate.delete(key);
     }
 
@@ -105,7 +94,7 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      */
     public void set(String key, Object item)
     {
-        redisTemplate.opsForValue().set(key,toJson(item));
+        redisTemplate.opsForValue().set(key,toJsonString(item));
     }
 
     /**

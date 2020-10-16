@@ -6,7 +6,8 @@ import java.util.function.BiFunction;
 
 public enum CheckType {
     NONULL("noNull", ParamsCheckUtil::isNull),
-    NOEMPTY("noEmpty",ParamsCheckUtil::isEmpty);
+    NOEMPTY("noEmpty",ParamsCheckUtil::isEmpty),
+    DEFAULT("default",ParamsCheckUtil::defaultMethod);
 
     private String oper;
     BiFunction<Object,String,Boolean>  function;

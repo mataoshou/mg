@@ -24,7 +24,7 @@ import java.util.List;
 public class CheckAop {
 
     @Before(value = "@annotation(com.mg.node.common.plugin.param.annotation.ParamsCheck)")
-    public void chenckParam(JoinPoint point) throws Exception {
+    public void checkParam(JoinPoint point) throws Exception {
         MethodSignature signature = (MethodSignature) point.getSignature();
         Method method = signature.getMethod();
 
@@ -69,7 +69,6 @@ public class CheckAop {
             String[] item = value.split(spliteStr);
             items.add(new CheckParamsItem(item[0],checkOper(item[1]),item[2]));
         }
-
         return items;
     }
     private CheckType checkOper(String oper) throws Exception {

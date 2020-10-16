@@ -1,7 +1,7 @@
 package com.mg.website.action; 
 
-import com.mg.website.pojo.vo.OauthVo;
-import com.mg.website.pojo.dto.InOauthDto;
+import com.mg.website.pojo.vo.in.InOauthVo;
+import com.mg.website.pojo.dto.in.InOauthDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +21,7 @@ public class OauthController {
    GeneralMapper mapper;
 
    @RequestMapping(OauthControllerConstant.ACTION_LOGIN)
-   public ResultItem login(@RequestBody OauthVo voData) throws Exception{
+   public ResultItem login(@RequestBody InOauthVo voData) throws Exception{
       InOauthDto pojo = mapper.convert(voData, InOauthDto.class);
       return repository.login(pojo);
    }

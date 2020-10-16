@@ -5,8 +5,7 @@ import org.springframework.stereotype.Component;
 import com.mg.common.pojo.ResultItem;
 import com.mg.website.common.service.feign.BaseFallBack;
 import com.mg.website.constant.feign.UserFeignConstant;
-import com.mg.website.pojo.dto.OutUserDto;
-import com.mg.website.pojo.dto.InUserDto;
+import com.mg.website.pojo.dto.out.OutUserDto;
 
 @Component
 @Slf4j

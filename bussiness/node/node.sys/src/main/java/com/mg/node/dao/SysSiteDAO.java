@@ -42,7 +42,7 @@ public class SysSiteDAO {
 
    public MTdSysSite getByName(String name)
    {
-      MTdSysSite site = mapper.getBySingleParam("site_name",name);
+      MTdSysSite site = mapper.getByParam("site_name",name);
       return site;
    }
 
