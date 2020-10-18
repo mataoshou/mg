@@ -1,5 +1,7 @@
 package com.mg.empty.demo.alt.data;
 
+import com.mg.empty.demo.alt.leetcode.Mg20201007;
+
 /**
  * 树是一种非线性关系的数据结构
  * 根节点下分布着一些不交叉的子节点
@@ -11,4 +13,9 @@ package com.mg.empty.demo.alt.data;
  * 森林  多个没有交叉关系的树组成
  */
 public class TreeNode {
+    public TreeNode left;
+    public TreeNode right;
+    public int val;
+
+    public TreeNode(int x) { val = x; }
 }

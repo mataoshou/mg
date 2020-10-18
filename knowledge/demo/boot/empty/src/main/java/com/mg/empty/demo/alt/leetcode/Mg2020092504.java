@@ -16,7 +16,6 @@ public class Mg2020092504 {
             int index = Integer.min(height[left],height[right]);
             int tmp = index*(right-left);
             if(max<tmp)max=tmp;
-
             if(height[left]<height[right]){left++;}
             else {right--;}
         }
