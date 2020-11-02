@@ -10,6 +10,3 @@ spring:
         server-addr: 10.0.127.103:8848
   main:
     allow-bean-definition-overriding: true
-
-
-

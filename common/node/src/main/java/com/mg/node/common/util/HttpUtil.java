@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Component
 public class HttpUtil {
+
     public HttpServletRequest getRequest()
     {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();

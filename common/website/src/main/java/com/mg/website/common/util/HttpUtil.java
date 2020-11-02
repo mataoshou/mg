@@ -39,23 +39,13 @@ public class HttpUtil {
         HttpServletResponse response = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getResponse();
         return response;
     }
+    
 
-
-    public String doPost(String url,Map<String, Object> params)
-    {
-        HttpHeaders h = new HttpHeaders();
-        h.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<Map<String, Object>> request = new HttpEntity<>(params, h);
-        ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
-        return response.getBody();
+    @LoadBalanced
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
-
-    public String doGet(String url,Map<String, Object> params)
-    {
-        ResponseEntity<String> response = restTemplate.getForEntity(url,String.class);
-        return response.getBody();
-    }
-
 
 
 

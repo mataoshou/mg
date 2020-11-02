@@ -138,15 +138,15 @@ public class MgCloudLockFactory {
     }
 
     public static void main(String[] args) throws Exception {
-                CuratorFramework framework= CuratorFrameworkFactory.newClient(
-                "10.0.127.103:2181",
-                5000,
-                5000,
-                new RetryNTimes(3, 1000));
+        CuratorFramework framework= CuratorFrameworkFactory.newClient(
+        "10.0.127.103:2181",
+        5000,
+        5000,
+        new RetryNTimes(3, 1000));
 
-                framework.start();
+        framework.start();
+
         InterProcessMutex mutex1 =  new InterProcessMutex(framework,"/lock/matao");
-
         mutex1.acquire();
         Thread.sleep(1000*5);
         mutex1.release();

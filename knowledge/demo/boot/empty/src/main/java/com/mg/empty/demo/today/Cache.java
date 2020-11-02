@@ -69,7 +69,6 @@ public class Cache<T,M> {
     {
         if(cacheStore.size()>capacity)
         {
-            Semaphore
             cacheStore.remove(head.next.key);
             removeHead();
         }
