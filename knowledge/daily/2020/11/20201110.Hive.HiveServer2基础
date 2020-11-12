@@ -1,0 +1,108 @@
+Hive是基于Hadoop构建的一套数据仓库分析系统，它不适用于联机事物或实时查询的功能。适合基于大量不可变数据的批量作业。
+
+特点：可伸缩、可扩展、容错、输入格式的松耦合。
+
+Hive查询MB级别的数据集过程一般会有分钟级的延时，所以不适合高实时性的应用。
+
+Hive在加载过程中不会对数据进行任何的修改，只是将数据移动到HDFS中hive设定的目录下。因此hive不支持对数据的改写和添加，所有数据在加载时是确定的。
+
+Hive的服务包括：beeline、cli、hiveserver、hiveserver2、hwi、metastore(感觉这个需要重点了解下)
+
+Hive用户接口主要有三个：CLI、Client、WebUI
+
+Hive的启动方式：
+    CLI : hive -service cli
+    web界面 ： hive -service hwi
+    远程服务启动（10000端口） ： hive -service hiveserver2
+
+Hive的对象（库、表、函数等等）的定义存储在MetaStore中。
+hive中metaStore的三种方式：derby（内嵌式）、local、remote
+
+MetaStore包括三部分的配置：metastore database、metastore server、metastore client
+
+Beeline有嵌入和远程两种模式。
+---------------------------------------------------------概念比较---------------------------------------------------------------------
+
+Hive中hive-cli服务和beeline服务的比较
+    1、cli是和hive一起出现的服务，不过后期随着hive的升级，已经不能完全满足Hive的功能了，然后就出现了新的工具beeline
+        1）通过metaServer访问元数据
+        2）SQL会直接编译，然后访问MetaStore,提交作业
+    2、beeline是cli的升级版本，可以覆盖cli的所有功能
+        1）beeline是纯粹的客户端，链接HiveServer2
+        2)SQL执行会提交给HiveServer2,然后HiveServer2编译，访问MetaStore，提交作业
+     区别：beeline有权限控制，cli没有；cli直接访问metaServer访问数据，没有走hiveServer2,beeline需要通过hiveServer2的管控，从而实现权限控制。
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+HiveService2 是 HiveService（也称为HiveService1）的升级版本（重写版本）,支持多个客户端的并发请求。
+
+HiveService不能处理多个客户端的并发请求原因是：HiveService导出的Thrift接口所施加的限制。
+
+HiveService2是一种使客户端执行Hive查询的服务，支持多客户端并发和身份验证。基于Thrift的Hive服务是HiveService2的核心。
+
+堆栈由4层组成：server、transport、protocol 和 处理器。
+    server控制tcp的链接，会为每一个TCP链接建立一个线程
+    transport  控制服务器和客户端传输协议的切换
+    protocol  负责序列化和反序列化
+    处理器 处理请求的应用程序框架，实现了编译和执行hive查询的逻辑。
+
+HiveService2安装完成可以使用beeline作为客户端来连接。
+
+初始化数据库的  在bin下执行./schematool -initSchema -dbType derby
+执行过程中出现  FUNCTION 'NUCLEUS_ASCII' already exists. (state=X0Y68,code=30000) 错误  处理方法
+重命名bin目录下的 metastore_db 目录，再重新执行初始化方法
+
+创建数据库，提示错误  Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. MetaException(message:Got exception: org.apache.hadoop.security.AccessControlException Permission denied: user=anonymous, access=WRITE, inode="/":root:supergroup:drwxr-xr-x
+原因 hdfs文件的权限问题，临时解决方案  修改hadoop的hdfs-site.xml文件，增加配置
+<property>
+    <name>dfs.permissions</name>
+    <value>false</value>
+</property>
+
+创建数据库命令例子
+create database if not exists hive_db
+comment 'hive database'
+location 'hiveDB';
+
+beeline链接命令
+ ./beeline -u jdbc:hive2://192.168.26.128:10000
+或者
+ ./beeline
+!connect jdbc:hive2://localhost:10000 hadoop
+
+beeline的链接串格式如下 ：jdbc:hive2://<host1>:<port1>,<host2>:<port2>/dbName;initFile=<file>;sess_var_list?hive_conf_list#hive_var_list
+    initFile 表示初始化脚本文件，链接完成后会自动执行
+    sess_var_list表示回话变量参数（如：用户、密码），格式：key=value；key=value
+    hive_conf_list表示Hive的配置变量，格式：key=value；key=value
+    hive_var_list表示hive 变量的值，格式：key=value；key=value，个人理解为自定义变量（待验证）
+
+创建表例子
+create external  table user_out(
+    stuNo  int,
+    stuName string,
+    age int,
+    sex char(1)
+);
+
+插入数据
+insert into user_out (stuno,stuname,age,sex) values(4,'mm1',19,1);
+
+数据模型分为：数据库、表、分区、桶
+    其中表可以分为 内部表、外部表、索引表、视图
+    内部表 的数据是Hive自己控制
+    外部表 的数据由HDFS控制
+
+不同的客户端类型  CLI（Command Line Interface）、HiveServer、HWI等等
+名词说明:
+    CLI 命令行客户端
+    HWI hadoop web interface 是hive命令行的补充
+    HUE 是一个可快速开发和调试Hadoop生态系统各种应用的一个基于浏览器的图形化用户接口
+
+未解决问题：
+java代码尝试链接hive库 ,并获取数据
+
+
+
+
+
+
