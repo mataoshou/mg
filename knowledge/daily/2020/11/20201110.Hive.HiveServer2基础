@@ -101,6 +101,10 @@ insert into user_out (stuno,stuname,age,sex) values(4,'mm1',19,1);
 未解决问题：
 java代码尝试链接hive库 ,并获取数据
 
+待了解内容：
+1、aprk
+2、presto
+
 
 
 

@@ -1,0 +1,37 @@
+
+
+参数查询 （资料库）:http://172.21.176.2/?orgId=2
+白泽-presto监控
+
+代理地址：172.18.153.41:80
+proxifier
+
+集群地址：http://172.21.141.195:8095/v1/cluster
+
+git地址 ： http://bdpgit.jd.com/matao/hs-2
+账号：matao   密码: mg3217010
+
+
+git checkout master
+git remote add Upstream http://bdpgit.jd.com/adhoc/hive-metastore.git
+//git remote add Upstream http://bit.jd.com/BigData-ML/spark.git
+//git remote add Upstream http://bdpgit.jd.com/adhoc/spark.git
+git remote update Upstream
+git pull Upstream master
+git push origin master
+git remote remove Upstream
+
+
+堡垒机
+您的用户名： 	matao53
+您的权限： 	普通用户
+您的登录密码： 	KhYOECdrYm9Ltr3e
+堡垒机IP： 	jps.jd.com
+SSH连接端口： 	80
+http://bit.jd.com/dev/FAQs/wikis/JMPS-User-Reference
+
+
+ssh root@10.207.41.44
+bajie
+6rRBBLLlLDG0R4bCbfQT
+
