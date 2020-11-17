@@ -1,5 +1,8 @@
 
 
+代码编译命令
+"C:\Program Files\Java\jdk1.8.0_271\bin\java.exe" -Dmaven.multiModuleProjectDirectory=D:\work-core\hs-2 "-Dmaven.home=D:\soft\IntelliJ IDEA Community Edition 2019.1\plugins\maven\lib\maven3" "-Dclassworlds.conf=D:\soft\IntelliJ IDEA Community Edition 2019.1\plugins\maven\lib\maven3\bin\m2.conf"  -classpath "D:\soft\IntelliJ IDEA Community Edition 2019.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar" org.codehaus.classworlds.Launcher  -Phadoop-2 -DskipTests -Pdist -X install
+
 参数查询 （资料库）:http://172.21.176.2/?orgId=2
 白泽-presto监控
 
@@ -28,10 +31,28 @@ git remote remove Upstream
 您的登录密码： 	KhYOECdrYm9Ltr3e
 堡垒机IP： 	jps.jd.com
 SSH连接端口： 	80
+使用文档url地址:
 http://bit.jd.com/dev/FAQs/wikis/JMPS-User-Reference
-
 
 ssh root@10.207.41.44
 bajie
 6rRBBLLlLDG0R4bCbfQT
 
+hiveserver2  测试环境  172.21.75.132
+
+复制
+/software/conf/bajie/hadoop_conf
+/software/conf/bajie/hive_conf
+到个人临时目录中（暂定/tmp/matao）
+配置 HIVE_CONF_DIR 和 HADOOP_CONF_DIR 为临时存储位置
+修改hadoop_conf 下的 Hadoop_env.sh
+或者
+修改hive_conf下的hive_env.sh,增加
+export HADOOP_CLIENT_OPTS="-Xmx5g  -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:10030    $HADOOP_CLIENT_OPTS"
+
+export HADOOP_CONF_DIR=/software/conf/bajie/hadoop_conf
+
+下载文件
+上传文件到 http://oss.jd.com/bucket/matao/list/
+配置代理  export http_proxy=172.18.153.45:80
+wget下载

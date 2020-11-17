@@ -1,0 +1,15 @@
+链接堡垒机，进入10.198.193.100服务器，执行ssh root@10.207.41.44进入bajie服务器，切换到bajie用户
+
+1、启动hiveserver2
+进入/software/servers/jdhive-2.0.0-HADOOP-2.7.1/bin 目录下，
+cd /software/servers/jdhive-2.0.0-HADOOP-2.7.1/bin
+执行 ./hiveserver2 或者  ./hive --service hiveserver2 启动hiveserver2服务
+hiveserver2启动成功后，可以使用beeline进行链接
+
+2、beeline链接hiveserver2
+
+进入/software/servers/jdhive-2.0.0-HADOOP-2.7.1/bin 目录下
+执行./beeline -u jdbc:hive2://10.207.41.44:10000/进行链接
+或者先./beeline,进入后执行 !connect jdbc:hive2://localhost:10000 进行链接
+
+链接hiveserver2成功后，可以尝试执行show databases；命令进行简单测试。
