@@ -4,6 +4,10 @@
 
 3、尝试传递参数到hive中
 
+4、jmx参数控制
+
+3、hive.server2.delegate.engine 参数测试
+
 已处理问题
 
 hiveserver2调试及问题
