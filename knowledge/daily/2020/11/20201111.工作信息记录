@@ -38,6 +38,10 @@ ssh root@10.207.41.44
 bajie
 6rRBBLLlLDG0R4bCbfQT
 
+服务器常用密码
+5rRBBLLlLDG3R4bCbfQT
+6ws5SGnI0UGwbi3g
+
 hiveserver2  测试环境  172.21.75.132
 
 复制
@@ -56,3 +60,34 @@ export HADOOP_CONF_DIR=/software/conf/bajie/hadoop_conf
 上传文件到 http://oss.jd.com/bucket/matao/list/
 配置代理  export http_proxy=172.18.153.45:80
 wget下载
+
+
+测试sql
+
+use tpcds_jd_100;
+
+SELECT
+sr_customer_sk ctr_customer_sk
+, sr_store_sk ctr_store_sk
+, sum(sr_return_amt) ctr_total_return
+FROM
+store_returns
+, date_dim
+WHERE (sr_returned_date_sk = d_date_sk)
+AND (d_year = 2000)
+GROUP BY sr_customer_sk, sr_store_sk
+
+
+测试环境IP ：10.198.228.227   ssh root@10.198.228.227
+用户 bdp_client
+
+export JDHXXXXX_USER=mart_sch
+export JDHXXXXX_CLUSTER_NAME=hope
+export JDHXXXXX_QUEUE=bdp_jmart_presto_standalone_highperformance
+
+
+tail -f /data0/Logs/bdp_client/hive-0.12.0/hive.log
+/software/servers/hadoop-2.7.1/share/hadoop/common/hadoop-common-2.7.1.jar
+
+
+10.198.193.100

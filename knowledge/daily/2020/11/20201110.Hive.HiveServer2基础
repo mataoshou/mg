@@ -76,6 +76,17 @@ beeline的链接串格式如下 ：jdbc:hive2://<host1>:<port1>,<host2>:<port2>/
     hive_conf_list表示Hive的配置变量，格式：key=value；key=value
     hive_var_list表示hive 变量的值，格式：key=value；key=value，个人理解为自定义变量（待验证）
 
+需要在hadoop的core-site.xml中增加如下配置：
+    <property>
+            <name>hadoop.proxyuser.bajie.hosts</name>
+            <value>*</value>
+    </property>
+    <property>
+            <name>hadoop.proxyuser.bajie.groups</name>
+            <value>*</value>
+    </property>
+
+
 创建表例子
 create external  table user_out(
     stuNo  int,

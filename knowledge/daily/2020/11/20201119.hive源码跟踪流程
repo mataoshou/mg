@@ -1,0 +1,9 @@
+一、hiveserver2执行流程
+    1、启动hiveserver2,启动org.apache.hive.service.server.HiveServer2类中的main函数
+    主要执行语句oprocResponse.getServerOptionsExecutor().execute()，是执行的HiverServer2的内部类StartOptionExecutor
+    中的execute()函数执行了startHiveServer2方法
+
+    2、beelin链接hiveserver2
+    在hiveserver2的入口是org.apache.hive.service.cli.CLIService的openSessionWithImpersonation()函数，然后
+    进入org.apache.hive.service.cli.thrift.ThriftCLIService的OpenSession()函数
+    再执行getSessionHandle()函数
