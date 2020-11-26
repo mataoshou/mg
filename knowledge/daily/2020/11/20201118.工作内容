@@ -1,0 +1,69 @@
+1、增加配置环境变量的shell脚本
+
+2、调试找到空指针的原因
+
+3、尝试传递参数到hive中
+
+4、jmx参数控制
+
+3、hive.server2.delegate.engine 参数测试
+
+已处理问题
+
+hiveserver2调试及问题
+一、hiveserver2运行流程
+启动入口
+org.apache.hive.service.server.HiveServer2的main函数
+
+beeline链接进入 首先进入org.apache.hive.service.cli.CLIService的openSessionWithImpersonation函数，进行链接
+然后进入 executeStatement 执行sql
+
+二、出现问题：
+1、beeline链接过程中提示：  bajie is not allowed to impersonate anonymous (state=,code=0)
+    解决方案  修改 hadoop的core-site.xml中增加如下配置：
+                 <property>
+                         <name>hadoop.proxyuser.bajie.hosts</name>
+                         <value>*</value>
+                 </property>
+                 <property>
+                         <name>hadoop.proxyuser.bajie.groups</name>
+                         <value>*</value>
+                 </property>
+
+2、beeline执行sql脚本，返回空指针异常
+    原因hiveserver2中代码有修改，切到了PrestoDelegateOperation中执行
+    暂时解决方案：修改org.apache.hive.service.cli.operation.OperationFactory类中获取到的ExecuteStatementOperation类，
+    改为DelegateOperation
+
+3、hive执行sql过程中提示找不到/software/servers/env/env.sh文件
+    在org.apache.hive.service.cli.operation.delegate.SqlExecutor中initEnv函数，有添加该位置脚本的执行
+
+4、日志提示  JD Secure: 使用未加安全的Hadoop包,获取USER_KEY异常:
+HiveMetaStoreClient 中open函数中找不到这个getUserKey()函数
+
+5、hiveserver2启动后，beeline连接不上
+    问题：jetty冲突
+    解决方案
+    mv /tmp/renzhimin/hadoop-2.7.1/share/hadoop/hdfs/lib/jetty-util-9.3.19.v20170502.jar /tmp/renzhimin/hadoop-2.7.1/share/hadoop/hdfs/lib/jetty-util-9.3.19.v20170502.jar.bak
+    mv /tmp/renzhimin/hadoop-2.7.1/share/hadoop/yarn/lib/jetty-util-9.3.19.v20170502.jar /tmp/renzhimin/hadoop-2.7.1/share/hadoop/yarn/lib/jetty-util-9.3.19.v20170502.jar.bak
+    mv /tmp/renzhimin/hadoop-2.7.1/share/hadoop/tools/lib/jetty-6.1.26.jar /tmp/renzhimin/hadoop-2.7.1/share/hadoop/tools/lib/jetty-6.1.26.jar.bak
+    mv /tmp/renzhimin/hadoop-2.7.1/share/hadoop/tools/lib/jetty-util-6.1.26.jar /tmp/renzhimin/hadoop-2.7.1/share/hadoop/tools/lib/jetty-util-6.1.26.jar.bak
+    mv /tmp/renzhimin/jdhive-2.0.0-HADOOP-2.7.1/lib/jetty-all-server-7.6.0.v20120127.jar /tmp/renzhimin/jdhive-2.0.0-HADOOP-2.7.1/lib/jetty-all-server-7.6.0.v20120127.jar.bak
+
+6、查询一直没有返回结果
+    执行sql语句时， ExecuteStatementOperation 没有重置sql的类型，增加cacheStatement函数执行
+
+7、beeline连接参数无法初始化
+    在添加传入参数前，会执行 .hiverc文件内容，其中包含一些sql
+    会造成DelegateOperation 的提前构建，造成传入参数的提前使用
+    结果参数为初始化，就被使用了
+
+8、执行sql语句提示   Cannot load this JVM TI agent twice, check your java command line for duplicate jdwp options.
+    原因 HADOOP_CLIENT_OPTS 配置的 -Xmx5g  -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=10.198.228.227:10036 被添加到hadoop_opts中两次
+    估计原因，在执行sql时启动了一个hive客户端，重新加载了hadoop的配置
+
+9、beeline客户端链接，执行一次查询sql后，再次执行查询sql会提示表不存在
+    问题原因：第二次查询使用了新的ExecuteStatementOperation ，在ExecuteStatementOperation中有一个静态map存储每次session链接
+    的ExecuteStatementOperation对象，每次执行完sql后会被清理掉，再次执行会重新创建
+    解决方案：将map换成 LUR缓存模式
+
