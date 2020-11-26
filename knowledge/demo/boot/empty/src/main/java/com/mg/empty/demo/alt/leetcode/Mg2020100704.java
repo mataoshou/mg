@@ -1,5 +1,4 @@
 package com.mg.empty.demo.alt.leetcode;
-
 import com.mg.empty.demo.alt.data.TreeNode;
 import com.mg.empty.demo.alt.util.BuildData;
 

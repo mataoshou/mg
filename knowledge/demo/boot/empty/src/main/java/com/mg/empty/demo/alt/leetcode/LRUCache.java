@@ -1,5 +1,4 @@
 package com.mg.empty.demo.alt.leetcode;
-
 import java.util.HashMap;
 
 public class LRUCache {

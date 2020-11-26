@@ -1,5 +1,6 @@
 package com.mg.empty.demo.today;
 
+<<<<<<< Updated upstream
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
@@ -148,4 +149,7 @@ public class Cache<T,M> {
         cache.showList();
     }
 
+=======
+public class Cache {
+>>>>>>> Stashed changes
 }

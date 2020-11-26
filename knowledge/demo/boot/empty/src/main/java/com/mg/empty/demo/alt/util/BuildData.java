@@ -1,5 +1,6 @@
 package com.mg.empty.demo.alt.util;
 
+<<<<<<< Updated upstream
 import com.mg.empty.demo.alt.data.LinkListNode;
 import com.mg.empty.demo.alt.data.ListNode;
 import com.mg.empty.demo.alt.data.TreeNode;
@@ -53,4 +54,7 @@ public class BuildData {
 
 
 
+=======
+public class BuildData {
+>>>>>>> Stashed changes
 }
