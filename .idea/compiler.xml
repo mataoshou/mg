@@ -19,18 +19,22 @@
         <module name="mg-compose-command" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
+        <module name="mg-config" />
         <module name="boot.empty" />
         <module name="mg-node-user" />
         <module name="mg-node-article" />
         <module name="mg-gateway" />
         <module name="mg-eurake" />
+        <module name="games" />
         <module name="mg-common-basic" />
-        <module name="mg-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="boot.empty" target="1.8" />
+      <module name="boot.root" target="1.8" />
       <module name="build" target="1.8" />
+      <module name="game" target="1.8" />
+      <module name="games" target="1.8" />
       <module name="mg-bussiness" target="1.8" />
       <module name="mg-common" target="1.8" />
       <module name="mg-common-basic" target="1.8" />
@@ -61,7 +65,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="boot.empty" options="-parameters" />
+      <module name="boot.root" options="-parameters" />
       <module name="build" options="-parameters" />
+      <module name="game" options="-parameters" />
+      <module name="games" options="-parameters" />
       <module name="mg-common-basic" options="-parameters" />
       <module name="mg-common-compose" options="-parameters" />
       <module name="mg-common-node" options="-parameters" />
