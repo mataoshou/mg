@@ -19,14 +19,14 @@
         <module name="mg-compose-command" />
         <module name="mg-common-website" />
         <module name="mg-compose-uums" />
-        <module name="mg-config" />
         <module name="boot.empty" />
         <module name="mg-node-user" />
         <module name="mg-node-article" />
         <module name="mg-gateway" />
         <module name="mg-eurake" />
-        <module name="games" />
         <module name="mg-common-basic" />
+        <module name="games" />
+        <module name="mg-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
